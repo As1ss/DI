@@ -1,0 +1,14 @@
+D:\DAM2T\DI\TestWakaTime\TestWakaTime\bin\Debug\net6.0\TestWakaTime.exe
+D:\DAM2T\DI\TestWakaTime\TestWakaTime\bin\Debug\net6.0\TestWakaTime.deps.json
+D:\DAM2T\DI\TestWakaTime\TestWakaTime\bin\Debug\net6.0\TestWakaTime.runtimeconfig.json
+D:\DAM2T\DI\TestWakaTime\TestWakaTime\bin\Debug\net6.0\TestWakaTime.dll
+D:\DAM2T\DI\TestWakaTime\TestWakaTime\bin\Debug\net6.0\TestWakaTime.pdb
+D:\DAM2T\DI\TestWakaTime\TestWakaTime\obj\Debug\net6.0\TestWakaTime.GeneratedMSBuildEditorConfig.editorconfig
+D:\DAM2T\DI\TestWakaTime\TestWakaTime\obj\Debug\net6.0\TestWakaTime.AssemblyInfoInputs.cache
+D:\DAM2T\DI\TestWakaTime\TestWakaTime\obj\Debug\net6.0\TestWakaTime.AssemblyInfo.cs
+D:\DAM2T\DI\TestWakaTime\TestWakaTime\obj\Debug\net6.0\TestWakaTime.csproj.CoreCompileInputs.cache
+D:\DAM2T\DI\TestWakaTime\TestWakaTime\obj\Debug\net6.0\TestWakaTime.dll
+D:\DAM2T\DI\TestWakaTime\TestWakaTime\obj\Debug\net6.0\refint\TestWakaTime.dll
+D:\DAM2T\DI\TestWakaTime\TestWakaTime\obj\Debug\net6.0\TestWakaTime.pdb
+D:\DAM2T\DI\TestWakaTime\TestWakaTime\obj\Debug\net6.0\TestWakaTime.genruntimeconfig.cache
+D:\DAM2T\DI\TestWakaTime\TestWakaTime\obj\Debug\net6.0\ref\TestWakaTime.dll
