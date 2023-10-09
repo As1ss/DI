@@ -1,0 +1,14 @@
+D:\DAM2T\DI\Practica1_Alexis-Lopez-Briongos\Practica1_Alexis-Lopez-Briongos\bin\Debug\net7.0\Practica1_Alexis-Lopez-Briongos.exe
+D:\DAM2T\DI\Practica1_Alexis-Lopez-Briongos\Practica1_Alexis-Lopez-Briongos\bin\Debug\net7.0\Practica1_Alexis-Lopez-Briongos.deps.json
+D:\DAM2T\DI\Practica1_Alexis-Lopez-Briongos\Practica1_Alexis-Lopez-Briongos\bin\Debug\net7.0\Practica1_Alexis-Lopez-Briongos.runtimeconfig.json
+D:\DAM2T\DI\Practica1_Alexis-Lopez-Briongos\Practica1_Alexis-Lopez-Briongos\bin\Debug\net7.0\Practica1_Alexis-Lopez-Briongos.dll
+D:\DAM2T\DI\Practica1_Alexis-Lopez-Briongos\Practica1_Alexis-Lopez-Briongos\bin\Debug\net7.0\Practica1_Alexis-Lopez-Briongos.pdb
+D:\DAM2T\DI\Practica1_Alexis-Lopez-Briongos\Practica1_Alexis-Lopez-Briongos\obj\Debug\net7.0\Practica1_Alexis-Lopez-Briongos.GeneratedMSBuildEditorConfig.editorconfig
+D:\DAM2T\DI\Practica1_Alexis-Lopez-Briongos\Practica1_Alexis-Lopez-Briongos\obj\Debug\net7.0\Practica1_Alexis-Lopez-Briongos.AssemblyInfoInputs.cache
+D:\DAM2T\DI\Practica1_Alexis-Lopez-Briongos\Practica1_Alexis-Lopez-Briongos\obj\Debug\net7.0\Practica1_Alexis-Lopez-Briongos.AssemblyInfo.cs
+D:\DAM2T\DI\Practica1_Alexis-Lopez-Briongos\Practica1_Alexis-Lopez-Briongos\obj\Debug\net7.0\Practica1_Alexis-Lopez-Briongos.csproj.CoreCompileInputs.cache
+D:\DAM2T\DI\Practica1_Alexis-Lopez-Briongos\Practica1_Alexis-Lopez-Briongos\obj\Debug\net7.0\Practica1_Alexis-Lopez-Briongos.dll
+D:\DAM2T\DI\Practica1_Alexis-Lopez-Briongos\Practica1_Alexis-Lopez-Briongos\obj\Debug\net7.0\refint\Practica1_Alexis-Lopez-Briongos.dll
+D:\DAM2T\DI\Practica1_Alexis-Lopez-Briongos\Practica1_Alexis-Lopez-Briongos\obj\Debug\net7.0\Practica1_Alexis-Lopez-Briongos.pdb
+D:\DAM2T\DI\Practica1_Alexis-Lopez-Briongos\Practica1_Alexis-Lopez-Briongos\obj\Debug\net7.0\Practica1_Alexis-Lopez-Briongos.genruntimeconfig.cache
+D:\DAM2T\DI\Practica1_Alexis-Lopez-Briongos\Practica1_Alexis-Lopez-Briongos\obj\Debug\net7.0\ref\Practica1_Alexis-Lopez-Briongos.dll
