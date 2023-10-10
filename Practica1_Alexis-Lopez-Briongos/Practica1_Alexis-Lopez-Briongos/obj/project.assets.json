@@ -8,19 +8,19 @@
     "net7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\dam2t05\\.nuget\\packages\\": {}
+    "C:\\Users\\As1ss\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\DAM2T\\DI\\Practica1_Alexis-Lopez-Briongos\\Practica1_Alexis-Lopez-Briongos\\Practica1_Alexis-Lopez-Briongos.csproj",
+      "projectUniqueName": "C:\\Users\\As1ss\\Desktop\\COSAS CLASE KEK\\DAM2T\\DI\\Practica1_Alexis-Lopez-Briongos\\Practica1_Alexis-Lopez-Briongos\\Practica1_Alexis-Lopez-Briongos.csproj",
       "projectName": "Practica1_Alexis-Lopez-Briongos",
-      "projectPath": "D:\\DAM2T\\DI\\Practica1_Alexis-Lopez-Briongos\\Practica1_Alexis-Lopez-Briongos\\Practica1_Alexis-Lopez-Briongos.csproj",
-      "packagesPath": "C:\\Users\\dam2t05\\.nuget\\packages\\",
-      "outputPath": "D:\\DAM2T\\DI\\Practica1_Alexis-Lopez-Briongos\\Practica1_Alexis-Lopez-Briongos\\obj\\",
+      "projectPath": "C:\\Users\\As1ss\\Desktop\\COSAS CLASE KEK\\DAM2T\\DI\\Practica1_Alexis-Lopez-Briongos\\Practica1_Alexis-Lopez-Briongos\\Practica1_Alexis-Lopez-Briongos.csproj",
+      "packagesPath": "C:\\Users\\As1ss\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\As1ss\\Desktop\\COSAS CLASE KEK\\DAM2T\\DI\\Practica1_Alexis-Lopez-Briongos\\Practica1_Alexis-Lopez-Briongos\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\dam2t05\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\As1ss\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
