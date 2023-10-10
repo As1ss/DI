@@ -15,14 +15,14 @@ namespace Practica1_Alexis_Lopez_Briongos
             exit = false;
             Console.WriteLine("Buenas tardes, introduce tu nombre.");
             name = Console.ReadLine();
-          
 
-            menuPrincipal();
+
+            mainMenu();
         }
 
-        private static void menuPrincipal()
+        private static void mainMenu()
         {
-            
+
             do
             {
 
@@ -32,12 +32,12 @@ namespace Practica1_Alexis_Lopez_Briongos
                     "\n2.- Obtener el día de la semana " +
                     "\n3.- Salir.");
                 input = Console.ReadLine();
-                
 
-                if (int.TryParse(input,out opcion))
+
+                if (int.TryParse(input, out opcion))
                 {
-                    
-                   
+
+
                     switch (opcion)
                     {
                         case 1:
@@ -59,13 +59,13 @@ namespace Practica1_Alexis_Lopez_Briongos
                 {
                     Console.WriteLine("No has introducido un numero entero.");
                 }
-                    
 
-              
-            } while (exit==false);
+
+
+            } while (exit == false);
 
             Console.WriteLine($"Gracias por su visita {name}");
-           
+
         }
 
         private static void getDateOption()
@@ -73,8 +73,8 @@ namespace Practica1_Alexis_Lopez_Briongos
             Console.Clear();
             DateTime date = DateTime.Now;
             CultureInfo spanishCulture = new CultureInfo("es-ES");
-            Console.WriteLine($"Hoy es {date.ToString("dddd",spanishCulture)}");
-         
+            Console.WriteLine($"Hoy es {date.ToString("dddd", spanishCulture)}");
+
         }
 
         private static void getDniLetterOption()
@@ -90,15 +90,15 @@ namespace Practica1_Alexis_Lopez_Briongos
 
         private static void obtainDNI(int dni)
         {
-            char[] dniLettersValue = { 'T', 'R', 'W', 'A', 'G', 'M','Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E' };
-           
+            char[] dniLettersValue = { 'T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E' };
+
             int resto;
 
             resto = dni % 23;
 
 
             Console.WriteLine($"Tu dni es {dni}-{dniLettersValue[resto]}");
-          
+
 
 
         }
