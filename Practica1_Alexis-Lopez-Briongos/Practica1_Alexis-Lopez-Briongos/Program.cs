@@ -90,6 +90,7 @@ namespace Practica1_Alexis_Lopez_Briongos
 
         private static void obtainDNI(int dni)
         {
+            checkDNI(dni);
             char[] dniLettersValue = { 'T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E' };
 
             int resto;
@@ -101,6 +102,21 @@ namespace Practica1_Alexis_Lopez_Briongos
 
 
 
+        }
+
+        private static void checkDNI(int dni)
+        {
+            String dniAux= dni.ToString();
+            int dniLength= dniAux.Length;
+
+            if (dniLength.Equals(8) && dni!=0)
+            {
+                
+            }
+            else
+            {
+                Console.WriteLine("El dni tiene menos de 8 caracteres");
+            }
         }
     }
 }
