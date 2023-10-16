@@ -5,53 +5,153 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Practica2_Alexis_Lopez_Briongos"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" Height="640" Width="800">
+    <Window.Resources>
+        <Style x:Key="FocusVisual">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle Margin="2" StrokeDashArray="1 2" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" SnapsToDevicePixels="true" StrokeThickness="1"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <SolidColorBrush x:Key="Button.Static.Background" Color="#FFDDDDDD"/>
+        <SolidColorBrush x:Key="Button.Static.Border" Color="#FF707070"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#FFBEE6FD"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Border" Color="#FF3C7FB1"/>
+        <SolidColorBrush x:Key="Button.Pressed.Background" Color="#FFC4E5F6"/>
+        <SolidColorBrush x:Key="Button.Pressed.Border" Color="#FF2C628B"/>
+        <SolidColorBrush x:Key="Button.Disabled.Background" Color="#FFF4F4F4"/>
+        <SolidColorBrush x:Key="Button.Disabled.Border" Color="#FFADB2B5"/>
+        <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#FF838383"/>
+        <Style x:Key="RoundedButtonStyle" TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+            <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" CornerRadius="4" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" SnapsToDevicePixels="true">
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsDefaulted" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.MouseOver.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.MouseOver.Border}"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Pressed.Border}"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid MaxHeight="640" MaxWidth="800">
+
         <Rectangle Height="50" Width="auto" VerticalAlignment="top" >
             <Rectangle.Fill>
                 <SolidColorBrush Color="#FF336699"/>
             </Rectangle.Fill>
         </Rectangle>
+
         <TextBlock HorizontalAlignment="Left" FontSize="25" VerticalAlignment="Top" Margin="10 0 0 10">
             <TextBlock.Foreground>
                 <SolidColorBrush>#FFFFFF</SolidColorBrush>
             </TextBlock.Foreground>
             <TextBlock.Text>Registro</TextBlock.Text>
-
         </TextBlock>
+
         <TextBox x:Name="textNombre" Foreground="Gray" Text="Ej: Roberto Joao" 
-                 HorizontalAlignment="Left" Margin="208,103,0,0" TextWrapping="Wrap" 
-                 VerticalAlignment="Top" Width="120" 
+                 HorizontalAlignment="Left" Margin="275,244,0,0" TextWrapping="Wrap" 
+                 VerticalAlignment="Top" Width="253" 
                  MouseDoubleClick="textNombre_MouseDoubleClick"
-                 MouseLeave="textNombre_MouseLeave"
+                 MouseLeave="textNombre_MouseLeave" FontSize="14"
                     />
-        <Label Content="Nombre" HorizontalAlignment="Left" Margin="149,99,0,0"
-               VerticalAlignment="Top"/>
+
+        <Label Content="Nombre" HorizontalAlignment="Left" Margin="278,208,0,0"
+               VerticalAlignment="Top" FontSize="16" RenderTransformOrigin="1.081,0.545"/>
 
         <TextBox x:Name="textApellido" Foreground="Gray"
-                 Text="Ej: Tirón Gonsales" HorizontalAlignment="Left"
-                 Margin="434,103,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" 
-                 Width="120" MouseDoubleClick="textApellido_MouseDoubleClick"
-                 MouseLeave="textApellido_MouseLeave"/>
-        <Label Content="Apellidos" HorizontalAlignment="Left" Margin="361,99,0,0"
-               VerticalAlignment="Top"/>
-        <DatePicker x:Name="datePicker" Foreground="Gray" Margin="294,146,306,234">
+                 Text="Ej: Tirón Gonsales"
+                 Margin="278,307,0,0" TextWrapping="Wrap" MouseDoubleClick="textApellido_MouseDoubleClick"
+                 MouseLeave="textApellido_MouseLeave"
+                 FontSize="14" Height="21" VerticalAlignment="Top"
+                 HorizontalAlignment="Left" Width="253"/>
 
-        </DatePicker>
-        <Label Content="Fecha de nacimiento" HorizontalAlignment="Left" Margin="149,147,0,0" VerticalAlignment="Top"/>
-        <Label Content="DNI" HorizontalAlignment="Left" Margin="233,217,0,0" VerticalAlignment="Top"/>
+        <Label Content="Apellidos" HorizontalAlignment="Left" Margin="275,270,0,0"
+               VerticalAlignment="Top" RenderTransformOrigin="0.56,0.079" 
+               FontSize="16"/>
+
+        <DatePicker x:Name="datePicker" Foreground="Gray" Margin="275,431,0,0"
+                     FontSize="14" Height="51" VerticalAlignment="Top" 
+                    HorizontalAlignment="Left" Width="253"/>
+
+        <Label  FontSize="16" Content="Fecha de nacimiento" 
+                HorizontalAlignment="Left" Margin="275,395,0,0" 
+                VerticalAlignment="Top"/>
+
+        <Label  FontSize="16" Content="DNI" HorizontalAlignment="Left" 
+                Margin="278,333,0,0" VerticalAlignment="Top" 
+                RenderTransformOrigin="0.721,0.96"/>
+
         <TextBox x:Name="textDNI" Foreground="Gray" Text="Ej: 12345678N" 
-                 HorizontalAlignment="Left" Margin="294,217,0,0" TextWrapping="Wrap" 
-                 VerticalAlignment="Top" Width="120" 
+                 HorizontalAlignment="Left" Margin="278,369,0,0" TextWrapping="Wrap" 
+                 VerticalAlignment="Top" Width="253" 
                  MouseDoubleClick="textDNI_MouseDoubleClick"
-                 MouseLeave="textDNI_MouseLeave"
+                 MouseLeave="textDNI_MouseLeave" FontSize="14"
                    />
-        <Label Content="Dirección de correo electrónico" HorizontalAlignment="Left" Margin="152,272,0,0" VerticalAlignment="Top"/>
+
+        <Label Content="Dirección de correo electrónico" HorizontalAlignment="Left" 
+               Margin="275,146,0,0" VerticalAlignment="Top" FontSize="16"/>
+
         <TextBox x:Name="textEmail" Foreground="Gray" HorizontalAlignment="Left" 
-                 Margin="354,272,0,0" TextWrapping="Wrap" 
-                 Text="Ej: JohnDoe@gmail.com" VerticalAlignment="Top" Width="169"
+                 Margin="275,182,0,0" TextWrapping="Wrap" 
+                 Text="Ej: JohnDoe@gmail.com" VerticalAlignment="Top" Width="250"
                  MouseDoubleClick="textEmail_MouseDoubleClick"
-                 MouseLeave="textEmail_MouseLeave"/>
+                 MouseLeave="textEmail_MouseLeave" FontSize="14"/>
+
+        <Button Style="{DynamicResource RoundedButtonStyle}" x:Name="buttonConfirm" Content="Confirmar registro" HorizontalAlignment="Left" 
+                Margin="275,511,0,0" VerticalAlignment="Top" 
+                Height="48" Width="129"
+                FontSize="14"
+                Background="#FF336699"
+                Foreground="White"
+                />
+
+
+
+
+
+
+        <Button Style="{DynamicResource RoundedButtonStyle}" x:Name="cancelButton" Content="Cancelar" HorizontalAlignment="Left" 
+                Margin="421,511,0,0" VerticalAlignment="Top" 
+                Height="48" Width="76" Click="cancelButton_Click"
+                FontSize="14"
+                Background="White"
+                Foreground="#FF336699"
+                BorderBrush="#FF336699"/>
+
+        <Image Margin="314,55,0,0" 
+               Source="images/logoJC.png" Height="79" 
+               VerticalAlignment="Top" HorizontalAlignment="Left" 
+               Width="212" />
 
     </Grid>
 </Window>

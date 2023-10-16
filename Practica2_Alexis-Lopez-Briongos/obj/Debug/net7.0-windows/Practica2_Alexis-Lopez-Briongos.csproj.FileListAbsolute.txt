@@ -18,3 +18,23 @@ D:\DAM2T\DI\Practica2_Alexis-Lopez-Briongos\obj\Debug\net7.0-windows\refint\Prac
 D:\DAM2T\DI\Practica2_Alexis-Lopez-Briongos\obj\Debug\net7.0-windows\Practica2_Alexis-Lopez-Briongos.pdb
 D:\DAM2T\DI\Practica2_Alexis-Lopez-Briongos\obj\Debug\net7.0-windows\Practica2_Alexis-Lopez-Briongos.genruntimeconfig.cache
 D:\DAM2T\DI\Practica2_Alexis-Lopez-Briongos\obj\Debug\net7.0-windows\ref\Practica2_Alexis-Lopez-Briongos.dll
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Practica2_Alexis-Lopez-Briongos\bin\Debug\net7.0-windows\Practica2_Alexis-Lopez-Briongos.exe
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Practica2_Alexis-Lopez-Briongos\bin\Debug\net7.0-windows\Practica2_Alexis-Lopez-Briongos.deps.json
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Practica2_Alexis-Lopez-Briongos\bin\Debug\net7.0-windows\Practica2_Alexis-Lopez-Briongos.runtimeconfig.json
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Practica2_Alexis-Lopez-Briongos\bin\Debug\net7.0-windows\Practica2_Alexis-Lopez-Briongos.dll
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Practica2_Alexis-Lopez-Briongos\bin\Debug\net7.0-windows\Practica2_Alexis-Lopez-Briongos.pdb
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Practica2_Alexis-Lopez-Briongos\obj\Debug\net7.0-windows\MainWindow.g.cs
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Practica2_Alexis-Lopez-Briongos\obj\Debug\net7.0-windows\App.g.cs
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Practica2_Alexis-Lopez-Briongos\obj\Debug\net7.0-windows\Practica2_Alexis-Lopez-Briongos_MarkupCompile.cache
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Practica2_Alexis-Lopez-Briongos\obj\Debug\net7.0-windows\Practica2_Alexis-Lopez-Briongos_MarkupCompile.lref
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Practica2_Alexis-Lopez-Briongos\obj\Debug\net7.0-windows\MainWindow.baml
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Practica2_Alexis-Lopez-Briongos\obj\Debug\net7.0-windows\Practica2_Alexis-Lopez-Briongos.g.resources
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Practica2_Alexis-Lopez-Briongos\obj\Debug\net7.0-windows\Practica2_Alexis-Lopez-Briongos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Practica2_Alexis-Lopez-Briongos\obj\Debug\net7.0-windows\Practica2_Alexis-Lopez-Briongos.AssemblyInfoInputs.cache
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Practica2_Alexis-Lopez-Briongos\obj\Debug\net7.0-windows\Practica2_Alexis-Lopez-Briongos.AssemblyInfo.cs
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Practica2_Alexis-Lopez-Briongos\obj\Debug\net7.0-windows\Practica2_Alexis-Lopez-Briongos.csproj.CoreCompileInputs.cache
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Practica2_Alexis-Lopez-Briongos\obj\Debug\net7.0-windows\Practica2_Alexis-Lopez-Briongos.dll
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Practica2_Alexis-Lopez-Briongos\obj\Debug\net7.0-windows\refint\Practica2_Alexis-Lopez-Briongos.dll
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Practica2_Alexis-Lopez-Briongos\obj\Debug\net7.0-windows\Practica2_Alexis-Lopez-Briongos.pdb
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Practica2_Alexis-Lopez-Briongos\obj\Debug\net7.0-windows\Practica2_Alexis-Lopez-Briongos.genruntimeconfig.cache
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Practica2_Alexis-Lopez-Briongos\obj\Debug\net7.0-windows\ref\Practica2_Alexis-Lopez-Briongos.dll
