@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "Practica2_Alexis-Lopez-Briongos/1.0.0": {
+        "runtime": {
+          "Practica2_Alexis-Lopez-Briongos.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Practica2_Alexis-Lopez-Briongos/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
