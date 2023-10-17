@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -99,5 +100,76 @@ namespace Practica2_Alexis_Lopez_Briongos
             textDNI.Text = "";
             textEmail.Text = "";
         }
+
+        private void buttonConfirm_Click(object sender, RoutedEventArgs e)
+        {
+            // comprobarCampos();
+
+            if (comprobarEmail(textEmail.Text))
+            {
+                textEmail.Foreground = new SolidColorBrush(Colors.Green);
+                textEmail.Text = "EL EMAIL ESTA CHIDO";
+            }
+            else
+            {
+                textEmail.Foreground = new SolidColorBrush(Colors.Red);
+                textEmail.Text = "EL EMAIL ES ERRONEO";
+            }
+            if (comprobarNombre(textNombre.Text))
+            {
+                textEmail.Foreground = new SolidColorBrush(Colors.Green);
+                textEmail.Text = "EL NOMBRE ESTA CHIDO";
+            }
+            else
+            {
+                textEmail.Foreground = new SolidColorBrush(Colors.Red);
+                textEmail.Text = "EL NOMBRE ES ERRONEO";
+            }
+
+
+           
+        }
+
+        private void comprobarCampos()
+        {
+           ;
+            comprobarApellidos();
+            comprobarDNI();
+            comprobarEdad();
+        }
+
+        private void comprobarEdad()
+        {
+            throw new NotImplementedException();
+        }
+
+        private bool comprobarEmail(String email)
+        {
+           
+            // Patrón de expresión regular para validar correos electrónicos
+            string patron = @"^[\w\.-]+@[\w\.-]+\.\w+$";
+
+            // Comprobar si el email coincide con el patrón
+            return Regex.IsMatch(email, patron);
+        }
+
+        private void comprobarDNI()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void comprobarApellidos()
+        {
+            throw new NotImplementedException();
+        }
+
+        private bool comprobarNombre(String nombre)
+        {
+            string patron = "\\D";
+
+            return Regex.IsMatch(nombre, patron);
+        }
+
+        
     }
 }

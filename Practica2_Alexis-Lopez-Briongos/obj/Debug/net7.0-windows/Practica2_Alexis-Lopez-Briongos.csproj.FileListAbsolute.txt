@@ -38,3 +38,5 @@ C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Practica2_Alexis-Lopez-Briongos\
 C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Practica2_Alexis-Lopez-Briongos\obj\Debug\net7.0-windows\Practica2_Alexis-Lopez-Briongos.pdb
 C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Practica2_Alexis-Lopez-Briongos\obj\Debug\net7.0-windows\Practica2_Alexis-Lopez-Briongos.genruntimeconfig.cache
 C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Practica2_Alexis-Lopez-Briongos\obj\Debug\net7.0-windows\ref\Practica2_Alexis-Lopez-Briongos.dll
+D:\DAM2T\DI\Practica2_Alexis-Lopez-Briongos\obj\Debug\net7.0-windows\Practica2_Alexis-Lopez-Briongos_Content.g.cs
+D:\DAM2T\DI\Practica2_Alexis-Lopez-Briongos\bin\Debug\net7.0-windows\Strings.xml

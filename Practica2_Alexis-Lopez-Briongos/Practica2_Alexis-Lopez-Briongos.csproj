@@ -10,6 +10,13 @@
 
   <ItemGroup>
     <None Remove="images\logoJC.png" />
+    <None Remove="Strings.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Strings.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
   <ItemGroup>

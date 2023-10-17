@@ -63,7 +63,7 @@
             </Setter>
         </Style>
     </Window.Resources>
-    <Grid MaxHeight="640" MaxWidth="800">
+    <Grid>
 
         <Rectangle Height="50" Width="auto" VerticalAlignment="top" >
             <Rectangle.Fill>
@@ -71,12 +71,21 @@
             </Rectangle.Fill>
         </Rectangle>
 
-        <TextBlock HorizontalAlignment="Left" FontSize="25" VerticalAlignment="Top" Margin="10 0 0 10">
+        <TextBlock>
+            <TextBlock.HorizontalAlignment>Left</TextBlock.HorizontalAlignment>
+            <TextBlock.FontSize>25</TextBlock.FontSize>
+            <TextBlock.VerticalAlignment>Top</TextBlock.VerticalAlignment>
+            <TextBlock.Margin>10 0 0 10</TextBlock.Margin>
             <TextBlock.Foreground>
                 <SolidColorBrush>#FFFFFF</SolidColorBrush>
             </TextBlock.Foreground>
             <TextBlock.Text>Registro</TextBlock.Text>
         </TextBlock>
+        <TextBox x:Name="textEmail" Foreground="Gray" HorizontalAlignment="Left" 
+         Margin="275,182,0,0" TextWrapping="Wrap" 
+         Text="Ej: JohnDoe@gmail.com" VerticalAlignment="Top" Width="250"
+         MouseDoubleClick="textEmail_MouseDoubleClick"
+         MouseLeave="textEmail_MouseLeave" FontSize="14" />
 
         <TextBox x:Name="textNombre" Foreground="Gray" Text="Ej: Roberto Joao" 
                  HorizontalAlignment="Left" Margin="275,244,0,0" TextWrapping="Wrap" 
@@ -99,40 +108,42 @@
                VerticalAlignment="Top" RenderTransformOrigin="0.56,0.079" 
                FontSize="16"/>
 
+
+        <Label  FontSize="16" Content="DNI" HorizontalAlignment="Left" 
+          Margin="278,333,0,0" VerticalAlignment="Top" 
+          RenderTransformOrigin="0.721,0.96"/>
+
+        <TextBox x:Name="textDNI" Foreground="Gray" Text="Ej: 12345678N" 
+           HorizontalAlignment="Left" Margin="278,369,0,0" TextWrapping="Wrap" 
+           VerticalAlignment="Top" Width="253" 
+           MouseDoubleClick="textDNI_MouseDoubleClick"
+           MouseLeave="textDNI_MouseLeave" FontSize="14" 
+             />
+
+
         <DatePicker x:Name="datePicker" Foreground="Gray" Margin="275,431,0,0"
-                     FontSize="14" Height="51" VerticalAlignment="Top" 
-                    HorizontalAlignment="Left" Width="253"/>
+               FontSize="14" Height="51" VerticalAlignment="Top" 
+              HorizontalAlignment="Left" Width="253"/>
 
         <Label  FontSize="16" Content="Fecha de nacimiento" 
                 HorizontalAlignment="Left" Margin="275,395,0,0" 
                 VerticalAlignment="Top"/>
 
-        <Label  FontSize="16" Content="DNI" HorizontalAlignment="Left" 
-                Margin="278,333,0,0" VerticalAlignment="Top" 
-                RenderTransformOrigin="0.721,0.96"/>
+      
 
-        <TextBox x:Name="textDNI" Foreground="Gray" Text="Ej: 12345678N" 
-                 HorizontalAlignment="Left" Margin="278,369,0,0" TextWrapping="Wrap" 
-                 VerticalAlignment="Top" Width="253" 
-                 MouseDoubleClick="textDNI_MouseDoubleClick"
-                 MouseLeave="textDNI_MouseLeave" FontSize="14"
-                   />
+      
 
         <Label Content="Dirección de correo electrónico" HorizontalAlignment="Left" 
                Margin="275,146,0,0" VerticalAlignment="Top" FontSize="16"/>
 
-        <TextBox x:Name="textEmail" Foreground="Gray" HorizontalAlignment="Left" 
-                 Margin="275,182,0,0" TextWrapping="Wrap" 
-                 Text="Ej: JohnDoe@gmail.com" VerticalAlignment="Top" Width="250"
-                 MouseDoubleClick="textEmail_MouseDoubleClick"
-                 MouseLeave="textEmail_MouseLeave" FontSize="14"/>
+        
 
         <Button Style="{DynamicResource RoundedButtonStyle}" x:Name="buttonConfirm" Content="Confirmar registro" HorizontalAlignment="Left" 
                 Margin="275,511,0,0" VerticalAlignment="Top" 
                 Height="48" Width="129"
                 FontSize="14"
                 Background="#FF336699"
-                Foreground="White"
+                Foreground="White" Click="buttonConfirm_Click"
                 />
 
 
