@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="images\exitIcon.png" />
     <None Remove="images\logoJC.png" />
     <None Remove="Strings.xml" />
   </ItemGroup>
@@ -20,6 +21,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="images\exitIcon.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="images\logoJC.png" />
   </ItemGroup>
 

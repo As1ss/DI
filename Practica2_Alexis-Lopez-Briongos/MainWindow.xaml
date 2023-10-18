@@ -164,6 +164,20 @@
                VerticalAlignment="Top" HorizontalAlignment="Left" 
                Width="212" />
 
+        <Button>
+            <Button.HorizontalAlignment>Right</Button.HorizontalAlignment>
+            <Button.VerticalAlignment>Top</Button.VerticalAlignment>
+            <Button.Margin>10,0,10,0</Button.Margin>
+            <Button.Background>Transparent</Button.Background>
+            <Button.BorderBrush>Transparent</Button.BorderBrush>
+            <StackPanel Orientation="Horizontal" >
+                <Image  Source="images/exitIcon.png" Height="30" Width="34"/>
+                <TextBlock FontSize="25" Text="Salir" Background="Transparent" 
+                         Foreground="White" />
+            </StackPanel>
+
+
+        </Button>
     </Grid>
 </Window>
 
