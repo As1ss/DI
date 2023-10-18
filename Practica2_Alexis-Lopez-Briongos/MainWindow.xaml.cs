@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -21,16 +22,20 @@ namespace Practica2_Alexis_Lopez_Briongos
     /// </summary>
     public partial class MainWindow : Window
     {
+        
+
         public MainWindow()
         {
             InitializeComponent();
         }
-
+        //Eventos de creación y borrado de los hints de los campos
+        #region
         private void textNombre_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             textNombre.Text = "";
             textNombre.Foreground = new SolidColorBrush(Colors.Black);
         }
+
         private void textNombre_MouseLeave(object sender, MouseEventArgs e)
         {
             if (textNombre.Text.Equals(""))
@@ -87,11 +92,12 @@ namespace Practica2_Alexis_Lopez_Briongos
                 textEmail.Foreground = new SolidColorBrush(Colors.Gray);
                 textEmail.Text = "Ej: JohnDoe@gmail.com";
             }
-
-
-
-
         }
+        #endregion
+
+
+
+
 
         private void cancelButton_Click(object sender, RoutedEventArgs e)
         {
@@ -99,77 +105,102 @@ namespace Practica2_Alexis_Lopez_Briongos
             textApellido.Text = "";
             textDNI.Text = "";
             textEmail.Text = "";
+            datePicker.Text = "";
         }
 
         private void buttonConfirm_Click(object sender, RoutedEventArgs e)
         {
-            // comprobarCampos();
-
-            if (comprobarEmail(textEmail.Text))
-            {
-                textEmail.Foreground = new SolidColorBrush(Colors.Green);
-                textEmail.Text = "EL EMAIL ESTA CHIDO";
-            }
-            else
-            {
-                textEmail.Foreground = new SolidColorBrush(Colors.Red);
-                textEmail.Text = "EL EMAIL ES ERRONEO";
-            }
-            if (comprobarNombre(textNombre.Text))
-            {
-                textEmail.Foreground = new SolidColorBrush(Colors.Green);
-                textEmail.Text = "EL NOMBRE ESTA CHIDO";
-            }
-            else
-            {
-                textEmail.Foreground = new SolidColorBrush(Colors.Red);
-                textEmail.Text = "EL NOMBRE ES ERRONEO";
-            }
-
-
-           
+            comprobarCampos();
         }
 
         private void comprobarCampos()
         {
-           ;
-            comprobarApellidos();
-            comprobarDNI();
-            comprobarEdad();
+            bool emailValido = comprobarEmail(textEmail.Text);
+            bool nombreValido = comprobarNombre(textNombre.Text);
+            bool apellidosValido = comprobarApellidos(textApellido.Text);
+            bool dniValido = comprobarDNI(textDNI.Text);
+            bool edadValido = comprobarEdad(datePicker.Text);
+
+            
+            if (!emailValido)
+            {
+                textEmail.Foreground = new SolidColorBrush(Colors.Red);
+                textEmail.Text = "EL EMAIL ES ERRONEO";
+            }
+            if (!nombreValido)
+            {
+                textNombre.Foreground = new SolidColorBrush(Colors.Red);
+                textNombre.Text = "EL NOMBRE ES ERRONEO";
+            }
+            if (!apellidosValido)
+            {
+                textApellido.Foreground = new SolidColorBrush(Colors.Red);
+                textApellido.Text = "EL APELLIDO ES ERRONEO";
+            }
+            
+
+            if (!dniValido)
+            {
+                textDNI.Foreground = new SolidColorBrush(Colors.Red);
+                textDNI.Text = "EL DNI ES ERRONEO";
+            }
+         
+            if (!edadValido)
+            {
+                MessageBox.Show("Fecha erronea");
+            }
+           
+
+
+
         }
 
-        private void comprobarEdad()
+        //Métodos de validación de los valores introducidos por el usuario en los campos
+        #region
+        private bool comprobarEdad(String fecha)
         {
-            throw new NotImplementedException();
+            string patron = @"^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/\d{4}$";
+            return Regex.IsMatch(fecha, patron);
         }
 
         private bool comprobarEmail(String email)
         {
            
-            // Patrón de expresión regular para validar correos electrónicos
+            // Patrón para validar correos electrónicos
             string patron = @"^[\w\.-]+@[\w\.-]+\.\w+$";
 
             // Comprobar si el email coincide con el patrón
             return Regex.IsMatch(email, patron);
         }
 
-        private void comprobarDNI()
+        private bool comprobarDNI(String dni)
         {
-            throw new NotImplementedException();
+            // Patrón para validar dni
+            string patron = @"^\d{8}[A-Za-z]$";
+
+            // Comprobar si el email coincide con el patrón
+            return Regex.IsMatch(dni, patron);
         }
 
-        private void comprobarApellidos()
+        private bool comprobarApellidos(String apellidos)
         {
-            throw new NotImplementedException();
+            //Patrón para validar los apellidos
+            string patron = "^[^0-9\\-_:]*$";
+
+            //Comprobar si los apellidos coinciden con el patrón
+            return Regex.IsMatch(apellidos, patron);
         }
 
         private bool comprobarNombre(String nombre)
         {
-            string patron = "\\D";
+            //Patrón para validar nombre
+            string patron = "^[^0-9\\-_:]*$";
 
+            //Comprobar si el nombre coincide con el patrón
             return Regex.IsMatch(nombre, patron);
         }
+        #endregion
 
-        
+
     }
 }

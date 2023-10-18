@@ -123,7 +123,7 @@
 
         <DatePicker x:Name="datePicker" Foreground="Gray" Margin="275,431,0,0"
                FontSize="14" Height="51" VerticalAlignment="Top" 
-              HorizontalAlignment="Left" Width="253"/>
+              HorizontalAlignment="Left" Width="253" />
 
         <Label  FontSize="16" Content="Fecha de nacimiento" 
                 HorizontalAlignment="Left" Margin="275,395,0,0" 
