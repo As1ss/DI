@@ -164,7 +164,8 @@
                VerticalAlignment="Top" HorizontalAlignment="Left" 
                Width="212" />
 
-        <Button>
+        <Button x:Name="btnSalir" Click="btnSalir_Click">
+            
             <Button.HorizontalAlignment>Right</Button.HorizontalAlignment>
             <Button.VerticalAlignment>Top</Button.VerticalAlignment>
             <Button.Margin>10,0,10,0</Button.Margin>

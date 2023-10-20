@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -27,7 +28,12 @@ namespace Practica2_Alexis_Lopez_Briongos
         public MainWindow()
         {
             InitializeComponent();
+          
         }
+
+      
+
+        
         //Eventos de creación y borrado de los hints de los campos
         #region
         private void textNombre_MouseDoubleClick(object sender, MouseButtonEventArgs e)
@@ -120,6 +126,17 @@ namespace Practica2_Alexis_Lopez_Briongos
             bool apellidosValido = comprobarApellidos(textApellido.Text);
             bool dniValido = comprobarDNI(textDNI.Text);
             bool edadValido = comprobarEdad(datePicker.Text);
+            List<Boolean> formValido = new List<Boolean>();
+            formValido.Add(emailValido);
+            formValido.Add(nombreValido);
+            formValido.Add(apellidosValido);
+            formValido.Add(dniValido);
+            formValido.Add(edadValido);
+
+            if (formValido.All(valor => valor == true))
+            {
+                MessageBox.Show("REGISTRO COMPLETADO");
+            }
 
             
             if (!emailValido)
@@ -199,8 +216,18 @@ namespace Practica2_Alexis_Lopez_Briongos
             //Comprobar si el nombre coincide con el patrón
             return Regex.IsMatch(nombre, patron);
         }
+
         #endregion
 
+        private void btnSalir_Click(object sender, RoutedEventArgs e)
+        {
 
+            if (MessageBox.Show("¿Estás seguro de que deseas salir?", "Confirmación", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+            {
+                Close();
+            }
+        }
+
+       
     }
 }

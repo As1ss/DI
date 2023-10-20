@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\As1ss\\Desktop\\COSAS CLASE KEK\\DAM2T\\DI\\Practica2_Alexis-Lopez-Briongos\\Practica2_Alexis-Lopez-Briongos.csproj": {}
+    "D:\\DAM2T\\DI\\Practica2_Alexis-Lopez-Briongos\\Practica2_Alexis-Lopez-Briongos.csproj": {}
   },
   "projects": {
-    "C:\\Users\\As1ss\\Desktop\\COSAS CLASE KEK\\DAM2T\\DI\\Practica2_Alexis-Lopez-Briongos\\Practica2_Alexis-Lopez-Briongos.csproj": {
+    "D:\\DAM2T\\DI\\Practica2_Alexis-Lopez-Briongos\\Practica2_Alexis-Lopez-Briongos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\As1ss\\Desktop\\COSAS CLASE KEK\\DAM2T\\DI\\Practica2_Alexis-Lopez-Briongos\\Practica2_Alexis-Lopez-Briongos.csproj",
+        "projectUniqueName": "D:\\DAM2T\\DI\\Practica2_Alexis-Lopez-Briongos\\Practica2_Alexis-Lopez-Briongos.csproj",
         "projectName": "Practica2_Alexis-Lopez-Briongos",
-        "projectPath": "C:\\Users\\As1ss\\Desktop\\COSAS CLASE KEK\\DAM2T\\DI\\Practica2_Alexis-Lopez-Briongos\\Practica2_Alexis-Lopez-Briongos.csproj",
-        "packagesPath": "C:\\Users\\As1ss\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\As1ss\\Desktop\\COSAS CLASE KEK\\DAM2T\\DI\\Practica2_Alexis-Lopez-Briongos\\obj\\",
+        "projectPath": "D:\\DAM2T\\DI\\Practica2_Alexis-Lopez-Briongos\\Practica2_Alexis-Lopez-Briongos.csproj",
+        "packagesPath": "C:\\Users\\dam2t05\\.nuget\\packages\\",
+        "outputPath": "D:\\DAM2T\\DI\\Practica2_Alexis-Lopez-Briongos\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\As1ss\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\dam2t05\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -58,7 +58,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }
