@@ -29,11 +29,16 @@ namespace Practica2_Alexis_Lopez_Briongos
         {
             InitializeComponent();
           
+
         }
 
       
 
-        
+
+
+
+
+
         //Eventos de creación y borrado de los hints de los campos
         #region
         private void textNombre_MouseDoubleClick(object sender, MouseButtonEventArgs e)
@@ -219,7 +224,7 @@ namespace Practica2_Alexis_Lopez_Briongos
 
         #endregion
 
-        private void btnSalir_Click(object sender, RoutedEventArgs e)
+        private void btnSalir_Click(object sender)
         {
 
             if (MessageBox.Show("¿Estás seguro de que deseas salir?", "Confirmación", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
