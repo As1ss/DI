@@ -134,8 +134,16 @@ namespace Practica2_Alexis_Lopez_Briongos
             if (formValido.All(valor => valor == true))
             {
                
-                MessageBox.Show("REGISTRO COMPLETADO");
+              
                 guardarForm();
+                VentanaResultado ventanaResultado = new VentanaResultado();
+                ventanaResultado.textNombre.Text = this.textNombre.Text;
+                ventanaResultado.textApellido.Text = this.textApellido.Text;
+                ventanaResultado.textEmail.Text = this.textEmail.Text;
+                ventanaResultado.textDNI.Text = this.textDNI.Text;
+                ventanaResultado.datePicker.Text = this.datePicker.Text;
+                ventanaResultado.Show();
+                this.Hide();
             }
 
             

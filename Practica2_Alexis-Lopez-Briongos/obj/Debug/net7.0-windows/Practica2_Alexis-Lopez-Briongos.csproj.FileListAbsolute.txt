@@ -42,3 +42,5 @@ D:\DAM2T\DI\Practica2_Alexis-Lopez-Briongos\obj\Debug\net7.0-windows\Practica2_A
 D:\DAM2T\DI\Practica2_Alexis-Lopez-Briongos\bin\Debug\net7.0-windows\Strings.xml
 C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Practica2_Alexis-Lopez-Briongos\bin\Debug\net7.0-windows\Strings.xml
 C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Practica2_Alexis-Lopez-Briongos\obj\Debug\net7.0-windows\Practica2_Alexis-Lopez-Briongos_Content.g.cs
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Practica2_Alexis-Lopez-Briongos\obj\Debug\net7.0-windows\VentanaResultado.g.cs
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Practica2_Alexis-Lopez-Briongos\obj\Debug\net7.0-windows\VentanaResultado.baml
