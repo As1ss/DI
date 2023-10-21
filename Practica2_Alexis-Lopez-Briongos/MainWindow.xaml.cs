@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Windows;
@@ -131,7 +133,9 @@ namespace Practica2_Alexis_Lopez_Briongos
 
             if (formValido.All(valor => valor == true))
             {
+               
                 MessageBox.Show("REGISTRO COMPLETADO");
+                guardarForm();
             }
 
             
@@ -166,6 +170,18 @@ namespace Practica2_Alexis_Lopez_Briongos
 
 
 
+        }
+
+        private void guardarForm()
+        {
+            //El archivo se guarda en Practica2_Alexis-Lopez-Briongos\bin\Debug\net7.0-windows
+            TextWriter writer = new StreamWriter("Form.txt");
+            writer.WriteLine($"Nombre: {textNombre.Text}");
+            writer.WriteLine($"Apellidos: {textApellido.Text}");
+            writer.WriteLine($"Email: {textEmail.Text}");
+            writer.WriteLine($"DNI: {textDNI.Text}");
+            writer.WriteLine($"Fecha de nacimiento: {datePicker.Text}");
+            writer.Close();
         }
 
         //Métodos de validación de los valores introducidos por el usuario en los campos
@@ -218,9 +234,17 @@ namespace Practica2_Alexis_Lopez_Briongos
       
         private void btnSalir_Click(object sender, RoutedEventArgs e)
         {
+            Close();
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
             if (MessageBox.Show("¿Estás seguro de que deseas salir?", "Confirmación", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
             {
-                Close();
+                
+            }
+            else{
+                e.Cancel = true;
             }
         }
     }
