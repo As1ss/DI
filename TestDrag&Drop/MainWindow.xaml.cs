@@ -20,15 +20,26 @@ namespace TestDrag_Drop
     /// </summary>
     public partial class MainWindow : Window
     {
+        static bool isRedSelected;
+        static bool isBlueSelected;
+        static Point rPosition;
+        static Point bPosition;
         public MainWindow()
         {
             InitializeComponent();
+            isRedSelected = false;
         }
 
         private void RedRectangle_MouseMove(object sender, MouseEventArgs e)
         {
+            
             if(e.LeftButton== MouseButtonState.Pressed)
             {
+                rPosition = e.GetPosition(canvas);
+                Canvas.SetTop(redRectangle, rPosition.Y);
+                Canvas.SetLeft(redRectangle, rPosition.X);
+                isBlueSelected = false;
+                isRedSelected = true;
                 DragDrop.DoDragDrop(redRectangle,redRectangle, DragDropEffects.Move);
             }
             
@@ -36,18 +47,47 @@ namespace TestDrag_Drop
 
         private void canvas_Drop(object sender, DragEventArgs e)
         {
-            Point position = e.GetPosition(canvas);
-            Canvas.SetTop(redRectangle,position.Y);
-            Canvas.SetLeft(redRectangle,position.X);
+            if (isRedSelected)
+            {
+                rPosition = e.GetPosition(canvas);
+                Canvas.SetTop(redRectangle, rPosition.Y);
+                Canvas.SetLeft(redRectangle, rPosition.X);
+            }
+            if (isBlueSelected)
+            {
+                bPosition = e.GetPosition(canvas);
+                Canvas.SetTop(blueRectangle, bPosition.Y);
+                Canvas.SetLeft(blueRectangle, bPosition.X);
+            }
         }
 
         private void canvas_DragOver(object sender, DragEventArgs e)
         {
-            Point position = e.GetPosition(canvas);
+            if (isRedSelected)
+            {
+                rPosition = e.GetPosition(canvas);
+                Canvas.SetTop(redRectangle, rPosition.Y);
+                Canvas.SetLeft(redRectangle, rPosition.X);
+            }
+            if (isBlueSelected)
+            {
+                bPosition = e.GetPosition(canvas);
+                Canvas.SetTop(blueRectangle, bPosition.Y);
+                Canvas.SetLeft(blueRectangle, bPosition.X);
+            }
+        }
 
-          
-            Canvas.SetTop(redRectangle,position.Y);
-            Canvas.SetLeft(redRectangle,position.X);
+        private void blueRectangle_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.LeftButton == MouseButtonState.Pressed)
+            {
+                bPosition = e.GetPosition(canvas);
+                Canvas.SetTop(blueRectangle, bPosition.Y);
+                Canvas.SetLeft(blueRectangle, bPosition.X);
+                isRedSelected = false;
+                isBlueSelected = true;
+                DragDrop.DoDragDrop(blueRectangle, blueRectangle, DragDropEffects.Move);
+            }
         }
     }
 }

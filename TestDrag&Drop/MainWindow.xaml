@@ -19,7 +19,16 @@
                 Width="50"
                 Height="50"
                 MouseMove="RedRectangle_MouseMove"/>
-           
+            <Rectangle Name="blueRectangle"
+                       Fill="Blue"
+                       Canvas.Left="500"
+                       Canvas.Right="50"
+                       Canvas.Top="50"
+                       Canvas.Bottom="50"
+                       Width="50"
+                       Height="50"
+                       MouseMove="blueRectangle_MouseMove"/>
+
         </Canvas>
     </Border>
 </Window>

@@ -18,3 +18,23 @@ C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\TestDrag&Drop\obj\Debug\net7.0-w
 C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\TestDrag&Drop\obj\Debug\net7.0-windows\TestDrag&Drop.pdb
 C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\TestDrag&Drop\obj\Debug\net7.0-windows\TestDrag&Drop.genruntimeconfig.cache
 C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\TestDrag&Drop\obj\Debug\net7.0-windows\ref\TestDrag&Drop.dll
+D:\DAM2T\DI\TestDrag&Drop\bin\Debug\net7.0-windows\TestDrag&Drop.exe
+D:\DAM2T\DI\TestDrag&Drop\bin\Debug\net7.0-windows\TestDrag&Drop.deps.json
+D:\DAM2T\DI\TestDrag&Drop\bin\Debug\net7.0-windows\TestDrag&Drop.runtimeconfig.json
+D:\DAM2T\DI\TestDrag&Drop\bin\Debug\net7.0-windows\TestDrag&Drop.dll
+D:\DAM2T\DI\TestDrag&Drop\bin\Debug\net7.0-windows\TestDrag&Drop.pdb
+D:\DAM2T\DI\TestDrag&Drop\obj\Debug\net7.0-windows\MainWindow.g.cs
+D:\DAM2T\DI\TestDrag&Drop\obj\Debug\net7.0-windows\App.g.cs
+D:\DAM2T\DI\TestDrag&Drop\obj\Debug\net7.0-windows\TestDrag&Drop_MarkupCompile.cache
+D:\DAM2T\DI\TestDrag&Drop\obj\Debug\net7.0-windows\TestDrag&Drop_MarkupCompile.lref
+D:\DAM2T\DI\TestDrag&Drop\obj\Debug\net7.0-windows\MainWindow.baml
+D:\DAM2T\DI\TestDrag&Drop\obj\Debug\net7.0-windows\TestDrag&Drop.g.resources
+D:\DAM2T\DI\TestDrag&Drop\obj\Debug\net7.0-windows\TestDrag&Drop.GeneratedMSBuildEditorConfig.editorconfig
+D:\DAM2T\DI\TestDrag&Drop\obj\Debug\net7.0-windows\TestDrag&Drop.AssemblyInfoInputs.cache
+D:\DAM2T\DI\TestDrag&Drop\obj\Debug\net7.0-windows\TestDrag&Drop.AssemblyInfo.cs
+D:\DAM2T\DI\TestDrag&Drop\obj\Debug\net7.0-windows\TestDrag&Drop.csproj.CoreCompileInputs.cache
+D:\DAM2T\DI\TestDrag&Drop\obj\Debug\net7.0-windows\TestDrag&Drop.dll
+D:\DAM2T\DI\TestDrag&Drop\obj\Debug\net7.0-windows\refint\TestDrag&Drop.dll
+D:\DAM2T\DI\TestDrag&Drop\obj\Debug\net7.0-windows\TestDrag&Drop.pdb
+D:\DAM2T\DI\TestDrag&Drop\obj\Debug\net7.0-windows\TestDrag&Drop.genruntimeconfig.cache
+D:\DAM2T\DI\TestDrag&Drop\obj\Debug\net7.0-windows\ref\TestDrag&Drop.dll
