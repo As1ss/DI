@@ -21,3 +21,28 @@ D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\ref\Proyecto_1EVA_ALB.dll
 D:\DAM2T\DI\Proyecto_1EVA_ALB\bin\Debug\net7.0-windows\images\hammer_wrench.png
 D:\DAM2T\DI\Proyecto_1EVA_ALB\bin\Debug\net7.0-windows\images\pc_icon.png
 D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\Proyecto_1EVA_ALB_Content.g.cs
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\bin\Debug\net7.0-windows\images\hammer_wrench.png
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\bin\Debug\net7.0-windows\images\pc_icon.png
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\bin\Debug\net7.0-windows\Proyecto_1EVA_ALB.exe
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\bin\Debug\net7.0-windows\Proyecto_1EVA_ALB.deps.json
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\bin\Debug\net7.0-windows\Proyecto_1EVA_ALB.runtimeconfig.json
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\bin\Debug\net7.0-windows\Proyecto_1EVA_ALB.dll
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\bin\Debug\net7.0-windows\Proyecto_1EVA_ALB.pdb
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\MainWindow.g.cs
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\Settings.g.cs
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\App.g.cs
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\Proyecto_1EVA_ALB_Content.g.cs
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\Proyecto_1EVA_ALB_MarkupCompile.cache
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\Proyecto_1EVA_ALB_MarkupCompile.lref
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\MainWindow.baml
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\Settings.baml
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\Proyecto_1EVA_ALB.g.resources
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\Proyecto_1EVA_ALB.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\Proyecto_1EVA_ALB.AssemblyInfoInputs.cache
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\Proyecto_1EVA_ALB.AssemblyInfo.cs
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\Proyecto_1EVA_ALB.csproj.CoreCompileInputs.cache
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\Proyecto_1EVA_ALB.dll
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\refint\Proyecto_1EVA_ALB.dll
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\Proyecto_1EVA_ALB.pdb
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\Proyecto_1EVA_ALB.genruntimeconfig.cache
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\ref\Proyecto_1EVA_ALB.dll
