@@ -27,7 +27,8 @@
                        Canvas.Bottom="50"
                        Width="50"
                        Height="50"
-                       MouseMove="blueRectangle_MouseMove"/>
+                       MouseMove="blueRectangle_MouseMove"
+                       />
 
         </Canvas>
     </Border>

@@ -36,9 +36,27 @@ namespace TestDrag_Drop
             if (rPosition.X < bPosition.X + blueRectangle.Width &&
                 rPosition.X + redRectangle.Width > bPosition.X &&
                 rPosition.Y < bPosition.Y + blueRectangle.Height &&
-                rPosition.Y + redRectangle.Height > bPosition.Y)
+                rPosition.Y + redRectangle.Height > bPosition.Y && isBlueSelected)
             {
-                MessageBox.Show("Colisión");
+                redRectangle.Stroke = Brushes.Lime;
+                redRectangle.StrokeThickness = 5;
+            }
+            else
+            {
+                redRectangle.Stroke = Brushes.Transparent;
+
+            }
+            if (rPosition.X < bPosition.X + blueRectangle.Width &&
+               rPosition.X + redRectangle.Width > bPosition.X &&
+               rPosition.Y < bPosition.Y + blueRectangle.Height &&
+               rPosition.Y + redRectangle.Height > bPosition.Y && isRedSelected)
+            {
+                blueRectangle.Stroke = Brushes.Lime;
+                blueRectangle.StrokeThickness = 5;
+            }
+            else
+            {
+                blueRectangle.Stroke = Brushes.Transparent;
             }
         }
 
@@ -47,6 +65,7 @@ namespace TestDrag_Drop
             
             if(e.LeftButton== MouseButtonState.Pressed)
             {
+               
                 rPosition = e.GetPosition(canvas);
                 Canvas.SetTop(redRectangle, rPosition.Y);
                 Canvas.SetLeft(redRectangle, rPosition.X);
@@ -54,6 +73,12 @@ namespace TestDrag_Drop
                 isRedSelected = true;
                 DragDrop.DoDragDrop(redRectangle,redRectangle, DragDropEffects.Move);
                 isColliding();
+            }
+
+            if (e.LeftButton== MouseButtonState.Released)
+            {
+                redRectangle.Stroke = Brushes.Transparent;
+
             }
             
         }
@@ -65,12 +90,14 @@ namespace TestDrag_Drop
                 rPosition = e.GetPosition(canvas);
                 Canvas.SetTop(redRectangle, rPosition.Y);
                 Canvas.SetLeft(redRectangle, rPosition.X);
+                
             }
             if (isBlueSelected)
             {
                 bPosition = e.GetPosition(canvas);
                 Canvas.SetTop(blueRectangle, bPosition.Y);
                 Canvas.SetLeft(blueRectangle, bPosition.X);
+
             }
         }
 
@@ -81,12 +108,14 @@ namespace TestDrag_Drop
                 rPosition = e.GetPosition(canvas);
                 Canvas.SetTop(redRectangle, rPosition.Y);
                 Canvas.SetLeft(redRectangle, rPosition.X);
+                isColliding();
             }
             if (isBlueSelected)
             {
                 bPosition = e.GetPosition(canvas);
                 Canvas.SetTop(blueRectangle, bPosition.Y);
                 Canvas.SetLeft(blueRectangle, bPosition.X);
+                isColliding();
             }
         }
 
@@ -102,6 +131,19 @@ namespace TestDrag_Drop
                 DragDrop.DoDragDrop(blueRectangle, blueRectangle, DragDropEffects.Move);
                 isColliding();
             }
+        }
+
+        private void redRectangle_MouseEnter(object sender, MouseEventArgs e)
+        {
+            if (isBlueSelected)
+            {
+
+            }
+        }
+
+        private void redRectangle_MouseLeave(object sender, MouseEventArgs e)
+        {
+
         }
     }
 }
