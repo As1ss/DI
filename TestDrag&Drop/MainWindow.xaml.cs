@@ -27,7 +27,19 @@ namespace TestDrag_Drop
         public MainWindow()
         {
             InitializeComponent();
-            isRedSelected = false;
+            rPosition = new Point(Canvas.GetLeft(redRectangle), Canvas.GetTop(redRectangle));
+            bPosition = new Point(Canvas.GetLeft(blueRectangle),Canvas.GetTop(blueRectangle));
+        }
+
+        private void isColliding()
+        {
+            if (rPosition.X < bPosition.X + blueRectangle.Width &&
+                rPosition.X + redRectangle.Width > bPosition.X &&
+                rPosition.Y < bPosition.Y + blueRectangle.Height &&
+                rPosition.Y + redRectangle.Height > bPosition.Y)
+            {
+                MessageBox.Show("Colisión");
+            }
         }
 
         private void RedRectangle_MouseMove(object sender, MouseEventArgs e)
@@ -41,6 +53,7 @@ namespace TestDrag_Drop
                 isBlueSelected = false;
                 isRedSelected = true;
                 DragDrop.DoDragDrop(redRectangle,redRectangle, DragDropEffects.Move);
+                isColliding();
             }
             
         }
@@ -87,6 +100,7 @@ namespace TestDrag_Drop
                 isRedSelected = false;
                 isBlueSelected = true;
                 DragDrop.DoDragDrop(blueRectangle, blueRectangle, DragDropEffects.Move);
+                isColliding();
             }
         }
     }

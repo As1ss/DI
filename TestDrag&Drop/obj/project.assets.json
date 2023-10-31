@@ -8,19 +8,19 @@
     "net7.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\dam2t05\\.nuget\\packages\\": {}
+    "C:\\Users\\As1ss\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\DAM2T\\DI\\TestDrag&Drop\\TestDrag&Drop.csproj",
+      "projectUniqueName": "C:\\Users\\As1ss\\Desktop\\COSAS CLASE KEK\\DAM2T\\DI\\TestDrag&Drop\\TestDrag&Drop.csproj",
       "projectName": "TestDrag&Drop",
-      "projectPath": "D:\\DAM2T\\DI\\TestDrag&Drop\\TestDrag&Drop.csproj",
-      "packagesPath": "C:\\Users\\dam2t05\\.nuget\\packages\\",
-      "outputPath": "D:\\DAM2T\\DI\\TestDrag&Drop\\obj\\",
+      "projectPath": "C:\\Users\\As1ss\\Desktop\\COSAS CLASE KEK\\DAM2T\\DI\\TestDrag&Drop\\TestDrag&Drop.csproj",
+      "packagesPath": "C:\\Users\\As1ss\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\As1ss\\Desktop\\COSAS CLASE KEK\\DAM2T\\DI\\TestDrag&Drop\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\dam2t05\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\As1ss\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
