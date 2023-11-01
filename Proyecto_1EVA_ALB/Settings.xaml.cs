@@ -19,34 +19,35 @@ namespace Proyecto_1EVA_ALB
     /// </summary>
     public partial class Settings : Window
     {
-        private MainWindow mainWindow;
-      
-        public Settings(MainWindow mainWindow)
+       
+        private Principal principal;
+
+        public Settings(Principal principal)
         {
             InitializeComponent();
-            this.mainWindow = mainWindow;
+            this.principal = principal;
+            
         }
 
-       
 
         private void btnAceptar_Click(object sender, RoutedEventArgs e)
         {
             if (opcFacil.IsSelected)
             {
-                mainWindow.modoFacil = true;
-                mainWindow.modoMedio = false;
-                mainWindow.modoDios = false;
+                principal.modoFacil = true;
+                principal.modoMedio = false;
+                principal.modoDios = false;
             }
             if (opcMedio.IsSelected) {
-                mainWindow.modoFacil = false;
-                mainWindow.modoMedio = true;
-                mainWindow.modoDios = false;
+                principal.modoFacil = false;
+                principal.modoMedio = true;
+                principal.modoDios = false;
             }
             if (opcModoDios.IsSelected)
             {
-                mainWindow.modoFacil = false;
-                mainWindow.modoMedio = false;
-                mainWindow.modoDios = true;
+                principal.modoFacil = false;
+                principal.modoMedio = false;
+                principal.modoDios = true;
             }
 
             this.Close();

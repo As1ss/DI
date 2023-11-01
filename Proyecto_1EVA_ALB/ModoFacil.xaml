@@ -1,0 +1,72 @@
+﻿<Page x:Class="Proyecto_1EVA_ALB.ModoFacil"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Proyecto_1EVA_ALB"
+      mc:Ignorable="d" 
+      d:DesignHeight="720" d:DesignWidth="1280"
+      Title="ModoFacil">
+
+    <Canvas Background="White">
+        <Label FontSize="25" FontFamily="Comic Sans MS">Facil</Label>
+        <Rectangle StrokeThickness="3" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" VerticalAlignment="Center">
+            <Rectangle.Stroke>Black</Rectangle.Stroke>
+            <Canvas.Top>10</Canvas.Top>
+            <Canvas.Left>9</Canvas.Left>
+            <Rectangle.Height>694</Rectangle.Height>
+            <Rectangle.Width>882</Rectangle.Width>
+        </Rectangle>
+        <Rectangle x:Name="rectProc"
+            StrokeThickness="2" Canvas.Left="65" Canvas.Top="49" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Rectangle.Stroke>Black</Rectangle.Stroke>
+            <Rectangle.Height>266</Rectangle.Height>
+            <Rectangle.Width>298</Rectangle.Width>
+        </Rectangle>
+        <Rectangle x:Name="rectHDD" StrokeThickness="2" Canvas.Left="65" Canvas.Top="380" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <Rectangle.Stroke>Black</Rectangle.Stroke>
+            <Rectangle.Height>86</Rectangle.Height>
+            <Rectangle.Width>448</Rectangle.Width>
+        </Rectangle>
+        <Rectangle x:Name="rectPower" StrokeThickness="2" Canvas.Left="65" Canvas.Top="509" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <Rectangle.Stroke>Black</Rectangle.Stroke>
+            <Rectangle.Height>170</Rectangle.Height>
+            <Rectangle.Width>326</Rectangle.Width>
+        </Rectangle>
+        <Rectangle x:Name="rectRam1" StrokeThickness="2" Canvas.Left="585" Canvas.Top="49" HorizontalAlignment="Left" VerticalAlignment="Center">
+            <Rectangle.Stroke>Black</Rectangle.Stroke>
+            <Rectangle.Height>512</Rectangle.Height>
+            <Rectangle.Width>110</Rectangle.Width>
+        </Rectangle>
+        <Rectangle x:Name="rectRam2" StrokeThickness="2" Canvas.Left="741" Canvas.Top="49" HorizontalAlignment="Left" VerticalAlignment="Center">
+            <Rectangle.Stroke>Black</Rectangle.Stroke>
+            <Rectangle.Height>512</Rectangle.Height>
+            <Rectangle.Width>110</Rectangle.Width>
+        </Rectangle>
+        <Rectangle x:Name="imgProc" StrokeThickness="2" Canvas.Left="1040" Canvas.Top="22" HorizontalAlignment="Left" VerticalAlignment="Center">
+            <Rectangle.Stroke>Black</Rectangle.Stroke>
+            <Rectangle.Height>120</Rectangle.Height>
+            <Rectangle.Width>120</Rectangle.Width>
+        </Rectangle>
+        <Rectangle x:Name="imgHDD" StrokeThickness="2" Canvas.Left="955" Canvas.Top="182" HorizontalAlignment="Left" VerticalAlignment="Center">
+            <Rectangle.Stroke>Black</Rectangle.Stroke>
+            <Rectangle.Height>72</Rectangle.Height>
+            <Rectangle.Width>290</Rectangle.Width>
+        </Rectangle>
+        <Rectangle x:Name="imgPower" StrokeThickness="2" Canvas.Left="1018" Canvas.Top="305" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <Rectangle.Stroke>Black</Rectangle.Stroke>
+            <Rectangle.Height>93</Rectangle.Height>
+            <Rectangle.Width>164</Rectangle.Width>
+        </Rectangle>
+        <Rectangle x:Name="imgRam1" StrokeThickness="2" Canvas.Left="986" Canvas.Top="444" HorizontalAlignment="Left" VerticalAlignment="Center">
+            <Rectangle.Stroke>Black</Rectangle.Stroke>
+            <Rectangle.Height>260</Rectangle.Height>
+            <Rectangle.Width>88</Rectangle.Width>
+        </Rectangle>
+        <Rectangle x:Name="imgRam2" StrokeThickness="2" Canvas.Left="1126" Canvas.Top="444" HorizontalAlignment="Left" VerticalAlignment="Center">
+            <Rectangle.Stroke>Black</Rectangle.Stroke>
+            <Rectangle.Height>260</Rectangle.Height>
+            <Rectangle.Width>88</Rectangle.Width>
+        </Rectangle>
+    </Canvas>
+</Page>

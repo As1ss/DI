@@ -46,3 +46,11 @@ C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7
 C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\Proyecto_1EVA_ALB.pdb
 C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\Proyecto_1EVA_ALB.genruntimeconfig.cache
 C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\ref\Proyecto_1EVA_ALB.dll
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\ModoDios.g.cs
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\ModoFacil.g.cs
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\ModoMedio.g.cs
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\ModoDios.baml
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\ModoFacil.baml
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\ModoMedio.baml
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\Principal.g.cs
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\Principal.baml
