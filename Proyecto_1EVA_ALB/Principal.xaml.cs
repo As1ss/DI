@@ -27,8 +27,8 @@ namespace Proyecto_1EVA_ALB
         public Principal(MainWindow window)
         {
             this.window = window;   
-            
             InitializeComponent();
+            modoFacil = true;
         }
         private void btnJugar_Click(object sender, RoutedEventArgs e)
         {
