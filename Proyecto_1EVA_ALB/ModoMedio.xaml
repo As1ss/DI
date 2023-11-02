@@ -10,5 +10,29 @@
 
     <Canvas Background="White">
         <Label FontFamily="Comic Sans MS" FontSize="25">Medio</Label>
+        <Grid Width="389" Height="369" VerticalAlignment="Top"
+              HorizontalAlignment="Left" Canvas.Left="27" Canvas.Top="45">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <!-- Celdas del Grid -->
+            <Rectangle Grid.Row="0" Grid.Column="0" Fill="Red" />
+            <Rectangle Grid.Row="0" Grid.Column="1" Fill="Green" />
+            <Rectangle Grid.Row="0" Grid.Column="2" Fill="Blue" />
+            <Rectangle Grid.Row="1" Grid.Column="0" Fill="Yellow" />
+            <Rectangle Grid.Row="1" Grid.Column="1" Fill="Orange" />
+            <Rectangle Grid.Row="1" Grid.Column="2" Fill="Purple" />
+            <Rectangle Grid.Row="2" Grid.Column="0" Fill="Cyan" />
+            <Rectangle Grid.Row="2" Grid.Column="1" Fill="Magenta" />
+            <Rectangle Grid.Row="2" Grid.Column="2" Fill="Pink" />
+        </Grid>
     </Canvas>
 </Page>
