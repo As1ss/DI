@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Media.Media3D;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace Proyecto_1EVA_ALB
 {
@@ -30,6 +31,9 @@ namespace Proyecto_1EVA_ALB
         Point rectRam2Position;
         Point rectPowerPosition;
         bool imgProcSelected;
+        DispatcherTimer timer;
+        static int posX, posY;
+
         public ModoFacil(MainWindow window)
         {
             InitializeComponent();
@@ -41,9 +45,31 @@ namespace Proyecto_1EVA_ALB
             rectPowerPosition = new Point(Canvas.GetLeft(rectPower), Canvas.GetTop(rectPower));
             rectRam1Position = new Point(Canvas.GetLeft(rectRam1), Canvas.GetTop(rectRam1));
             rectRam2Position = new Point(Canvas.GetLeft(rectRam2), Canvas.GetTop(rectRam2));
+            rectProc.Fill = Brushes.Brown;
+            posX = 20;
+            posY = 20;
+            timer = new DispatcherTimer();
+            
+            timer.Tick += Timer_Tick;
+            timer.Interval = TimeSpan.FromSeconds(5);
+
+            timer.Start();
 
         }
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            // Detiene el temporizador
 
+            posY += 20;
+            posX += 20;
+            // Quita el rectángulo del Canvas
+           // canvasFacil.Children.Remove(rectProc);
+           // canvasFacil.Children.Add(rectProc);
+            Canvas.SetTop(rectProc, 200+posX);
+            Canvas.SetLeft(rectProc, 200+posY);
+           
+            rectProc.Opacity -= 0.2f;
+        }
 
 
 
@@ -52,6 +78,7 @@ namespace Proyecto_1EVA_ALB
         {
             if (e.LeftButton == MouseButtonState.Pressed)
             {
+                
                 DragDrop.DoDragDrop(canvasFacil, imgProc, DragDropEffects.Move);
                 imgProcSelected = true;
 
