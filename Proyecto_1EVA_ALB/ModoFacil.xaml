@@ -9,49 +9,60 @@
       Title="ModoFacil">
 
     <Canvas x:Name="canvasFacil"
-        Background="White" AllowDrop="True" Drop="canvasFacil_Drop" DragOver="canvasFacil_DragOver"> 
+        Background="White" AllowDrop="True" Drop="canvasFacil_Drop" DragOver="canvasFacil_DragOver">
         <Label FontSize="25" FontFamily="Comic Sans MS">Facil</Label>
-        <Rectangle StrokeThickness="3" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" VerticalAlignment="Center">
-            <Rectangle.Stroke>Black</Rectangle.Stroke>
-            <Canvas.Top>10</Canvas.Top>
-            <Canvas.Left>9</Canvas.Left>
-            <Rectangle.Height>694</Rectangle.Height>
-            <Rectangle.Width>882</Rectangle.Width>
-        </Rectangle>
+
+
         <Rectangle x:Name="rectProc"
-            StrokeThickness="2" Canvas.Left="65" Canvas.Top="49" HorizontalAlignment="Left" VerticalAlignment="Top">
+            StrokeThickness="2" Canvas.Left="65" Canvas.Top="50" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="/boxCPU.png" Stretch="None"/>
+            </Rectangle.Fill>
             <Rectangle.Stroke>Black</Rectangle.Stroke>
-            <Rectangle.Height>266</Rectangle.Height>
-            <Rectangle.Width>298</Rectangle.Width>
+            <Rectangle.Height>175</Rectangle.Height>
+            <Rectangle.Width>183</Rectangle.Width>
         </Rectangle>
-        <Rectangle x:Name="rectHDD" StrokeThickness="2" Canvas.Left="65" Canvas.Top="380" HorizontalAlignment="Center" VerticalAlignment="Top">
+        <Rectangle x:Name="rectHDD" StrokeThickness="2" Canvas.Left="65" Canvas.Top="510" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="/boxHDD.png" Stretch="None"/>
+            </Rectangle.Fill>
             <Rectangle.Stroke>Black</Rectangle.Stroke>
-            <Rectangle.Height>86</Rectangle.Height>
-            <Rectangle.Width>448</Rectangle.Width>
+            <Rectangle.Height>176</Rectangle.Height>
+            <Rectangle.Width>183</Rectangle.Width>
         </Rectangle>
-        <Rectangle x:Name="rectPower" StrokeThickness="2" Canvas.Left="65" Canvas.Top="509" HorizontalAlignment="Center" VerticalAlignment="Top">
+        <Rectangle x:Name="rectPower" StrokeThickness="2" Canvas.Left="548" Canvas.Top="511" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="/boxPower.png" Stretch="None"/>
+            </Rectangle.Fill>
             <Rectangle.Stroke>Black</Rectangle.Stroke>
-            <Rectangle.Height>170</Rectangle.Height>
-            <Rectangle.Width>326</Rectangle.Width>
+            <Rectangle.Height>175</Rectangle.Height>
+            <Rectangle.Width>184</Rectangle.Width>
         </Rectangle>
-        <Rectangle x:Name="rectRam1" StrokeThickness="2" Canvas.Left="585" Canvas.Top="49" HorizontalAlignment="Left" VerticalAlignment="Center">
+        <Rectangle x:Name="rectRam" StrokeThickness="2" Canvas.Left="549" Canvas.Top="50" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="/boxRAM.png" Stretch="None"/>
+            </Rectangle.Fill>
             <Rectangle.Stroke>Black</Rectangle.Stroke>
-            <Rectangle.Height>512</Rectangle.Height>
-            <Rectangle.Width>110</Rectangle.Width>
+            <Rectangle.Height>175</Rectangle.Height>
+            <Rectangle.Width>183</Rectangle.Width>
         </Rectangle>
-        <Rectangle x:Name="rectRam2" StrokeThickness="2" Canvas.Left="741" Canvas.Top="49" HorizontalAlignment="Left" VerticalAlignment="Center">
+        <Rectangle x:Name="rectGIU" StrokeThickness="2" Canvas.Left="307" Canvas.Top="272" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="/boxGIU.png" Stretch="None"/>
+            </Rectangle.Fill>
             <Rectangle.Stroke>Black</Rectangle.Stroke>
-            <Rectangle.Height>512</Rectangle.Height>
-            <Rectangle.Width>110</Rectangle.Width>
+            <Rectangle.Height>176</Rectangle.Height>
+            <Rectangle.Width>183</Rectangle.Width>
         </Rectangle>
-        
+
         <Rectangle MouseMove="imgProc_MouseMove"
             x:Name="imgProc" StrokeThickness="2" Canvas.Left="1040" Canvas.Top="22" HorizontalAlignment="Left" VerticalAlignment="Center">
             <Rectangle.Stroke>Black</Rectangle.Stroke>
             <Rectangle.Height>120</Rectangle.Height>
             <Rectangle.Width>120</Rectangle.Width>
         </Rectangle>
-        <Rectangle x:Name="imgHDD" StrokeThickness="2" Canvas.Left="955" Canvas.Top="182" HorizontalAlignment="Left" VerticalAlignment="Center">
+        <Rectangle MouseMove="imgHDD_MouseMove"
+            x:Name="imgHDD" StrokeThickness="2" Canvas.Left="955" Canvas.Top="182" HorizontalAlignment="Left" VerticalAlignment="Center">
             <Rectangle.Stroke>Black</Rectangle.Stroke>
             <Rectangle.Height>72</Rectangle.Height>
             <Rectangle.Width>290</Rectangle.Width>

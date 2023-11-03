@@ -8,17 +8,36 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="box.png" />
+    <None Remove="boxCPU.png" />
+    <None Remove="boxGIU.png" />
+    <None Remove="boxHDD.png" />
+    <None Remove="boxPower.png" />
+    <None Remove="boxRAM.png" />
+    <None Remove="images\boxCPU.png" />
     <None Remove="images\hammer_wrench.png" />
     <None Remove="images\pc_icon.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="images\boxCPU.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="images\hammer_wrench.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="images\pc_icon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="box.png" />
+    <Resource Include="boxCPU.png" />
+    <Resource Include="boxGIU.png" />
+    <Resource Include="boxHDD.png" />
+    <Resource Include="boxPower.png" />
+    <Resource Include="boxRAM.png" />
   </ItemGroup>
 
 </Project>
