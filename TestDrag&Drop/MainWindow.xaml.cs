@@ -126,17 +126,6 @@ namespace TestDrag_Drop
             }
         }
 
-        private void redRectangle_MouseEnter(object sender, MouseEventArgs e)
-        {
-            if (isBlueSelected)
-            {
-
-            }
-        }
-
-        private void redRectangle_MouseLeave(object sender, MouseEventArgs e)
-        {
-
-        }
+     
     }
 }

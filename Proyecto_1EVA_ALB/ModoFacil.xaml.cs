@@ -29,18 +29,18 @@ namespace Proyecto_1EVA_ALB
         Point imgHDDPosition;
         Point imgHDDOriginalPosition;
 
-        Point rectProcPosition;
-        Point rectHDDPosition;
-        Point rectRamPosition;
-        Point rectPowerPosition;
-        Point rectGIUPosition;
 
-        bool imgProcSelected;
-        bool imgHDDSelected;
+
+        static int puntuacion;
+
+        static bool imgProcSelected;
+        static bool imgHDDSelected;
         DispatcherTimer timer;
-        DispatcherTimer respawn;
+        DispatcherTimer respawnProcBox;
+        DispatcherTimer respawnHDDBox;
         static int posX, posY;
         bool boxProcisAlive;
+        bool boxHDDisAlive;
 
         public ModoFacil(MainWindow window)
         {
@@ -49,26 +49,29 @@ namespace Proyecto_1EVA_ALB
             //Aqui inicializamos todas las posiciones originales de los elementos
 
             imgProcOriginalPosition = new Point(Canvas.GetLeft(imgProc), Canvas.GetTop(imgProc));
+            imgProcPosition = imgProcOriginalPosition;
             imgHDDOriginalPosition = new Point(Canvas.GetLeft(imgHDD), Canvas.GetTop(imgHDD));
-            /*
-             *   rectProcPosition = new Point(Canvas.GetTop(rectProc), Canvas.GetLeft(rectProc));
-            rectHDDPosition  = new Point(Canvas.GetLeft(rectHDD),Canvas.GetTop(rectHDD));
-            rectPowerPosition = new Point(Canvas.GetLeft(rectPower), Canvas.GetTop(rectPower));
-            rectRamPosition = new Point(Canvas.GetLeft(rectRam), Canvas.GetTop(rectRam));
-            rectGIUPosition = new Point(Canvas.GetLeft(rectGIU), Canvas.GetTop(rectGIU));
-             */
+            imgHDDPosition = imgHDDOriginalPosition;
 
-
-
+            puntuacion = 0;
+            labelPuntuacion.Content = "Puntuacion: " + puntuacion.ToString();
+            boxHDDisAlive = true;
             boxProcisAlive = true;
+
             timer = new DispatcherTimer();
-            respawn = new DispatcherTimer();
-            respawn.Tick += Respawn_Tick;
-            respawn.Interval = TimeSpan.FromSeconds(10);
-
-
             timer.Tick += Timer_Tick;
             timer.Interval = TimeSpan.FromSeconds(2);
+
+            respawnProcBox = new DispatcherTimer();
+            respawnProcBox.Tick += Respawn_Tick;
+            respawnProcBox.Interval = TimeSpan.FromSeconds(10);
+
+            respawnHDDBox = new DispatcherTimer();
+            respawnHDDBox.Tick += Respawn_Tick;
+            respawnProcBox.Interval = TimeSpan.FromSeconds(10);
+
+
+           
 
             timer.Start();
 
@@ -81,7 +84,14 @@ namespace Proyecto_1EVA_ALB
                 rectProc.Opacity = 1;
                 boxProcisAlive = true;
                 canvasFacil.Children.Add(rectProc);
-                respawn.Stop();
+                respawnProcBox.Stop();
+            }
+            if (!boxHDDisAlive)
+            {
+                rectHDD.Opacity = 1;
+                boxHDDisAlive = true;
+                canvasFacil.Children.Add(rectHDD);
+                respawnProcBox.Stop();
             }
         }
 
@@ -96,7 +106,19 @@ namespace Proyecto_1EVA_ALB
                 canvasFacil.Children.Remove(rectProc);
 
 
-                respawn.Start();
+                respawnProcBox.Start();
+            }
+
+            rectHDD.Opacity -= 0.2f;
+
+            if (rectHDD.Opacity < 0.0f && boxHDDisAlive)
+            {
+                boxHDDisAlive = false;
+
+                canvasFacil.Children.Remove(rectHDD);
+
+
+                respawnProcBox.Start();
             }
 
 
@@ -106,50 +128,7 @@ namespace Proyecto_1EVA_ALB
 
 
 
-        private void imgProc_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (e.LeftButton == MouseButtonState.Pressed)
-            {
 
-                DragDrop.DoDragDrop(canvasFacil, imgProc, DragDropEffects.Move);
-                imgProcSelected = true;
-                imgHDDSelected = false;
-
-            }
-            if (e.LeftButton == MouseButtonState.Released)
-            {
-
-
-                if (isColliding(imgProc, rectProc))
-                {
-                    Canvas.SetTop(imgProc, imgProcOriginalPosition.Y);
-                    Canvas.SetLeft(imgProc, imgProcOriginalPosition.X);
-                }
-                else
-                {
-                    rectProc.Stroke = Brushes.Black;
-                    rectProc.StrokeThickness = 2;
-
-                    rectHDD.Stroke = Brushes.Black;
-                    rectHDD.StrokeThickness = 2;
-
-                    rectPower.Stroke = Brushes.Black;
-                    rectPower.StrokeThickness = 2;
-
-                    rectRam.Stroke = Brushes.Black;
-                    rectRam.StrokeThickness = 2;
-
-                    rectGIU.Stroke = Brushes.Black;
-                    rectGIU.StrokeThickness = 2;
-
-
-                    Canvas.SetTop(imgProc, imgProcOriginalPosition.Y);
-                    Canvas.SetLeft(imgProc, imgProcOriginalPosition.X);
-                }
-
-
-            }
-        }
 
         private bool isColliding(Rectangle rect1, Rectangle rect2)
         {
@@ -171,89 +150,123 @@ namespace Proyecto_1EVA_ALB
 
         private void canvasFacil_Drop(object sender, DragEventArgs e)
         {
+            if (imgProcSelected)
+            {
+                imgProcPosition = e.GetPosition(canvasFacil);
+                Canvas.SetTop(imgProc, imgProcPosition.Y);
+                Canvas.SetLeft(imgProc, imgProcPosition.X);
+                procesadorColliders();
+            }
+            if (imgHDDSelected)
+            {
+                imgHDDPosition = e.GetPosition(canvasFacil);
+                Canvas.SetTop(imgHDD, imgHDDPosition.Y);
+                Canvas.SetLeft(imgHDD, imgHDDPosition.X);
 
-            imgProcPosition = e.GetPosition(canvasFacil);
-            Canvas.SetTop(imgProc, imgProcPosition.Y);
-            Canvas.SetLeft(imgProc, imgProcPosition.X);
-            procesadorColliders();
-
-
-
-
-
-
-
-
-
-
-
-
+                hardDiskColliders();
+            }
+          
+          
         }
 
         private void canvasFacil_DragOver(object sender, DragEventArgs e)
         {
+          
+            if (imgProcSelected)
+            {
+                imgProcPosition = e.GetPosition(canvasFacil);
+                Canvas.SetTop(imgProc, imgProcPosition.Y);
+                Canvas.SetLeft(imgProc, imgProcPosition.X);
+                procesadorColliders();
+            }
+            if (imgHDDSelected)
+            {
+                imgHDDPosition = e.GetPosition(canvasFacil);
+                Canvas.SetTop(imgHDD, imgHDDPosition.Y);
+                Canvas.SetLeft(imgHDD, imgHDDPosition.X);
+                hardDiskColliders();
+            }
+          
+          
+        }
 
-            imgProcPosition = e.GetPosition(canvasFacil);
-            Canvas.SetTop(imgProc, imgProcPosition.Y);
-            Canvas.SetLeft(imgProc, imgProcPosition.X);
-            procesadorColliders();
+        private void imgProc_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.LeftButton == MouseButtonState.Pressed)
+            {
+                imgProcPosition = e.GetPosition(canvasFacil);
+                Canvas.SetTop(imgProc, imgProcPosition.Y);
+                Canvas.SetLeft(imgProc, imgProcPosition.X);
+                imgHDDSelected = false;
+                imgProcSelected = true;
+                DragDrop.DoDragDrop(canvasFacil, imgProc, DragDropEffects.Move);
+            
 
 
-
+            }
+            if (e.LeftButton == MouseButtonState.Released)
+            {
+                imgProcSelected = false;
+                if (isColliding(imgProc, rectProc) && imgProcSelected == false && boxProcisAlive)
+                {
+                    rectProc.Stroke = Brushes.Lime;
+                    rectProc.StrokeThickness = 5;
+                    puntuacion += 10;
+                    labelPuntuacion.Content = "Puntuacion: " + puntuacion.ToString();
+                    rectProc.Opacity = -1;
+                   
+                }
+                
+                procesadorColliders();
+                Canvas.SetTop(imgProc, imgProcOriginalPosition.Y);
+                Canvas.SetLeft(imgProc, imgProcOriginalPosition.X);
+            }
         }
 
         private void imgHDD_MouseMove(object sender, MouseEventArgs e)
         {
             if (e.LeftButton == MouseButtonState.Pressed)
             {
-
-                DragDrop.DoDragDrop(canvasFacil, imgHDD, DragDropEffects.Move);
-                imgHDDSelected = true;
+               
+                imgHDDPosition = e.GetPosition(canvasFacil);
+                Canvas.SetTop(imgHDD, imgHDDPosition.Y);
+                Canvas.SetLeft(imgHDD, imgHDDPosition.X);
                 imgProcSelected = false;
+                imgHDDSelected = true;
+                DragDrop.DoDragDrop(canvasFacil, imgHDD, DragDropEffects.Move);
+               
 
             }
             if (e.LeftButton == MouseButtonState.Released)
             {
-
-                if (isColliding(imgHDD, rectHDD))
+                imgHDDSelected = false;
+                if (isColliding(imgHDD, rectHDD) && imgHDDSelected == false && boxHDDisAlive)
                 {
-                    Canvas.SetTop(imgHDD, imgHDDOriginalPosition.Y);
-                    Canvas.SetLeft(imgHDD, imgHDDOriginalPosition.X);
+                    rectHDD.Stroke = Brushes.Lime;
+                    rectHDD.StrokeThickness = 5;
+                    puntuacion += 10;
+                    labelPuntuacion.Content = "Puntuacion: " + puntuacion.ToString();
+                    rectHDD.Opacity =-1f;
+
                 }
-                else
-                {
-                    rectProc.Stroke = Brushes.Black;
-                    rectProc.StrokeThickness = 2;
-
-                    rectHDD.Stroke = Brushes.Black;
-                    rectHDD.StrokeThickness = 2;
-
-                    rectPower.Stroke = Brushes.Black;
-                    rectPower.StrokeThickness = 2;
-
-                    rectRam.Stroke = Brushes.Black;
-                    rectRam.StrokeThickness = 2;
-
-                    rectGIU.Stroke = Brushes.Black;
-                    rectGIU.StrokeThickness = 2;
-
-
-                    Canvas.SetTop(imgHDD, imgHDDOriginalPosition.Y);
-                    Canvas.SetLeft(imgHDD, imgHDDOriginalPosition.X);
-                }
-
+                
+                hardDiskColliders();
+                Canvas.SetTop(imgHDD, imgHDDOriginalPosition.Y);
+                Canvas.SetLeft(imgHDD, imgHDDOriginalPosition.X);
 
             }
         }
 
         private void procesadorColliders()
         {
-            if (isColliding(imgProc, rectProc))
+            if (isColliding(imgProc, rectProc) )
             {
                 rectProc.Stroke = Brushes.Lime;
                 rectProc.StrokeThickness = 5;
+               
+
             }
-            else
+            else 
             {
                 rectProc.Stroke = Brushes.Black;
                 rectProc.StrokeThickness = 2;
@@ -263,7 +276,7 @@ namespace Proyecto_1EVA_ALB
                 rectHDD.Stroke = Brushes.Red;
                 rectHDD.StrokeThickness = 5;
             }
-            else if (imgProcSelected == false)
+            else 
             {
                 rectHDD.Stroke = Brushes.Black;
                 rectHDD.StrokeThickness = 2;
@@ -273,7 +286,7 @@ namespace Proyecto_1EVA_ALB
                 rectPower.Stroke = Brushes.Red;
                 rectPower.StrokeThickness = 5;
             }
-            else if (imgProcSelected == false)
+            else
             {
                 rectPower.Stroke = Brushes.Black;
                 rectPower.StrokeThickness = 2;
@@ -283,7 +296,7 @@ namespace Proyecto_1EVA_ALB
                 rectRam.Stroke = Brushes.Red;
                 rectRam.StrokeThickness = 5;
             }
-            else if (imgProcSelected == false)
+            else 
             {
                 rectRam.Stroke = Brushes.Black;
                 rectRam.StrokeThickness = 2;
@@ -293,13 +306,14 @@ namespace Proyecto_1EVA_ALB
                 rectGIU.Stroke = Brushes.Red;
                 rectGIU.StrokeThickness = 5;
             }
-            else if (imgProcSelected == false)
+            else 
             {
                 rectGIU.Stroke = Brushes.Black;
                 rectGIU.StrokeThickness = 2;
             }
 
         }
+
         private void hardDiskColliders()
         {
             if (isColliding(imgHDD, rectProc))
@@ -307,7 +321,7 @@ namespace Proyecto_1EVA_ALB
                 rectProc.Stroke = Brushes.Red;
                 rectProc.StrokeThickness = 5;
             }
-            else
+            else 
             {
                 rectProc.Stroke = Brushes.Black;
                 rectProc.StrokeThickness = 2;
@@ -317,7 +331,7 @@ namespace Proyecto_1EVA_ALB
                 rectHDD.Stroke = Brushes.Lime;
                 rectHDD.StrokeThickness = 5;
             }
-            else if (imgHDDSelected == false)
+            else
             {
                 rectHDD.Stroke = Brushes.Black;
                 rectHDD.StrokeThickness = 2;
@@ -327,7 +341,7 @@ namespace Proyecto_1EVA_ALB
                 rectPower.Stroke = Brushes.Red;
                 rectPower.StrokeThickness = 5;
             }
-            else if (imgHDDSelected == false)
+            else 
             {
                 rectPower.Stroke = Brushes.Black;
                 rectPower.StrokeThickness = 2;
@@ -337,7 +351,7 @@ namespace Proyecto_1EVA_ALB
                 rectRam.Stroke = Brushes.Red;
                 rectRam.StrokeThickness = 5;
             }
-            else if (imgHDDSelected == false)
+            else
             {
                 rectRam.Stroke = Brushes.Black;
                 rectRam.StrokeThickness = 2;
@@ -347,7 +361,7 @@ namespace Proyecto_1EVA_ALB
                 rectGIU.Stroke = Brushes.Red;
                 rectGIU.StrokeThickness = 5;
             }
-            else if (imgHDDSelected == false)
+            else
             {
                 rectGIU.Stroke = Brushes.Black;
                 rectGIU.StrokeThickness = 2;

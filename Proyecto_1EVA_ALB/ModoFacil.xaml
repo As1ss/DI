@@ -11,8 +11,13 @@
     <Canvas x:Name="canvasFacil"
         Background="White" AllowDrop="True" Drop="canvasFacil_Drop" DragOver="canvasFacil_DragOver">
         <Label FontSize="25" FontFamily="Comic Sans MS">Facil</Label>
+        <Label x:Name="labelPuntuacion"
+            FontSize="25" HorizontalAlignment="Left" 
+            Canvas.Left="156" 
+            VerticalAlignment="Center">Puntuacion: </Label>
 
 
+        
         <Rectangle x:Name="rectProc"
             StrokeThickness="2" Canvas.Left="65" Canvas.Top="50" HorizontalAlignment="Left" VerticalAlignment="Top">
             <Rectangle.Fill>
@@ -22,6 +27,7 @@
             <Rectangle.Height>175</Rectangle.Height>
             <Rectangle.Width>183</Rectangle.Width>
         </Rectangle>
+      
         <Rectangle x:Name="rectHDD" StrokeThickness="2" Canvas.Left="65" Canvas.Top="510" HorizontalAlignment="Left" VerticalAlignment="Top">
             <Rectangle.Fill>
                 <ImageBrush ImageSource="/boxHDD.png" Stretch="None"/>
