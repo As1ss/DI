@@ -14,9 +14,14 @@
     <None Remove="boxHDD.png" />
     <None Remove="boxPower.png" />
     <None Remove="boxRAM.png" />
+    <None Remove="GIU.png" />
+    <None Remove="HDDpng.png" />
     <None Remove="images\boxCPU.png" />
     <None Remove="images\hammer_wrench.png" />
     <None Remove="images\pc_icon.png" />
+    <None Remove="Power.png" />
+    <None Remove="Proc.png" />
+    <None Remove="RAM.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -38,6 +43,11 @@
     <Resource Include="boxHDD.png" />
     <Resource Include="boxPower.png" />
     <Resource Include="boxRAM.png" />
+    <Resource Include="GIU.png" />
+    <Resource Include="HDDpng.png" />
+    <Resource Include="Power.png" />
+    <Resource Include="Proc.png" />
+    <Resource Include="RAM.png" />
   </ItemGroup>
 
 </Project>

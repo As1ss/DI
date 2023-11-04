@@ -96,7 +96,7 @@ namespace Proyecto_1EVA_ALB
 
             opacityTimer = new DispatcherTimer();
             opacityTimer.Tick += Timer_Tick;
-            opacityTimer.Interval = TimeSpan.FromSeconds(1);
+            opacityTimer.Interval = TimeSpan.FromSeconds(1.5f);
             opacityTimer.Start();
 
             respawnTimer = new DispatcherTimer();
@@ -245,35 +245,35 @@ namespace Proyecto_1EVA_ALB
         {
             if (imgProcSelected)
             {
-                imgProcPosition = e.GetPosition(canvasFacil);
+                imgProcPosition = e.GetPosition(canvasNivel1);
                 Canvas.SetTop(imgProc, imgProcPosition.Y);
                 Canvas.SetLeft(imgProc, imgProcPosition.X);
                 procesadorColliders();
             }
             if (imgHDDSelected)
             {
-                imgHDDPosition = e.GetPosition(canvasFacil);
+                imgHDDPosition = e.GetPosition(canvasNivel1);
                 Canvas.SetTop(imgHDD, imgHDDPosition.Y);
                 Canvas.SetLeft(imgHDD, imgHDDPosition.X);
                 hardDiskColliders();
             }
             if (imgPowerSelected)
             {
-                imgPowerPosition = e.GetPosition(canvasFacil);
+                imgPowerPosition = e.GetPosition(canvasNivel1);
                 Canvas.SetTop(imgPower, imgPowerPosition.Y);
                 Canvas.SetLeft(imgPower, imgPowerPosition.X);
                 powerColliders();
             }
             if(imgRamSelected)
             {
-                imgRamPosition = e.GetPosition(canvasFacil);
+                imgRamPosition = e.GetPosition(canvasNivel1);
                 Canvas.SetTop(imgRam, imgRamPosition.Y);
                 Canvas.SetLeft(imgRam, imgRamPosition.X);
                 ramColliders();
             }
             if (imgGIUSelected)
             {
-                imgGIUPosition = e.GetPosition(canvasFacil);
+                imgGIUPosition = e.GetPosition(canvasNivel1);
                 Canvas.SetTop(imgGIU, imgGIUPosition.Y);
                 Canvas.SetLeft(imgGIU, imgGIUPosition.X);
                 GIUcolliders();
@@ -288,35 +288,35 @@ namespace Proyecto_1EVA_ALB
 
             if (imgProcSelected)
             {
-                imgProcPosition = e.GetPosition(canvasFacil);
+                imgProcPosition = e.GetPosition(canvasNivel1);
                 Canvas.SetTop(imgProc, imgProcPosition.Y);
                 Canvas.SetLeft(imgProc, imgProcPosition.X);
                 procesadorColliders();
             }
             if (imgHDDSelected)
             {
-                imgHDDPosition = e.GetPosition(canvasFacil);
+                imgHDDPosition = e.GetPosition(canvasNivel1);
                 Canvas.SetTop(imgHDD, imgHDDPosition.Y);
                 Canvas.SetLeft(imgHDD, imgHDDPosition.X);
                 hardDiskColliders();
             }
             if (imgPowerSelected)
             {
-                imgPowerPosition = e.GetPosition(canvasFacil);
+                imgPowerPosition = e.GetPosition(canvasNivel1);
                 Canvas.SetTop(imgPower, imgPowerPosition.Y);
                 Canvas.SetLeft(imgPower, imgPowerPosition.X);
                 powerColliders();
             }
             if (imgRamSelected)
             {
-                imgRamPosition = e.GetPosition(canvasFacil);
+                imgRamPosition = e.GetPosition(canvasNivel1);
                 Canvas.SetTop(imgRam, imgRamPosition.Y);
                 Canvas.SetLeft(imgRam, imgRamPosition.X);
                 ramColliders();
             }
             if(imgGIUSelected)
             {
-                imgGIUPosition = e.GetPosition(canvasFacil);
+                imgGIUPosition = e.GetPosition(canvasNivel1);
                 Canvas.SetTop(imgGIU, imgGIUPosition.Y);
                 Canvas.SetLeft(imgGIU, imgGIUPosition.X);
                 GIUcolliders();
@@ -329,7 +329,7 @@ namespace Proyecto_1EVA_ALB
         {
             if (e.LeftButton == MouseButtonState.Pressed)
             {
-                imgProcPosition = e.GetPosition(canvasFacil);
+                imgProcPosition = e.GetPosition(canvasNivel1);
                 Canvas.SetTop(imgProc, imgProcPosition.Y);
                 Canvas.SetLeft(imgProc, imgProcPosition.X);
                 imgHDDSelected = false;
@@ -337,7 +337,7 @@ namespace Proyecto_1EVA_ALB
                 imgRamSelected = false;
                 imgGIUSelected = false;
                 imgProcSelected = true;
-                DragDrop.DoDragDrop(canvasFacil, imgProc, DragDropEffects.Move);
+                DragDrop.DoDragDrop(canvasNivel1, imgProc, DragDropEffects.Move);
 
 
 
@@ -367,7 +367,7 @@ namespace Proyecto_1EVA_ALB
             if (e.LeftButton == MouseButtonState.Pressed)
             {
 
-                imgHDDPosition = e.GetPosition(canvasFacil);
+                imgHDDPosition = e.GetPosition(canvasNivel1);
                 Canvas.SetTop(imgHDD, imgHDDPosition.Y);
                 Canvas.SetLeft(imgHDD, imgHDDPosition.X);
                 imgProcSelected = false;
@@ -375,7 +375,7 @@ namespace Proyecto_1EVA_ALB
                 imgRamSelected = false;
                 imgGIUSelected = false;
                 imgHDDSelected = true;
-                DragDrop.DoDragDrop(canvasFacil, imgHDD, DragDropEffects.Move);
+                DragDrop.DoDragDrop(canvasNivel1, imgHDD, DragDropEffects.Move);
 
 
             }
@@ -404,7 +404,7 @@ namespace Proyecto_1EVA_ALB
             if (e.LeftButton == MouseButtonState.Pressed)
             {
 
-                imgPowerPosition = e.GetPosition(canvasFacil);
+                imgPowerPosition = e.GetPosition(canvasNivel1);
                 Canvas.SetTop(imgPower, imgPowerPosition.Y);
                 Canvas.SetLeft(imgPower, imgPowerPosition.X);
                 imgProcSelected = false;
@@ -413,7 +413,7 @@ namespace Proyecto_1EVA_ALB
                 imgGIUSelected = false;
                 imgPowerSelected = true;
 
-                DragDrop.DoDragDrop(canvasFacil, imgPower, DragDropEffects.Move);
+                DragDrop.DoDragDrop(canvasNivel1, imgPower, DragDropEffects.Move);
 
 
             }
@@ -442,7 +442,7 @@ namespace Proyecto_1EVA_ALB
             if (e.LeftButton == MouseButtonState.Pressed)
             {
 
-                imgRamPosition = e.GetPosition(canvasFacil);
+                imgRamPosition = e.GetPosition(canvasNivel1);
                 Canvas.SetTop(imgRam, imgRamPosition.Y);
                 Canvas.SetLeft(imgRam, imgRamPosition.X);
                 imgProcSelected = false;
@@ -451,7 +451,7 @@ namespace Proyecto_1EVA_ALB
                 imgGIUSelected = false;
                 imgRamSelected = true;
 
-                DragDrop.DoDragDrop(canvasFacil, imgRam, DragDropEffects.Move);
+                DragDrop.DoDragDrop(canvasNivel1, imgRam, DragDropEffects.Move);
 
 
             }
@@ -480,7 +480,7 @@ namespace Proyecto_1EVA_ALB
             if (e.LeftButton == MouseButtonState.Pressed)
             {
 
-                imgGIUPosition = e.GetPosition(canvasFacil);
+                imgGIUPosition = e.GetPosition(canvasNivel1);
                 Canvas.SetTop(imgGIU, imgGIUPosition.Y);
                 Canvas.SetLeft(imgGIU, imgGIUPosition.X);
                 imgProcSelected = false;
@@ -489,7 +489,7 @@ namespace Proyecto_1EVA_ALB
                 imgRamSelected = false;
                 imgGIUSelected = true;
 
-                DragDrop.DoDragDrop(canvasFacil, imgGIU, DragDropEffects.Move);
+                DragDrop.DoDragDrop(canvasNivel1, imgGIU, DragDropEffects.Move);
 
 
             }

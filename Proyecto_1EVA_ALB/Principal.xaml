@@ -5,36 +5,31 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Proyecto_1EVA_ALB"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="720" d:DesignWidth="1280"
       Title="Principal">
-    <Canvas Width="800" Height="450" Background="White">
+    <Canvas Background="White" Margin="0,10,10,10">
         <TextBlock FontSize="85"
-               FontFamily="Comic Sans MS">Ordena Tó</TextBlock>
+               FontFamily="Comic Sans MS" Canvas.Left="235" Canvas.Top="42">Ordena Tó</TextBlock>
         <Image Source="images/pc_icon.png" Height="260"
-           Canvas.Bottom="50" Canvas.Right="280" Canvas.Left="81" Canvas.Top="120" Width="340" HorizontalAlignment="Center"
-           VerticalAlignment="Top"/>
-        <Button x:Name="btnJugar" FontSize="65" Canvas.Left="488" Width="250"
-            Canvas.Top="120" FontFamily="Comic Sans MS" Click="btnJugar_Click">
+           Canvas.Bottom="50" Canvas.Right="280" Canvas.Left="235" Canvas.Top="195" Width="340" HorizontalAlignment="Left"
+           VerticalAlignment="Top">
+            <Image.Effect>
+                <DropShadowEffect/>
+            </Image.Effect>
+        </Image>
+        <Button x:Name="btnJugar" FontSize="65" Canvas.Left="735" Width="250"
+            Canvas.Top="203" FontFamily="Comic Sans MS" Click="btnJugar_Click">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect> JUGAR
         </Button>
-        <Button x:Name="btnSalir" FontSize="65" Canvas.Left="488" 
-            Canvas.Top="264" HorizontalAlignment="Left"
+        <Button x:Name="btnSalir" FontSize="65" Canvas.Left="735" 
+            Canvas.Top="360" HorizontalAlignment="Left"
             VerticalAlignment="Top" Width="250" FontFamily="Comic Sans MS" Click="btnSalir_Click">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect> SALIR
         </Button>
-        <Button x:Name="btnSettings" Background="Transparent"
-        Canvas.Bottom="50" Canvas.Left="10" Width="80" Click="btnSettings_Click">
-            <Image    
-        Source="images/hammer_wrench.png" Height="74"
-           Width="54" >
-                <Image.Effect>
-                    <DropShadowEffect/>
-                </Image.Effect>
-            </Image>
-        </Button>
+
     </Canvas>
 </Page>

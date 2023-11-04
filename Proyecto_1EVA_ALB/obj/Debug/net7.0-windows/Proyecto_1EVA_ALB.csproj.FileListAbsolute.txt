@@ -55,3 +55,5 @@ C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7
 C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\Principal.g.cs
 C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\Principal.baml
 C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\bin\Debug\net7.0-windows\images\boxCPU.png
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\Final.g.cs
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\Final.baml

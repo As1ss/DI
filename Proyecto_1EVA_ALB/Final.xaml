@@ -1,0 +1,17 @@
+﻿<Page x:Class="Proyecto_1EVA_ALB.Final"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Proyecto_1EVA_ALB"
+      mc:Ignorable="d" 
+      d:DesignHeight="720" d:DesignWidth="1280"
+      Title="Final">
+
+    <Canvas Background="Wheat">
+        <Label FontFamily="Comic Sans MS"
+            FontSize="40" Canvas.Left="10" 
+            Canvas.Top="256">HAS GANADO PUTO IMBECIL, 
+            LOS REYES SON LOS PADRES</Label>
+    </Canvas>
+</Page>

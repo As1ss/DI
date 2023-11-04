@@ -8,16 +8,17 @@
       d:DesignHeight="720" d:DesignWidth="1280"
       Title="ModoFacil">
 
-    <Canvas x:Name="canvasFacil"
-        Background="White" AllowDrop="True" Drop="canvasFacil_Drop" DragOver="canvasFacil_DragOver">
+    <Canvas x:Name="canvasNivel1"
+        Background="White" AllowDrop="True" Drop="canvasFacil_Drop" 
+            DragOver="canvasFacil_DragOver">
         <Label FontSize="25" FontFamily="Comic Sans MS">Nivel 1</Label>
-        <Label x:Name="labelVidas"
+        <Label x:Name="labelVidas" FontFamily="Comic Sans MS"
             FontSize="25" HorizontalAlignment="Left" 
             Canvas.Left="156" 
             VerticalAlignment="Center">Vidas: 3</Label>
 
 
-        
+
         <Rectangle x:Name="rectProc"
             StrokeThickness="2" Canvas.Left="65" Canvas.Top="50" HorizontalAlignment="Left" VerticalAlignment="Top">
             <Rectangle.Fill>
@@ -27,7 +28,7 @@
             <Rectangle.Height>175</Rectangle.Height>
             <Rectangle.Width>183</Rectangle.Width>
         </Rectangle>
-      
+
         <Rectangle x:Name="rectHDD" StrokeThickness="2" Canvas.Left="65" Canvas.Top="510" HorizontalAlignment="Left" VerticalAlignment="Top">
             <Rectangle.Fill>
                 <ImageBrush ImageSource="/boxHDD.png" Stretch="None"/>
@@ -62,34 +63,64 @@
         </Rectangle>
 
         <Rectangle MouseMove="imgProc_MouseMove"
-            x:Name="imgProc" StrokeThickness="2" Canvas.Left="1040" Canvas.Top="22" HorizontalAlignment="Left" VerticalAlignment="Center">
-            <Rectangle.Stroke>Black</Rectangle.Stroke>
-            <Rectangle.Height>120</Rectangle.Height>
-            <Rectangle.Width>120</Rectangle.Width>
+            x:Name="imgProc" StrokeThickness="2" Canvas.Left="1040" Canvas.Top="22" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="/Proc.png" Stretch="Fill"/>
+            </Rectangle.Fill>
+
+            <Rectangle.Height>111</Rectangle.Height>
+            <Rectangle.Width>121</Rectangle.Width>
         </Rectangle>
+        
         <Rectangle MouseMove="imgHDD_MouseMove"
-            x:Name="imgHDD" StrokeThickness="2" Canvas.Left="955" Canvas.Top="182" HorizontalAlignment="Left" VerticalAlignment="Center">
-            <Rectangle.Stroke>Black</Rectangle.Stroke>
-            <Rectangle.Height>72</Rectangle.Height>
-            <Rectangle.Width>290</Rectangle.Width>
+  x:Name="imgHDD" StrokeThickness="2" Canvas.Left="1050" Canvas.Top="138" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="/HDDpng.png" Stretch="UniformToFill"/>
+            </Rectangle.Fill>
+            <Rectangle.Height>149</Rectangle.Height>
+            <Rectangle.Width>102</Rectangle.Width>
         </Rectangle>
-        <Rectangle MouseMove="imgPower_MouseMove"
-            x:Name="imgPower" StrokeThickness="2" Canvas.Left="1018" Canvas.Top="305" HorizontalAlignment="Center" VerticalAlignment="Top">
-            <Rectangle.Stroke>Black</Rectangle.Stroke>
-            <Rectangle.Height>93</Rectangle.Height>
-            <Rectangle.Width>164</Rectangle.Width>
+        <Rectangle 
+            MouseMove="imgPower_MouseMove"
+            x:Name="imgPower" StrokeThickness="2" Canvas.Left="997" Canvas.Top="300" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" VerticalAlignment="Center">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-360.677"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+            <Rectangle.Fill>
+
+                <ImageBrush ImageSource="/Power.png" Stretch="UniformToFill"/>
+            </Rectangle.Fill>
+            <Rectangle.Height>118</Rectangle.Height>
+            <Rectangle.Width>226</Rectangle.Width>
         </Rectangle>
         <Rectangle MouseMove="imgRam_MouseMove"
-            x:Name="imgRam" StrokeThickness="2" Canvas.Left="986" Canvas.Top="444" HorizontalAlignment="Left" VerticalAlignment="Center">
-            <Rectangle.Stroke>Black</Rectangle.Stroke>
-            <Rectangle.Height>260</Rectangle.Height>
-            <Rectangle.Width>88</Rectangle.Width>
+            x:Name="imgRam" StrokeThickness="2" Canvas.Left="925" Canvas.Top="527" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="89.463"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="/RAM.png" Stretch="UniformToFill" TileMode="None"/>
+            </Rectangle.Fill>
+            <Rectangle.Height>79</Rectangle.Height>
+            <Rectangle.Width>237</Rectangle.Width>
         </Rectangle>
         <Rectangle MouseMove="imgGIU_MouseMove"
-            x:Name="imgGIU" StrokeThickness="2" Canvas.Left="1126" Canvas.Top="444" HorizontalAlignment="Left" VerticalAlignment="Center">
-            <Rectangle.Stroke>Black</Rectangle.Stroke>
-            <Rectangle.Height>260</Rectangle.Height>
-            <Rectangle.Width>88</Rectangle.Width>
+            x:Name="imgGIU" StrokeThickness="2" Canvas.Left="1118" Canvas.Top="448" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="/GIU.png" Stretch="UniformToFill"/>
+            </Rectangle.Fill>
+            <Rectangle.Height>238</Rectangle.Height>
+            <Rectangle.Width>120</Rectangle.Width>
         </Rectangle>
     </Canvas>
 </Page>
