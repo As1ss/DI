@@ -10,11 +10,11 @@
 
     <Canvas x:Name="canvasFacil"
         Background="White" AllowDrop="True" Drop="canvasFacil_Drop" DragOver="canvasFacil_DragOver">
-        <Label FontSize="25" FontFamily="Comic Sans MS">Facil</Label>
-        <Label x:Name="labelPuntuacion"
+        <Label FontSize="25" FontFamily="Comic Sans MS">Nivel 1</Label>
+        <Label x:Name="labelVidas"
             FontSize="25" HorizontalAlignment="Left" 
             Canvas.Left="156" 
-            VerticalAlignment="Center">Puntuacion: </Label>
+            VerticalAlignment="Center">Vidas: 3</Label>
 
 
         
@@ -73,17 +73,20 @@
             <Rectangle.Height>72</Rectangle.Height>
             <Rectangle.Width>290</Rectangle.Width>
         </Rectangle>
-        <Rectangle x:Name="imgPower" StrokeThickness="2" Canvas.Left="1018" Canvas.Top="305" HorizontalAlignment="Center" VerticalAlignment="Top">
+        <Rectangle MouseMove="imgPower_MouseMove"
+            x:Name="imgPower" StrokeThickness="2" Canvas.Left="1018" Canvas.Top="305" HorizontalAlignment="Center" VerticalAlignment="Top">
             <Rectangle.Stroke>Black</Rectangle.Stroke>
             <Rectangle.Height>93</Rectangle.Height>
             <Rectangle.Width>164</Rectangle.Width>
         </Rectangle>
-        <Rectangle x:Name="imgRam1" StrokeThickness="2" Canvas.Left="986" Canvas.Top="444" HorizontalAlignment="Left" VerticalAlignment="Center">
+        <Rectangle MouseMove="imgRam_MouseMove"
+            x:Name="imgRam" StrokeThickness="2" Canvas.Left="986" Canvas.Top="444" HorizontalAlignment="Left" VerticalAlignment="Center">
             <Rectangle.Stroke>Black</Rectangle.Stroke>
             <Rectangle.Height>260</Rectangle.Height>
             <Rectangle.Width>88</Rectangle.Width>
         </Rectangle>
-        <Rectangle x:Name="imgRam2" StrokeThickness="2" Canvas.Left="1126" Canvas.Top="444" HorizontalAlignment="Left" VerticalAlignment="Center">
+        <Rectangle MouseMove="imgGIU_MouseMove"
+            x:Name="imgGIU" StrokeThickness="2" Canvas.Left="1126" Canvas.Top="444" HorizontalAlignment="Left" VerticalAlignment="Center">
             <Rectangle.Stroke>Black</Rectangle.Stroke>
             <Rectangle.Height>260</Rectangle.Height>
             <Rectangle.Width>88</Rectangle.Width>
