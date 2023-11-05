@@ -6,6 +6,7 @@
       xmlns:local="clr-namespace:Proyecto_1EVA_ALB"
       mc:Ignorable="d" 
       d:DesignHeight="720" d:DesignWidth="1280"
+     
       Title="Principal">
     <Page.Resources>
         <Style x:Key="FocusVisual">

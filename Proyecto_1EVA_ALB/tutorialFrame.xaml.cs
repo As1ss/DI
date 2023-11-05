@@ -25,9 +25,11 @@ namespace Proyecto_1EVA_ALB
         static int contadorClicks;
         DispatcherTimer timer;
         MainWindow window;
+        BitmapImage image;
         public tutorialFrame(MainWindow window)
         {
             this.window = window;
+            image = new BitmapImage();
             InitializeComponent();
             timer = new DispatcherTimer();
             timer.Tick += Texto_Tick;
@@ -41,7 +43,7 @@ namespace Proyecto_1EVA_ALB
 
         private void Texto_Tick(object? sender, EventArgs e)
         {
-            var image = new BitmapImage();
+            
             image.BeginInit();
             image.UriSource = new Uri("tutorialGif.gif", UriKind.Relative);
             image.EndInit();
@@ -59,7 +61,7 @@ namespace Proyecto_1EVA_ALB
             }
             if (contadorClicks == 2)
             {
-                ModoFacil nivel1Frame = new ModoFacil(window);
+                nivel1TalkFrame nivel1Frame = new nivel1TalkFrame(window);
                 this.NavigationService.Navigate(nivel1Frame);
 
             }
@@ -67,7 +69,7 @@ namespace Proyecto_1EVA_ALB
 
         private void PrimerTexto()
         {
-            textWinston.Content = "El Objetivo que debemos cumplir es el empaquetado de todos los componentes hardware \npara satisfacer" +
+            textWinston.Content = "El objetivo que debemos cumplir es el empaquetado de todos los componentes hardware \npara satisfacer" +
                 " las peticiones de nuestros clientes antes de que desaparezcan las cajas.";
 
         }

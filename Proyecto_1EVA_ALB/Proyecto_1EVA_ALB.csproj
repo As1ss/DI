@@ -8,6 +8,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="ammoBoxCPU.png" />
+    <None Remove="ammoBoxGIU.png" />
+    <None Remove="ammoBoxHDD.png" />
+    <None Remove="ammoBoxPower.png" />
+    <None Remove="ammoBoxRAM.png" />
     <None Remove="box.png" />
     <None Remove="boxCPU.png" />
     <None Remove="boxGIU.png" />
@@ -26,12 +31,15 @@
     <None Remove="images\RAM.png" />
     <None Remove="images\tutorialGif.gif" />
     <None Remove="images\winstonMenu.png" />
+    <None Remove="label2Texture.jpg" />
     <None Remove="nivel1Background.png" />
+    <None Remove="nivel2Background.jpg" />
     <None Remove="Power.png" />
     <None Remove="PrincipalBackground.jpg" />
     <None Remove="PrincipalBackground.png" />
     <None Remove="Proc.png" />
     <None Remove="RAM.png" />
+    <None Remove="torbjorn.png" />
     <None Remove="tutorialGif.gif" />
     <None Remove="winstonMenu.png" />
   </ItemGroup>
@@ -55,6 +63,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="ammoBoxCPU.png" />
+    <Resource Include="ammoBoxGIU.png" />
+    <Resource Include="ammoBoxHDD.png" />
+    <Resource Include="ammoBoxPower.png" />
+    <Resource Include="ammoBoxRAM.png" />
     <Resource Include="box.png" />
     <Resource Include="boxCPU.png" />
     <Resource Include="boxGIU.png" />
@@ -63,6 +76,8 @@
     <Resource Include="boxRAM.png" />
     <Resource Include="bubbleChat.png" />
     <Resource Include="buttonTexture.jpg" />
+    <Resource Include="label2Texture.jpg" />
+    <Resource Include="nivel2Background.jpg" />
     <Resource Include="pointer.cur" />
     <Resource Include="GIU.png" />
     <Resource Include="HDDpng.png" />
@@ -72,6 +87,9 @@
     <Resource Include="PrincipalBackground.png" />
     <Resource Include="Proc.png" />
     <Resource Include="RAM.png" />
+    <Resource Include="torbjorn.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="tutorialGif.gif">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>

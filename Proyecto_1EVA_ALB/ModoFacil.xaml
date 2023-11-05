@@ -6,7 +6,8 @@
       xmlns:local="clr-namespace:Proyecto_1EVA_ALB"
       mc:Ignorable="d" 
       d:DesignHeight="720" d:DesignWidth="1280"
-      Title="ModoFacil">
+      Title="ModoFacil"
+      >
 
     <Canvas Width="1280" Height="720"
         x:Name="canvasNivel1" AllowDrop="True" Drop="canvasFacil_Drop" 

@@ -1,0 +1,85 @@
+﻿<Page x:Class="Proyecto_1EVA_ALB.nivel1TalkFrame"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Proyecto_1EVA_ALB"
+      mc:Ignorable="d" 
+      d:DesignHeight="720" d:DesignWidth="1280"
+      Title="nivel1TalkFrame">
+
+    <Canvas>
+        <Canvas.Background>
+            <ImageBrush ImageSource="/nivel1Background.png"/>
+        </Canvas.Background>
+        <Image Width="421" Height="634" Canvas.Left="770" Canvas.Top="36">
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="/torbjorn.png"/>
+            </Image.OpacityMask>
+        </Image>
+        <Image Source="images/winstonMenu.png" Width="578" Height="462" Canvas.Left="-85" HorizontalAlignment="Left" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Top" Canvas.Top="282" >
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="tobjornImage"
+            Source="/torbjorn.png" Visibility="Hidden"
+            Width="877" Height="815" Canvas.Left="489" Stretch="Fill" HorizontalAlignment="Left" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+
+        </Image>
+
+        <Image x:Name="bubbleChatTobjorn" Visibility="Hidden"
+               Source="/bubbleChat.png" Canvas.Top="482" HorizontalAlignment="Left" VerticalAlignment="Center" Width="1206" Height="206" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Canvas.Left="16" >
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="-1" ScaleX="1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="bubbleChatWinston" Source="/bubbleChat.png" Canvas.Top="482" HorizontalAlignment="Left" VerticalAlignment="Center" Width="1192" Height="206" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Canvas.Left="28" >
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="-1" ScaleX="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+
+        <Label x:Name="textWinston"
+               FontSize="30"  
+           FontFamily="Impact"
+        MouseLeftButtonDown="textWinston_MouseLeftButtonDown"
+        Width="1230" Canvas.Top="567" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="50" 
+               Content="Nuestro primer cliente es un buen amigo llamado Torbjorn. Es un poco gruñón pero&#xD;&#xA; es buena persona y necesita nuestros componentes para mejorar sus torretas." 
+               />
+
+        <Label x:Name="textTobJorn" Visibility="Hidden"
+        FontSize="30"  
+    FontFamily="Impact"
+ MouseLeftButtonDown="textWinston_MouseLeftButtonDown"
+ Width="1230" Canvas.Top="549" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Left="50" 
+        Content="¡Hey, buenas Winston! Gracias a dios que has llegado ¿Quién es ese con el que vienes?&#xD;&#xA; ¡Bah, no importa!  Lo único que quiero son esos malditos componentes para mis chicas&#xD;&#xA;
+hambrientas de poder." 
+        />
+
+
+    </Canvas>
+</Page>

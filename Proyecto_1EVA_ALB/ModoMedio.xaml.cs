@@ -156,7 +156,7 @@ namespace Proyecto_1EVA_ALB
         private void Timer_Tick(object sender, EventArgs e)
         {
             //Comprobación de la puntuación
-            if (puntuacion == 50)
+            if (puntuacion == 8)
             {
                 respawnTimer.Stop();
                 opacityTimer.Stop();
@@ -349,7 +349,8 @@ namespace Proyecto_1EVA_ALB
                 {
                     rectProc.Stroke = Brushes.Lime;
                     rectProc.StrokeThickness = 5;
-                    puntuacion += 10;
+                    puntuacion += 1;
+                    labelPuntuacion.Content = puntuacion + "/8";
                     rectProc.Opacity = -1;
                     vidas++;
                    
@@ -386,7 +387,8 @@ namespace Proyecto_1EVA_ALB
                 {
                     rectHDD.Stroke = Brushes.Lime;
                     rectHDD.StrokeThickness = 5;
-                    puntuacion += 10;
+                    puntuacion += 1;
+                    labelPuntuacion.Content = puntuacion + "/8";
                     rectHDD.Opacity = -1f;
                     vidas++;
                    
@@ -424,7 +426,8 @@ namespace Proyecto_1EVA_ALB
                 {
                     rectPower.Stroke = Brushes.Lime;
                     rectPower.StrokeThickness = 5;
-                    puntuacion += 10;
+                    puntuacion += 1;
+                    labelPuntuacion.Content = puntuacion + "/8";
                     rectPower.Opacity = -1f;
                     vidas++;
                     
@@ -463,7 +466,8 @@ namespace Proyecto_1EVA_ALB
                 {
                     rectRam.Stroke = Brushes.Lime;
                     rectRam.StrokeThickness = 5;
-                    puntuacion += 10;
+                    puntuacion += 1;
+                    labelPuntuacion.Content = puntuacion + "/8";
                     rectRam.Opacity = -1f;
                     vidas++;
                  
@@ -501,7 +505,8 @@ namespace Proyecto_1EVA_ALB
                 {
                     rectGIU.Stroke = Brushes.Lime;
                     rectGIU.StrokeThickness = 5;
-                    puntuacion += 10;
+                    puntuacion += 1;
+                    labelPuntuacion.Content = puntuacion + "/8";
                     rectGIU.Opacity = -1f;
                     vidas++;
                    
