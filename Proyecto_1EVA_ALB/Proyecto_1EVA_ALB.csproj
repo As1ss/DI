@@ -14,7 +14,9 @@
     <None Remove="boxHDD.png" />
     <None Remove="boxPower.png" />
     <None Remove="boxRAM.png" />
+    <None Remove="bubbleChat.png" />
     <None Remove="buttonTexture.jpg" />
+    <None Remove="Cursors\pointer.cur" />
     <None Remove="GIU.png" />
     <None Remove="HDDpng.png" />
     <None Remove="images\boxCPU.png" />
@@ -22,12 +24,15 @@
     <None Remove="images\hammer_wrench.png" />
     <None Remove="images\pc_icon.png" />
     <None Remove="images\RAM.png" />
+    <None Remove="images\tutorialGif.gif" />
     <None Remove="images\winstonMenu.png" />
+    <None Remove="nivel1Background.png" />
     <None Remove="Power.png" />
     <None Remove="PrincipalBackground.jpg" />
     <None Remove="PrincipalBackground.png" />
     <None Remove="Proc.png" />
     <None Remove="RAM.png" />
+    <None Remove="tutorialGif.gif" />
     <None Remove="winstonMenu.png" />
   </ItemGroup>
 
@@ -56,17 +61,31 @@
     <Resource Include="boxHDD.png" />
     <Resource Include="boxPower.png" />
     <Resource Include="boxRAM.png" />
+    <Resource Include="bubbleChat.png" />
     <Resource Include="buttonTexture.jpg" />
+    <Resource Include="pointer.cur" />
     <Resource Include="GIU.png" />
     <Resource Include="HDDpng.png" />
+    <Resource Include="nivel1Background.png" />
     <Resource Include="Power.png" />
     <Resource Include="PrincipalBackground.jpg" />
     <Resource Include="PrincipalBackground.png" />
     <Resource Include="Proc.png" />
     <Resource Include="RAM.png" />
+    <Resource Include="tutorialGif.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Content Include="images\winstonMenu.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="WpfAnimatedGif" Version="2.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Cursors\" />
   </ItemGroup>
 
 </Project>

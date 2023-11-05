@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -24,30 +26,25 @@ namespace Proyecto_1EVA_ALB
         public bool modoFacil;
         public bool modoMedio;
         public bool modoDios;
+        static Cursor owCursor = new Cursor(Application.GetResourceStream(new Uri("pointer.cur",UriKind.Relative)).Stream);
         public Principal(MainWindow window)
         {
+            
             this.window = window;   
             InitializeComponent();
             modoFacil = true;
+            Mouse.OverrideCursor = owCursor;
+
+
+          
+
         }
         private void btnJugar_Click(object sender, RoutedEventArgs e)
         {
-            if (modoFacil)
-            {
-                ModoFacil modoFacilPage = new ModoFacil(window);
-                this.NavigationService.Navigate(modoFacilPage);
+            tutorialFrame tutorial = new tutorialFrame(window);
+            this.NavigationService.Navigate(tutorial);
 
-            }
-            if (modoMedio)
-            {
-                ModoMedio modoMedio = new ModoMedio(window);
-                this.NavigationService.Navigate(modoMedio);
-            }
-            if (modoDios)
-            {
-                ModoDios modoGod = new ModoDios(window);
-                this.NavigationService.Navigate(modoGod);
-            }
+          
         }
         private void btnSettings_Click(object sender, RoutedEventArgs e)
         {

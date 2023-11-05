@@ -5,6 +5,6 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Proyecto_1EVA_ALB"
         mc:Ignorable="d" Closing="Window_Closing"
-        Title="MainWindow" Height="720" Width="1280">
+        Title="MainWindow" Height="740" Width="1280">
     <Frame x:Name="MainFrame" Content="Frame" NavigationUIVisibility="Hidden"/>
 </Window>

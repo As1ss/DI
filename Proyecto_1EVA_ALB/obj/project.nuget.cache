@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "ggtIJZQz/bEXaWO2WlYFLzUz1ukuMe/xFFgpc5zj6x6Rq+wyiDWcR/M29erHpAIT6cR6GS5Rdjle44wFRewlbA==",
+  "dgSpecHash": "r1guxfden/SM3Ccdy+sI32CLlE1nmozsF6UB1u6TFmeqhmQ2//y6rKa4O1EZ8WcJyUgkOB1W43ci8+D0e2QrAQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\As1ss\\Desktop\\COSAS CLASE KEK\\DAM2T\\DI\\Proyecto_1EVA_ALB\\Proyecto_1EVA_ALB.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\As1ss\\.nuget\\packages\\wpfanimatedgif\\2.0.2\\wpfanimatedgif.2.0.2.nupkg.sha512"
+  ],
   "logs": []
 }

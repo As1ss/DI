@@ -8,9 +8,14 @@
       d:DesignHeight="720" d:DesignWidth="1280"
       Title="ModoFacil">
 
-    <Canvas x:Name="canvasNivel1"
-        Background="White" AllowDrop="True" Drop="canvasFacil_Drop" 
-            DragOver="canvasFacil_DragOver">
+    <Canvas Width="1280" Height="720"
+        x:Name="canvasNivel1" AllowDrop="True" Drop="canvasFacil_Drop" 
+            DragOver="canvasFacil_DragOver"
+            VerticalAlignment="Center" 
+            HorizontalAlignment="Center">
+        <Canvas.Background>
+            <ImageBrush ImageSource="/nivel1Background.png" Stretch="UniformToFill"/>
+        </Canvas.Background>
         <Label FontSize="25" FontFamily="ShowCard Gothic" Canvas.Left="10" Foreground="White" RenderTransformOrigin="-0.233,-4.054" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Top="669">
             <Label.Effect>
                 <DropShadowEffect/>
@@ -32,7 +37,19 @@
             </Label.Background> Vidas: 3
         </Label>
 
-
+        <Label x:Name="labelPuntuacion"
+        FontFamily="ShowCard Gothic"
+     FontSize="35" HorizontalAlignment="Left" 
+     Canvas.Left="620" 
+     VerticalAlignment="Center"
+               Foreground="White" Canvas.Top="10">
+            <Label.Effect>
+                <DropShadowEffect/>
+            </Label.Effect>
+            <Label.Background>
+                <ImageBrush ImageSource="/buttonTexture.jpg"/>
+            </Label.Background> 0/5
+        </Label>
 
         <Rectangle x:Name="rectProc"
             StrokeThickness="2" Canvas.Left="83" Canvas.Top="78" HorizontalAlignment="Left" VerticalAlignment="Top">
@@ -78,17 +95,17 @@
         </Rectangle>
 
         <Rectangle MouseMove="imgProc_MouseMove"
-            x:Name="imgProc" StrokeThickness="2" Canvas.Left="1040" Canvas.Top="22" HorizontalAlignment="Center" VerticalAlignment="Top">
+            x:Name="imgProc" StrokeThickness="2" Canvas.Left="1072" Canvas.Top="22" HorizontalAlignment="Left" VerticalAlignment="Center">
             <Rectangle.Fill>
                 <ImageBrush ImageSource="/Proc.png" Stretch="Fill"/>
             </Rectangle.Fill>
 
             <Rectangle.Height>111</Rectangle.Height>
-            <Rectangle.Width>121</Rectangle.Width>
+            <Rectangle.Width>122</Rectangle.Width>
         </Rectangle>
 
         <Rectangle MouseMove="imgHDD_MouseMove"
-  x:Name="imgHDD" StrokeThickness="2" Canvas.Left="1050" Canvas.Top="138" HorizontalAlignment="Center" VerticalAlignment="Center">
+  x:Name="imgHDD" StrokeThickness="2" Canvas.Left="1082" Canvas.Top="138" HorizontalAlignment="Center" VerticalAlignment="Center">
             <Rectangle.Fill>
                 <ImageBrush ImageSource="/HDDpng.png" Stretch="UniformToFill"/>
             </Rectangle.Fill>
@@ -97,7 +114,7 @@
         </Rectangle>
         <Rectangle 
             MouseMove="imgPower_MouseMove"
-            x:Name="imgPower" StrokeThickness="2" Canvas.Left="997" Canvas.Top="300" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" VerticalAlignment="Center">
+            x:Name="imgPower" StrokeThickness="2" Canvas.Left="997" Canvas.Top="310" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" VerticalAlignment="Top">
             <Rectangle.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -114,7 +131,7 @@
             <Rectangle.Width>226</Rectangle.Width>
         </Rectangle>
         <Rectangle MouseMove="imgRam_MouseMove"
-            x:Name="imgRam" StrokeThickness="2" Canvas.Left="925" Canvas.Top="527" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" VerticalAlignment="Top">
+            x:Name="imgRam" StrokeThickness="2" Canvas.Left="935" Canvas.Top="523" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" VerticalAlignment="Top">
             <Rectangle.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -130,7 +147,7 @@
             <Rectangle.Width>237</Rectangle.Width>
         </Rectangle>
         <Rectangle MouseMove="imgGIU_MouseMove"
-            x:Name="imgGIU" StrokeThickness="2" Canvas.Left="1118" Canvas.Top="448" HorizontalAlignment="Left" VerticalAlignment="Top">
+            x:Name="imgGIU" StrokeThickness="2" Canvas.Left="1124" Canvas.Top="448" HorizontalAlignment="Left" VerticalAlignment="Top">
             <Rectangle.Fill>
                 <ImageBrush ImageSource="/GIU.png" Stretch="UniformToFill"/>
             </Rectangle.Fill>
