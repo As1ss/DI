@@ -62,6 +62,35 @@ namespace Proyecto_1EVA_ALB
         {
             window.Close();
         }
-       
+
+        private void btnJugar_MouseEnter(object sender, MouseEventArgs e)
+        {
+            Canvas.SetTop(btnJugar, 488);
+           
+            btnJugar.Width += 50;
+            btnJugar.Height += 50;
+        }
+
+        private void btnJugar_MouseLeave(object sender, MouseEventArgs e)
+        {
+            Canvas.SetTop(btnJugar, 538);
+            btnJugar.Width -= 50;
+            btnJugar.Height -= 50;
+        }
+
+        private void btnSalir_MouseEnter(object sender, MouseEventArgs e)
+        {
+            Canvas.SetTop(btnSalir, 488);
+            btnSalir.Width += 50;
+            btnSalir.Height += 50;
+        }
+
+        private void btnSalir_MouseLeave(object sender, MouseEventArgs e)
+        {
+            Canvas.SetTop(btnSalir, 538);
+            btnSalir.Width -= 50;
+            btnSalir.Height -= 50;
+           
+        }
     }
 }

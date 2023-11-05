@@ -14,24 +14,37 @@
     <None Remove="boxHDD.png" />
     <None Remove="boxPower.png" />
     <None Remove="boxRAM.png" />
+    <None Remove="buttonTexture.jpg" />
     <None Remove="GIU.png" />
     <None Remove="HDDpng.png" />
     <None Remove="images\boxCPU.png" />
+    <None Remove="images\buttonTexture.jpg" />
     <None Remove="images\hammer_wrench.png" />
     <None Remove="images\pc_icon.png" />
+    <None Remove="images\RAM.png" />
+    <None Remove="images\winstonMenu.png" />
     <None Remove="Power.png" />
+    <None Remove="PrincipalBackground.jpg" />
+    <None Remove="PrincipalBackground.png" />
     <None Remove="Proc.png" />
     <None Remove="RAM.png" />
+    <None Remove="winstonMenu.png" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Include="images\boxCPU.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="images\buttonTexture.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="images\hammer_wrench.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="images\pc_icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\RAM.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
@@ -43,11 +56,17 @@
     <Resource Include="boxHDD.png" />
     <Resource Include="boxPower.png" />
     <Resource Include="boxRAM.png" />
+    <Resource Include="buttonTexture.jpg" />
     <Resource Include="GIU.png" />
     <Resource Include="HDDpng.png" />
     <Resource Include="Power.png" />
+    <Resource Include="PrincipalBackground.jpg" />
+    <Resource Include="PrincipalBackground.png" />
     <Resource Include="Proc.png" />
     <Resource Include="RAM.png" />
+    <Content Include="images\winstonMenu.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>

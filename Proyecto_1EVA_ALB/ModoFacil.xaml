@@ -11,25 +11,40 @@
     <Canvas x:Name="canvasNivel1"
         Background="White" AllowDrop="True" Drop="canvasFacil_Drop" 
             DragOver="canvasFacil_DragOver">
-        <Label FontSize="25" FontFamily="Comic Sans MS">Nivel 1</Label>
-        <Label x:Name="labelVidas" FontFamily="Comic Sans MS"
+        <Label FontSize="25" FontFamily="ShowCard Gothic" Canvas.Left="10" Foreground="White" RenderTransformOrigin="-0.233,-4.054" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Top="669">
+            <Label.Effect>
+                <DropShadowEffect/>
+            </Label.Effect>
+            <Label.Background>
+                <ImageBrush ImageSource="/buttonTexture.jpg"/>
+            </Label.Background> Nivel 1
+        </Label>
+        <Label x:Name="labelVidas"
+               FontFamily="ShowCard Gothic"
             FontSize="25" HorizontalAlignment="Left" 
-            Canvas.Left="156" 
-            VerticalAlignment="Center">Vidas: 3</Label>
+            Canvas.Left="10" 
+            VerticalAlignment="Top" Foreground="White" Canvas.Top="10">
+            <Label.Effect>
+                <DropShadowEffect/>
+            </Label.Effect>
+            <Label.Background>
+                <ImageBrush ImageSource="/buttonTexture.jpg"/>
+            </Label.Background> Vidas: 3
+        </Label>
 
 
 
         <Rectangle x:Name="rectProc"
-            StrokeThickness="2" Canvas.Left="65" Canvas.Top="50" HorizontalAlignment="Left" VerticalAlignment="Top">
+            StrokeThickness="2" Canvas.Left="83" Canvas.Top="78" HorizontalAlignment="Left" VerticalAlignment="Top">
             <Rectangle.Fill>
                 <ImageBrush ImageSource="/boxCPU.png" Stretch="None"/>
             </Rectangle.Fill>
             <Rectangle.Stroke>Black</Rectangle.Stroke>
-            <Rectangle.Height>175</Rectangle.Height>
+            <Rectangle.Height>174</Rectangle.Height>
             <Rectangle.Width>183</Rectangle.Width>
         </Rectangle>
 
-        <Rectangle x:Name="rectHDD" StrokeThickness="2" Canvas.Left="65" Canvas.Top="510" HorizontalAlignment="Left" VerticalAlignment="Top">
+        <Rectangle x:Name="rectHDD" StrokeThickness="2" Canvas.Left="83" Canvas.Top="479" HorizontalAlignment="Left" VerticalAlignment="Top">
             <Rectangle.Fill>
                 <ImageBrush ImageSource="/boxHDD.png" Stretch="None"/>
             </Rectangle.Fill>
@@ -37,7 +52,7 @@
             <Rectangle.Height>176</Rectangle.Height>
             <Rectangle.Width>183</Rectangle.Width>
         </Rectangle>
-        <Rectangle x:Name="rectPower" StrokeThickness="2" Canvas.Left="548" Canvas.Top="511" HorizontalAlignment="Left" VerticalAlignment="Top">
+        <Rectangle x:Name="rectPower" StrokeThickness="2" Canvas.Left="528" Canvas.Top="479" HorizontalAlignment="Left" VerticalAlignment="Top">
             <Rectangle.Fill>
                 <ImageBrush ImageSource="/boxPower.png" Stretch="None"/>
             </Rectangle.Fill>
@@ -45,7 +60,7 @@
             <Rectangle.Height>175</Rectangle.Height>
             <Rectangle.Width>184</Rectangle.Width>
         </Rectangle>
-        <Rectangle x:Name="rectRam" StrokeThickness="2" Canvas.Left="549" Canvas.Top="50" HorizontalAlignment="Left" VerticalAlignment="Top">
+        <Rectangle x:Name="rectRam" StrokeThickness="2" Canvas.Left="548" Canvas.Top="77" HorizontalAlignment="Left" VerticalAlignment="Top">
             <Rectangle.Fill>
                 <ImageBrush ImageSource="/boxRAM.png" Stretch="None"/>
             </Rectangle.Fill>
@@ -71,7 +86,7 @@
             <Rectangle.Height>111</Rectangle.Height>
             <Rectangle.Width>121</Rectangle.Width>
         </Rectangle>
-        
+
         <Rectangle MouseMove="imgHDD_MouseMove"
   x:Name="imgHDD" StrokeThickness="2" Canvas.Left="1050" Canvas.Top="138" HorizontalAlignment="Center" VerticalAlignment="Center">
             <Rectangle.Fill>
