@@ -26,16 +26,27 @@
     <None Remove="devilChestCPU.png" />
     <None Remove="GIU.png" />
     <None Remove="HDDpng.png" />
+    <None Remove="images\ammoBoxCPU.png" />
+    <None Remove="images\ammoBoxGIU.png" />
+    <None Remove="images\ammoBoxHDD.png" />
+    <None Remove="images\ammoBoxPower.png" />
+    <None Remove="images\ammoBoxRAM.png" />
     <None Remove="images\boxCPU.png" />
     <None Remove="images\buttonTexture.jpg" />
+    <None Remove="images\devilChestCPU.png" />
     <None Remove="images\devilChestGIU.png" />
     <None Remove="images\devilChestHDD.png" />
     <None Remove="images\devilChestPower.png" />
     <None Remove="images\devilChestRAM.png" />
+    <None Remove="images\GIU.png" />
     <None Remove="images\hammer_wrench.png" />
+    <None Remove="images\HDDpng.png" />
+    <None Remove="images\label2Texture.jpg" />
     <None Remove="images\metalTexture.jpg" />
+    <None Remove="images\nivel2Background.jpg" />
     <None Remove="images\nivel3Background.jpg" />
     <None Remove="images\pc_icon.png" />
+    <None Remove="images\Power.png" />
     <None Remove="images\PrincipalBackground.png" />
     <None Remove="images\Proc.png" />
     <None Remove="images\RAM.png" />
@@ -57,6 +68,21 @@
     <Content Include="images\boxCPU.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Resource Include="images\ammoBoxCPU.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\ammoBoxGIU.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\ammoBoxHDD.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\ammoBoxPower.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\ammoBoxRAM.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="images\buttonTexture.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
@@ -66,18 +92,22 @@
     <Content Include="images\pc_icon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="images\RAM.png">
+    <Resource Include="images\GIU.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    </Resource>
+    <Resource Include="images\label2Texture.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\nivel2Background.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\RAM.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="2305.w026.n002.3573B.p1.3573.jpg" />
-    <Resource Include="ammoBoxCPU.png" />
-    <Resource Include="ammoBoxGIU.png" />
-    <Resource Include="ammoBoxHDD.png" />
-    <Resource Include="ammoBoxPower.png" />
-    <Resource Include="ammoBoxRAM.png" />
     <Resource Include="andrew.png" />
     <Resource Include="box.png" />
     <Resource Include="boxCPU.png" />
@@ -86,7 +116,9 @@
     <Resource Include="boxPower.png" />
     <Resource Include="boxRAM.png" />
     <Resource Include="bubbleChat.png" />
-    <Resource Include="devilChestCPU.png" />
+    <Resource Include="images\devilChestCPU.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="images\devilChestGIU.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
@@ -99,10 +131,16 @@
     <Resource Include="images\devilChestRAM.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="images\HDDpng.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="images\metalTexture.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="images\nivel3Background.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\Power.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="images\PrincipalBackground.png">
@@ -111,17 +149,11 @@
     <Resource Include="images\Proc.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="label2Texture.jpg" />
     <Resource Include="mercy.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="nivel2Background.jpg" />
     <Resource Include="pointer.cur" />
-    <Resource Include="GIU.png" />
-    <Resource Include="HDDpng.png" />
     <Resource Include="nivel1Background.png" />
-    <Resource Include="Power.png" />
-    <Resource Include="RAM.png" />
     <Resource Include="soldado76.png" />
     <Resource Include="torbjorn.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

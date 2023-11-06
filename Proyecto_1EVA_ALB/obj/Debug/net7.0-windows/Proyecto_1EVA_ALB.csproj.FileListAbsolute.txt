@@ -72,7 +72,6 @@ C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7
 C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\FinalTalkFrame.g.cs
 C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\FinalTalkFrame.baml
 D:\DAM2T\DI\Proyecto_1EVA_ALB\bin\Debug\net7.0-windows\images\boxCPU.png
-D:\DAM2T\DI\Proyecto_1EVA_ALB\bin\Debug\net7.0-windows\images\RAM.png
 D:\DAM2T\DI\Proyecto_1EVA_ALB\bin\Debug\net7.0-windows\images\winstonMenu.png
 D:\DAM2T\DI\Proyecto_1EVA_ALB\bin\Debug\net7.0-windows\WpfAnimatedGif.dll
 D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\Proyecto_1EVA_ALB.csproj.AssemblyReference.cache

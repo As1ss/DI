@@ -54,7 +54,7 @@
         <Rectangle x:Name="rectProc"
           StrokeThickness="2" Canvas.Left="548" Canvas.Top="481" HorizontalAlignment="Left" VerticalAlignment="Top">
             <Rectangle.Fill>
-                <ImageBrush ImageSource="/devilChestCPU.png" Stretch="UniformToFill"/>
+                <ImageBrush ImageSource="images/devilChestCPU.png" Stretch="UniformToFill"/>
             </Rectangle.Fill>
             <Rectangle.Stroke>Black</Rectangle.Stroke>
             <Rectangle.Height>174</Rectangle.Height>
@@ -107,7 +107,7 @@
         <Rectangle MouseMove="imgHDD_MouseMove"
 x:Name="imgHDD" StrokeThickness="2" Canvas.Left="1082" Canvas.Top="138" HorizontalAlignment="Center" VerticalAlignment="Center">
             <Rectangle.Fill>
-                <ImageBrush ImageSource="/HDDpng.png" Stretch="UniformToFill"/>
+                <ImageBrush ImageSource="images/HDDpng.png" Stretch="UniformToFill"/>
             </Rectangle.Fill>
             <Rectangle.Height>149</Rectangle.Height>
             <Rectangle.Width>102</Rectangle.Width>
@@ -125,7 +125,7 @@ x:Name="imgHDD" StrokeThickness="2" Canvas.Left="1082" Canvas.Top="138" Horizont
             </Rectangle.RenderTransform>
             <Rectangle.Fill>
 
-                <ImageBrush ImageSource="/Power.png" Stretch="UniformToFill"/>
+                <ImageBrush ImageSource="images/Power.png" Stretch="UniformToFill"/>
             </Rectangle.Fill>
             <Rectangle.Height>118</Rectangle.Height>
             <Rectangle.Width>226</Rectangle.Width>
@@ -141,7 +141,7 @@ x:Name="imgHDD" StrokeThickness="2" Canvas.Left="1082" Canvas.Top="138" Horizont
                 </TransformGroup>
             </Rectangle.RenderTransform>
             <Rectangle.Fill>
-                <ImageBrush ImageSource="/RAM.png" Stretch="UniformToFill" TileMode="None"/>
+                <ImageBrush ImageSource="images/RAM.png" Stretch="UniformToFill" TileMode="None"/>
             </Rectangle.Fill>
             <Rectangle.Height>79</Rectangle.Height>
             <Rectangle.Width>237</Rectangle.Width>
@@ -149,7 +149,7 @@ x:Name="imgHDD" StrokeThickness="2" Canvas.Left="1082" Canvas.Top="138" Horizont
         <Rectangle MouseMove="imgGIU_MouseMove"
           x:Name="imgGIU" StrokeThickness="2" Canvas.Left="1124" Canvas.Top="448" HorizontalAlignment="Left" VerticalAlignment="Top">
             <Rectangle.Fill>
-                <ImageBrush ImageSource="/GIU.png" Stretch="UniformToFill"/>
+                <ImageBrush ImageSource="images/GIU.png" Stretch="UniformToFill"/>
             </Rectangle.Fill>
             <Rectangle.Height>238</Rectangle.Height>
             <Rectangle.Width>120</Rectangle.Width>

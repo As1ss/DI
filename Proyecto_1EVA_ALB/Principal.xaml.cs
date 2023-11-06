@@ -44,7 +44,7 @@ namespace Proyecto_1EVA_ALB
             //tutorialFrame tutorialFrame = new tutorialFrame(window);
             //this.NavigationService.Navigate(tutorialFrame);
 
-            ModoDios nivel3 = new ModoDios(window);
+            ModoMedio nivel3 = new ModoMedio(window);
             this.NavigationService.Navigate(nivel3);
           
         }
