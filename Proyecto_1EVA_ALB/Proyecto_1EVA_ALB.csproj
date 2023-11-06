@@ -8,7 +8,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="146Z_2107.w026.n002.565B.p1.565.jpg" />
     <None Remove="2305.w026.n002.3573B.p1.3573.jpg" />
     <None Remove="ammoBoxCPU.png" />
     <None Remove="ammoBoxGIU.png" />
@@ -23,19 +22,21 @@
     <None Remove="boxPower.png" />
     <None Remove="boxRAM.png" />
     <None Remove="bubbleChat.png" />
-    <None Remove="buttonTexture.jpg" />
     <None Remove="Cursors\pointer.cur" />
     <None Remove="devilChestCPU.png" />
-    <None Remove="devilChestGIU.png" />
-    <None Remove="devilChestHDD.png" />
-    <None Remove="devilChestPower.png" />
-    <None Remove="devilChestRAM.png" />
     <None Remove="GIU.png" />
     <None Remove="HDDpng.png" />
     <None Remove="images\boxCPU.png" />
     <None Remove="images\buttonTexture.jpg" />
+    <None Remove="images\devilChestGIU.png" />
+    <None Remove="images\devilChestHDD.png" />
+    <None Remove="images\devilChestPower.png" />
+    <None Remove="images\devilChestRAM.png" />
     <None Remove="images\hammer_wrench.png" />
+    <None Remove="images\nivel3Background.jpg" />
     <None Remove="images\pc_icon.png" />
+    <None Remove="images\PrincipalBackground.png" />
+    <None Remove="images\Proc.png" />
     <None Remove="images\RAM.png" />
     <None Remove="images\tutorialGif.gif" />
     <None Remove="images\winstonMenu.png" />
@@ -45,9 +46,6 @@
     <None Remove="nivel1Background.png" />
     <None Remove="nivel2Background.jpg" />
     <None Remove="Power.png" />
-    <None Remove="PrincipalBackground.jpg" />
-    <None Remove="PrincipalBackground.png" />
-    <None Remove="Proc.png" />
     <None Remove="RAM.png" />
     <None Remove="soldado76.png" />
     <None Remove="torbjorn.png" />
@@ -59,9 +57,9 @@
     <Content Include="images\boxCPU.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="images\buttonTexture.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Resource Include="images\buttonTexture.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Content Include="images\hammer_wrench.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -74,7 +72,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="146Z_2107.w026.n002.565B.p1.565.jpg" />
     <Resource Include="2305.w026.n002.3573B.p1.3573.jpg" />
     <Resource Include="ammoBoxCPU.png" />
     <Resource Include="ammoBoxGIU.png" />
@@ -89,12 +86,28 @@
     <Resource Include="boxPower.png" />
     <Resource Include="boxRAM.png" />
     <Resource Include="bubbleChat.png" />
-    <Resource Include="buttonTexture.jpg" />
     <Resource Include="devilChestCPU.png" />
-    <Resource Include="devilChestGIU.png" />
-    <Resource Include="devilChestHDD.png" />
-    <Resource Include="devilChestPower.png" />
-    <Resource Include="devilChestRAM.png" />
+    <Resource Include="images\devilChestGIU.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\devilChestHDD.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\devilChestPower.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\devilChestRAM.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\nivel3Background.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\PrincipalBackground.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\Proc.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="label2Texture.jpg" />
     <Resource Include="mercy.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -106,9 +119,6 @@
     <Resource Include="HDDpng.png" />
     <Resource Include="nivel1Background.png" />
     <Resource Include="Power.png" />
-    <Resource Include="PrincipalBackground.jpg" />
-    <Resource Include="PrincipalBackground.png" />
-    <Resource Include="Proc.png" />
     <Resource Include="RAM.png" />
     <Resource Include="soldado76.png" />
     <Resource Include="torbjorn.png">

@@ -67,7 +67,7 @@
     </Page.Resources>
     <Canvas>
         <Canvas.Background>
-            <ImageBrush ImageSource="/PrincipalBackground.png"/>
+            <ImageBrush ImageSource="images/PrincipalBackground.png"/>
         </Canvas.Background>
         <TextBlock FontSize="125"
                FontFamily="ShowCard Gothic" Canvas.Left="302" Canvas.Top="10" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center">
@@ -94,7 +94,7 @@
                 VerticalAlignment="Center"
                 Click="btnJugar_Click">
             <Button.Background>
-                <ImageBrush ImageSource="/buttonTexture.jpg"
+                <ImageBrush ImageSource="images/buttonTexture.jpg"
                             Stretch="None"/>
             </Button.Background>
 
