@@ -9,11 +9,13 @@
 
   <ItemGroup>
     <None Remove="146Z_2107.w026.n002.565B.p1.565.jpg" />
+    <None Remove="2305.w026.n002.3573B.p1.3573.jpg" />
     <None Remove="ammoBoxCPU.png" />
     <None Remove="ammoBoxGIU.png" />
     <None Remove="ammoBoxHDD.png" />
     <None Remove="ammoBoxPower.png" />
     <None Remove="ammoBoxRAM.png" />
+    <None Remove="andrew.png" />
     <None Remove="box.png" />
     <None Remove="boxCPU.png" />
     <None Remove="boxGIU.png" />
@@ -73,11 +75,13 @@
 
   <ItemGroup>
     <Resource Include="146Z_2107.w026.n002.565B.p1.565.jpg" />
+    <Resource Include="2305.w026.n002.3573B.p1.3573.jpg" />
     <Resource Include="ammoBoxCPU.png" />
     <Resource Include="ammoBoxGIU.png" />
     <Resource Include="ammoBoxHDD.png" />
     <Resource Include="ammoBoxPower.png" />
     <Resource Include="ammoBoxRAM.png" />
+    <Resource Include="andrew.png" />
     <Resource Include="box.png" />
     <Resource Include="boxCPU.png" />
     <Resource Include="boxGIU.png" />

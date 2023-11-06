@@ -146,19 +146,7 @@ namespace Proyecto_1EVA_ALB
         }
     }
 
-    /*
-     * 
-     *  private void SegundoTexto()
-    {
-        textMercy.Visibility = Visibility.Hidden;
-        mercyImage.Visibility = Visibility.Hidden;
-        bubbleMercy.Visibility = Visibility.Hidden;
-        String texto = "Supongo que no tenemos muchas opciones. Vamos a ayudar a Mercy con su solicitud, pero\n mantén un ojo en todo esto, no sabemos qué planea realmente.";
-        textWinston.Content = texto;
-        textWinston.Visibility = Visibility.Visible;
-        bubbleChatWinston.Visibility = Visibility.Visible;
-    }
-     * */
+   
 
 }
 

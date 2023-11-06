@@ -163,7 +163,7 @@ namespace Proyecto_1EVA_ALB
                 MessageBox.Show("Has pasado de nivel!");
 
 
-                Final finalTalk = new Final(window);
+                FinalTalkFrame finalTalk = new FinalTalkFrame(window);
                 this.NavigationService.Navigate(finalTalk);
 
             }

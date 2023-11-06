@@ -7,7 +7,7 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="Final.xaml.cs">
+    <Compile Update="FinalTalkFrame.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="ModoDios.xaml.cs">
@@ -39,7 +39,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="Final.xaml">
+    <Page Update="FinalTalkFrame.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">
