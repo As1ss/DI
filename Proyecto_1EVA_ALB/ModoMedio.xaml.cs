@@ -163,8 +163,8 @@ namespace Proyecto_1EVA_ALB
                 MessageBox.Show("Has pasado de nivel!");
                
                 
-                ModoDios modoDificl= new ModoDios(window);
-                this.NavigationService.Navigate(modoDificl);
+                Nivel3TalkFrame nivel3TalkFrame= new Nivel3TalkFrame(window);
+                this.NavigationService.Navigate(nivel3TalkFrame);
 
             }
 

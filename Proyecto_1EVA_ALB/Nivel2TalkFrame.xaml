@@ -10,7 +10,7 @@
 
     <Canvas>
         <Canvas.Background>
-            <ImageBrush ImageSource="/nivel2Background.jpg"/>
+            <ImageBrush ImageSource="/nivel2Background.jpg" Stretch="UniformToFill"/>
         </Canvas.Background>
         <Image Width="421" Height="634" Canvas.Left="770" Canvas.Top="36">
             <Image.OpacityMask>
@@ -76,7 +76,7 @@
         FontSize="30"  
     FontFamily="Impact"
  MouseLeftButtonDown="textWinston_MouseLeftButtonDown"
- Width="1230" Canvas.Top="560" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="76" 
+ Width="1230" Canvas.Top="549" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Left="76" 
         Content="¡Alto ahí! Ah, Winston, ¿eres tú? Veo que vienes acompañado. Espero que sea de fiar. Han &#xD;&#xA;interceptado mi último convoy con los componentes necesarios para mis operaciones&#xD;&#xA; secretas. Necesito que hagas el trabajo rápido y, ya sabes... Tú no me conoces." 
         />
 

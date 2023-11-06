@@ -38,6 +38,7 @@
     <None Remove="images\tutorialGif.gif" />
     <None Remove="images\winstonMenu.png" />
     <None Remove="label2Texture.jpg" />
+    <None Remove="mercy.png" />
     <None Remove="metalTexture.jpg" />
     <None Remove="nivel1Background.png" />
     <None Remove="nivel2Background.jpg" />
@@ -91,6 +92,9 @@
     <Resource Include="devilChestPower.png" />
     <Resource Include="devilChestRAM.png" />
     <Resource Include="label2Texture.jpg" />
+    <Resource Include="mercy.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="metalTexture.jpg" />
     <Resource Include="nivel2Background.jpg" />
     <Resource Include="pointer.cur" />
