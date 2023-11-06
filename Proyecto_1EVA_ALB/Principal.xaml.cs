@@ -44,8 +44,8 @@ namespace Proyecto_1EVA_ALB
             //tutorialFrame tutorialFrame = new tutorialFrame(window);
             //this.NavigationService.Navigate(tutorialFrame);
 
-            ModoMedio nivel3 = new ModoMedio(window);
-            this.NavigationService.Navigate(nivel3);
+            tutorialFrame tutorialFrame = new tutorialFrame(window);
+            this.NavigationService.Navigate(tutorialFrame);
           
         }
         private void btnSettings_Click(object sender, RoutedEventArgs e)

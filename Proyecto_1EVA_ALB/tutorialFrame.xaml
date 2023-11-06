@@ -11,7 +11,7 @@
 
     <Canvas>
         <Canvas.Background>
-            <ImageBrush ImageSource="/PrincipalBackground.png"/>
+            <ImageBrush ImageSource="images/PrincipalBackground.png"/>
         </Canvas.Background>
         <Image Source="images/winstonMenu.png" Width="754" Height="718" Canvas.Left="-197" HorizontalAlignment="Left" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Top" Canvas.Top="36" >
             <Image.RenderTransform>
@@ -30,7 +30,7 @@
                VerticalAlignment="Top" Canvas.Top="16" >
            
         </Image>
-        <Image x:Name="bubbleChat" Source="/bubbleChat.png" Canvas.Top="456" HorizontalAlignment="Left" VerticalAlignment="Center" Width="1260" Height="206" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Canvas.Left="10" >
+        <Image x:Name="bubbleChat" Source="images/bubbleChat.png" Canvas.Top="456" HorizontalAlignment="Left" VerticalAlignment="Center" Width="1260" Height="206" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Canvas.Left="10" >
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform ScaleY="-1" ScaleX="-1"/>

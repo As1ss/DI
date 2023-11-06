@@ -32,6 +32,11 @@
     <None Remove="images\ammoBoxPower.png" />
     <None Remove="images\ammoBoxRAM.png" />
     <None Remove="images\boxCPU.png" />
+    <None Remove="images\boxGIU.png" />
+    <None Remove="images\boxHDD.png" />
+    <None Remove="images\boxPower.png" />
+    <None Remove="images\boxRAM.png" />
+    <None Remove="images\bubbleChat.png" />
     <None Remove="images\buttonTexture.jpg" />
     <None Remove="images\devilChestCPU.png" />
     <None Remove="images\devilChestGIU.png" />
@@ -43,6 +48,7 @@
     <None Remove="images\HDDpng.png" />
     <None Remove="images\label2Texture.jpg" />
     <None Remove="images\metalTexture.jpg" />
+    <None Remove="images\nivel1Background.png" />
     <None Remove="images\nivel2Background.jpg" />
     <None Remove="images\nivel3Background.jpg" />
     <None Remove="images\pc_icon.png" />
@@ -65,9 +71,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="images\boxCPU.png">
+    <Resource Include="images\boxCPU.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    </Resource>
     <Resource Include="images\ammoBoxCPU.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
@@ -81,6 +87,21 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="images\ammoBoxRAM.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\boxGIU.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\boxHDD.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\boxPower.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\boxRAM.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\bubbleChat.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="images\buttonTexture.jpg">
@@ -98,6 +119,9 @@
     <Resource Include="images\label2Texture.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="images\nivel1Background.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="images\nivel2Background.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
@@ -110,12 +134,6 @@
     <Resource Include="2305.w026.n002.3573B.p1.3573.jpg" />
     <Resource Include="andrew.png" />
     <Resource Include="box.png" />
-    <Resource Include="boxCPU.png" />
-    <Resource Include="boxGIU.png" />
-    <Resource Include="boxHDD.png" />
-    <Resource Include="boxPower.png" />
-    <Resource Include="boxRAM.png" />
-    <Resource Include="bubbleChat.png" />
     <Resource Include="images\devilChestCPU.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
@@ -153,7 +171,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="pointer.cur" />
-    <Resource Include="nivel1Background.png" />
     <Resource Include="soldado76.png" />
     <Resource Include="torbjorn.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

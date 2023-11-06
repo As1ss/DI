@@ -15,14 +15,14 @@
             VerticalAlignment="Center" 
             HorizontalAlignment="Center">
         <Canvas.Background>
-            <ImageBrush ImageSource="/nivel1Background.png" Stretch="UniformToFill"/>
+            <ImageBrush ImageSource="images/nivel1Background.png" Stretch="UniformToFill"/>
         </Canvas.Background>
         <Label FontSize="25" FontFamily="ShowCard Gothic" Canvas.Left="10" Foreground="White" RenderTransformOrigin="-0.233,-4.054" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Top="669">
             <Label.Effect>
                 <DropShadowEffect/>
             </Label.Effect>
             <Label.Background>
-                <ImageBrush ImageSource="/buttonTexture.jpg"/>
+                <ImageBrush ImageSource="images/buttonTexture.jpg"/>
             </Label.Background> Nivel 1
         </Label>
         <Label x:Name="labelVidas"
@@ -34,7 +34,7 @@
                 <DropShadowEffect/>
             </Label.Effect>
             <Label.Background>
-                <ImageBrush ImageSource="/buttonTexture.jpg"/>
+                <ImageBrush ImageSource="images/buttonTexture.jpg"/>
             </Label.Background> Vidas: 3
         </Label>
 
@@ -48,14 +48,14 @@
                 <DropShadowEffect/>
             </Label.Effect>
             <Label.Background>
-                <ImageBrush ImageSource="/buttonTexture.jpg"/>
+                <ImageBrush ImageSource="images/buttonTexture.jpg"/>
             </Label.Background> 0/5
         </Label>
 
         <Rectangle x:Name="rectProc"
             StrokeThickness="2" Canvas.Left="83" Canvas.Top="78" HorizontalAlignment="Left" VerticalAlignment="Top">
             <Rectangle.Fill>
-                <ImageBrush ImageSource="/boxCPU.png" Stretch="None"/>
+                <ImageBrush ImageSource="images/boxCPU.png" Stretch="None"/>
             </Rectangle.Fill>
             <Rectangle.Stroke>Black</Rectangle.Stroke>
             <Rectangle.Height>174</Rectangle.Height>
@@ -64,7 +64,7 @@
 
         <Rectangle x:Name="rectHDD" StrokeThickness="2" Canvas.Left="83" Canvas.Top="479" HorizontalAlignment="Left" VerticalAlignment="Top">
             <Rectangle.Fill>
-                <ImageBrush ImageSource="/boxHDD.png" Stretch="None"/>
+                <ImageBrush ImageSource="images/boxHDD.png" Stretch="None"/>
             </Rectangle.Fill>
             <Rectangle.Stroke>Black</Rectangle.Stroke>
             <Rectangle.Height>176</Rectangle.Height>
@@ -72,7 +72,7 @@
         </Rectangle>
         <Rectangle x:Name="rectPower" StrokeThickness="2" Canvas.Left="528" Canvas.Top="479" HorizontalAlignment="Left" VerticalAlignment="Top">
             <Rectangle.Fill>
-                <ImageBrush ImageSource="/boxPower.png" Stretch="None"/>
+                <ImageBrush ImageSource="images/boxPower.png" Stretch="None"/>
             </Rectangle.Fill>
             <Rectangle.Stroke>Black</Rectangle.Stroke>
             <Rectangle.Height>175</Rectangle.Height>
@@ -80,7 +80,7 @@
         </Rectangle>
         <Rectangle x:Name="rectRam" StrokeThickness="2" Canvas.Left="548" Canvas.Top="77" HorizontalAlignment="Left" VerticalAlignment="Top">
             <Rectangle.Fill>
-                <ImageBrush ImageSource="/boxRAM.png" Stretch="None"/>
+                <ImageBrush ImageSource="images/boxRAM.png" Stretch="None"/>
             </Rectangle.Fill>
             <Rectangle.Stroke>Black</Rectangle.Stroke>
             <Rectangle.Height>175</Rectangle.Height>
@@ -88,7 +88,7 @@
         </Rectangle>
         <Rectangle x:Name="rectGIU" StrokeThickness="2" Canvas.Left="307" Canvas.Top="272" HorizontalAlignment="Left" VerticalAlignment="Top">
             <Rectangle.Fill>
-                <ImageBrush ImageSource="/boxGIU.png" Stretch="None"/>
+                <ImageBrush ImageSource="images/boxGIU.png" Stretch="None"/>
             </Rectangle.Fill>
             <Rectangle.Stroke>Black</Rectangle.Stroke>
             <Rectangle.Height>176</Rectangle.Height>
@@ -98,7 +98,7 @@
         <Rectangle MouseMove="imgProc_MouseMove"
             x:Name="imgProc" StrokeThickness="2" Canvas.Left="1072" Canvas.Top="22" HorizontalAlignment="Left" VerticalAlignment="Center">
             <Rectangle.Fill>
-                <ImageBrush ImageSource="/Proc.png" Stretch="Fill"/>
+                <ImageBrush ImageSource="images/Proc.png" Stretch="Fill"/>
             </Rectangle.Fill>
 
             <Rectangle.Height>111</Rectangle.Height>
@@ -108,14 +108,15 @@
         <Rectangle MouseMove="imgHDD_MouseMove"
   x:Name="imgHDD" StrokeThickness="2" Canvas.Left="1082" Canvas.Top="138" HorizontalAlignment="Center" VerticalAlignment="Center">
             <Rectangle.Fill>
-                <ImageBrush ImageSource="/HDDpng.png" Stretch="UniformToFill"/>
+                <ImageBrush ImageSource="images/HDDpng.png" Stretch="UniformToFill"/>
             </Rectangle.Fill>
             <Rectangle.Height>149</Rectangle.Height>
             <Rectangle.Width>102</Rectangle.Width>
         </Rectangle>
         <Rectangle 
             MouseMove="imgPower_MouseMove"
-            x:Name="imgPower" StrokeThickness="2" Canvas.Left="997" Canvas.Top="310" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" VerticalAlignment="Top">
+            x:Name="imgPower" StrokeThickness="2" Canvas.Left="997" 
+            Canvas.Top="310" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" VerticalAlignment="Top">
             <Rectangle.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -126,7 +127,7 @@
             </Rectangle.RenderTransform>
             <Rectangle.Fill>
 
-                <ImageBrush ImageSource="/Power.png" Stretch="UniformToFill"/>
+                <ImageBrush ImageSource="images/Power.png" Stretch="UniformToFill"/>
             </Rectangle.Fill>
             <Rectangle.Height>118</Rectangle.Height>
             <Rectangle.Width>226</Rectangle.Width>
@@ -142,7 +143,7 @@
                 </TransformGroup>
             </Rectangle.RenderTransform>
             <Rectangle.Fill>
-                <ImageBrush ImageSource="/RAM.png" Stretch="UniformToFill" TileMode="None"/>
+                <ImageBrush ImageSource="images/RAM.png" Stretch="UniformToFill" TileMode="None"/>
             </Rectangle.Fill>
             <Rectangle.Height>79</Rectangle.Height>
             <Rectangle.Width>237</Rectangle.Width>
@@ -150,7 +151,7 @@
         <Rectangle MouseMove="imgGIU_MouseMove"
             x:Name="imgGIU" StrokeThickness="2" Canvas.Left="1124" Canvas.Top="448" HorizontalAlignment="Left" VerticalAlignment="Top">
             <Rectangle.Fill>
-                <ImageBrush ImageSource="/GIU.png" Stretch="UniformToFill"/>
+                <ImageBrush ImageSource="images/GIU.png" Stretch="UniformToFill"/>
             </Rectangle.Fill>
             <Rectangle.Height>238</Rectangle.Height>
             <Rectangle.Width>120</Rectangle.Width>
