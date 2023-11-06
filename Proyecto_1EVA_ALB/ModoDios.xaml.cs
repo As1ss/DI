@@ -100,7 +100,7 @@ namespace Proyecto_1EVA_ALB
 
             respawnTimer = new DispatcherTimer();
             respawnTimer.Tick += Respawn_Tick;
-            respawnTimer.Interval = TimeSpan.FromSeconds(10);
+            respawnTimer.Interval = TimeSpan.FromSeconds(2.5f);
             respawnTimer.Start();
         }
 
@@ -109,11 +109,11 @@ namespace Proyecto_1EVA_ALB
         {
             rectangles = new List<Rectangle>
         {
+            rectProc,
+            rectHDD,
             rectPower,
             rectGIU,
-            rectRam,
-            rectHDD,
-            rectProc
+            rectRam
         };
 
 
@@ -156,15 +156,15 @@ namespace Proyecto_1EVA_ALB
         private void Timer_Tick(object sender, EventArgs e)
         {
             //Comprobación de la puntuación
-            if (puntuacion == 50)
+            if (puntuacion == 12)
             {
-                opacityTimer.Stop();
                 respawnTimer.Stop();
-               
+                opacityTimer.Stop();
                 MessageBox.Show("Has pasado de nivel!");
-                puntuacion = 0;
-                Final finalFrame = new Final(window);
-                this.NavigationService.Navigate(finalFrame);
+
+
+                Final finalTalk = new Final(window);
+                this.NavigationService.Navigate(finalTalk);
 
             }
 
@@ -194,7 +194,7 @@ namespace Proyecto_1EVA_ALB
                     }
                     if (rectName == "rectRam")
                     {
-                        boxPowerisAlive = false;
+                        boxRamisAlive = false;
                     }
                     if (rectName == "rectGIU")
                     {
@@ -349,10 +349,11 @@ namespace Proyecto_1EVA_ALB
                 {
                     rectProc.Stroke = Brushes.Lime;
                     rectProc.StrokeThickness = 5;
-                    puntuacion += 10;
+                    puntuacion += 1;
+                    labelPuntuacion.Content = puntuacion + "/12";
                     rectProc.Opacity = -1;
                     vidas++;
-                    
+
                 }
 
 
@@ -386,10 +387,11 @@ namespace Proyecto_1EVA_ALB
                 {
                     rectHDD.Stroke = Brushes.Lime;
                     rectHDD.StrokeThickness = 5;
-                    puntuacion += 10;
+                    puntuacion += 1;
+                    labelPuntuacion.Content = puntuacion + "/12";
                     rectHDD.Opacity = -1f;
                     vidas++;
-                   
+
                 }
 
                 hardDiskColliders();
@@ -424,10 +426,11 @@ namespace Proyecto_1EVA_ALB
                 {
                     rectPower.Stroke = Brushes.Lime;
                     rectPower.StrokeThickness = 5;
-                    puntuacion += 10;
+                    puntuacion += 1;
+                    labelPuntuacion.Content = puntuacion + "/12";
                     rectPower.Opacity = -1f;
                     vidas++;
-                    
+
 
                 }
 
@@ -463,10 +466,11 @@ namespace Proyecto_1EVA_ALB
                 {
                     rectRam.Stroke = Brushes.Lime;
                     rectRam.StrokeThickness = 5;
-                    puntuacion += 10;
+                    puntuacion += 1;
+                    labelPuntuacion.Content = puntuacion + "/12";
                     rectRam.Opacity = -1f;
                     vidas++;
-                   
+
                 }
 
                 hardDiskColliders();
@@ -501,10 +505,11 @@ namespace Proyecto_1EVA_ALB
                 {
                     rectGIU.Stroke = Brushes.Lime;
                     rectGIU.StrokeThickness = 5;
-                    puntuacion += 10;
+                    puntuacion += 1;
+                    labelPuntuacion.Content = puntuacion + "/12";
                     rectGIU.Opacity = -1f;
                     vidas++;
-                    
+
                 }
 
                 hardDiskColliders();

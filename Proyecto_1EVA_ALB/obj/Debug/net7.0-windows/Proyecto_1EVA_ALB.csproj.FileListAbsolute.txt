@@ -67,3 +67,5 @@ C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7
 C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\Proyecto_1EVA_ALB.csproj.CopyComplete
 C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\nivel1TalkFrame.g.cs
 C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\nivel1TalkFrame.baml
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\Nivel2TalkFrame.g.cs
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\Nivel2TalkFrame.baml

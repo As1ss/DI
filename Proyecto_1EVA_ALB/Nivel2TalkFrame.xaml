@@ -1,0 +1,85 @@
+﻿<Page x:Class="Proyecto_1EVA_ALB.Nivel2TalkFrame"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Proyecto_1EVA_ALB"
+      mc:Ignorable="d" 
+      d:DesignHeight="720" d:DesignWidth="1280"
+      Title="Nivel2TalkFrame">
+
+    <Canvas>
+        <Canvas.Background>
+            <ImageBrush ImageSource="/nivel2Background.jpg"/>
+        </Canvas.Background>
+        <Image Width="421" Height="634" Canvas.Left="770" Canvas.Top="36">
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="/torbjorn.png"/>
+            </Image.OpacityMask>
+        </Image>
+        <Image Source="images/winstonMenu.png" Width="578" Height="462" Canvas.Left="-85" HorizontalAlignment="Left" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Top" Canvas.Top="282" >
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="soldado76Image"
+            Source="/soldado76.png" Visibility="Hidden"
+            Width="645" Height="739" Canvas.Left="640" Stretch="Fill" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
+
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+
+        </Image>
+
+        <Image x:Name="bubbleChatSoldado76" Visibility="Hidden"
+               Source="/bubbleChat.png" Canvas.Top="482" HorizontalAlignment="Left" VerticalAlignment="Center" Width="1206" Height="206" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Canvas.Left="16" >
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="-1" ScaleX="1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="bubbleChatWinston" Source="/bubbleChat.png" Canvas.Top="482" HorizontalAlignment="Center" VerticalAlignment="Top" Width="1192" Height="224" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Canvas.Left="28" >
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="-1" ScaleX="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+
+        <Label x:Name="textWinston"
+               FontSize="30"  
+           FontFamily="Impact" Visibility="Visible"
+        MouseLeftButtonDown="textWinston_MouseLeftButtonDown"
+        Width="1230" Canvas.Top="560" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="76" 
+               Content="Nuestro segundo cliente es el justiciero Soldado 76, su solicitud es de suma urgencia&#xD;&#xA; y requiere un alto nivel de discreción. Se encuentra actualmente en búsqueda y captura &#xD;&#xA;a nivel mundial, lo que hace que esta transacción sea especialmente delicada." 
+               />
+
+        <Label x:Name="textSoldado76" Visibility="Hidden"
+        FontSize="30"  
+    FontFamily="Impact"
+ MouseLeftButtonDown="textWinston_MouseLeftButtonDown"
+ Width="1230" Canvas.Top="560" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="76" 
+        Content="¡Alto ahí! Ah, Winston, ¿eres tú? Veo que vienes acompañado. Espero que sea de fiar. Han &#xD;&#xA;interceptado mi último convoy con los componentes necesarios para mis operaciones&#xD;&#xA; secretas. Necesito que hagas el trabajo rápido y, ya sabes... Tú no me conoces." 
+        />
+
+
+    </Canvas>
+</Page>

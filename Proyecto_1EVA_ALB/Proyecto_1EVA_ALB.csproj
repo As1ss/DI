@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="146Z_2107.w026.n002.565B.p1.565.jpg" />
     <None Remove="ammoBoxCPU.png" />
     <None Remove="ammoBoxGIU.png" />
     <None Remove="ammoBoxHDD.png" />
@@ -22,6 +23,11 @@
     <None Remove="bubbleChat.png" />
     <None Remove="buttonTexture.jpg" />
     <None Remove="Cursors\pointer.cur" />
+    <None Remove="devilChestCPU.png" />
+    <None Remove="devilChestGIU.png" />
+    <None Remove="devilChestHDD.png" />
+    <None Remove="devilChestPower.png" />
+    <None Remove="devilChestRAM.png" />
     <None Remove="GIU.png" />
     <None Remove="HDDpng.png" />
     <None Remove="images\boxCPU.png" />
@@ -32,6 +38,7 @@
     <None Remove="images\tutorialGif.gif" />
     <None Remove="images\winstonMenu.png" />
     <None Remove="label2Texture.jpg" />
+    <None Remove="metalTexture.jpg" />
     <None Remove="nivel1Background.png" />
     <None Remove="nivel2Background.jpg" />
     <None Remove="Power.png" />
@@ -39,6 +46,7 @@
     <None Remove="PrincipalBackground.png" />
     <None Remove="Proc.png" />
     <None Remove="RAM.png" />
+    <None Remove="soldado76.png" />
     <None Remove="torbjorn.png" />
     <None Remove="tutorialGif.gif" />
     <None Remove="winstonMenu.png" />
@@ -63,6 +71,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="146Z_2107.w026.n002.565B.p1.565.jpg" />
     <Resource Include="ammoBoxCPU.png" />
     <Resource Include="ammoBoxGIU.png" />
     <Resource Include="ammoBoxHDD.png" />
@@ -76,7 +85,13 @@
     <Resource Include="boxRAM.png" />
     <Resource Include="bubbleChat.png" />
     <Resource Include="buttonTexture.jpg" />
+    <Resource Include="devilChestCPU.png" />
+    <Resource Include="devilChestGIU.png" />
+    <Resource Include="devilChestHDD.png" />
+    <Resource Include="devilChestPower.png" />
+    <Resource Include="devilChestRAM.png" />
     <Resource Include="label2Texture.jpg" />
+    <Resource Include="metalTexture.jpg" />
     <Resource Include="nivel2Background.jpg" />
     <Resource Include="pointer.cur" />
     <Resource Include="GIU.png" />
@@ -87,6 +102,7 @@
     <Resource Include="PrincipalBackground.png" />
     <Resource Include="Proc.png" />
     <Resource Include="RAM.png" />
+    <Resource Include="soldado76.png" />
     <Resource Include="torbjorn.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>

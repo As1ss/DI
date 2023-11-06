@@ -100,7 +100,7 @@ namespace Proyecto_1EVA_ALB
 
             respawnTimer = new DispatcherTimer();
             respawnTimer.Tick += Respawn_Tick;
-            respawnTimer.Interval = TimeSpan.FromSeconds(10);
+            respawnTimer.Interval = TimeSpan.FromSeconds(5);
             respawnTimer.Start();
         }
 
@@ -109,11 +109,11 @@ namespace Proyecto_1EVA_ALB
         {
             rectangles = new List<Rectangle>
         {
+            rectProc,
+            rectHDD,
             rectPower,
             rectGIU,
-            rectRam,
-            rectHDD,
-            rectProc
+            rectRam
         };
 
 
@@ -194,7 +194,7 @@ namespace Proyecto_1EVA_ALB
                     }
                     if (rectName == "rectRam")
                     {
-                        boxPowerisAlive = false;
+                        boxRamisAlive = false;
                     }
                     if (rectName == "rectGIU")
                     {

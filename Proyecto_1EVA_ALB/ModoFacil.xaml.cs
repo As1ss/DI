@@ -164,8 +164,8 @@ namespace Proyecto_1EVA_ALB
                 opacityTimer.Stop();
                 MessageBox.Show("Has pasado de nivel!");
                 puntuacion = 0;
-                ModoMedio modoMedio = new ModoMedio(window);
-                this.NavigationService.Navigate(modoMedio);
+                Nivel2TalkFrame nivel2TalkFrame = new Nivel2TalkFrame(window);
+                this.NavigationService.Navigate(nivel2TalkFrame);
 
             }
 
@@ -195,7 +195,7 @@ namespace Proyecto_1EVA_ALB
                     }
                     if (rectName == "rectRam")
                     {
-                        boxPowerisAlive = false;
+                        boxRamisAlive = false;
                     }
                     if (rectName== "rectGIU")
                     {
