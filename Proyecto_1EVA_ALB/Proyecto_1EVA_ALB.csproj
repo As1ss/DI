@@ -33,6 +33,7 @@
     <None Remove="images\devilChestPower.png" />
     <None Remove="images\devilChestRAM.png" />
     <None Remove="images\hammer_wrench.png" />
+    <None Remove="images\metalTexture.jpg" />
     <None Remove="images\nivel3Background.jpg" />
     <None Remove="images\pc_icon.png" />
     <None Remove="images\PrincipalBackground.png" />
@@ -42,7 +43,6 @@
     <None Remove="images\winstonMenu.png" />
     <None Remove="label2Texture.jpg" />
     <None Remove="mercy.png" />
-    <None Remove="metalTexture.jpg" />
     <None Remove="nivel1Background.png" />
     <None Remove="nivel2Background.jpg" />
     <None Remove="Power.png" />
@@ -99,6 +99,9 @@
     <Resource Include="images\devilChestRAM.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="images\metalTexture.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="images\nivel3Background.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
@@ -112,7 +115,6 @@
     <Resource Include="mercy.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="metalTexture.jpg" />
     <Resource Include="nivel2Background.jpg" />
     <Resource Include="pointer.cur" />
     <Resource Include="GIU.png" />
