@@ -26,7 +26,7 @@ namespace Proyecto_1EVA_ALB
         public bool modoFacil;
         public bool modoMedio;
         public bool modoDios;
-        static Cursor owCursor = new Cursor(Application.GetResourceStream(new Uri("pointer.cur",UriKind.Relative)).Stream);
+        static Cursor owCursor = new Cursor(Application.GetResourceStream(new Uri("Cursors/pointer.cur",UriKind.Relative)).Stream);
         public Principal(MainWindow window)
         {
             

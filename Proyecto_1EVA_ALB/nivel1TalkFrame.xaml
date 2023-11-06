@@ -10,11 +10,11 @@
 
     <Canvas>
         <Canvas.Background>
-            <ImageBrush ImageSource="/nivel1Background.png"/>
+            <ImageBrush ImageSource="images/nivel1Background.png"/>
         </Canvas.Background>
         <Image Width="421" Height="634" Canvas.Left="770" Canvas.Top="36">
             <Image.OpacityMask>
-                <ImageBrush ImageSource="/torbjorn.png"/>
+                <ImageBrush ImageSource="images/torbjorn.png"/>
             </Image.OpacityMask>
         </Image>
         <Image Source="images/winstonMenu.png" Width="578" Height="462" Canvas.Left="-85" HorizontalAlignment="Left" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Top" Canvas.Top="282" >
@@ -28,7 +28,7 @@
             </Image.RenderTransform>
         </Image>
         <Image x:Name="tobjornImage"
-            Source="/torbjorn.png" Visibility="Hidden"
+            Source="images/torbjorn.png" Visibility="Hidden"
             Width="877" Height="815" Canvas.Left="489" Stretch="Fill" HorizontalAlignment="Left" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>
                 <TransformGroup>
@@ -42,7 +42,7 @@
         </Image>
 
         <Image x:Name="bubbleChatTobjorn" Visibility="Hidden"
-               Source="/bubbleChat.png" Canvas.Top="482" HorizontalAlignment="Left" VerticalAlignment="Center" Width="1206" Height="206" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Canvas.Left="16" >
+               Source="images/bubbleChat.png" Canvas.Top="482" HorizontalAlignment="Left" VerticalAlignment="Center" Width="1206" Height="206" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Canvas.Left="16" >
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform ScaleY="-1" ScaleX="1"/>
@@ -52,7 +52,7 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <Image x:Name="bubbleChatWinston" Source="/bubbleChat.png" Canvas.Top="482" HorizontalAlignment="Left" VerticalAlignment="Center" Width="1192" Height="206" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Canvas.Left="28" >
+        <Image x:Name="bubbleChatWinston" Source="images/bubbleChat.png" Canvas.Top="482" HorizontalAlignment="Left" VerticalAlignment="Center" Width="1192" Height="206" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Canvas.Left="28" >
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform ScaleY="-1" ScaleX="-1"/>
@@ -67,7 +67,8 @@
                FontSize="30"  
            FontFamily="Impact"
         MouseLeftButtonDown="textWinston_MouseLeftButtonDown"
-        Width="1230" Canvas.Top="567" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="50" 
+        Width="1230" Canvas.Top="567" HorizontalAlignment="Left" 
+               VerticalAlignment="Top" Canvas.Left="50" 
                Content="Nuestro primer cliente es un buen amigo llamado Torbjorn. Es un poco gruñón pero&#xD;&#xA; es buena persona y necesita nuestros componentes para mejorar sus torretas." 
                />
 
