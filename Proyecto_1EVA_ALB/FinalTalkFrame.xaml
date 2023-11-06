@@ -8,11 +8,14 @@
       d:DesignHeight="720" d:DesignWidth="1280"
       Title="FinalTalkFrame">
 
-    <Canvas>
+    <Canvas x:Name="canvasFinal">
         <Canvas.Background>
-            <ImageBrush ImageSource="/2305.w026.n002.3573B.p1.3573.jpg" Stretch="Fill"/>
+            <ImageBrush ImageSource="images/finalTalkBackground.jpg" Stretch="Fill"/>
         </Canvas.Background>
         <Image Width="421" Height="634" Canvas.Left="770" Canvas.Top="36">
+            <Image.OpacityMask>
+                <ImageBrush/>
+            </Image.OpacityMask>
 
         </Image>
         <Image Source="images/winstonMenu.png" Width="578" Height="462" Canvas.Left="-85" HorizontalAlignment="Left" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Top" Canvas.Top="282" >
@@ -26,7 +29,7 @@
             </Image.RenderTransform>
         </Image>
         <Image x:Name="andrewImage"
-           Source="/andrew.png" Visibility="Hidden"
+           Source="images/andrew.png" Visibility="Hidden"
            Width="768" Height="594" Canvas.Left="521" Stretch="Fill" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Canvas.Top="230">
 
             <Image.RenderTransform>
@@ -41,7 +44,7 @@
         </Image>
 
         <Image x:Name="bubbleAndrew" Visibility="Hidden"
-              Source="/bubbleChat.png" Canvas.Top="446" HorizontalAlignment="Center" VerticalAlignment="Top" Width="1206" Height="242" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Canvas.Left="16" >
+              Source="images/bubbleChat.png" Canvas.Top="446" HorizontalAlignment="Center" VerticalAlignment="Top" Width="1206" Height="242" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Canvas.Left="16" >
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform ScaleY="-1" ScaleX="1"/>
@@ -52,7 +55,7 @@
             </Image.RenderTransform>
         </Image>
         <Image x:Name="bubbleChatWinston" Visibility="Visible"
-               Source="/bubbleChat.png" Canvas.Top="482" HorizontalAlignment="Center" VerticalAlignment="Top" Width="1192" Height="207" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Canvas.Left="28" >
+               Source="images/bubbleChat.png" Canvas.Top="482" HorizontalAlignment="Center" VerticalAlignment="Top" Width="1192" Height="207" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Canvas.Left="28" >
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform ScaleY="-1" ScaleX="-1"/>

@@ -8,7 +8,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="2305.w026.n002.3573B.p1.3573.jpg" />
     <None Remove="ammoBoxCPU.png" />
     <None Remove="ammoBoxGIU.png" />
     <None Remove="ammoBoxHDD.png" />
@@ -22,6 +21,7 @@
     <None Remove="boxRAM.png" />
     <None Remove="bubbleChat.png" />
     <None Remove="devilChestCPU.png" />
+    <None Remove="finalTalkBackground.jpg" />
     <None Remove="GIU.png" />
     <None Remove="HDDpng.png" />
     <None Remove="images\ammoBoxCPU.png" />
@@ -29,6 +29,7 @@
     <None Remove="images\ammoBoxHDD.png" />
     <None Remove="images\ammoBoxPower.png" />
     <None Remove="images\ammoBoxRAM.png" />
+    <None Remove="images\andrew.png" />
     <None Remove="images\boxCPU.png" />
     <None Remove="images\boxGIU.png" />
     <None Remove="images\boxHDD.png" />
@@ -45,6 +46,7 @@
     <None Remove="images\hammer_wrench.png" />
     <None Remove="images\HDDpng.png" />
     <None Remove="images\label2Texture.jpg" />
+    <None Remove="images\mercy.png" />
     <None Remove="images\metalTexture.jpg" />
     <None Remove="images\nivel1Background.png" />
     <None Remove="images\nivel2Background.jpg" />
@@ -54,6 +56,7 @@
     <None Remove="images\PrincipalBackground.png" />
     <None Remove="images\Proc.png" />
     <None Remove="images\RAM.png" />
+    <None Remove="images\soldado76.png" />
     <None Remove="images\torbjorn.png" />
     <None Remove="images\tutorialGif.gif" />
     <None Remove="images\winstonMenu.png" />
@@ -70,6 +73,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="images\andrew.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="images\boxCPU.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
@@ -118,6 +124,9 @@
     <Resource Include="images\label2Texture.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="images\mercy.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="images\nivel1Background.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
@@ -130,8 +139,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="2305.w026.n002.3573B.p1.3573.jpg" />
-    <Resource Include="andrew.png" />
+    <Resource Include="images\finalTalkBackground.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="images\devilChestCPU.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
@@ -165,16 +175,15 @@
     <Resource Include="images\Proc.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="images\torbjorn.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    <Resource Include="images\soldado76.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="mercy.png">
+    <Resource Include="images\torbjorn.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Cursors\pointer.cur">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="soldado76.png" />
     <Resource Include="tutorialGif.gif">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>

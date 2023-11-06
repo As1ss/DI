@@ -41,11 +41,10 @@ namespace Proyecto_1EVA_ALB
         }
         private void btnJugar_Click(object sender, RoutedEventArgs e)
         {
-            //tutorialFrame tutorialFrame = new tutorialFrame(window);
-            //this.NavigationService.Navigate(tutorialFrame);
-
             tutorialFrame tutorialFrame = new tutorialFrame(window);
             this.NavigationService.Navigate(tutorialFrame);
+
+          
           
         }
         private void btnSettings_Click(object sender, RoutedEventArgs e)

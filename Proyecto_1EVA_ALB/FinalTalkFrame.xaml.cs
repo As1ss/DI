@@ -113,6 +113,8 @@ namespace Proyecto_1EVA_ALB
                
                 timerTexto.Start();
 
+         
+
             }
             else if (contadorClicks == 5)
             {
