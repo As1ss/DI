@@ -63,7 +63,7 @@
             </Image.RenderTransform>
         </Image>
 
-        <Label x:Name="textWinston"
+        <Label x:Name="textWinston" Visibility="Visible"
                FontSize="30"  
            FontFamily="Impact"
         MouseLeftButtonDown="textWinston_MouseLeftButtonDown"
@@ -75,7 +75,7 @@
         FontSize="30"  
     FontFamily="Impact"
  MouseLeftButtonDown="textWinston_MouseLeftButtonDown"
- Width="1230" Canvas.Top="549" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Left="50" 
+ Width="1230" Canvas.Top="542" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Left="70" 
         Content="¡Hey, buenas Winston! Gracias a dios que has llegado ¿Quién es ese con el que vienes?&#xD;&#xA; ¡Bah, no importa!  Lo único que quiero son esos malditos componentes para mis chicas&#xD;&#xA;
 hambrientas de poder." 
         />

@@ -26,15 +26,31 @@ namespace Proyecto_1EVA_ALB
         DispatcherTimer timer;
         MainWindow window;
         BitmapImage image;
+        static string textoActual; // Texto actual que se mostrará letra por letra
+        static string textoSegundo;
+        static int indiceTexto;// Índice de la letra actual
+        static int indiceTextoSegundo;
+        private DispatcherTimer timerTexto; // Temporizador para mostrar el texto letra por letra
         public tutorialFrame(MainWindow window)
         {
             this.window = window;
             image = new BitmapImage();
             InitializeComponent();
             timer = new DispatcherTimer();
-            timer.Tick += Texto_Tick;
+            timer.Tick += Gif_Tick;
             timer.Start();
             contadorClicks = 0;
+
+            textoActual = "Bienvenido novato, mi nombre es Winston y estoy aquí para instruirte y guiarte\n a lo largo de tu recorrido en este juego.";
+            textoSegundo = "El objetivo que debemos cumplir es el empaquetado de todos los componentes hardware \npara satisfacer" +
+                " las peticiones de nuestros clientes antes de que desaparezcan las cajas.";
+            indiceTexto = 0; // Comenzar desde la primera letra
+            textWinston.Content = string.Empty; // Inicializar el contenido del Label
+
+            timerTexto = new DispatcherTimer();
+            timerTexto.Interval = TimeSpan.FromMilliseconds(30); // Controla la velocidad de la animación
+            timerTexto.Tick += Texto_Tick;
+            timerTexto.Start();
 
 
 
@@ -43,7 +59,29 @@ namespace Proyecto_1EVA_ALB
 
         private void Texto_Tick(object? sender, EventArgs e)
         {
-            
+            if (indiceTexto < textoActual.Length)
+            {
+                // Agregar la siguiente letra al contenido del Label
+                textWinston.Content += textoActual[indiceTexto].ToString();
+                indiceTexto++;
+            }
+
+            else if (indiceTextoSegundo < textoSegundo.Length)
+            {
+                textWinston.Content += textoSegundo[indiceTextoSegundo].ToString();
+                indiceTextoSegundo++;
+            }
+            else
+            {
+                timerTexto.Stop();
+            }
+
+
+
+        }
+        private void Gif_Tick(object? sender, EventArgs e)
+        {
+
             image.BeginInit();
             image.UriSource = new Uri("tutorialGif.gif", UriKind.Relative);
             image.EndInit();
@@ -56,22 +94,33 @@ namespace Proyecto_1EVA_ALB
             contadorClicks++;
             if (contadorClicks == 1)
             {
-                PrimerTexto();
+                timerTexto.Stop(); // Detener la animación de texto actual
+                textWinston.Content = textoActual; // Mostrar el texto completo
+                indiceTexto = textoActual.Length;
+               
+            }
+            else if (contadorClicks == 2)
+            {
+                textWinston.Content = string.Empty;
+                timerTexto.Start();
+
 
             }
-            if (contadorClicks == 2)
+            else if (contadorClicks == 3)
+            {
+                timerTexto.Stop();
+                textWinston.Content = textoSegundo;
+               
+
+            }
+           
+         else if (contadorClicks==4)
             {
                 nivel1TalkFrame nivel1Frame = new nivel1TalkFrame(window);
                 this.NavigationService.Navigate(nivel1Frame);
-
             }
         }
 
-        private void PrimerTexto()
-        {
-            textWinston.Content = "El objetivo que debemos cumplir es el empaquetado de todos los componentes hardware \npara satisfacer" +
-                " las peticiones de nuestros clientes antes de que desaparezcan las cajas.";
-
-        }
+       
     }
 }

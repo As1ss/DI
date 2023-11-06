@@ -46,7 +46,7 @@
                FontFamily="Impact"
             MouseLeftButtonDown="TextBlock_MouseLeftButtonDown"
             Width="1230" Canvas.Top="543" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="40" 
-                   Content="Bienvenido novato, mi nombre es Winston y estoy aquí para instruirte y guiarte a lo largo &#xD;&#xA;de tu recorrido en este juego." 
+                    
                    />
 
 

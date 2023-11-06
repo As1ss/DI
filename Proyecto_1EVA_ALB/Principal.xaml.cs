@@ -41,8 +41,8 @@ namespace Proyecto_1EVA_ALB
         }
         private void btnJugar_Click(object sender, RoutedEventArgs e)
         {
-            nivel1TalkFrame nivel1TalkFrame = new nivel1TalkFrame(window);
-            this.NavigationService.Navigate(nivel1TalkFrame);
+            tutorialFrame tutorialFrame = new tutorialFrame(window);
+            this.NavigationService.Navigate(tutorialFrame);
            // tutorialFrame tutorial = new tutorialFrame(window);
            // this.NavigationService.Navigate(tutorial);
 
