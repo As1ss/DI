@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -31,6 +32,9 @@ namespace Proyecto_1EVA_ALB
         static int indiceTexto;// Índice de la letra actual
         static int indiceTextoSegundo;
         static int indiceTextoTercero;
+
+        SoundPlayer finalSoundTrack;
+        SoundPlayer topGSoundTrack;
         public FinalTalkFrame(MainWindow window)
         {
             contadorClicks = 0;
@@ -51,6 +55,9 @@ namespace Proyecto_1EVA_ALB
             timerTexto.Tick += Texto_Tick;
             timerTexto.Start();
 
+            finalSoundTrack = new SoundPlayer("tutorialSoundTrack.wav");
+            topGSoundTrack = new SoundPlayer("topGSoundTrack.wav");
+            finalSoundTrack.PlayLooping();
 
 
 
@@ -63,17 +70,31 @@ namespace Proyecto_1EVA_ALB
                 // Agregar la siguiente letra al contenido del Label
                 textWinston.Content += textoActual[indiceTexto].ToString();
                 indiceTexto++;
+                if (indiceTexto == textoActual.Length)
+                {
+                    finalSoundTrack.Stop();
+                    topGSoundTrack.PlayLooping();
+                    timerTexto.Stop();
+                }
             }
 
             else if (indiceTextoSegundo < textoSegundo.Length)
             {
                 textAndrew.Content += textoSegundo[indiceTextoSegundo].ToString();
                 indiceTextoSegundo++;
+                if (indiceTextoSegundo == textoSegundo.Length)
+                {
+                    timerTexto.Stop();
+                }
             }
             else if (indiceTextoTercero < textoTercero.Length)
             {
                 textContinuara.Text += textoTercero[indiceTextoTercero].ToString();
                 indiceTextoTercero++;
+                if (indiceTextoTercero == textoTercero.Length)
+                {
+                    timerTexto.Stop();
+                }
             }
             else
             {
@@ -118,8 +139,9 @@ namespace Proyecto_1EVA_ALB
             }
             else if (contadorClicks == 5)
             {
-                ModoDios nivel3 = new ModoDios(window);
-                this.NavigationService.Navigate(nivel3);
+                topGSoundTrack.Stop();
+                Principal menuPrincipal = new Principal(window);
+                this.NavigationService.Navigate(menuPrincipal);
             }
            
 
@@ -133,16 +155,7 @@ namespace Proyecto_1EVA_ALB
             textWinston.Visibility = Visibility.Hidden;
             bubbleChatWinston.Visibility = Visibility.Hidden;
         }
-        private void SegundoTexto()
-        {
-            textAndrew.Visibility = Visibility.Hidden;
-            andrewImage.Visibility = Visibility.Hidden;
-            bubbleAndrew.Visibility = Visibility.Hidden;
-
-
-            textWinston.Visibility = Visibility.Visible;
-            bubbleChatWinston.Visibility = Visibility.Visible;
-        }
+       
     }
 
 }

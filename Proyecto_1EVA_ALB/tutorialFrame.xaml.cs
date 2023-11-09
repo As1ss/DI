@@ -127,6 +127,7 @@ namespace Proyecto_1EVA_ALB
            
          else if (contadorClicks==4)
             {
+                
                 tutorialSoundTrack.Stop();
                 nivel1TalkFrame nivel1Frame = new nivel1TalkFrame(window);
                 this.NavigationService.Navigate(nivel1Frame);
