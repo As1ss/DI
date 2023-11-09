@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -31,6 +32,8 @@ namespace Proyecto_1EVA_ALB
         static int indiceTexto;// Índice de la letra actual
         static int indiceTextoSegundo;
         static int indiceTextoTercero;
+
+        SoundPlayer nivel2SoundTrack;
         public Nivel2TalkFrame(MainWindow window)
         {
             contadorClicks = 0;
@@ -50,6 +53,9 @@ namespace Proyecto_1EVA_ALB
             timerTexto.Tick += Texto_Tick;
             timerTexto.Start();
 
+            nivel2SoundTrack = new SoundPlayer("nivel2SoundTrack.wav");
+            nivel2SoundTrack.PlayLooping();
+
 
 
 
@@ -62,17 +68,29 @@ namespace Proyecto_1EVA_ALB
                 // Agregar la siguiente letra al contenido del Label
                 textWinston.Content += textoActual[indiceTexto].ToString();
                 indiceTexto++;
+                if(indiceTexto == textoActual.Length)
+                {
+                    timerTexto.Stop();
+                }
             }
 
             else if (indiceTextoSegundo < textoSegundo.Length)
             {
                 textSoldado76.Content += textoSegundo[indiceTextoSegundo].ToString();
                 indiceTextoSegundo++;
+                if(indiceTextoSegundo == textoSegundo.Length)
+                {
+                    timerTexto.Stop();
+                }
             }
             else if (indiceTextoTercero < textoTercero.Length)
             {
                 textWinston.Content += textoTercero[indiceTextoTercero].ToString();
                 indiceTextoTercero++;
+                if (indiceTextoTercero == textoTercero.Length)
+                {
+                    timerTexto.Stop();
+                }
             }
             else
             {

@@ -55,7 +55,7 @@ namespace Proyecto_1EVA_ALB
             timerTexto.Start();
 
             nivel1SoundTrack = new SoundPlayer("nivel1SoundTrack.wav");
-            nivel1SoundTrack.Play();
+            nivel1SoundTrack.PlayLooping();
 
 
 

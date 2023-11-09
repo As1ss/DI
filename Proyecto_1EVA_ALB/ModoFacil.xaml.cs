@@ -210,6 +210,8 @@ namespace Proyecto_1EVA_ALB
                     labelVidas.Content = "Vidas: " + vidas;
                     if (vidas <= 0)
                     {
+                        SoundPlayer nivel3SoundTrack = new SoundPlayer("nivel3SoundTrack.wav");
+                        nivel3SoundTrack.Stop();
                         respawnTimer.Stop();
                         opacityTimer.Stop();
                         MessageBox.Show("Has perdido pulsa aceptar para continuar.");

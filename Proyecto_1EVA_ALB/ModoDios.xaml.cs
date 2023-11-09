@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -59,6 +60,8 @@ namespace Proyecto_1EVA_ALB
         bool boxRamisAlive;
         bool boxGIUisAlive;
 
+        SoundPlayer nivel3SoundTrack;
+
         public ModoDios(MainWindow window)
         {
             InitializeComponent();
@@ -102,6 +105,10 @@ namespace Proyecto_1EVA_ALB
             respawnTimer.Tick += Respawn_Tick;
             respawnTimer.Interval = TimeSpan.FromSeconds(2.5f);
             respawnTimer.Start();
+
+
+            nivel3SoundTrack= new SoundPlayer("nivel3SoundTrack.wav");
+            nivel3SoundTrack.PlayLooping();
         }
 
 
@@ -158,6 +165,8 @@ namespace Proyecto_1EVA_ALB
             //Comprobación de la puntuación
             if (puntuacion == 12)
             {
+             
+                nivel3SoundTrack.Stop();
                 respawnTimer.Stop();
                 opacityTimer.Stop();
                 MessageBox.Show("Has pasado de nivel!");
@@ -206,6 +215,8 @@ namespace Proyecto_1EVA_ALB
                     labelVidas.Content = "Vidas: " + vidas;
                     if (vidas <= 0)
                     {
+                       
+                        nivel3SoundTrack.Stop();
                         respawnTimer.Stop();
                         opacityTimer.Stop();
                         MessageBox.Show("Has perdido pulsa aceptar para continuar.");
