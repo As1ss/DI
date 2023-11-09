@@ -7,8 +7,8 @@
       mc:Ignorable="d"
       Title="ModoMedio" d:DesignHeight="720" d:DesignWidth="1280">
     <Canvas Width="1280" Height="720"
-      x:Name="canvasNivel2" AllowDrop="True" Drop="canvasFacil_Drop" 
-          DragOver="canvasFacil_DragOver"
+      x:Name="canvasNivel2" AllowDrop="True" Drop="canvasMedio_Drop" 
+          DragOver="canvasMedio_DragOver"
           VerticalAlignment="Center" 
           HorizontalAlignment="Center">
         <Canvas.Background>

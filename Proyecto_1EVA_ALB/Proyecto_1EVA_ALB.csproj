@@ -69,7 +69,6 @@
     <None Remove="Power.png" />
     <None Remove="RAM.png" />
     <None Remove="soldado76.png" />
-    <None Remove="songs\testCancion.wav" />
     <None Remove="torbjorn.png" />
     <None Remove="tutorialGif.gif" />
     <None Remove="winstonMenu.png" />
@@ -189,9 +188,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Cursors\pointer.cur">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="songs\testCancion.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="tutorialGif.gif">

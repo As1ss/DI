@@ -246,7 +246,7 @@ namespace Proyecto_1EVA_ALB
             }
         }
 
-        private void canvasFacil_Drop(object sender, DragEventArgs e)
+        private void canvasMedio_Drop(object sender, DragEventArgs e)
         {
             if (imgProcSelected)
             {
@@ -288,7 +288,7 @@ namespace Proyecto_1EVA_ALB
 
         }
 
-        private void canvasFacil_DragOver(object sender, DragEventArgs e)
+        private void canvasMedio_DragOver(object sender, DragEventArgs e)
         {
 
             if (imgProcSelected)

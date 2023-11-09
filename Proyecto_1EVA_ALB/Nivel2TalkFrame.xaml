@@ -13,7 +13,9 @@
             <ImageBrush ImageSource="images/nivel2Background.jpg" Stretch="UniformToFill"/>
         </Canvas.Background>
      
-        <Image Source="images/winstonMenu.png" Width="578" Height="462" Canvas.Left="-85" HorizontalAlignment="Left" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Top" Canvas.Top="282" >
+        <Image Source="images/winstonMenu.png" Width="578" Height="462" Canvas.Left="-85" 
+               HorizontalAlignment="Left" RenderTransformOrigin="0.5,0.5" 
+               VerticalAlignment="Top" Canvas.Top="282" >
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform ScaleX="-1"/>
@@ -64,8 +66,11 @@
                FontSize="30"  
            FontFamily="Impact" Visibility="Visible"
         MouseLeftButtonDown="textWinston_MouseLeftButtonDown"
-        Width="1230" Canvas.Top="560" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="76" 
-               Content="Nuestro segundo cliente es el justiciero Soldado 76, su solicitud es de suma urgencia&#xD;&#xA; y requiere un alto nivel de discreción. Se encuentra actualmente en búsqueda y captura &#xD;&#xA;a nivel mundial, lo que hace que esta transacción sea especialmente delicada." 
+        Width="1230" Canvas.Top="560" HorizontalAlignment="Left" VerticalAlignment="Top" 
+               Canvas.Left="76" 
+               Content="Nuestro segundo cliente es el justiciero Soldado 76, su solicitud es de suma
+               urgencia&#xD;&#xA; y requiere un alto nivel de discreción. Se encuentra actualmente en búsqueda y 
+               captura &#xD;&#xA;a nivel mundial, lo que hace que esta transacción sea especialmente delicada." 
                />
 
         <Label x:Name="textSoldado76" Visibility="Hidden"
