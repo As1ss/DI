@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -28,14 +29,17 @@ namespace Proyecto_1EVA_ALB
         BitmapImage image;
         static string textoActual; // Texto actual que se mostrará letra por letra
         static string textoSegundo;
-        static int indiceTexto;// Índice de la letra actual
-        static int indiceTextoSegundo;
+         int indiceTexto;// Índice de la letra actual
+         int indiceTextoSegundo;
         private DispatcherTimer timerTexto; // Temporizador para mostrar el texto letra por letra
+        SoundPlayer tutorialSoundTrack;
         public tutorialFrame(MainWindow window)
         {
             this.window = window;
             image = new BitmapImage();
             InitializeComponent();
+
+
             timer = new DispatcherTimer();
             timer.Tick += Gif_Tick;
             timer.Start();
@@ -52,6 +56,8 @@ namespace Proyecto_1EVA_ALB
             timerTexto.Tick += Texto_Tick;
             timerTexto.Start();
 
+            tutorialSoundTrack = new SoundPlayer("tutorialSoundTrack.wav");
+            tutorialSoundTrack.Play();
 
 
 
@@ -64,6 +70,10 @@ namespace Proyecto_1EVA_ALB
                 // Agregar la siguiente letra al contenido del Label
                 textWinston.Content += textoActual[indiceTexto].ToString();
                 indiceTexto++;
+                if (indiceTexto == textoActual.Length)//Si el texto llega al final se para el timer para que no reporduzca el siguiente texto
+                {
+                    timerTexto.Stop();
+                }
             }
 
             else if (indiceTextoSegundo < textoSegundo.Length)
@@ -74,6 +84,7 @@ namespace Proyecto_1EVA_ALB
             else
             {
                 timerTexto.Stop();
+                
             }
 
 
@@ -116,6 +127,7 @@ namespace Proyecto_1EVA_ALB
            
          else if (contadorClicks==4)
             {
+                tutorialSoundTrack.Stop();
                 nivel1TalkFrame nivel1Frame = new nivel1TalkFrame(window);
                 this.NavigationService.Navigate(nivel1Frame);
             }

@@ -9,6 +9,7 @@
 //------------------------------------------------------------------------------
 
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/hammer_wrench.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/icon1.ico")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/pc_icon.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/winstonmenu.png")]
 

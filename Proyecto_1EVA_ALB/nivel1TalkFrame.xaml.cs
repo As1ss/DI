@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -31,6 +32,7 @@ namespace Proyecto_1EVA_ALB
         static int indiceTexto;// Índice de la letra actual
         static int indiceTextoSegundo;
         static int indiceTextoTercero;
+        SoundPlayer nivel1SoundTrack;
         public nivel1TalkFrame(MainWindow window)
         {
             contadorClicks = 0;
@@ -52,6 +54,8 @@ namespace Proyecto_1EVA_ALB
             timerTexto.Tick += Texto_Tick;
             timerTexto.Start();
 
+            nivel1SoundTrack = new SoundPlayer("nivel1SoundTrack.wav");
+            nivel1SoundTrack.Play();
 
 
 
@@ -64,17 +68,29 @@ namespace Proyecto_1EVA_ALB
                 // Agregar la siguiente letra al contenido del Label
                 textWinston.Content += textoActual[indiceTexto].ToString();
                 indiceTexto++;
+                if (indiceTexto == textoActual.Length)
+                {
+                    timerTexto.Stop();
+                }
             }
 
             else if (indiceTextoSegundo < textoSegundo.Length)
             {
                textTobJorn.Content += textoSegundo[indiceTextoSegundo].ToString();
                 indiceTextoSegundo++;
+                if (indiceTextoSegundo== textoSegundo.Length)
+                {
+                    timerTexto.Stop();
+                }
             }
             else if (indiceTextoTercero< textoTercero.Length)
             {
                 textWinston.Content += textoTercero[indiceTextoTercero].ToString();
                 indiceTextoTercero++;
+                if(indiceTextoTercero== textoTercero.Length)
+                {
+                    timerTexto.Stop();
+                }
             }
             else
             {
@@ -103,7 +119,7 @@ namespace Proyecto_1EVA_ALB
                 timerTexto.Stop();
                 textTobJorn.Content = textoSegundo;
                 indiceTextoSegundo = textoSegundo.Length;
-                textWinston.Content = string.Empty;
+                
 
 
             }
@@ -111,6 +127,7 @@ namespace Proyecto_1EVA_ALB
             else if (contadorClicks == 4)
             {
                
+                textWinston.Content = string.Empty;
                 SegundoTexto();
                 timerTexto.Start();
               

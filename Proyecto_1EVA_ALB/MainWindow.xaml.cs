@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -20,10 +21,14 @@ namespace Proyecto_1EVA_ALB
     /// </summary>
     public partial class MainWindow : Window
     {
+      
+
+        
         public MainWindow()
         {
             InitializeComponent();
             MainFrame.Content = new Principal(this);
+           
         }
 
         public void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)

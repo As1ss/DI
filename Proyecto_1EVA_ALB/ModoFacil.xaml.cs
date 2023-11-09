@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -160,6 +161,8 @@ namespace Proyecto_1EVA_ALB
             //Comprobación de la puntuación
             if (puntuacion == 5)
             {
+                SoundPlayer nivel1SoundTrack = new SoundPlayer("nivel1SoundTrack.wav");
+                nivel1SoundTrack.Stop();
                 respawnTimer.Stop();
                 opacityTimer.Stop();
                 MessageBox.Show("Has pasado de nivel!");

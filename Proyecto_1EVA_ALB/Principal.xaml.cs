@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Media;
+using System.Reflection;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,17 +28,39 @@ namespace Proyecto_1EVA_ALB
         public bool modoFacil;
         public bool modoMedio;
         public bool modoDios;
-        static Cursor owCursor = new Cursor(Application.GetResourceStream(new Uri("Cursors/pointer.cur",UriKind.Relative)).Stream);
+        static Cursor owCursor = new Cursor(Application.GetResourceStream(new Uri("Cursors/pointer.cur", UriKind.Relative)).Stream);
+      
+
         public Principal(MainWindow window)
         {
-            
-            this.window = window;   
+
+            this.window = window;
             InitializeComponent();
             modoFacil = true;
             Mouse.OverrideCursor = owCursor;
+            
+
+         
+           
 
 
-          
+
+
+
+         
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         }
         private void btnJugar_Click(object sender, RoutedEventArgs e)
@@ -44,8 +68,8 @@ namespace Proyecto_1EVA_ALB
             tutorialFrame tutorialFrame = new tutorialFrame(window);
             this.NavigationService.Navigate(tutorialFrame);
 
-          
-          
+
+
         }
         private void btnSettings_Click(object sender, RoutedEventArgs e)
         {
@@ -63,14 +87,16 @@ namespace Proyecto_1EVA_ALB
 
         private void btnJugar_MouseEnter(object sender, MouseEventArgs e)
         {
+            //Esto es para generar la animación de aumento de tamaño sin desposicionar el boton
             Canvas.SetTop(btnJugar, 488);
-           
+
             btnJugar.Width += 50;
             btnJugar.Height += 50;
         }
 
         private void btnJugar_MouseLeave(object sender, MouseEventArgs e)
         {
+            //Esto es para generar la animación de disminución de tamaño sin desposicionar el boton
             Canvas.SetTop(btnJugar, 538);
             btnJugar.Width -= 50;
             btnJugar.Height -= 50;
@@ -78,6 +104,7 @@ namespace Proyecto_1EVA_ALB
 
         private void btnSalir_MouseEnter(object sender, MouseEventArgs e)
         {
+            //Esto es para generar la animación de aumento de tamaño sin desposicionar el boton
             Canvas.SetTop(btnSalir, 488);
             btnSalir.Width += 50;
             btnSalir.Height += 50;
@@ -85,10 +112,11 @@ namespace Proyecto_1EVA_ALB
 
         private void btnSalir_MouseLeave(object sender, MouseEventArgs e)
         {
+            //Esto es para generar la animación de disminución de tamaño sin desposicionar el boton
             Canvas.SetTop(btnSalir, 538);
             btnSalir.Width -= 50;
             btnSalir.Height -= 50;
-           
+
         }
     }
 }
