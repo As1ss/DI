@@ -34,7 +34,8 @@ namespace Proyecto_1EVA_ALB
         public void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
            
-            MessageBoxResult result = MessageBox.Show("¿Seguro que deseas cerrar el juego?", "Confirmación", MessageBoxButton.OKCancel, MessageBoxImage.Question);
+            MessageBoxResult result = MessageBox.Show("¿Seguro que deseas cerrar el juego?", "Confirmación",
+                MessageBoxButton.OKCancel, MessageBoxImage.Question);
             if (result == MessageBoxResult.OK)
             {
                 try

@@ -40,27 +40,6 @@ namespace Proyecto_1EVA_ALB
             Mouse.OverrideCursor = owCursor;
             
 
-         
-           
-
-
-
-
-
-         
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         }
         private void btnJugar_Click(object sender, RoutedEventArgs e)
@@ -70,14 +49,6 @@ namespace Proyecto_1EVA_ALB
 
 
 
-        }
-        private void btnSettings_Click(object sender, RoutedEventArgs e)
-        {
-            // Crear e instanciar el diálogo personalizado
-            var dialog = new Settings(this);
-
-            // Mostrar el diálogo como una ventana emergente
-            dialog.ShowDialog();
         }
 
         private void btnSalir_Click(object sender, RoutedEventArgs e)
