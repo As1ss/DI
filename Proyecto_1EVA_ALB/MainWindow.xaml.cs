@@ -27,6 +27,7 @@ namespace Proyecto_1EVA_ALB
         public MainWindow()
         {
             InitializeComponent();
+
             MainFrame.Content = new Principal(this);
            
         }

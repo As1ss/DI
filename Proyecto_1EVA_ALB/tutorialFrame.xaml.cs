@@ -60,15 +60,7 @@ namespace Proyecto_1EVA_ALB
 
 
 
-            //tutorialSoundTrack = new SoundPlayer(System.IO.Path.Combine(directorioBase, "sounds",  "tutorialSoundTrack.wav"));
-            tutorialSoundTrack = new MediaPlayer();
-            tutorialSoundTrack.Open(new Uri("sounds/tutorialSoundTrack.wav", UriKind.Relative));
-            tutorialSoundTrack.Play();
-            MessageBox.Show("Se ha reproducido");
-
-       
-                //new Uri("sounds/tutorialSoundTrack.wav", UriKind.Relative); 
-
+            SoundManager.tutorialSoundTrack.Play();
          
 
 

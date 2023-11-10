@@ -36,6 +36,8 @@ namespace Proyecto_1EVA_ALB
 
             this.window = window; //Para poder cerrar la ventana desde el boton salir
             InitializeComponent();
+            SoundManager.loadSongs();
+          
             modoFacil = true;
             Mouse.OverrideCursor = owCursor;
             
