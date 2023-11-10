@@ -1,0 +1,9 @@
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\bin\Release\net7.0-windows\publish\Proyecto_1EVA_ALB.exe
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\bin\Release\net7.0-windows\publish\images\hammer_wrench.png
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\bin\Release\net7.0-windows\publish\images\pc_icon.png
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\bin\Release\net7.0-windows\publish\images\winstonMenu.png
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\bin\Release\net7.0-windows\publish\Proyecto_1EVA_ALB.dll
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\bin\Release\net7.0-windows\publish\Proyecto_1EVA_ALB.deps.json
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\bin\Release\net7.0-windows\publish\Proyecto_1EVA_ALB.runtimeconfig.json
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\bin\Release\net7.0-windows\publish\Proyecto_1EVA_ALB.pdb
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\bin\Release\net7.0-windows\publish\WpfAnimatedGif.dll

@@ -25,7 +25,6 @@
     <None Remove="finalTalkBackground.jpg" />
     <None Remove="GIU.png" />
     <None Remove="HDDpng.png" />
-    <None Remove="Icon1.ico" />
     <None Remove="images\ammoBoxCPU.png" />
     <None Remove="images\ammoBoxGIU.png" />
     <None Remove="images\ammoBoxHDD.png" />
