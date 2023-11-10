@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Media;
 using System.Text;
@@ -23,16 +24,17 @@ namespace Proyecto_1EVA_ALB
     /// </summary>
     public partial class tutorialFrame : Page
     {
+     
         static int contadorClicks;
         DispatcherTimer timer;
         MainWindow window;
         BitmapImage image;
-        static string textoActual; // Texto actual que se mostrará letra por letra
-        static string textoSegundo;
+        static string? textoActual; // Texto actual que se mostrará letra por letra
+        static string? textoSegundo;
          int indiceTexto;// Índice de la letra actual
          int indiceTextoSegundo;
         private DispatcherTimer timerTexto; // Temporizador para mostrar el texto letra por letra
-        SoundPlayer tutorialSoundTrack;
+        MediaPlayer tutorialSoundTrack;
         public tutorialFrame(MainWindow window)
         {
             this.window = window;
@@ -56,8 +58,18 @@ namespace Proyecto_1EVA_ALB
             timerTexto.Tick += Texto_Tick;
             timerTexto.Start();
 
-            tutorialSoundTrack = new SoundPlayer("tutorialSoundTrack.wav");
-            tutorialSoundTrack.PlayLooping();
+
+
+            //tutorialSoundTrack = new SoundPlayer(System.IO.Path.Combine(directorioBase, "sounds",  "tutorialSoundTrack.wav"));
+            tutorialSoundTrack = new MediaPlayer();
+            tutorialSoundTrack.Open(new Uri("sounds/tutorialSoundTrack.wav", UriKind.Relative));
+            tutorialSoundTrack.Play();
+            MessageBox.Show("Se ha reproducido");
+
+       
+                //new Uri("sounds/tutorialSoundTrack.wav", UriKind.Relative); 
+
+         
 
 
 
@@ -75,7 +87,7 @@ namespace Proyecto_1EVA_ALB
                     timerTexto.Stop();
                 }
             }
-
+            //Si el texto llega al final se para el timer para que no reporduzca el siguiente texto
             else if (indiceTextoSegundo < textoSegundo.Length)
             {
                 textWinston.Content += textoSegundo[indiceTextoSegundo].ToString();
@@ -90,16 +102,18 @@ namespace Proyecto_1EVA_ALB
 
 
         }
-        private void Gif_Tick(object? sender, EventArgs e)
+        //Método para mostrar el gif
+        private void Gif_Tick(object? sender, EventArgs e) 
         {
-
+            
             image.BeginInit();
             image.UriSource = new Uri("tutorialGif.gif", UriKind.Relative);
             image.EndInit();
-            ImageBehavior.SetAnimatedSource(testGIF, image);
+            ImageBehavior.SetAnimatedSource(testGIF, image); //Asignar el gif al control Image
             timer.Stop();
         }
 
+        //Método para pasar de texto
         private void TextBlock_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             contadorClicks++;

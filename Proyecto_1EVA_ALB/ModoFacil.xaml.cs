@@ -24,6 +24,8 @@ namespace Proyecto_1EVA_ALB
     public partial class ModoFacil : Page
     {
         MainWindow window;
+
+        //Posiciones
         Point imgProcPosition;
         Point imgProcOriginalPosition;
 
@@ -39,8 +41,11 @@ namespace Proyecto_1EVA_ALB
         Point imgGIUPosition;
         Point imgGIUOriginalPosition;
 
+        //Rectangles
         List<Rectangle> rectangles;
         int currentRectangleIndex = 0;
+
+        //Timers
         DispatcherTimer opacityTimer;
         DispatcherTimer respawnTimer;
 
@@ -48,13 +53,14 @@ namespace Proyecto_1EVA_ALB
         static int puntuacion;
         static int vidas;
 
+        //Variables para comprobar si las imagenes estan seleccionadas
         static bool imgProcSelected;
         static bool imgHDDSelected;
         static bool imgPowerSelected;
         static bool imgRamSelected;
         static bool imgGIUSelected;
 
-
+        //Variables para comprobar si las cajas estan vivas
         bool boxProcisAlive;
         bool boxHDDisAlive;
         bool boxPowerisAlive;
@@ -89,25 +95,27 @@ namespace Proyecto_1EVA_ALB
             puntuacion = 0;
             labelVidas.Content = "Vidas: " + vidas.ToString();
 
+            //Inicializamos las variables de comprobación
             boxHDDisAlive = true;
             boxProcisAlive = true;
             boxPowerisAlive = true;
             boxRamisAlive = true;
             boxGIUisAlive = true;
 
-
+            //Inicializamos los timers
             opacityTimer = new DispatcherTimer();
             opacityTimer.Tick += Timer_Tick;
             opacityTimer.Interval = TimeSpan.FromSeconds(1.5f);
             opacityTimer.Start();
 
+            //Inicializamos el timer de respawn
             respawnTimer = new DispatcherTimer();
             respawnTimer.Tick += Respawn_Tick;
             respawnTimer.Interval = TimeSpan.FromSeconds(10);
             respawnTimer.Start();
         }
 
-
+        //Inicializamos los rectangulos
         private void InitializeRectangles()
         {
             rectangles = new List<Rectangle>
@@ -161,25 +169,27 @@ namespace Proyecto_1EVA_ALB
             //Comprobación de la puntuación
             if (puntuacion == 5)
             {
-                SoundPlayer nivel1SoundTrack = new SoundPlayer("nivel1SoundTrack.wav");
-                nivel1SoundTrack.Stop();
-                respawnTimer.Stop();
-                opacityTimer.Stop();
-                MessageBox.Show("Has pasado de nivel!");
-                puntuacion = 0;
-                Nivel2TalkFrame nivel2TalkFrame = new Nivel2TalkFrame(window);
-                this.NavigationService.Navigate(nivel2TalkFrame);
+                SoundPlayer nivel1SoundTrack = new SoundPlayer("nivel1SoundTrack.wav"); //Reproducir la música de fondo
+                nivel1SoundTrack.Stop(); //Parar la música de fondo
+                respawnTimer.Stop(); //Parar el timer de respawn
+                opacityTimer.Stop(); //Parar el timer de opacidad
+                MessageBox.Show("Has pasado de nivel!"); //Mostrar mensaje
+                puntuacion = 0; //Reiniciar la puntuación
+                Nivel2TalkFrame nivel2TalkFrame = new Nivel2TalkFrame(window); //Pasar a la siguiente página
+                this.NavigationService.Navigate(nivel2TalkFrame); //Navegar a la siguiente página
 
             }
 
+            //  Comprobación de la opacidad
             if (currentRectangleIndex < rectangles.Count)
             {
-                Rectangle currentRect = rectangles[currentRectangleIndex];
-                currentRect.Opacity -= 0.2;
+                Rectangle currentRect = rectangles[currentRectangleIndex]; //Obtener el rectángulo actual
+                currentRect.Opacity -= 0.2; //Disminuir la opacidad del rectángulo actual
 
+                // Comprobar si la opacidad del rectángulo actual es menor o igual a 0
                 if (currentRect.Opacity <= 0)
                 {
-                    string rectName = currentRect.Name;
+                    string rectName = currentRect.Name; //Obtener el nombre del rectángulo actual
 
 
                     // Comprobar el nombre del rectángulo
@@ -205,18 +215,20 @@ namespace Proyecto_1EVA_ALB
                         boxGIUisAlive = false;
                     }
 
-                    currentRectangleIndex++;
-                    vidas--;
-                    labelVidas.Content = "Vidas: " + vidas;
+                    currentRectangleIndex++; //Aumentar el índice del rectángulo actual
+                    vidas--; //Disminuir las vidas
+                    labelVidas.Content = "Vidas: " + vidas; //Mostrar las vidas
+
+                    // Comprobar si las vidas son <= 0
                     if (vidas <= 0)
                     {
-                        SoundPlayer nivel3SoundTrack = new SoundPlayer("nivel3SoundTrack.wav");
-                        nivel3SoundTrack.Stop();
-                        respawnTimer.Stop();
-                        opacityTimer.Stop();
-                        MessageBox.Show("Has perdido pulsa aceptar para continuar.");
-                        Principal princpalPage = new Principal(window);
-                        this.NavigationService.Navigate(princpalPage);
+                        SoundPlayer nivel3SoundTrack = new SoundPlayer("nivel3SoundTrack.wav"); //Reproducir la música de fondo
+                        nivel3SoundTrack.Stop(); //Parar la música de fondo
+                        respawnTimer.Stop(); // Parar el timer de respawn
+                        opacityTimer.Stop(); //Parar el timer de opacidad
+                        MessageBox.Show("Has perdido pulsa aceptar para continuar."); //    Mostrar mensaje
+                        Principal princpalPage = new Principal(window); //Pasar a la siguiente página
+                        this.NavigationService.Navigate(princpalPage); //Navegar a la siguiente página
                     }
                 }
             }
@@ -247,6 +259,7 @@ namespace Proyecto_1EVA_ALB
             }
         }
 
+        //Métodos para soltar las imágenes
         private void canvasFacil_Drop(object sender, DragEventArgs e)
         {
             if (imgProcSelected)
@@ -288,16 +301,17 @@ namespace Proyecto_1EVA_ALB
 
 
         }
-
+        //Métodos para arrastrar las imagenes
         private void canvasFacil_DragOver(object sender, DragEventArgs e)
         {
-
+            //Comprobamos si las imagenes estan seleccionadas
             if (imgProcSelected)
             {
-                imgProcPosition = e.GetPosition(canvasNivel1);
-                Canvas.SetTop(imgProc, imgProcPosition.Y);
-                Canvas.SetLeft(imgProc, imgProcPosition.X);
-                procesadorColliders();
+
+                imgProcPosition = e.GetPosition(canvasNivel1); //Obtener la posición del ratón
+                Canvas.SetTop(imgProc, imgProcPosition.Y); //Asignar la posición del ratón a la imagen
+                Canvas.SetLeft(imgProc, imgProcPosition.X); //Asignar la posición del ratón a la imagen
+                procesadorColliders(); // Comprobar colisiones
             }
             if (imgHDDSelected)
             {
@@ -331,41 +345,45 @@ namespace Proyecto_1EVA_ALB
 
         }
 
+        //Métodos para mover las imagenes
         private void imgProc_MouseMove(object sender, MouseEventArgs e)
         {
+            //Comprobamos si el boton izquierdo del ratón esta pulsado
             if (e.LeftButton == MouseButtonState.Pressed)
             {
-                imgProcPosition = e.GetPosition(canvasNivel1);
-                Canvas.SetTop(imgProc, imgProcPosition.Y);
-                Canvas.SetLeft(imgProc, imgProcPosition.X);
+                imgProcPosition = e.GetPosition(canvasNivel1); //Obtener la posición del ratón
+                Canvas.SetTop(imgProc, imgProcPosition.Y); //Asignar la posición del ratón a la imagen
+                Canvas.SetLeft(imgProc, imgProcPosition.X); //Asignar la posición del ratón a la imagen
                 imgHDDSelected = false;
                 imgPowerSelected = false;
                 imgRamSelected = false;
                 imgGIUSelected = false;
                 imgProcSelected = true;
-                DragDrop.DoDragDrop(canvasNivel1, imgProc, DragDropEffects.Move);
+                DragDrop.DoDragDrop(canvasNivel1, imgProc, DragDropEffects.Move); //Permitir arrastrar la imagen
 
 
 
             }
+            //Comprobamos si el boton izquierdo del ratón esta soltado
             if (e.LeftButton == MouseButtonState.Released)
             {
+                //  Comprobamos si la imagen esta colisionando con el rectangulo
                 imgProcSelected = false;
                 if (isColliding(imgProc, rectProc) && imgProcSelected == false && boxProcisAlive)
                 {
-                    rectProc.Stroke = Brushes.Lime;
-                    rectProc.StrokeThickness = 5;
-                    puntuacion ++;
-                    labelPuntuacion.Content = puntuacion + "/5";
-                    rectProc.Opacity = -1;
-                    vidas++;
+                    rectProc.Stroke = Brushes.Lime; //Cambiar el color del rectangulo
+                    rectProc.StrokeThickness = 5; //Cambiar el grosor del rectangulo
+                    puntuacion ++; //Aumentar la puntuación
+                    labelPuntuacion.Content = puntuacion + "/5"; //Mostrar la puntuación
+                    rectProc.Opacity = -1; //Cambiar la opacidad del rectangulo
+                    vidas++; //Aumentar las vidas
 
                 }
 
 
-                procesadorColliders();
-                Canvas.SetTop(imgProc, imgProcOriginalPosition.Y);
-                Canvas.SetLeft(imgProc, imgProcOriginalPosition.X);
+                procesadorColliders(); //Comprobar colisiones
+                Canvas.SetTop(imgProc, imgProcOriginalPosition.Y); //Asignar la posición original a la imagen
+                Canvas.SetLeft(imgProc, imgProcOriginalPosition.X); //  Asignar la posición original a la imagen
             }
         }
 

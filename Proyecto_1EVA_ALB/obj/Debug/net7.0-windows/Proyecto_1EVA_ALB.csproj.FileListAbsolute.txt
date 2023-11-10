@@ -1,26 +1,3 @@
-D:\DAM2T\DI\Proyecto_1EVA_ALB\bin\Debug\net7.0-windows\Proyecto_1EVA_ALB.exe
-D:\DAM2T\DI\Proyecto_1EVA_ALB\bin\Debug\net7.0-windows\Proyecto_1EVA_ALB.deps.json
-D:\DAM2T\DI\Proyecto_1EVA_ALB\bin\Debug\net7.0-windows\Proyecto_1EVA_ALB.runtimeconfig.json
-D:\DAM2T\DI\Proyecto_1EVA_ALB\bin\Debug\net7.0-windows\Proyecto_1EVA_ALB.dll
-D:\DAM2T\DI\Proyecto_1EVA_ALB\bin\Debug\net7.0-windows\Proyecto_1EVA_ALB.pdb
-D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\MainWindow.g.cs
-D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\App.g.cs
-D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\Proyecto_1EVA_ALB_MarkupCompile.cache
-D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\Proyecto_1EVA_ALB_MarkupCompile.lref
-D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\MainWindow.baml
-D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\Proyecto_1EVA_ALB.g.resources
-D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\Proyecto_1EVA_ALB.GeneratedMSBuildEditorConfig.editorconfig
-D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\Proyecto_1EVA_ALB.AssemblyInfoInputs.cache
-D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\Proyecto_1EVA_ALB.AssemblyInfo.cs
-D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\Proyecto_1EVA_ALB.csproj.CoreCompileInputs.cache
-D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\Proyecto_1EVA_ALB.dll
-D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\refint\Proyecto_1EVA_ALB.dll
-D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\Proyecto_1EVA_ALB.pdb
-D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\Proyecto_1EVA_ALB.genruntimeconfig.cache
-D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\ref\Proyecto_1EVA_ALB.dll
-D:\DAM2T\DI\Proyecto_1EVA_ALB\bin\Debug\net7.0-windows\images\hammer_wrench.png
-D:\DAM2T\DI\Proyecto_1EVA_ALB\bin\Debug\net7.0-windows\images\pc_icon.png
-D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\Proyecto_1EVA_ALB_Content.g.cs
 C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\bin\Debug\net7.0-windows\images\hammer_wrench.png
 C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\bin\Debug\net7.0-windows\images\pc_icon.png
 C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\bin\Debug\net7.0-windows\Proyecto_1EVA_ALB.exe
@@ -68,11 +45,18 @@ C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7
 C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\Nivel3TalkFrame.baml
 C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\FinalTalkFrame.g.cs
 C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\FinalTalkFrame.baml
-D:\DAM2T\DI\Proyecto_1EVA_ALB\bin\Debug\net7.0-windows\images\boxCPU.png
+D:\DAM2T\DI\Proyecto_1EVA_ALB\bin\Debug\net7.0-windows\images\hammer_wrench.png
+D:\DAM2T\DI\Proyecto_1EVA_ALB\bin\Debug\net7.0-windows\images\pc_icon.png
 D:\DAM2T\DI\Proyecto_1EVA_ALB\bin\Debug\net7.0-windows\images\winstonMenu.png
+D:\DAM2T\DI\Proyecto_1EVA_ALB\bin\Debug\net7.0-windows\Proyecto_1EVA_ALB.exe
+D:\DAM2T\DI\Proyecto_1EVA_ALB\bin\Debug\net7.0-windows\Proyecto_1EVA_ALB.deps.json
+D:\DAM2T\DI\Proyecto_1EVA_ALB\bin\Debug\net7.0-windows\Proyecto_1EVA_ALB.runtimeconfig.json
+D:\DAM2T\DI\Proyecto_1EVA_ALB\bin\Debug\net7.0-windows\Proyecto_1EVA_ALB.dll
+D:\DAM2T\DI\Proyecto_1EVA_ALB\bin\Debug\net7.0-windows\Proyecto_1EVA_ALB.pdb
 D:\DAM2T\DI\Proyecto_1EVA_ALB\bin\Debug\net7.0-windows\WpfAnimatedGif.dll
 D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\Proyecto_1EVA_ALB.csproj.AssemblyReference.cache
 D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\FinalTalkFrame.g.cs
+D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\MainWindow.g.cs
 D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\ModoDios.g.cs
 D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\ModoFacil.g.cs
 D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\ModoMedio.g.cs
@@ -82,7 +66,12 @@ D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\Nivel3TalkFrame.g.cs
 D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\Principal.g.cs
 D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\Settings.g.cs
 D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\tutorialFrame.g.cs
+D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\App.g.cs
+D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\Proyecto_1EVA_ALB_Content.g.cs
+D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\Proyecto_1EVA_ALB_MarkupCompile.cache
+D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\Proyecto_1EVA_ALB_MarkupCompile.lref
 D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\FinalTalkFrame.baml
+D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\MainWindow.baml
 D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\ModoDios.baml
 D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\ModoFacil.baml
 D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\ModoMedio.baml
@@ -92,4 +81,15 @@ D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\Nivel3TalkFrame.baml
 D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\Principal.baml
 D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\Settings.baml
 D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\tutorialFrame.baml
+D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\Proyecto_1EVA_ALB.g.resources
+D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\Proyecto_1EVA_ALB.GeneratedMSBuildEditorConfig.editorconfig
+D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\Proyecto_1EVA_ALB.AssemblyInfoInputs.cache
+D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\Proyecto_1EVA_ALB.AssemblyInfo.cs
+D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\Proyecto_1EVA_ALB.csproj.CoreCompileInputs.cache
 D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\Proyecto_1EVA_ALB.csproj.CopyComplete
+D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\Proyecto_1EVA_ALB.dll
+D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\refint\Proyecto_1EVA_ALB.dll
+D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\Proyecto_1EVA_ALB.pdb
+D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\Proyecto_1EVA_ALB.genruntimeconfig.cache
+D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Debug\net7.0-windows\ref\Proyecto_1EVA_ALB.dll
+D:\DAM2T\DI\Proyecto_1EVA_ALB\bin\Debug\net7.0-windows\sounds\tutorialSoundTrack.wav

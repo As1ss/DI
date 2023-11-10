@@ -28,13 +28,13 @@ namespace Proyecto_1EVA_ALB
         public bool modoFacil;
         public bool modoMedio;
         public bool modoDios;
-        static Cursor owCursor = new Cursor(Application.GetResourceStream(new Uri("Cursors/pointer.cur", UriKind.Relative)).Stream);
+        static Cursor owCursor = new Cursor(Application.GetResourceStream(new Uri("Cursors/pointer.cur", UriKind.Relative)).Stream); //Cursor personalizado
       
 
         public Principal(MainWindow window)
         {
 
-            this.window = window;
+            this.window = window; //Para poder cerrar la ventana desde el boton salir
             InitializeComponent();
             modoFacil = true;
             Mouse.OverrideCursor = owCursor;
@@ -43,6 +43,7 @@ namespace Proyecto_1EVA_ALB
 
         }
         private void btnJugar_Click(object sender, RoutedEventArgs e)
+            //Este metodo es para pasar a la ventana de juego
         {
             tutorialFrame tutorialFrame = new tutorialFrame(window);
             this.NavigationService.Navigate(tutorialFrame);
@@ -52,7 +53,7 @@ namespace Proyecto_1EVA_ALB
         }
 
         private void btnSalir_Click(object sender, RoutedEventArgs e)
-        {
+        { //Este metodo es para cerrar la ventana
             window.Close();
         }
 

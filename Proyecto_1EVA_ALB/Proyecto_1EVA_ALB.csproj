@@ -68,6 +68,7 @@
     <None Remove="Power.png" />
     <None Remove="RAM.png" />
     <None Remove="soldado76.png" />
+    <None Remove="sounds\tutorialSoundTrack.wav" />
     <None Remove="torbjorn.png" />
     <None Remove="tutorialGif.gif" />
     <None Remove="winstonMenu.png" />
@@ -121,6 +122,9 @@
     </Content>
     <Content Include="images\Icon1.ico" />
     <Content Include="images\pc_icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="sounds\tutorialSoundTrack.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Resource Include="images\GIU.png">
