@@ -10,9 +10,6 @@ C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\bin\Release\ne
 C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\obj\Release\net7.0-windows\Proyecto_1EVA_ALB.csproj.AssemblyReference.cache
 C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\obj\Release\net7.0-windows\FinalTalkFrame.g.cs
 C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\obj\Release\net7.0-windows\MainWindow.g.cs
-C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\obj\Release\net7.0-windows\ModoDios.g.cs
-C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\obj\Release\net7.0-windows\ModoFacil.g.cs
-C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\obj\Release\net7.0-windows\ModoMedio.g.cs
 C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\obj\Release\net7.0-windows\nivel1TalkFrame.g.cs
 C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\obj\Release\net7.0-windows\Nivel2TalkFrame.g.cs
 C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\obj\Release\net7.0-windows\Nivel3TalkFrame.g.cs
@@ -25,9 +22,6 @@ C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\obj\Release\ne
 C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\obj\Release\net7.0-windows\Proyecto_1EVA_ALB_MarkupCompile.lref
 C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\obj\Release\net7.0-windows\FinalTalkFrame.baml
 C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\obj\Release\net7.0-windows\MainWindow.baml
-C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\obj\Release\net7.0-windows\ModoDios.baml
-C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\obj\Release\net7.0-windows\ModoFacil.baml
-C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\obj\Release\net7.0-windows\ModoMedio.baml
 C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\obj\Release\net7.0-windows\nivel1TalkFrame.baml
 C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\obj\Release\net7.0-windows\Nivel2TalkFrame.baml
 C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\obj\Release\net7.0-windows\Nivel3TalkFrame.baml
@@ -97,3 +91,17 @@ D:\DAM2T\DI\Proyecto_1EVA_ALB\bin\Release\net7.0-windows\Proyecto_1EVA_ALB.dll.m
 D:\DAM2T\DI\Proyecto_1EVA_ALB\bin\Release\net7.0-windows\Proyecto_1EVA_ALB.application
 D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Release\net7.0-windows\Proyecto_1EVA_ALB.dll.manifest
 D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Release\net7.0-windows\Proyecto_1EVA_ALB.application
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\bin\Release\net7.0-windows\sounds\nivel1SoundTrack.wav
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\bin\Release\net7.0-windows\sounds\tutorialSoundTrack.wav
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\bin\Release\net7.0-windows\sounds\nivel2SoundTrack.wav
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\bin\Release\net7.0-windows\sounds\nivel3SoundTrack.wav
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\bin\Release\net7.0-windows\sounds\nivel3TalkSoundTrack.wav
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\bin\Release\net7.0-windows\sounds\topGSoundTrack.wav
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\bin\Release\net7.0-windows\sounds\cogerCaja.wav
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\obj\Release\net7.0-windows\Nivel1.g.cs
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\obj\Release\net7.0-windows\Nivel1.baml
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\obj\Release\net7.0-windows\Nivel2.g.cs
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\obj\Release\net7.0-windows\Nivel3.g.cs
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\obj\Release\net7.0-windows\Nivel2.baml
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\obj\Release\net7.0-windows\Nivel3.baml
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\bin\Release\net7.0-windows\sounds\sonidoAccion.wav

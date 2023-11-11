@@ -68,6 +68,14 @@
     <None Remove="Power.png" />
     <None Remove="RAM.png" />
     <None Remove="soldado76.png" />
+    <None Remove="sounds\cogerCaja.wav" />
+    <None Remove="sounds\nivel1SoundTrack.wav" />
+    <None Remove="sounds\nivel2SoundTrack.wav" />
+    <None Remove="sounds\nivel3SoundTrack.wav" />
+    <None Remove="sounds\nivel3TalkSoundTrack.wav" />
+    <None Remove="sounds\poof-of-smoke-87381.mp3" />
+    <None Remove="sounds\sonidoAccion.wav" />
+    <None Remove="sounds\topGSoundTrack.wav" />
     <None Remove="sounds\tutorialSoundTrack.wav" />
     <None Remove="torbjorn.png" />
     <None Remove="tutorialGif.gif" />
@@ -122,6 +130,27 @@
     </Content>
     <Content Include="images\Icon1.ico" />
     <Content Include="images\pc_icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="sounds\cogerCaja.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="sounds\nivel1SoundTrack.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="sounds\nivel2SoundTrack.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="sounds\nivel3SoundTrack.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="sounds\nivel3TalkSoundTrack.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="sounds\sonidoAccion.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="sounds\topGSoundTrack.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="sounds\tutorialSoundTrack.wav">

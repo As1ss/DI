@@ -11,6 +11,13 @@
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/hammer_wrench.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/icon1.ico")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/pc_icon.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("sounds/cogercaja.wav")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("sounds/nivel1soundtrack.wav")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("sounds/nivel2soundtrack.wav")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("sounds/nivel3soundtrack.wav")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("sounds/nivel3talksoundtrack.wav")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("sounds/sonidoaccion.wav")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("sounds/topgsoundtrack.wav")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("sounds/tutorialsoundtrack.wav")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/winstonmenu.png")]
 

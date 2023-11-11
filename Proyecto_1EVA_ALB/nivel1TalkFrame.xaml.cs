@@ -32,7 +32,7 @@ namespace Proyecto_1EVA_ALB
         static int indiceTexto;// Índice de la letra actual
         static int indiceTextoSegundo;
         static int indiceTextoTercero;
-        SoundPlayer nivel1SoundTrack;
+     
         public nivel1TalkFrame(MainWindow window)
         {
             contadorClicks = 0;
@@ -54,9 +54,8 @@ namespace Proyecto_1EVA_ALB
             timerTexto.Tick += Texto_Tick;
             timerTexto.Start();
 
-            nivel1SoundTrack = new SoundPlayer("nivel1SoundTrack.wav");
-            nivel1SoundTrack.PlayLooping();
-
+          
+            SoundManager.nivel1SoundTrack.Play();
 
 
         }
@@ -103,12 +102,14 @@ namespace Proyecto_1EVA_ALB
             contadorClicks++;
             if (contadorClicks == 1)
             {
+              
                 timerTexto.Stop(); // Detener la animación de texto actual
                 textWinston.Content = textoActual; // Mostrar el texto completo
                 indiceTexto = textoActual.Length;
             }
             else if (contadorClicks == 2)
             {
+              
                 PrimerTexto();
                 timerTexto.Start();
 
@@ -116,6 +117,7 @@ namespace Proyecto_1EVA_ALB
             }
             else if (contadorClicks == 3)
             {
+               
                 timerTexto.Stop();
                 textTobJorn.Content = textoSegundo;
                 indiceTextoSegundo = textoSegundo.Length;
@@ -134,11 +136,13 @@ namespace Proyecto_1EVA_ALB
             }
             else if (contadorClicks==5)
             {
+               
                 timerTexto.Stop();
                 textWinston.Content = textoTercero;
             }
             else if(contadorClicks==6)
             {
+               
                 ModoFacil nivel1 = new ModoFacil(window);
                 this.NavigationService.Navigate(nivel1);
             }

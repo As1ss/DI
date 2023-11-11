@@ -12,13 +12,13 @@
     <Compile Update="FinalTalkFrame.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="ModoDios.xaml.cs">
+    <Compile Update="Nivel3.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="ModoFacil.xaml.cs">
+    <Compile Update="Nivel1.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="ModoMedio.xaml.cs">
+    <Compile Update="Nivel2.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="nivel1TalkFrame.xaml.cs">
@@ -47,16 +47,16 @@
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="ModoDios.xaml">
+    <Page Update="Nivel3.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="ModoFacil.xaml">
+    <Page Update="Nivel1.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="ModoMedio.xaml">
+    <Page Update="Nivel2.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="nivel1TalkFrame.xaml">
+    <Page Update="Nivel1TalkFrame.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Nivel2TalkFrame.xaml">
@@ -71,7 +71,7 @@
     <Page Update="Settings.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="tutorialFrame.xaml">
+    <Page Update="TutorialFrame.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
