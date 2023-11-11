@@ -84,7 +84,8 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <Button MouseEnter="btnJugar_MouseEnter" 
+        <Button Content="{StaticResource textButtonJugar}"
+            MouseEnter="btnJugar_MouseEnter" 
                 MouseLeave="btnJugar_MouseLeave"
             Style="{DynamicResource ButtonStyle1}" 
                 x:Name="btnJugar" FontSize="65" Canvas.Left="340" 
@@ -97,11 +98,9 @@
                 <ImageBrush ImageSource="images/buttonTexture.jpg"
                             Stretch="None"/>
             </Button.Background>
-
-
             <Button.Effect>
                 <DropShadowEffect/>
-            </Button.Effect> JUGAR
+            </Button.Effect> 
         </Button>
         <Button Style="{DynamicResource ButtonStyle1}"
             x:Name="btnSalir" FontSize="65" Canvas.Left="672" 
