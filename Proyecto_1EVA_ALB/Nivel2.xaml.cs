@@ -348,7 +348,8 @@ namespace Proyecto_1EVA_ALB
         {
             //Comprobación de si el botón izquierdo del ratón está pulsado
             if (e.LeftButton == MouseButtonState.Pressed)
-            { 
+            {
+                SoundManager.grabBox.Play();
                 imgProcPosition = e.GetPosition(canvasNivel2); // Obtener la posición del procesador
                 Canvas.SetTop(imgProc, imgProcPosition.Y); // Establecer la posición del procesador
                 Canvas.SetLeft(imgProc, imgProcPosition.X); // Establecer la posición del procesador
@@ -391,7 +392,7 @@ namespace Proyecto_1EVA_ALB
         {
             if (e.LeftButton == MouseButtonState.Pressed)
             {
-
+                SoundManager.grabBox.Play();
                 imgHDDPosition = e.GetPosition(canvasNivel2);
                 Canvas.SetTop(imgHDD, imgHDDPosition.Y);
                 Canvas.SetLeft(imgHDD, imgHDDPosition.X);
@@ -429,7 +430,7 @@ namespace Proyecto_1EVA_ALB
         {
             if (e.LeftButton == MouseButtonState.Pressed)
             {
-
+                SoundManager.grabBox.Play();
                 imgPowerPosition = e.GetPosition(canvasNivel2);
                 Canvas.SetTop(imgPower, imgPowerPosition.Y);
                 Canvas.SetLeft(imgPower, imgPowerPosition.X);
@@ -469,7 +470,7 @@ namespace Proyecto_1EVA_ALB
         {
             if (e.LeftButton == MouseButtonState.Pressed)
             {
-
+                SoundManager.grabBox.Play();
                 imgRamPosition = e.GetPosition(canvasNivel2);
                 Canvas.SetTop(imgRam, imgRamPosition.Y);
                 Canvas.SetLeft(imgRam, imgRamPosition.X);
@@ -508,7 +509,7 @@ namespace Proyecto_1EVA_ALB
         {
             if (e.LeftButton == MouseButtonState.Pressed)
             {
-
+                SoundManager.grabBox.Play();
                 imgGIUPosition = e.GetPosition(canvasNivel2);
                 Canvas.SetTop(imgGIU, imgGIUPosition.Y);
                 Canvas.SetLeft(imgGIU, imgGIUPosition.X);
