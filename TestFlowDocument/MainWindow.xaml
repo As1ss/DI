@@ -1,0 +1,28 @@
+﻿<Window x:Class="TestFlowDocument.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TestFlowDocument"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid >
+        <FlowDocumentReader>
+            <FlowDocument  Background="Wheat">
+                <Paragraph>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget leo sodales, aliquam eros at, lacinia justo. Suspendisse at volutpat purus. Proin bibendum, tellus non tristique porta, mauris est tempor turpis, id consequat urna urna eu lectus. Quisque a velit elit. Vestibulum consectetur sollicitudin velit a dapibus. Proin urna tellus, ultricies eu nunc quis, commodo pellentesque mi. Aliquam erat volutpat. Sed vel eros cursus, auctor turpis sit amet, facilisis mi. Pellentesque laoreet neque nec dictum tincidunt. Phasellus magna lacus, commodo vitae dictum a, auctor nec diam. Suspendisse eu erat ut lectus dictum aliquam eu sit amet nulla. Nam cursus, justo eget egestas cursus, justo enim dictum odio, eu scelerisque lorem tellus sit amet massa. Suspendisse tincidunt rhoncus tempor. Quisque cursus maximus velit sed tristique.
+
+Nullam scelerisque erat id volutpat placerat. Phasellus risus eros, pellentesque ac interdum non, tristique at nulla. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla aliquet iaculis velit nec ullamcorper. Sed sed quam eu massa aliquam interdum nec a enim. Nunc ipsum nibh, eleifend eget dui vitae, gravida vestibulum metus. Maecenas eleifend massa viverra gravida gravida. Etiam at quam imperdiet, commodo lacus sed, facilisis urna.
+
+Praesent et massa interdum, hendrerit urna id,
+                    <LineBreak/> posuere odio. Nunc risus lacus, interdum sit amet sagittis id, lobortis auctor nunc. Mauris aliquam lectus arcu, et placerat leo feugiat vel. Nam commodo nibh vel rhoncus suscipit. Nunc eleifend ligula vel ante commodo finibus. Nam sed lacus sed est ultricies iaculis nec fringilla nunc. Cras luctus metus dui, ut sagittis augue placerat in. Phasellus quis egestas ipsum. Vivamus convallis, magna sit amet rutrum pulvinar, leo nulla posuere risus, ac porta metus nisl eu diam. Suspendisse ante risus, viverra ac turpis sed, convallis convallis nibh. Duis consectetur tristique felis, eget semper lectus ultricies in. Mauris sagittis nibh vitae lacinia fermentum.
+
+In id cursus ex. Praesent fermentum diam et tortor molestie aliquam. Duis tempus libero vitae lacus tempus congue. Aliquam sed ante lorem. Integer elementum, nisl eget tincidunt lacinia, ante tellus condimentum urna, in lobortis mi nunc eget lorem. Donec ornare metus eu justo imperdiet, eu gravida nisi rutrum. Nunc tincidunt, ante eu viverra sodales, nisl nibh malesuada turpis, at pulvinar ipsum dui id justo. Donec dolor est, molestie eu posuere quis, venenatis id libero. Morbi tellus eros, posuere ut lorem id, semper mattis felis. Morbi sed augue vitae erat pharetra malesuada. Etiam a metus placerat, tincidunt ex eget, ornare sem. Vivamus vestibulum ligula nec ex porta, sit amet gravida neque tempor. Mauris imperdiet nisl at velit accumsan vulputate. Proin nec purus mauris. Sed congue tristique tellus, sit amet viverra massa laoreet ac.
+                    <LineBreak/>
+                    Morbi nec porttitor nunc. Proin venenatis ornare tempus. Donec aliquam libero tellus, eu iaculis diam facilisis cursus. Integer rutrum bibendum aliquam. In elit velit, posuere nec lacinia mattis, placerat ac dolor. Nullam mattis lorem in neque eleifend aliquam. Ut condimentum laoreet lectus, eget sollicitudin magna pellentesque sit amet. Nunc blandit maximus mattis. Quisque auctor, ex tempus pulvinar euismod, mi mauris aliquam leo, id interdum tortor metus ac erat.
+
+                </Paragraph>
+            </FlowDocument>
+        </FlowDocumentReader>
+    </Grid>
+</Window>
