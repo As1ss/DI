@@ -52,9 +52,6 @@ D:\DAM2T\DI\Proyecto_1EVA_ALB\bin\Release\net7.0-windows\WpfAnimatedGif.dll
 D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Release\net7.0-windows\Proyecto_1EVA_ALB.csproj.AssemblyReference.cache
 D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Release\net7.0-windows\FinalTalkFrame.g.cs
 D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Release\net7.0-windows\MainWindow.g.cs
-D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Release\net7.0-windows\ModoDios.g.cs
-D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Release\net7.0-windows\ModoFacil.g.cs
-D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Release\net7.0-windows\ModoMedio.g.cs
 D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Release\net7.0-windows\nivel1TalkFrame.g.cs
 D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Release\net7.0-windows\Nivel2TalkFrame.g.cs
 D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Release\net7.0-windows\Nivel3TalkFrame.g.cs
@@ -67,9 +64,6 @@ D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Release\net7.0-windows\Proyecto_1EVA_ALB_Marku
 D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Release\net7.0-windows\Proyecto_1EVA_ALB_MarkupCompile.lref
 D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Release\net7.0-windows\FinalTalkFrame.baml
 D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Release\net7.0-windows\MainWindow.baml
-D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Release\net7.0-windows\ModoDios.baml
-D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Release\net7.0-windows\ModoFacil.baml
-D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Release\net7.0-windows\ModoMedio.baml
 D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Release\net7.0-windows\nivel1TalkFrame.baml
 D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Release\net7.0-windows\Nivel2TalkFrame.baml
 D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Release\net7.0-windows\Nivel3TalkFrame.baml
@@ -87,10 +81,6 @@ D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Release\net7.0-windows\refint\Proyecto_1EVA_AL
 D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Release\net7.0-windows\Proyecto_1EVA_ALB.pdb
 D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Release\net7.0-windows\Proyecto_1EVA_ALB.genruntimeconfig.cache
 D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Release\net7.0-windows\ref\Proyecto_1EVA_ALB.dll
-D:\DAM2T\DI\Proyecto_1EVA_ALB\bin\Release\net7.0-windows\Proyecto_1EVA_ALB.dll.manifest
-D:\DAM2T\DI\Proyecto_1EVA_ALB\bin\Release\net7.0-windows\Proyecto_1EVA_ALB.application
-D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Release\net7.0-windows\Proyecto_1EVA_ALB.dll.manifest
-D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Release\net7.0-windows\Proyecto_1EVA_ALB.application
 C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\bin\Release\net7.0-windows\sounds\nivel1SoundTrack.wav
 C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\bin\Release\net7.0-windows\sounds\tutorialSoundTrack.wav
 C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\bin\Release\net7.0-windows\sounds\nivel2SoundTrack.wav
@@ -105,3 +95,17 @@ C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\obj\Release\ne
 C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\obj\Release\net7.0-windows\Nivel2.baml
 C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\obj\Release\net7.0-windows\Nivel3.baml
 C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\Proyecto_1EVA_ALB\bin\Release\net7.0-windows\sounds\sonidoAccion.wav
+D:\DAM2T\DI\Proyecto_1EVA_ALB\bin\Release\net7.0-windows\sounds\nivel1SoundTrack.wav
+D:\DAM2T\DI\Proyecto_1EVA_ALB\bin\Release\net7.0-windows\sounds\nivel2SoundTrack.wav
+D:\DAM2T\DI\Proyecto_1EVA_ALB\bin\Release\net7.0-windows\sounds\nivel3SoundTrack.wav
+D:\DAM2T\DI\Proyecto_1EVA_ALB\bin\Release\net7.0-windows\sounds\nivel3TalkSoundTrack.wav
+D:\DAM2T\DI\Proyecto_1EVA_ALB\bin\Release\net7.0-windows\sounds\topGSoundTrack.wav
+D:\DAM2T\DI\Proyecto_1EVA_ALB\bin\Release\net7.0-windows\sounds\cogerCaja.wav
+D:\DAM2T\DI\Proyecto_1EVA_ALB\bin\Release\net7.0-windows\sounds\sonidoAccion.wav
+D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Release\net7.0-windows\Nivel1.g.cs
+D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Release\net7.0-windows\Nivel2.g.cs
+D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Release\net7.0-windows\Nivel3.g.cs
+D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Release\net7.0-windows\App.baml
+D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Release\net7.0-windows\Nivel1.baml
+D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Release\net7.0-windows\Nivel2.baml
+D:\DAM2T\DI\Proyecto_1EVA_ALB\obj\Release\net7.0-windows\Nivel3.baml
