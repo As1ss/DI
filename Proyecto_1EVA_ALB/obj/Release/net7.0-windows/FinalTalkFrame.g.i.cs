@@ -109,7 +109,7 @@ namespace Proyecto_1EVA_ALB {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Proyecto_1EVA_ALB;V1.0.0.0;component/finaltalkframe.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Proyecto_1EVA_ALB;component/finaltalkframe.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\FinalTalkFrame.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

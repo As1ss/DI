@@ -157,7 +157,7 @@ namespace Proyecto_1EVA_ALB {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Proyecto_1EVA_ALB;V1.0.0.0;component/nivel2.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Proyecto_1EVA_ALB;component/nivel2.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\Nivel2.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

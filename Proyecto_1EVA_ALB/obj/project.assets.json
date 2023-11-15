@@ -48,19 +48,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\As1ss\\.nuget\\packages\\": {}
+    "C:\\Users\\dam2t05\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\As1ss\\Desktop\\COSAS CLASE KEK\\DAM2T\\DI\\Proyecto_1EVA_ALB\\Proyecto_1EVA_ALB.csproj",
+      "projectUniqueName": "D:\\DAM2T\\DI\\Proyecto_1EVA_ALB\\Proyecto_1EVA_ALB.csproj",
       "projectName": "Proyecto_1EVA_ALB",
-      "projectPath": "C:\\Users\\As1ss\\Desktop\\COSAS CLASE KEK\\DAM2T\\DI\\Proyecto_1EVA_ALB\\Proyecto_1EVA_ALB.csproj",
-      "packagesPath": "C:\\Users\\As1ss\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\As1ss\\Desktop\\COSAS CLASE KEK\\DAM2T\\DI\\Proyecto_1EVA_ALB\\obj\\",
+      "projectPath": "D:\\DAM2T\\DI\\Proyecto_1EVA_ALB\\Proyecto_1EVA_ALB.csproj",
+      "packagesPath": "C:\\Users\\dam2t05\\.nuget\\packages\\",
+      "outputPath": "D:\\DAM2T\\DI\\Proyecto_1EVA_ALB\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\As1ss\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\dam2t05\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
