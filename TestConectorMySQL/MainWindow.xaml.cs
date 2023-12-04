@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using MySqlConnector;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -23,6 +24,11 @@ namespace TestConectorMySQL
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void btnConectar_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

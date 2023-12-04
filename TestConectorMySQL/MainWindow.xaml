@@ -15,11 +15,12 @@
 
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="100"/>
+            <RowDefinition Height="150"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="100"/>
-
         </Grid.RowDefinitions>
+        <TextBlock Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Bottom"
+                   FontSize="35">Iniciar conexión</TextBlock>
         <Grid Width="Auto" Height="Auto" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
@@ -51,7 +52,7 @@
             <TextBlock HorizontalAlignment="Center" Grid.Column="0" Grid.Row="4" Margin="0,5,5,0">Contraseña:</TextBlock>
             <PasswordBox Grid.Column="1" Grid.Row="4" Width="75" Margin="0,5,0,25" Grid.RowSpan="2"/>
 
-            <Button Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="2" Content="Conectar" Click="Button_Click" Margin="0,5,0,0"/>
+            <Button x:Name="btnConectar" Click="btnConectar_Click" Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="2" Content="Conectar"  Margin="0,5,0,0"/>
         </Grid>
     </Grid>
 
