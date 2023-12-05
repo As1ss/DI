@@ -4,15 +4,15 @@
 winexe
 C#
 .cs
-D:\DAM2T\DI\TestConectorMySQL\obj\Debug\net7.0-windows\
+D:\DAM2T\DI\TestConectorMySQL\obj\Release\net7.0-windows\
 TestConectorMySQL
 none
 false
-TRACE;DEBUG;NET;NET7_0;NETCOREAPP
+TRACE;RELEASE;NET;NET7_0;NETCOREAPP
 D:\DAM2T\DI\TestConectorMySQL\App.xaml
 11407045341
 
-51134550847
+5-1595384689
 200-937347023
 MainWindow.xaml;
 

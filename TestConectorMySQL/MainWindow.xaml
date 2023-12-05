@@ -37,20 +37,26 @@
             </Grid.RowDefinitions>
 
             <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Grid.Row="0" 
-                       Margin="0,0,5,0">Servicio:</TextBlock>
-            <TextBox Grid.Column="1" Grid.Row="0" VerticalAlignment="Center" Width="75" Margin="0,0,0,5"/>
+                       Margin="0,0,5,0">Servidor:</TextBlock>
+            <TextBox x:Name="tbServidor"
+                Grid.Column="1" Grid.Row="0" VerticalAlignment="Center" Width="75" Margin="0,0,0,5"/>
 
             <TextBlock HorizontalAlignment="Center" Grid.Column="0" Grid.Row="1" Margin="0,5,5,0">Puerto:</TextBlock>
-            <TextBox Grid.Column="1" Grid.Row="1" Width="75" Margin="0,2,0,3"/>
+            <TextBox x:Name="tbPuerto"
+                Grid.Column="1" Grid.Row="1" Width="75" Margin="0,2,0,3"/>
 
             <TextBlock HorizontalAlignment="Center" Grid.Column="0" Grid.Row="2" Margin="0,5,5,0">Base de Datos:</TextBlock>
-            <TextBox Grid.Column="1" Grid.Row="2" Width="75" Margin="0,2,0,3"/>
+            <TextBox Name="tbBDD"
+                Grid.Column="1" Grid.Row="2" Width="75" Margin="0,2,0,3"/>
 
             <TextBlock HorizontalAlignment="Center" Grid.Column="0" Grid.Row="3" Margin="0,5,5,0">Usuario:</TextBlock>
-            <TextBox Grid.Column="1" Grid.Row="3" Width="75" Margin="0,2,0,3"/>
+            <TextBox x:Name="tbUsuario"
+                Grid.Column="1" Grid.Row="3" Width="75" Margin="0,2,0,3"/>
 
             <TextBlock HorizontalAlignment="Center" Grid.Column="0" Grid.Row="4" Margin="0,5,5,0">Contraseña:</TextBlock>
-            <PasswordBox Grid.Column="1" Grid.Row="4" Width="75" Margin="0,5,0,25" Grid.RowSpan="2"/>
+            <PasswordBox 
+                x:Name="tbContrasena"
+                Grid.Column="1" Grid.Row="4" Width="75" Margin="0,5,0,25" Grid.RowSpan="2"/>
 
             <Button x:Name="btnConectar" Click="btnConectar_Click" Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="2" Content="Conectar"  Margin="0,5,0,0"/>
         </Grid>
