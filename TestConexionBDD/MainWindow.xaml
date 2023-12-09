@@ -1,0 +1,30 @@
+﻿<Window x:Class="TestConexionBDD.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TestConexionBDD"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid RenderTransformOrigin="0.666,0.486">
+        <WrapPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal">
+
+            <WrapPanel  Orientation="Vertical">
+                <TextBlock x:Name="tbServidor"  HorizontalAlignment="Right" Height="20"  Margin="0 0 0 10">Servidor:</TextBlock>
+                <TextBlock x:Name="tbPuerto"   HorizontalAlignment="Right"  Height="20" Margin="0 0 0 10">Puerto:</TextBlock>
+                <TextBlock x:Name="tbBDD"   HorizontalAlignment="Right"  Height="20" Margin="0 0 0 10">Base de datos:</TextBlock>
+                <TextBlock x:Name="tbUsuario"   HorizontalAlignment="Right"  Height="20" Margin="0 0 0 10">Usuario:</TextBlock>
+                <TextBlock x:Name="tbPassword"   HorizontalAlignment="Right"  Height="20" Margin="0 0 0 10">Contraseña:</TextBlock>
+            </WrapPanel>
+            <WrapPanel  Orientation="Vertical">
+                <TextBox x:Name="tbxServidor" Width="75"  Height="20" Margin="10 0 0 10"/>
+                <TextBox x:Name="tbxPuerto" Margin="10 0 0 10"  Height="20"/>
+                <TextBox x:Name="tbxBDD" Margin="10 0 0 10"  Height="20"/>
+                <TextBox x:Name="tbxUsuario" Margin="10 0 0 10"  Height="20"/>
+                <PasswordBox x:Name="bxPassword" Margin="10 0 0 10"  Height="20"/>
+            </WrapPanel>
+        </WrapPanel>
+        <Button Height="25" Width="150" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="331,0,0,112" Click="Button_Click">Conectar</Button>
+
+    </Grid>
+</Window>
