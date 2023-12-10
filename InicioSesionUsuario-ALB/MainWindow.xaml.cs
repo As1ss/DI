@@ -17,17 +17,14 @@ namespace InicioSesionUsuario_ALB
     /// </summary>
     public partial class MainWindow : Window
     {
-        private const String SERVIDOR= "localhost";
-        private const uint PUERTO = 3306;
-        private const String BASEDATOS = "usuariologin";
-        private const String USUARIO = "root";
-        private const String PASSWORD = "1234";
+       
         private String? nombreUsuario;
         private String? contrasenaUsuario;
 
         public MainWindow()
         {
             InitializeComponent();
+          
         }
 
         private void btnIniciar_Click(object sender, RoutedEventArgs e)
@@ -37,20 +34,11 @@ namespace InicioSesionUsuario_ALB
              contrasenaUsuario = bxPassword.Password;
 
 
-            MySqlConnectionStringBuilder builder = new MySqlConnectionStringBuilder
-            {
-                Server = SERVIDOR,
-                Port = PUERTO,
-                Database = BASEDATOS,
-                UserID = USUARIO,
-                Password = PASSWORD
-            };
-
-            using var connector = new MySqlConnection(builder.ToString());
+  
 
             try
             {
-                connector.Open();
+               MySqlConnection connector = ConexionBD.getConnection();
 
                 String consulta = "SELECT nombre,contrasena FROM usuario";
 
@@ -74,7 +62,19 @@ namespace InicioSesionUsuario_ALB
                 if (nombreUsuario.Equals(userBDD) && contrasenaUsuario.Equals(passwordBDD))
                 {
                     
-                    MessageBox.Show("LOGIN CORRECTO");
+                  
+                   
+                    connector.Close(); 
+                    connector.Open();
+
+                    using (MySqlCommand commando = new MySqlCommand("SELECT tipo_usuario FROM usuario",connector))
+                    {
+                        commando.ExecuteReader(); 
+                        if (reader.Read())
+                        {
+                            MessageBox.Show($"LOGIN CORRECTO: \nNombre: {userBDD} \nTipo de usuario: {reader.GetString(0)}");
+                        }
+                    }
 
                 }
                 else
