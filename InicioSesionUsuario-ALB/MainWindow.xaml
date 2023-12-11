@@ -13,6 +13,7 @@
             <TextBlock Name="tbPassword" FontSize="25">Contraseña</TextBlock>
             <PasswordBox Name="bxPassword" FontSize="20"  Width="155" Height="25"/>
             <Button Name="btnIniciar" FontSize="25" Margin="0 10 0 0" Click="btnIniciar_Click">Iniciar Sesión</Button>
+            <TextBlock Name="tbMensaje" FontSize="20" Margin="0 10 0 0"/>
 
 
         </WrapPanel>
