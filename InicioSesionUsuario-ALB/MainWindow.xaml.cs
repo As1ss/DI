@@ -49,6 +49,8 @@ namespace InicioSesionUsuario_ALB
 
                 String userBDD = "";
                 String passwordBDD = "";
+                int numFallos= 0;
+                bool usuarioBloqueado= false;
 
 
                 while (reader.Read())
@@ -60,10 +62,13 @@ namespace InicioSesionUsuario_ALB
 
 
                 }
+           
 
                 reader.Close();
 
-                if (nombreUsuario.Equals(userBDD) && contrasenaUsuario.Equals(passwordBDD))
+                usuarioBloqueado = getBlockedUsuario(userBDD, reader, connector);
+
+                if (nombreUsuario.Equals(userBDD) && contrasenaUsuario.Equals(passwordBDD) && !usuarioBloqueado)
                 {
 
                     using (MySqlCommand commando = new MySqlCommand($"SELECT * FROM usuario WHERE usuario.nombre = '{userBDD}'", connector))
@@ -78,10 +83,16 @@ namespace InicioSesionUsuario_ALB
                     }
                     reader.Close() ;
                 }
-                else if(nombreUsuario.Equals(userBDD) && !contrasenaUsuario.Equals(passwordBDD))
+                else if(nombreUsuario.Equals(userBDD) && !contrasenaUsuario.Equals(passwordBDD) && !usuarioBloqueado)
                 {
                     setFallos(userBDD, reader,connector);
-                    tbMensaje.Text=$"Tienes {getFallos(userBDD,reader,connector)} fallos.";
+                    numFallos = getFallos(userBDD, reader, connector);
+                    tbMensaje.Text=$"Tienes {numFallos}/3 intentos";
+                    setBlockUsuario(userBDD,numFallos,reader,connector);
+
+                }else if(nombreUsuario.Equals(userBDD) && usuarioBloqueado)
+                {
+                    tbMensaje.Text = "El usuario esta bloqueado";
                 }
                 else
                 {
@@ -117,7 +128,35 @@ namespace InicioSesionUsuario_ALB
                 }
                
             }
+            reader.Close();
            return numFallos;
+        }
+        private void setBlockUsuario(String usuarioNombre,int numFallos,MySqlDataReader reader, MySqlConnection connector)
+        {
+            using (MySqlCommand bloquearUsu = new MySqlCommand($"UPDATE usuario SET bloqueado=1 WHERE nombre = '{usuarioNombre}' AND intentos_fallidos>=3",connector))
+            {
+                bloquearUsu.ExecuteReader();
+               
+            }
+            reader.Close();
+        }
+        private bool getBlockedUsuario(String usuarioNombre,MySqlDataReader reader,MySqlConnection connector)
+        {
+           bool usuarioBloqueado = false;
+
+            using (MySqlCommand obtenerBlockUsu = new MySqlCommand($"SELECT bloqueado FROM usuario WHERE nombre ='{usuarioNombre}'", connector))
+            {
+                obtenerBlockUsu.ExecuteReader();
+
+                if(reader.Read())
+                {
+                    usuarioBloqueado=reader.GetBoolean(0);
+                }
+            }
+            reader.Close();
+
+            return usuarioBloqueado;
+
         }
     }
 }
