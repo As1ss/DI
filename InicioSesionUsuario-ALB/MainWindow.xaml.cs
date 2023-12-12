@@ -27,52 +27,31 @@ namespace InicioSesionUsuario_ALB
             InitializeComponent();
 
         }
-
         private void btnIniciar_Click(object sender, RoutedEventArgs e)
         {
-
             nombreUsuario = tbxUsuario.Text;
             contrasenaUsuario = bxPassword.Password;
-
-
-
-
             try
             {
                 MySqlConnection connector = ConexionBD.getConnection();
-
                 String consulta = $"SELECT nombre,contrasena,tipo_usuario FROM usuario WHERE nombre = '{nombreUsuario}'";
-
                 using var command = new MySqlCommand(consulta, connector);
-
                 using var reader = command.ExecuteReader();
-
                 String userBDD = "";
                 String passwordBDD = "";
                 String tipoUsuario = "";
                 int numFallos= 0;
                 bool usuarioBloqueado= false;
-
-
                 while (reader.Read())
                 {
-
                     userBDD = reader.GetString(0);
                     passwordBDD = reader.GetString(1);
                     tipoUsuario=reader.GetString(2);
-
-
-
                 }
-           
-
                 reader.Close();
-
                 usuarioBloqueado = getBlockedUsuario(userBDD, reader, connector);
-
                 if (nombreUsuario.Equals(userBDD) && contrasenaUsuario.Equals(passwordBDD) && !usuarioBloqueado && tipoUsuario.Equals("estandar"))
                 {
-
                     using (MySqlCommand commando = new MySqlCommand($"SELECT * FROM usuario WHERE usuario.nombre = '{userBDD}'", connector))
                     {
                         commando.ExecuteReader();
@@ -97,10 +76,7 @@ namespace InicioSesionUsuario_ALB
                     else
                     {
                         tbMensaje.Text = "Contraseña incorrecta";
-                    }
-                 
-                    
-
+                    }                   
                 }else if(nombreUsuario.Equals(userBDD) && usuarioBloqueado)
                 {
                     tbMensaje.Text = "El usuario esta bloqueado. Contacta con un administrador para desbloquearlo";
@@ -108,12 +84,10 @@ namespace InicioSesionUsuario_ALB
                 else if(nombreUsuario.Equals(userBDD)&& tipoUsuario.Equals("administrador"))
                 {
                     AdminVentana adminVentana = new AdminVentana();
-                    adminVentana.Show();
-                  
+                    adminVentana.Show();                
                 }
                 else
                 {
-                    MessageBox.Show("LOGIN INCORRECTO");
                     tbMensaje.Text = "El usuario no se encuentra en nuestra base de datos";
                 }
             }
@@ -121,8 +95,7 @@ namespace InicioSesionUsuario_ALB
             {
                 MessageBox.Show($"Error: {ex.Message}");
             }
-        }
-        
+        }       
         private void setFallos(String usuarioNombre,MySqlConnection connector)
         {
             tbMensaje.Text = "Contraseña incorrecta.";
@@ -131,21 +104,18 @@ namespace InicioSesionUsuario_ALB
             {
                aumentoFallos.Prepare();
                 aumentoFallos.ExecuteNonQuery(); 
-            }
-           
+            }        
         }
         private int getFallos(String usuarioNombre,MySqlDataReader reader, MySqlConnection connector)
         {
             int numFallos=0;
-
             using(MySqlCommand obtenerFallos = new MySqlCommand($"SELECT intentos_fallidos FROM usuario WHERE nombre = '{usuarioNombre}'", connector))
             {
                 obtenerFallos.ExecuteReader();
                 if(reader.Read())
                 {
                     numFallos = reader.GetInt16(0);
-                }
-               
+                }            
             }
             reader.Close();
            return numFallos;
@@ -155,28 +125,22 @@ namespace InicioSesionUsuario_ALB
             using (MySqlCommand bloquearUsu = new MySqlCommand($"UPDATE usuario SET bloqueado=1 WHERE nombre = '{usuarioNombre}' AND intentos_fallidos>=3",connector))
             {
                 bloquearUsu.Prepare();
-                bloquearUsu.ExecuteNonQuery();
-               
-            }
-           
+                bloquearUsu.ExecuteNonQuery(); 
+            } 
         }
         private bool getBlockedUsuario(String usuarioNombre,MySqlDataReader reader,MySqlConnection connector)
         {
-           bool usuarioBloqueado = false;
-
+            bool usuarioBloqueado = false;
             using (MySqlCommand obtenerBlockUsu = new MySqlCommand($"SELECT bloqueado FROM usuario WHERE nombre ='{usuarioNombre}'", connector))
             {
                 obtenerBlockUsu.ExecuteReader();
-
                 if(reader.Read())
                 {
                     usuarioBloqueado=reader.GetBoolean(0);
                 }
             }
             reader.Close();
-
             return usuarioBloqueado;
-
         }
     }
 }
