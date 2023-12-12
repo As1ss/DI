@@ -28,7 +28,7 @@ namespace InicioSesionUsuario_ALB
             connector = ConexionBD.getConnection();
             cargarUsuarios();
         }
-        private void btnCargarLista_Click(object sender, RoutedEventArgs e)
+        private void btnDesbloquear_Click(object sender, RoutedEventArgs e)
         {
             try
             {
@@ -88,6 +88,9 @@ namespace InicioSesionUsuario_ALB
 
             }
         }
+
+      
+        
     }
 }
 

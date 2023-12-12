@@ -7,11 +7,14 @@
         mc:Ignorable="d"
         Title="AdminVentana" Height="450" Width="800">
     <Grid>
-        <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+        <WrapPanel VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Vertical">
             <DataGrid x:Name="dataGrid" FontSize="20" AutoGenerateColumns="True" CanUserAddRows="False" Margin="10" IsReadOnly="True"/>
-
-
-        </Grid>
-        <Button Name="btnCargarLista" FontSize="20" Content="Desbloquear" HorizontalAlignment="Center" Margin="0,297,0,0" VerticalAlignment="Top" Click="btnCargarLista_Click"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" >
+                <Button Name="btnDesbloquear" FontSize="20" Content="Desbloquear" Click="btnDesbloquear_Click" Margin="0 0 10 0" />
+                <Button Content="Bloquear" FontSize="20" Margin="10 0 0 0" />
+            </StackPanel>
+        
+        </WrapPanel>
     </Grid>
+        
 </Window>

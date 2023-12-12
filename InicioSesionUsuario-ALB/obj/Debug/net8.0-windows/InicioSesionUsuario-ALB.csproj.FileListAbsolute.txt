@@ -25,3 +25,30 @@ C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\InicioSesionUsuario-ALB\obj\Debu
 C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\InicioSesionUsuario-ALB\obj\Debug\net8.0-windows\ref\InicioSesionUsuario-ALB.dll
 C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\InicioSesionUsuario-ALB\obj\Debug\net8.0-windows\AdminVentana.g.cs
 C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\InicioSesionUsuario-ALB\obj\Debug\net8.0-windows\AdminVentana.baml
+D:\DAM2T\DI\InicioSesionUsuario-ALB\bin\Debug\net8.0-windows\InicioSesionUsuario-ALB.exe
+D:\DAM2T\DI\InicioSesionUsuario-ALB\bin\Debug\net8.0-windows\InicioSesionUsuario-ALB.deps.json
+D:\DAM2T\DI\InicioSesionUsuario-ALB\bin\Debug\net8.0-windows\InicioSesionUsuario-ALB.runtimeconfig.json
+D:\DAM2T\DI\InicioSesionUsuario-ALB\bin\Debug\net8.0-windows\InicioSesionUsuario-ALB.dll
+D:\DAM2T\DI\InicioSesionUsuario-ALB\bin\Debug\net8.0-windows\InicioSesionUsuario-ALB.pdb
+D:\DAM2T\DI\InicioSesionUsuario-ALB\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+D:\DAM2T\DI\InicioSesionUsuario-ALB\bin\Debug\net8.0-windows\MySqlConnector.dll
+D:\DAM2T\DI\InicioSesionUsuario-ALB\obj\Debug\net8.0-windows\InicioSesionUsuario-ALB.csproj.AssemblyReference.cache
+D:\DAM2T\DI\InicioSesionUsuario-ALB\obj\Debug\net8.0-windows\AdminVentana.g.cs
+D:\DAM2T\DI\InicioSesionUsuario-ALB\obj\Debug\net8.0-windows\MainWindow.g.cs
+D:\DAM2T\DI\InicioSesionUsuario-ALB\obj\Debug\net8.0-windows\App.g.cs
+D:\DAM2T\DI\InicioSesionUsuario-ALB\obj\Debug\net8.0-windows\InicioSesionUsuario-ALB_MarkupCompile.cache
+D:\DAM2T\DI\InicioSesionUsuario-ALB\obj\Debug\net8.0-windows\InicioSesionUsuario-ALB_MarkupCompile.lref
+D:\DAM2T\DI\InicioSesionUsuario-ALB\obj\Debug\net8.0-windows\AdminVentana.baml
+D:\DAM2T\DI\InicioSesionUsuario-ALB\obj\Debug\net8.0-windows\MainWindow.baml
+D:\DAM2T\DI\InicioSesionUsuario-ALB\obj\Debug\net8.0-windows\InicioSesionUsuario-ALB.g.resources
+D:\DAM2T\DI\InicioSesionUsuario-ALB\obj\Debug\net8.0-windows\InicioSesionUsuario-ALB.GeneratedMSBuildEditorConfig.editorconfig
+D:\DAM2T\DI\InicioSesionUsuario-ALB\obj\Debug\net8.0-windows\InicioSesionUsuario-ALB.AssemblyInfoInputs.cache
+D:\DAM2T\DI\InicioSesionUsuario-ALB\obj\Debug\net8.0-windows\InicioSesionUsuario-ALB.AssemblyInfo.cs
+D:\DAM2T\DI\InicioSesionUsuario-ALB\obj\Debug\net8.0-windows\InicioSesionUsuario-ALB.csproj.CoreCompileInputs.cache
+D:\DAM2T\DI\InicioSesionUsuario-ALB\obj\Debug\net8.0-windows\InicioSesionUsuario-ALB.sourcelink.json
+D:\DAM2T\DI\InicioSesionUsuario-ALB\obj\Debug\net8.0-windows\InicioSesionUsuario-ALB.csproj.CopyComplete
+D:\DAM2T\DI\InicioSesionUsuario-ALB\obj\Debug\net8.0-windows\InicioSesionUsuario-ALB.dll
+D:\DAM2T\DI\InicioSesionUsuario-ALB\obj\Debug\net8.0-windows\refint\InicioSesionUsuario-ALB.dll
+D:\DAM2T\DI\InicioSesionUsuario-ALB\obj\Debug\net8.0-windows\InicioSesionUsuario-ALB.pdb
+D:\DAM2T\DI\InicioSesionUsuario-ALB\obj\Debug\net8.0-windows\InicioSesionUsuario-ALB.genruntimeconfig.cache
+D:\DAM2T\DI\InicioSesionUsuario-ALB\obj\Debug\net8.0-windows\ref\InicioSesionUsuario-ALB.dll
