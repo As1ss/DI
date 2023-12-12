@@ -23,3 +23,5 @@ C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\InicioSesionUsuario-ALB\obj\Debu
 C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\InicioSesionUsuario-ALB\obj\Debug\net8.0-windows\InicioSesionUsuario-ALB.pdb
 C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\InicioSesionUsuario-ALB\obj\Debug\net8.0-windows\InicioSesionUsuario-ALB.genruntimeconfig.cache
 C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\InicioSesionUsuario-ALB\obj\Debug\net8.0-windows\ref\InicioSesionUsuario-ALB.dll
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\InicioSesionUsuario-ALB\obj\Debug\net8.0-windows\AdminVentana.g.cs
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\InicioSesionUsuario-ALB\obj\Debug\net8.0-windows\AdminVentana.baml
