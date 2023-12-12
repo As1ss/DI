@@ -45,11 +45,20 @@ namespace InicioSesionUsuario_ALB
 
                     // Obtener el valor de la celda en la columna "Nombre"
                     string nombreValor = row["nombre"].ToString();
+                    string tipoUsuario = row["tipo_usuario"].ToString();
 
-                    // Haz algo con el valor obtenido
-                    MessageBox.Show($"El valor de la columna 'Nombre' es: {nombreValor}");
-                    desbloquearUsuario(nombreValor);
+                    if (tipoUsuario.Equals("administrador"))
+                    {
+                        MessageBox.Show($"El usuario {nombreValor} no puede ser bloqueado porque es {tipoUsuario}");
+                    }
+                    else
+                    {
+                        MessageBox.Show($"Has desbloqueado al usuario: {nombreValor}");
+                        desbloquearUsuario(nombreValor);
+                    }
+             
                 }
+               
                 else
                 {
                     MessageBox.Show("Selecciona un registro para desbloquear");
@@ -105,6 +114,28 @@ namespace InicioSesionUsuario_ALB
 
             }
             
+        }
+        private String getTipoUsuario(string usuarioNombre,MySqlConnection connector)
+        {
+            String tipoUsuario = "";
+            try
+            {
+                String query = $"SELECT tipo_usuario from usuario WHERE nombre = '{usuarioNombre}'";
+                using MySqlCommand obtenerTipoUsuario = new MySqlCommand(usuarioNombre, connector);
+                using var reader = obtenerTipoUsuario.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    tipoUsuario = reader.GetString(0);
+                }
+                reader.Close();
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        return tipoUsuario;
         }
     }
 
