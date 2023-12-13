@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:InicioSesionUsuario_ALB"
         mc:Ignorable="d"
-        Title="AdminVentana" Height="450" Width="800">
-    <Grid>
-        <Button Name="btnVolver" Padding="10 0" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="20" Click="btnVolver_Click"
+        Title="AdminVentana" Height="450" Width="800" >
+    <Grid Background="Wheat">
+        <Button Name="btnVolver" Padding="10 0" HorizontalAlignment="Left" VerticalAlignment="Top"  FontSize="20" Click="btnVolver_Click"
                 Style="{StaticResource RoundedButtonStyle}">Volver</Button>
         <WrapPanel VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Vertical">
             <DataGrid x:Name="dataGrid" FontSize="20" AutoGenerateColumns="True" CanUserAddRows="False" Margin="10" IsReadOnly="True"/>

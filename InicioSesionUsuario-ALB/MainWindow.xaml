@@ -5,16 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:InicioSesionUsuario_ALB"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" Closing="Window_Closing">
    
-    <Grid>
-        <Button  Name="btnSalir" Click="btnSalir_Click" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="20"
-                Style="{StaticResource RoundedButtonStyle}">Salir</Button>
+    <Grid Background="Wheat">
+        <Button  Name="btnSalir" Click="btnSalir_Click" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="20" 
+                Style="{StaticResource RoundedButtonStyleExit}">Salir</Button>
         <WrapPanel   HorizontalAlignment="Center" VerticalAlignment="Center"  Orientation="Vertical">
             <TextBlock HorizontalAlignment="Center"  Name="tbUsuario" FontSize="25">Usuario</TextBlock>
-            <TextBox  Name="tbxUsuario" FontSize="20"  Width="155" Height="25" Style="{StaticResource RoundedTextBoxStyle}"/>
+            <TextBox   Name="tbxUsuario" FontSize="20"  Width="155" Height="25" Style="{StaticResource RoundedTextBoxStyle}" VerticalContentAlignment="Center"/>
             <TextBlock HorizontalAlignment="Center" Name="tbPassword" FontSize="25">Contraseña</TextBlock>
-            <PasswordBox Name="bxPassword" FontSize="20"  Width="155" Height="25" Style="{StaticResource RoundedPassBoxStyle}"/>
+            <PasswordBox VerticalAlignment="Center" Name="bxPassword" FontSize="20"  Width="155" Height="25" Style="{StaticResource RoundedPassBoxStyle}"/>
             <Button Name="btnIniciar"  FontSize="25" Margin="0 10 0 0" Click="btnIniciar_Click" Width="185" Style="{StaticResource RoundedButtonStyle}">Iniciar Sesión</Button>
             <TextBlock Name="tbMensaje" FontSize="20" Margin="0 10 0 0"/>
 

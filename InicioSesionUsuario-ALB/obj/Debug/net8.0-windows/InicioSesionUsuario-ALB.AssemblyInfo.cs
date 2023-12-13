@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("InicioSesionUsuario-ALB")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b4cfdac2215e38c30cb69858fd7aa81cf1cda00f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7a2102f031bf8916bd989e6676c3e20a00f875e9")]
 [assembly: System.Reflection.AssemblyProductAttribute("InicioSesionUsuario-ALB")]
 [assembly: System.Reflection.AssemblyTitleAttribute("InicioSesionUsuario-ALB")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
