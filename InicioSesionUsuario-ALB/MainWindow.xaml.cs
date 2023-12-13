@@ -84,7 +84,8 @@ namespace InicioSesionUsuario_ALB
                 else if(nombreUsuario.Equals(userBDD)&& tipoUsuario.Equals("administrador"))
                 {
                     AdminVentana adminVentana = new AdminVentana();
-                    adminVentana.Show();                
+                    adminVentana.ShowDialog();
+                  
                 }
                 else
                 {
@@ -143,13 +144,20 @@ namespace InicioSesionUsuario_ALB
             return usuarioBloqueado;
         }
 
+
         private void btnSalir_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             MessageBoxResult result = MessageBox.Show("¿Estás seguro de que quieres salir?", "Salir", MessageBoxButton.YesNo, MessageBoxImage.Question);
 
             if (result == MessageBoxResult.Yes)
             {
                 this.Close();
+                ConexionBD.CerrarConexion();
             }
         }
     }

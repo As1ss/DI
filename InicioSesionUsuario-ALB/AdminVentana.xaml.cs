@@ -96,12 +96,10 @@ namespace InicioSesionUsuario_ALB
 
             }
         }
-
         private void btnVolver_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
-
         private void btnBloquear_Click(object sender, RoutedEventArgs e)
         {
             try
