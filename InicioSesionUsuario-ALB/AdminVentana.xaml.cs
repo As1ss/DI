@@ -69,6 +69,14 @@ namespace InicioSesionUsuario_ALB
             unlockUsuario.ExecuteNonQuery();
             cargarUsuarios();
         }
+        private void bloquearUsuario(string? nombreValor)
+        {
+            String consultaUnlock = $"UPDATE usuario SET intentos_fallidos=3, bloqueado=1 WHERE nombre = '{nombreValor}'";
+            using MySqlCommand unlockUsuario = new MySqlCommand(consultaUnlock, connector);
+            unlockUsuario.Prepare();
+            unlockUsuario.ExecuteNonQuery();
+            cargarUsuarios();
+        }
         private void cargarUsuarios()
         {
             try
@@ -89,8 +97,46 @@ namespace InicioSesionUsuario_ALB
             }
         }
 
-      
-        
-    }
-}
+        private void btnVolver_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnBloquear_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                if (dataGrid.SelectedItem != null)
+                {
+                    DataRowView row = dataGrid.SelectedItem as DataRowView;
+
+                    String nombreValor = row["nombre"].ToString();
+                    String tipoUsuario = row["tipo_usuario"].ToString();
+                    if (tipoUsuario.Equals("administrador"))
+                    {
+                        MessageBox.Show($"El usuario {nombreValor} no puede ser bloqueado porque es {tipoUsuario}");
+                    }
+                    else
+                    {
+                        MessageBox.Show($"Has bloqueado al usuario: {nombreValor}");
+                        bloquearUsuario(nombreValor);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Selecciona un registro para desbloquear");
+                }
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+            }
+            
+
+        }
+    
+
 

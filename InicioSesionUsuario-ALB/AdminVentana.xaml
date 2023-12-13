@@ -7,11 +7,13 @@
         mc:Ignorable="d"
         Title="AdminVentana" Height="450" Width="800">
     <Grid>
+        <Button Name="btnVolver" Padding="10 0" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="20" Click="btnVolver_Click"
+                Style="{StaticResource RoundedButtonStyle}">Volver</Button>
         <WrapPanel VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Vertical">
             <DataGrid x:Name="dataGrid" FontSize="20" AutoGenerateColumns="True" CanUserAddRows="False" Margin="10" IsReadOnly="True"/>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" >
-                <Button Name="btnDesbloquear" FontSize="20" Content="Desbloquear" Click="btnDesbloquear_Click" Margin="0 0 10 0" />
-                <Button Content="Bloquear" FontSize="20" Margin="10 0 0 0" />
+                <Button Name="btnDesbloquear" Width="155" FontSize="20" Content="Desbloquear" Click="btnDesbloquear_Click" Margin="0 0 10 0" Style="{StaticResource RoundedButtonStyle}" />
+                <Button Name="btnBloquear" Width="120" Content="Bloquear" FontSize="20" Margin="10 0 0 0" Click="btnBloquear_Click" Style="{StaticResource RoundedButtonStyle}"/>
             </StackPanel>
         
         </WrapPanel>

@@ -6,13 +6,16 @@
         xmlns:local="clr-namespace:InicioSesionUsuario_ALB"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+   
     <Grid>
-        <WrapPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Vertical">
-            <TextBlock HorizontalAlignment="Center" Name="tbUsuario" FontSize="25">Usuario</TextBlock>
-            <TextBox  Name="tbxUsuario" FontSize="20" Width="155" Height="25"/>
+        <Button  Name="btnSalir" Click="btnSalir_Click" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="20"
+                Style="{StaticResource RoundedButtonStyle}">Salir</Button>
+        <WrapPanel   HorizontalAlignment="Center" VerticalAlignment="Center"  Orientation="Vertical">
+            <TextBlock HorizontalAlignment="Center"  Name="tbUsuario" FontSize="25">Usuario</TextBlock>
+            <TextBox  Name="tbxUsuario" FontSize="20"  Width="155" Height="25" Style="{StaticResource RoundedTextBoxStyle}"/>
             <TextBlock HorizontalAlignment="Center" Name="tbPassword" FontSize="25">Contraseña</TextBlock>
-            <PasswordBox Name="bxPassword" FontSize="20"  Width="155" Height="25"/>
-            <Button Name="btnIniciar" FontSize="25" Margin="0 10 0 0" Click="btnIniciar_Click" Width="165">Iniciar Sesión</Button>
+            <PasswordBox Name="bxPassword" FontSize="20"  Width="155" Height="25" Style="{StaticResource RoundedPassBoxStyle}"/>
+            <Button Name="btnIniciar"  FontSize="25" Margin="0 10 0 0" Click="btnIniciar_Click" Width="185" Style="{StaticResource RoundedButtonStyle}">Iniciar Sesión</Button>
             <TextBlock Name="tbMensaje" FontSize="20" Margin="0 10 0 0"/>
 
 

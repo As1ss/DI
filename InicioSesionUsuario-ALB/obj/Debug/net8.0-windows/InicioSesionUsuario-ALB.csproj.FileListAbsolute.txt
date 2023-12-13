@@ -52,3 +52,4 @@ D:\DAM2T\DI\InicioSesionUsuario-ALB\obj\Debug\net8.0-windows\refint\InicioSesion
 D:\DAM2T\DI\InicioSesionUsuario-ALB\obj\Debug\net8.0-windows\InicioSesionUsuario-ALB.pdb
 D:\DAM2T\DI\InicioSesionUsuario-ALB\obj\Debug\net8.0-windows\InicioSesionUsuario-ALB.genruntimeconfig.cache
 D:\DAM2T\DI\InicioSesionUsuario-ALB\obj\Debug\net8.0-windows\ref\InicioSesionUsuario-ALB.dll
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\InicioSesionUsuario-ALB\obj\Debug\net8.0-windows\App.baml
