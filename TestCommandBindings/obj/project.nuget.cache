@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "iZ1ROqIZiyj8g1tcK98G+HL5HD+GjQU8VOZpPTszCu8PzIWCWffyGfr4skpzxXplnyIRF9ZT76cb2uHDQ5qV2A==",
+  "success": true,
+  "projectFilePath": "D:\\DAM2T\\DI\\TestCommandBindings\\TestCommandBindings.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\dam2t05\\.nuget\\packages\\microsoft.toolkit.uwp.notifications\\7.1.3\\microsoft.toolkit.uwp.notifications.7.1.3.nupkg.sha512",
+    "C:\\Users\\dam2t05\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}
