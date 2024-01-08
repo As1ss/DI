@@ -25,6 +25,18 @@ id_incidencia INT PRIMARY KEY AUTO_INCREMENT,
 usuario INT NOT NULL,
 descripcion TEXT(200) NOT NULL,
 fecha_incidencia datetime NOT NULL,
-boolean 
+resuelta boolean NOT NULL,
+CONSTRAINT fk_usuario FOREIGN KEY (usuario) REFERENCES USUARIO(id_usuario)  ON UPDATE CASCADE
+);
 
+DROP TABLE IF EXISTS PRESTAMO;
+
+CREATE TABLE PRESTAMO(
+id_prestamo INT PRIMARY KEY AUTO_INCREMENT,
+usuario INT NOT NULL,
+libro INT NOT NULL,
+fecha_prestamo DATETIME NOT NULL,
+fecha_devolucion DATETIME NOT NULL,
+CONSTRAINT fk_usuario FOREIGN KEY (usuario) REFERENCES USUARIO(id_usuario)  ON UPDATE CASCADE,
+CONSTRAINT fk_libro FOREIGN KEY (libro) REFERENCES LIBRO(id_libro) ON DELETE CASCADE ON UPDATE CASCADE
 );
