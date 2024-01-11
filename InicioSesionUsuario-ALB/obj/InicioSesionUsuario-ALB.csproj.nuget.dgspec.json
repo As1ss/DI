@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\DAM2T\\DI\\InicioSesionUsuario-ALB\\InicioSesionUsuario-ALB.csproj": {}
+    "C:\\Users\\As1ss\\Desktop\\COSAS CLASE KEK\\DAM2T\\DI\\InicioSesionUsuario-ALB\\InicioSesionUsuario-ALB.csproj": {}
   },
   "projects": {
-    "D:\\DAM2T\\DI\\InicioSesionUsuario-ALB\\InicioSesionUsuario-ALB.csproj": {
+    "C:\\Users\\As1ss\\Desktop\\COSAS CLASE KEK\\DAM2T\\DI\\InicioSesionUsuario-ALB\\InicioSesionUsuario-ALB.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\DAM2T\\DI\\InicioSesionUsuario-ALB\\InicioSesionUsuario-ALB.csproj",
+        "projectUniqueName": "C:\\Users\\As1ss\\Desktop\\COSAS CLASE KEK\\DAM2T\\DI\\InicioSesionUsuario-ALB\\InicioSesionUsuario-ALB.csproj",
         "projectName": "InicioSesionUsuario-ALB",
-        "projectPath": "D:\\DAM2T\\DI\\InicioSesionUsuario-ALB\\InicioSesionUsuario-ALB.csproj",
-        "packagesPath": "C:\\Users\\dam2t05\\.nuget\\packages\\",
-        "outputPath": "D:\\DAM2T\\DI\\InicioSesionUsuario-ALB\\obj\\",
+        "projectPath": "C:\\Users\\As1ss\\Desktop\\COSAS CLASE KEK\\DAM2T\\DI\\InicioSesionUsuario-ALB\\InicioSesionUsuario-ALB.csproj",
+        "packagesPath": "C:\\Users\\As1ss\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\As1ss\\Desktop\\COSAS CLASE KEK\\DAM2T\\DI\\InicioSesionUsuario-ALB\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\dam2t05\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\As1ss\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

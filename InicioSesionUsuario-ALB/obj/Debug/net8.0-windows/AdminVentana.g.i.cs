@@ -85,7 +85,7 @@ namespace InicioSesionUsuario_ALB {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/InicioSesionUsuario-ALB;component/adminventana.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/InicioSesionUsuario-ALB;V1.0.0.0;component/adminventana.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\AdminVentana.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

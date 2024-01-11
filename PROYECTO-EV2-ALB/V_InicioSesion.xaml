@@ -7,20 +7,30 @@
         mc:Ignorable="d"
         Title="Inicio de Sesión" Height="720" Width="1280">
     <DockPanel>
-        <StackPanel Height="50" Background="DarkOliveGreen" DockPanel.Dock="Top">
-            <TextBlock Text="Biblioteca SAMPLE" FontSize="30" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        
+        <StackPanel Height="50" Background="#2258A5" DockPanel.Dock="Top">
+            <TextBlock  Text="BiblioNet" FontSize="30" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            
         </StackPanel>
-        <StackPanel HorizontalAlignment="Center" Margin="0 80 0 0">
-            <TextBlock Text="Inicio de Sesión" FontSize="30"/>
-            <TextBlock Text="Usuario" FontSize="20" Margin="0 10 0 0"/>
-            <TextBox x:Name="tbUser"  Height="30" Margin="0 10 0 0"/>
-            <TextBlock Text="Contraseña" FontSize="20" Margin="0 10 0 0"/>
-            <PasswordBox x:Name="tbxPassword" Height="30" Margin="0 10 0 0"/>
-            <Button x:Name="btnLogin" Content="Iniciar Sesión" Height="30" FontSize="20" Margin="0 30 0 0" Click="btnLogin_Click"/>
-            <TextBlock Margin="0 10 0 0" x:Name="tbMessage" Text="Inicie sesión con nombre de usuario y contraseña."
-                      FontSize="18"/>
-            <TextBlock Margin="0 20 0 0" x:Name="tbRegister" Text="¿No tienes cuenta? Registrate aquí."
-            FontSize="18"/>
+
+
+        
+            <StackPanel>
+                <Image  Source="images/BIBLIONET.png" Height="150" Width="200" Margin="0 10 0 0"/>
+            <GroupBox Header="Usuario" FontSize="25" HorizontalAlignment="Center" Margin="0 30 0 0" BorderThickness="2">
+                <StackPanel>
+                    <TextBox Style="{StaticResource RoundedTextBoxStyle}" x:Name="tbUser" Height="30" Margin="0 10 0 0"/>
+                    <TextBlock Text="Contraseña" FontSize="25" Margin="0 10 0 0"/>
+                    <PasswordBox Style="{StaticResource RoundedPassBoxStyle}" x:Name="tbxPassword" Height="30" Margin="0 10 0 0"/>
+                    <Button Style="{StaticResource RoundedButtonStyle}" x:Name="btnLogin" Content="Iniciar Sesión" Height="30" FontSize="20" Margin="0 30 0 0" Click="btnLogin_Click"/>
+                    <TextBlock HorizontalAlignment="Center" Margin="0 10 0 0" x:Name="tbMessage" Text="Inicie sesión con nombre de usuario y contraseña."
+                FontSize="18"/>
+                    <TextBlock HorizontalAlignment="Center" Margin="0 20 0 0" x:Name="tbRegister" Text="¿No tienes cuenta? Regístrate aquí."
+        FontSize="18"/>
+                </StackPanel>
+            </GroupBox>
         </StackPanel>
+       
+
     </DockPanel>
 </Window>
