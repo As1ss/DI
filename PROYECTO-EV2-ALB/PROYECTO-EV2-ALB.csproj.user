@@ -7,7 +7,15 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="V_InicioSesion.xaml">
+    <Compile Update="View\V_CreacionUsuario.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="View\V_CreacionUsuario.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\V_InicioSesion.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

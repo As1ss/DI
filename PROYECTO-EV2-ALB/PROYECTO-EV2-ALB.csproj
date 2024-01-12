@@ -12,7 +12,6 @@
   <ItemGroup>
     <None Remove="images\BIBLIONET.png" />
     <None Remove="images\exitIcon.png" />
-    <None Remove="images\logoJC.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -20,7 +19,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="images\exitIcon.png" />
-    <Resource Include="images\logoJC.png" />
   </ItemGroup>
 
 </Project>
