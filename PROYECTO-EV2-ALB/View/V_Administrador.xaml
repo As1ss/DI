@@ -1,0 +1,59 @@
+﻿<Window x:Class="PROYECTO_EV2_ALB.View.V_Administrador"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PROYECTO_EV2_ALB.View"
+        mc:Ignorable="d"
+        Title="V_Administrador" Height="720" Width="1280">
+    <DockPanel>
+        <Border Background="#2258A5" DockPanel.Dock="Top">
+            <Grid  DockPanel.Dock="Top">
+                <TextBlock Text="Administrador" FontSize="30" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <Button x:Name="btnLogout" Click="btnLogout_Click" >
+
+                    <Button.HorizontalAlignment>Right</Button.HorizontalAlignment>
+                    <Button.VerticalAlignment>Top</Button.VerticalAlignment>
+                    <Button.Margin>10,0,10,0</Button.Margin>
+                    <Button.Background>Transparent</Button.Background>
+                    <Button.BorderBrush>Transparent</Button.BorderBrush>
+                    <StackPanel Orientation="Horizontal" >
+                        <Image  Source="../images/exitIcon.png" Height="30" Width="34"/>
+                        <TextBlock FontSize="25" Text="Cerrar sesión" Background="Transparent" 
+   Foreground="White" />
+                    </StackPanel>
+                </Button>
+            </Grid>
+        </Border>
+        <Border DockPanel.Dock="Left" Background="#2258A5">
+        <TabControl TabStripPlacement="Left" Margin="0, 0, 0, 10" >
+                <TabItem Name="tiHome" Header="Home" FontSize="30" Style="{StaticResource BackgroundTabItems}" >
+                    <TabItem.Content>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                    </Grid>
+                </TabItem.Content>
+                 
+                </TabItem>
+
+                <TabItem Name="tiIncidence" Header="Incidencias" FontSize="30" Style="{StaticResource BackgroundTabItems}" >
+               
+            </TabItem>
+                <TabItem Name="tiBook" Header="Libro" FontSize="30" Style="{StaticResource BackgroundTabItems}" >
+
+            </TabItem>
+                <TabItem Name="tiUsers" Header="Usuarios" FontSize="30" Style="{StaticResource BackgroundTabItems}">
+
+            </TabItem>
+        </TabControl>
+        </Border>
+        
+    </DockPanel>
+</Window>

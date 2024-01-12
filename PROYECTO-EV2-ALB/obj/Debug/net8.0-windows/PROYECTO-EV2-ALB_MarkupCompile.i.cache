@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 D:\DAM2T\DI\PROYECTO-EV2-ALB\App.xaml
-2-964295243
+3-1842799506
 
-7-1282505513
+8-1329865174
 198-688555687
-View\V_CreacionUsuario.xaml;View\V_InicioSesion.xaml;
+View\V_Administrador.xaml;View\V_CreacionUsuario.xaml;View\V_InicioSesion.xaml;
 
 True
 

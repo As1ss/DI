@@ -44,3 +44,5 @@ D:\DAM2T\DI\PROYECTO-EV2-ALB\obj\Debug\net8.0-windows\View\V_InicioSesion.g.cs
 D:\DAM2T\DI\PROYECTO-EV2-ALB\obj\Debug\net8.0-windows\View\V_InicioSesion.baml
 D:\DAM2T\DI\PROYECTO-EV2-ALB\obj\Debug\net8.0-windows\View\V_CreacionUsuario.g.cs
 D:\DAM2T\DI\PROYECTO-EV2-ALB\obj\Debug\net8.0-windows\View\V_CreacionUsuario.baml
+D:\DAM2T\DI\PROYECTO-EV2-ALB\obj\Debug\net8.0-windows\View\V_Administrador.g.cs
+D:\DAM2T\DI\PROYECTO-EV2-ALB\obj\Debug\net8.0-windows\View\V_Administrador.baml

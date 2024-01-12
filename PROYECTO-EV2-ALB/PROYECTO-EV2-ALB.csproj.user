@@ -7,11 +7,17 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="View\V_Administrador.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\V_CreacionUsuario.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="View\V_Administrador.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="View\V_CreacionUsuario.xaml">
       <SubType>Designer</SubType>
     </Page>

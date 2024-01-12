@@ -24,7 +24,8 @@ namespace PROYECTO_EV2_ALB
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-
+            Window v_Administrador = new View.V_Administrador();
+            v_Administrador.ShowDialog();
         }
 
         private void btnSalir_Click(object sender, RoutedEventArgs e)
