@@ -26,6 +26,9 @@ namespace PROYECTO_EV2_ALB
 
         }
 
-       
+        private void btnSalir_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

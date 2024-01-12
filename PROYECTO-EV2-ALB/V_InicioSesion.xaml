@@ -7,15 +7,25 @@
         mc:Ignorable="d"
         Title="Inicio de Sesión" Height="720" Width="1280">
     <DockPanel>
-        
-        <StackPanel Height="50" Background="#2258A5" DockPanel.Dock="Top">
-            <TextBlock  Text="BiblioNet" FontSize="30" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            
-        </StackPanel>
+        <Border Background="#2258A5" DockPanel.Dock="Top">
+            <Grid  DockPanel.Dock="Top">
+                <TextBlock Text="BiblioNet" FontSize="30" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <Button x:Name="btnSalir" Click="btnSalir_Click" >
 
-
-        
-            <StackPanel>
+                    <Button.HorizontalAlignment>Right</Button.HorizontalAlignment>
+                    <Button.VerticalAlignment>Top</Button.VerticalAlignment>
+                    <Button.Margin>10,0,10,0</Button.Margin>
+                    <Button.Background>Transparent</Button.Background>
+                    <Button.BorderBrush>Transparent</Button.BorderBrush>
+                    <StackPanel Orientation="Horizontal" >
+                        <Image  Source="images/exitIcon.png" Height="30" Width="34"/>
+                        <TextBlock FontSize="25" Text="Salir" Background="Transparent" 
+                  Foreground="White" />
+                    </StackPanel>
+                </Button>
+            </Grid>
+        </Border>
+        <StackPanel>
                 <Image  Source="images/BIBLIONET.png" Height="150" Width="200" Margin="0 10 0 0"/>
             <GroupBox Header="Usuario" FontSize="25" HorizontalAlignment="Center" Margin="0 30 0 0" BorderThickness="2">
                 <StackPanel>
