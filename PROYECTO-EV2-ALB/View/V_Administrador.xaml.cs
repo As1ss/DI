@@ -30,5 +30,30 @@ namespace PROYECTO_EV2_ALB.View
         {
             this.Close();
         }
+
+        private void bAdminUsers_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            // Cambia a un TabItem específico por referencia
+            tcAdministrador.SelectedItem = tiUsers;
+
+
+        }
+
+        private void bIncidencias_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            // Cambia a un TabItem específico por referencia
+            tcAdministrador.SelectedItem = tiIncidence;
+        }
+
+        private void bAdminBooks_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            // Cambia a un TabItem específico por referencia
+            tcAdministrador.SelectedItem = tiBook;
+        }
+
+        private void bLogOut_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

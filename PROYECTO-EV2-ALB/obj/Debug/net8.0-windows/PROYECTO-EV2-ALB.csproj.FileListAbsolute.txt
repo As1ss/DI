@@ -22,14 +22,12 @@ C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\PROYECTO-EV2-ALB\obj\Debug\net8.
 C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\PROYECTO-EV2-ALB\obj\Debug\net8.0-windows\PROYECTO-EV2-ALB.dll
 C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\PROYECTO-EV2-ALB\obj\Debug\net8.0-windows\refint\PROYECTO-EV2-ALB.dll
 C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\PROYECTO-EV2-ALB\obj\Debug\net8.0-windows\PROYECTO-EV2-ALB.pdb
-C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\PROYECTO-EV2-ALB\obj\Debug\net8.0-windows\V_InicioSesion.g.cs
 C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\PROYECTO-EV2-ALB\obj\Debug\net8.0-windows\PROYECTO-EV2-ALB_MarkupCompile.lref
 C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\PROYECTO-EV2-ALB\bin\Debug\net8.0-windows\PROYECTO-EV2-ALB.exe
 C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\PROYECTO-EV2-ALB\bin\Debug\net8.0-windows\PROYECTO-EV2-ALB.deps.json
 C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\PROYECTO-EV2-ALB\bin\Debug\net8.0-windows\PROYECTO-EV2-ALB.runtimeconfig.json
 C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\PROYECTO-EV2-ALB\bin\Debug\net8.0-windows\PROYECTO-EV2-ALB.dll
 C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\PROYECTO-EV2-ALB\bin\Debug\net8.0-windows\PROYECTO-EV2-ALB.pdb
-C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\PROYECTO-EV2-ALB\obj\Debug\net8.0-windows\V_InicioSesion.baml
 C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\PROYECTO-EV2-ALB\obj\Debug\net8.0-windows\PROYECTO-EV2-ALB.g.resources
 C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\PROYECTO-EV2-ALB\obj\Debug\net8.0-windows\PROYECTO-EV2-ALB.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\PROYECTO-EV2-ALB\obj\Debug\net8.0-windows\PROYECTO-EV2-ALB.AssemblyInfoInputs.cache
@@ -46,3 +44,9 @@ D:\DAM2T\DI\PROYECTO-EV2-ALB\obj\Debug\net8.0-windows\View\V_CreacionUsuario.g.c
 D:\DAM2T\DI\PROYECTO-EV2-ALB\obj\Debug\net8.0-windows\View\V_CreacionUsuario.baml
 D:\DAM2T\DI\PROYECTO-EV2-ALB\obj\Debug\net8.0-windows\View\V_Administrador.g.cs
 D:\DAM2T\DI\PROYECTO-EV2-ALB\obj\Debug\net8.0-windows\View\V_Administrador.baml
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\PROYECTO-EV2-ALB\obj\Debug\net8.0-windows\View\V_Administrador.g.cs
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\PROYECTO-EV2-ALB\obj\Debug\net8.0-windows\View\V_CreacionUsuario.g.cs
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\PROYECTO-EV2-ALB\obj\Debug\net8.0-windows\View\V_InicioSesion.g.cs
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\PROYECTO-EV2-ALB\obj\Debug\net8.0-windows\View\V_Administrador.baml
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\PROYECTO-EV2-ALB\obj\Debug\net8.0-windows\View\V_CreacionUsuario.baml
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\PROYECTO-EV2-ALB\obj\Debug\net8.0-windows\View\V_InicioSesion.baml
