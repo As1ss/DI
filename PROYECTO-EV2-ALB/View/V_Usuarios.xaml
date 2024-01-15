@@ -102,8 +102,19 @@ Foreground="White" />
                     <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
                         <StackPanel Orientation="Vertical">
                             <TextBlock Text="CONSULTAR LIBROS" FontSize="40" Margin="0 0 0 80" HorizontalAlignment="Center"/>
-                            <ListBox Name="listBoxBooks" ScrollViewer.VerticalScrollBarVisibility="Auto" Height="200" HorizontalAlignment="Stretch"
-                                     Width="1000" d:ItemsSource="{d:SampleData ItemCount=5}">
+                            <Grid Margin="0 0 0 20">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="3*"/>
+                                    <ColumnDefinition Width="120"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBox x:Name="tbBuscar" Grid.Column="1" Margin="0 0 0 0" HorizontalAlignment="Stretch"/>
+                                <TextBlock Text="Buscar por:" FontSize="30"  Grid.Column="0"   Margin="0 0 20 0"/>
+                                <Button  Grid.Column="2"  Width="100" HorizontalAlignment="Right"  Style="{StaticResource RoundedButtonStyle}" 
+                                         VerticalAlignment="Center" >Buscar</Button>
+                            </Grid>
+                            <ListBox Name="listBoxBooks" ScrollViewer.VerticalScrollBarVisibility="Auto"  ScrollViewer.HorizontalScrollBarVisibility="Auto" Height="200" HorizontalAlignment="Stretch"
+                                     Width="Auto" d:ItemsSource="{d:SampleData ItemCount=5}">
                                 <ListBox.Effect>
                                     <DropShadowEffect/>
                                 </ListBox.Effect>
@@ -113,9 +124,9 @@ Foreground="White" />
                                     <DataTemplate>
                                         <StackPanel Orientation="Horizontal">
 
-                                            <TextBlock Text="{Binding Titulo, StringFormat='Titulo: {0}'}" Margin="60 0 0 0" />
-                                            <TextBlock Text="{Binding Autor, StringFormat='Autor: {0}'}" Margin="120 0 0 0"/>
-                                            <TextBlock Text="{Binding Stock , StringFormat='Stock: {0}'}"  Margin="120 0 0 0"/>
+                                            <TextBlock Text="{Binding Titulo, StringFormat='Titulo: {0}'}" Width="Auto" Margin="60 0 0 0" />
+                                            <TextBlock Text="{Binding Autor, StringFormat='Autor: {0}'}" Width="Auto" Margin="120 0 0 0"/>
+                                            <TextBlock Text="{Binding Stock , StringFormat='Stock: {0}'}"  Width="Auto" Margin="120 0 0 0"/>
                                             <!-- Agrega más TextBlocks u otros controles según tus necesidades -->
                                         </StackPanel>
                                     </DataTemplate>

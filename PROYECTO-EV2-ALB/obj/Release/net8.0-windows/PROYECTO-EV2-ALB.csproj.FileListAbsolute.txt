@@ -30,3 +30,35 @@ C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\PROYECTO-EV2-ALB\obj\Release\net
 C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\PROYECTO-EV2-ALB\obj\Release\net8.0-windows\View\V_Usuarios.baml
 C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\PROYECTO-EV2-ALB\obj\Release\net8.0-windows\View\V_Incidencia.g.cs
 C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\PROYECTO-EV2-ALB\obj\Release\net8.0-windows\View\V_Incidencia.baml
+D:\DAM2T\DI\PROYECTO-EV2-ALB\bin\Release\net8.0-windows\images\users.png
+D:\DAM2T\DI\PROYECTO-EV2-ALB\bin\Release\net8.0-windows\PROYECTO-EV2-ALB.exe
+D:\DAM2T\DI\PROYECTO-EV2-ALB\bin\Release\net8.0-windows\PROYECTO-EV2-ALB.deps.json
+D:\DAM2T\DI\PROYECTO-EV2-ALB\bin\Release\net8.0-windows\PROYECTO-EV2-ALB.runtimeconfig.json
+D:\DAM2T\DI\PROYECTO-EV2-ALB\bin\Release\net8.0-windows\PROYECTO-EV2-ALB.dll
+D:\DAM2T\DI\PROYECTO-EV2-ALB\bin\Release\net8.0-windows\PROYECTO-EV2-ALB.pdb
+D:\DAM2T\DI\PROYECTO-EV2-ALB\obj\Release\net8.0-windows\View\V_Administrador.g.cs
+D:\DAM2T\DI\PROYECTO-EV2-ALB\obj\Release\net8.0-windows\View\V_CreacionUsuario.g.cs
+D:\DAM2T\DI\PROYECTO-EV2-ALB\obj\Release\net8.0-windows\View\V_Incidencia.g.cs
+D:\DAM2T\DI\PROYECTO-EV2-ALB\obj\Release\net8.0-windows\View\V_InicioSesion.g.cs
+D:\DAM2T\DI\PROYECTO-EV2-ALB\obj\Release\net8.0-windows\View\V_Usuarios.g.cs
+D:\DAM2T\DI\PROYECTO-EV2-ALB\obj\Release\net8.0-windows\App.g.cs
+D:\DAM2T\DI\PROYECTO-EV2-ALB\obj\Release\net8.0-windows\PROYECTO-EV2-ALB_Content.g.cs
+D:\DAM2T\DI\PROYECTO-EV2-ALB\obj\Release\net8.0-windows\PROYECTO-EV2-ALB_MarkupCompile.cache
+D:\DAM2T\DI\PROYECTO-EV2-ALB\obj\Release\net8.0-windows\PROYECTO-EV2-ALB_MarkupCompile.lref
+D:\DAM2T\DI\PROYECTO-EV2-ALB\obj\Release\net8.0-windows\App.baml
+D:\DAM2T\DI\PROYECTO-EV2-ALB\obj\Release\net8.0-windows\View\V_Administrador.baml
+D:\DAM2T\DI\PROYECTO-EV2-ALB\obj\Release\net8.0-windows\View\V_CreacionUsuario.baml
+D:\DAM2T\DI\PROYECTO-EV2-ALB\obj\Release\net8.0-windows\View\V_Incidencia.baml
+D:\DAM2T\DI\PROYECTO-EV2-ALB\obj\Release\net8.0-windows\View\V_InicioSesion.baml
+D:\DAM2T\DI\PROYECTO-EV2-ALB\obj\Release\net8.0-windows\View\V_Usuarios.baml
+D:\DAM2T\DI\PROYECTO-EV2-ALB\obj\Release\net8.0-windows\PROYECTO-EV2-ALB.g.resources
+D:\DAM2T\DI\PROYECTO-EV2-ALB\obj\Release\net8.0-windows\PROYECTO-EV2-ALB.GeneratedMSBuildEditorConfig.editorconfig
+D:\DAM2T\DI\PROYECTO-EV2-ALB\obj\Release\net8.0-windows\PROYECTO-EV2-ALB.AssemblyInfoInputs.cache
+D:\DAM2T\DI\PROYECTO-EV2-ALB\obj\Release\net8.0-windows\PROYECTO-EV2-ALB.AssemblyInfo.cs
+D:\DAM2T\DI\PROYECTO-EV2-ALB\obj\Release\net8.0-windows\PROYECTO-EV2-ALB.csproj.CoreCompileInputs.cache
+D:\DAM2T\DI\PROYECTO-EV2-ALB\obj\Release\net8.0-windows\PROYECTO-EV2-ALB.sourcelink.json
+D:\DAM2T\DI\PROYECTO-EV2-ALB\obj\Release\net8.0-windows\PROYECTO-EV2-ALB.dll
+D:\DAM2T\DI\PROYECTO-EV2-ALB\obj\Release\net8.0-windows\refint\PROYECTO-EV2-ALB.dll
+D:\DAM2T\DI\PROYECTO-EV2-ALB\obj\Release\net8.0-windows\PROYECTO-EV2-ALB.pdb
+D:\DAM2T\DI\PROYECTO-EV2-ALB\obj\Release\net8.0-windows\PROYECTO-EV2-ALB.genruntimeconfig.cache
+D:\DAM2T\DI\PROYECTO-EV2-ALB\obj\Release\net8.0-windows\ref\PROYECTO-EV2-ALB.dll

@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "BofcuONOF06FpRWAFKXc2rIN/PCRP2ZHkUR/CDUPiRwuD7VUAF9kxXg6F9pXZIahyiixdXIdSxEnC3NBr88Dnw==",
+  "success": true,
+  "projectFilePath": "D:\\DAM2T\\DI\\TestMVVM CRUD\\WPF_MVVM_CRUD\\WPF_MVVM_CRUD\\WPF_MVVM_CRUD.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\dam2t05\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.1\\microsoft.extensions.logging.abstractions.7.0.1.nupkg.sha512",
+    "C:\\Users\\dam2t05\\.nuget\\packages\\mysqlconnector\\2.3.3\\mysqlconnector.2.3.3.nupkg.sha512"
+  ],
+  "logs": []
+}
