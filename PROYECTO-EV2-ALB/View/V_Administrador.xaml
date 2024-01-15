@@ -156,11 +156,11 @@
                                     <DropShadowEffect/>
                                 </DataGrid.Effect>
                                 <DataGrid.Columns>
-                                    <DataGridTextColumn Header="Id" Binding="{Binding Id_user}" Width="*"/>
-                                    <DataGridTextColumn Header="Nombre" Binding="{Binding Name}" Width="*"/>
-                                    <DataGridTextColumn Header="Contraseña" Binding="{Binding Password}" Width="*"/>
+                                    <DataGridTextColumn Header="Id" Binding="{Binding Id_usuario}" Width="*"/>
+                                    <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}" Width="*"/>
+                                    <DataGridTextColumn Header="Contraseña" Binding="{Binding Contrasena}" Width="*"/>
                                     <DataGridTextColumn Header="Email" Binding="{Binding Email}" Width="*"/>
-                                    <DataGridTextColumn Header="TipoUsuario" Binding="{Binding Tipo_user}" Width="*"/>
+                                    <DataGridTextColumn Header="TipoUsuario" Binding="{Binding Tipo_usuario}" Width="*"/>
                                 </DataGrid.Columns>
                             </DataGrid>
                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">

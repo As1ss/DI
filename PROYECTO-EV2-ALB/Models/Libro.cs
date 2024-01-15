@@ -8,6 +8,7 @@ namespace PROYECTO_EV2_ALB.Models
 {
     public class Libro
     {
+        private int id_libro;
         private string titulo;
         private string autor;
         private int stock;
@@ -27,5 +28,6 @@ namespace PROYECTO_EV2_ALB.Models
         public string Titulo { get => titulo; set => titulo = value; }
         public string Autor { get => autor; set => autor = value; }
         public int Stock { get => stock; set => stock = value; }
+        public int Id_libro { get => id_libro; set => id_libro = value; }
     }
 }
