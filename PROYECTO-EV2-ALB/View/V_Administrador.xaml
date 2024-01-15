@@ -78,44 +78,35 @@
 
                 <TabItem Name="tiIncidence" Header="Incidencias" FontSize="30" Style="{StaticResource BackgroundTabItems}">
                     <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
-                       
-                        <StackPanel Orientation="Vertical" Width="900">
-                            <TextBlock Text="INCIDENCIAS" FontSize="40" HorizontalAlignment="Center"/>
-                            <StackPanel Orientation="Horizontal" Margin="0 10 0 0" HorizontalAlignment="Left">
-                                <TextBlock Text="Usuario: " FontSize="30"/>
-                                <TextBlock x:Name="tbUsuario" Width="200" Margin="20 0 0 0"/>
-                            </StackPanel>
-                            <StackPanel Orientation="Horizontal" Margin="0 10 0 0" HorizontalAlignment="Left">
-                                <TextBlock Text="Incidencia: " FontSize="30"/>
-                                <TextBlock x:Name="tbIncidencia" Width="200" Margin="20 0 0 0"/>
-                            </StackPanel>
-                            <Border Background="LightGray" BorderBrush="DarkGray" BorderThickness="5" CornerRadius="5" Margin="0 30 0 0" Height="300" Width="889">
-                                <Border.Effect>
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock Text="ADMINISTRACIÓN DE INCIDENCIAS" FontSize="40" Margin="0 0 0 80" HorizontalAlignment="Center"/>
+                            <DataGrid x:Name="dgIncidencias" AutoGenerateColumns="False" CanUserAddRows="False" Width="1000"  Height="300">
+                                <DataGrid.Effect>
                                     <DropShadowEffect/>
-                                </Border.Effect>
-                                <ScrollViewer VerticalScrollBarVisibility="Auto">
-                                    <TextBlock TextWrapping="Wrap">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut velit quam. 
-                    Mauris ac neque vel tortor vehicula congue. Ut vel libero elit. Nunc in ipsum 
-                    vitae odio fermentum cursus. Sed eget sapien vel tortor imperdiet aliquet. 
-                    Phasellus vel dui sit amet nulla varius tincidunt. Duis at purus eu ipsum 
-                    fermentum sagittis.    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut velit quam. 
-   Mauris ac neque vel tortor vehicula congue. Ut vel libero elit. Nunc in ipsum 
-   vitae odio fermentum cursus. Sed eget sapien vel tortor imperdiet aliquet. 
-   Phasellus vel dui sit amet nulla varius tincidunt. Duis at purus eu ipsum 
-   fermentum sagittis.
-                   
-                                    </TextBlock>
-                                </ScrollViewer>
-                            </Border>
-                            <Button x:Name="btnResolver" Style="{StaticResource RoundedButtonStyle}" 
-                                    Width="200" FontSize="20" HorizontalAlignment="Right" Margin="0 20 20 0">Resolver</Button>
+                                </DataGrid.Effect>
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="Id" Binding="{Binding Id_incidencia}" Width="*"/>
+                                    <DataGridTextColumn Header="IdUsuario" Binding="{Binding Id_usuario}" Width="*"/>
+                                    <DataGridTextColumn Header="Descripción" Binding="{Binding Descripcion}" Width="*"/>
+                                    <DataGridTextColumn Header="Fecha" Binding="{Binding Fecha_incidencia}" Width="*"/>
+                                    <DataGridTextColumn Header="Resuelta" Binding="{Binding Resuelta}" Width="*"/>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                                <Button x:Name="btnDetalles" Style="{StaticResource RoundedButtonStyle}"
+                    FontSize="20" Width="200" Margin="0 20 20 0" Click="btnDetalles_Click">Detalles</Button>
+                                <Button x:Name="btnResolver" Margin="0 20 20 0" FontSize="20"  Style="{StaticResource RoundedButtonStyleExit}" Width="150">Resolver</Button>
+                            </StackPanel>
                         </StackPanel>
                     </Grid>
-            </TabItem>
+
+                </TabItem>
                 <TabItem Name="tiBook" Header="Libro" FontSize="30" Style="{StaticResource BackgroundTabItems}" >
                     <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
-                        <StackPanel Orientation="Horizontal" >
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock Text="ADMINISTRACIÓN DE LIBROS" FontSize="40" Margin="0 0 0 80" HorizontalAlignment="Center"/>
+
+                            <StackPanel Orientation="Horizontal" >
                             <DataGrid x:Name="dgLibros" AutoGenerateColumns="False" CanUserAddRows="False" Width="600" Height="300">
                                 <DataGrid.Effect>
                                     <DropShadowEffect/>
@@ -152,12 +143,14 @@
                             </StackPanel>
 
                         </StackPanel>
+                        </StackPanel>
                     </Grid>
 
                 </TabItem>
                 <TabItem Name="tiUsers" Header="Usuarios" FontSize="30" Style="{StaticResource BackgroundTabItems}">
                     <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
                         <StackPanel Orientation="Vertical">
+                            <TextBlock Text="ADMINISTRACIÓN DE USUARIOS" FontSize="40" Margin="0 0 0 80" HorizontalAlignment="Center"/>
                             <DataGrid x:Name="dgUsuarios" AutoGenerateColumns="False" CanUserAddRows="False" Width="1000"  Height="300">
                                 <DataGrid.Effect>
                                     <DropShadowEffect/>

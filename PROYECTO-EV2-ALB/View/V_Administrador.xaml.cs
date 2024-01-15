@@ -55,5 +55,11 @@ namespace PROYECTO_EV2_ALB.View
         {
             this.Close();
         }
+
+        private void btnDetalles_Click(object sender, RoutedEventArgs e)
+        {
+            Window v_incidencia = new V_Incidencia();
+            v_incidencia.ShowDialog();
+        }
     }
 }
