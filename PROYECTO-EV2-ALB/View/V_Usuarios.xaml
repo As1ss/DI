@@ -12,6 +12,8 @@
         <CommandBinding Command="Core:Comandos.Aceptar"
           Executed="EjecutarAceptar" CanExecute="PuedoAceptar"
           />
+        <CommandBinding x:Name="EnviarIncidencia" Command="Core:Comandos.EnviarIncidencia" CanExecute="EnviarIncidencia_CanExecute" Executed="EnviarIncidencia_Executed"/>
+        <CommandBinding x:Name="PedirLibro" Command="Core:Comandos.PedirLibro" CanExecute="PedirLibro_CanExecute" Executed="PedirLibro_Executed"/>
     </Window.CommandBindings>
     <DockPanel>
         <Border Background="#2258A5" DockPanel.Dock="Top">
@@ -100,7 +102,7 @@ Foreground="White" />
                                     </TextBox>
                                 </ScrollViewer>
                             </Border>
-                            <Button Click="btnEnviar_Click" x:Name="btnEnviar" Style="{StaticResource RoundedButtonStyle}" 
+                            <Button Click="btnEnviar_Click" x:Name="btnEnviar" Command="Core:Comandos.EnviarIncidencia" Style="{StaticResource RoundedButtonStyle}" 
                                  Width="200" FontSize="20"  HorizontalAlignment="Right" Margin="0 20 20 0">Enviar</Button>
                         </StackPanel>
                     </Grid>
@@ -140,7 +142,8 @@ Foreground="White" />
                                 </ListBox.ItemTemplate>
 
                             </ListBox>
-                            <Button x:Name="btnPedir" Click="btnPedir_Click" FontSize="20" HorizontalAlignment="Right" Margin="0 20 20 0" Width="100" Style="{StaticResource RoundedButtonStyle}">Pedir</Button>
+                            <Button x:Name="btnPedir" Click="btnPedir_Click" Command="Core:Comandos.PedirLibro"
+                                    FontSize="20" HorizontalAlignment="Right" Margin="0 20 20 0" Width="100" Style="{StaticResource RoundedButtonStyle}">Pedir</Button>
                         </StackPanel>
                     </Grid>
 

@@ -270,7 +270,7 @@ namespace PROYECTO_EV2_ALB.View {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/PROYECTO-EV2-ALB;V1.0.0.0;component/view/v_administrador.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/PROYECTO-EV2-ALB;component/view/v_administrador.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\View\V_Administrador.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

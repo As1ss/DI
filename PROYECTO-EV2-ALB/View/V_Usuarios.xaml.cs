@@ -131,14 +131,26 @@ namespace PROYECTO_EV2_ALB.View
 
         private void btnPedir_Click(object sender, RoutedEventArgs e)
         {
-            if(listBoxBooks.SelectedItem == null)
+            
+               //Comprobar si el stock es mayor que 0
+                if (listBoxBooks.SelectedItem != null)
             {
-                MessageBox.Show("No has seleccionado ningún libro", "Préstamo", MessageBoxButton.OK, MessageBoxImage.Error);
-            }
-            else
+                    Libro libro = (Libro)listBoxBooks.SelectedItem;
+                    if (libro.Stock > 0)
+                {
+                        MessageBox.Show("Préstamo realizado correctamente", "Préstamo", MessageBoxButton.OK, MessageBoxImage.Information);
+                    }
+                    else
+                {
+                        MessageBox.Show("No hay stock disponible", "Préstamo", MessageBoxButton.OK, MessageBoxImage.Error);
+                    }
+                }
+                else
             {
-                MessageBox.Show("Préstamo realizado correctamente", "Préstamo", MessageBoxButton.OK, MessageBoxImage.Information);
-            }
+                    MessageBox.Show("No has seleccionado ningún libro", "Préstamo", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+              
+            
         }
 
       
@@ -153,6 +165,48 @@ namespace PROYECTO_EV2_ALB.View
             {
                 MessageBox.Show("Libro encontrado", "Buscar", MessageBoxButton.OK, MessageBoxImage.Information);
             }
+        }
+
+        private void EnviarIncidencia_CanExecute(object sender, CanExecuteRoutedEventArgs e)
+        {
+            if(tcUser.SelectedItem == tiIncidence)
+            {
+                if (tbxIncidencia.Text == "")
+                {
+                    e.CanExecute = false;
+                }
+                else
+                {
+                    e.CanExecute = true;
+                }
+            }
+           
+        }
+
+        private void EnviarIncidencia_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+            btnEnviar_Click(sender, e);
+        }
+
+        private void PedirLibro_CanExecute(object sender, CanExecuteRoutedEventArgs e)
+        {
+            if(tcUser.SelectedItem == tiBooks)
+            {
+                if (listBoxBooks.SelectedItem == null)
+                {
+                    e.CanExecute = false;
+                }
+                else
+                {
+                    e.CanExecute = true;
+                }
+            }
+        }
+
+        private void PedirLibro_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+            //Si agregamos el comando a la lista de comandos de la ventana, podemos ejecutarlo desde aquí
+          //  btnPedir_Click(sender, e);  
         }
     }
 }

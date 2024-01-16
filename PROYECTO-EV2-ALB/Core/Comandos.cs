@@ -31,6 +31,15 @@ namespace PROYECTO_EV2_ALB.Core
         {
                 new KeyGesture(Key.E,ModifierKeys.Alt)
         });
+        public static readonly RoutedUICommand EnviarIncidencia = new RoutedUICommand("EnviarIncidencia", "EnviarIncidencia", typeof(Comandos), new InputGestureCollection()
+        {
+                new KeyGesture(Key.Enter)
+        });
+
+        public static readonly RoutedUICommand PedirLibro = new RoutedUICommand("PedirLibro", "PedirLibro", typeof(Comandos), new InputGestureCollection()
+        {
+                new KeyGesture(Key.Enter)
+        });
 
 
     }

@@ -72,6 +72,7 @@
                                 <Setter Property="Background" Value="LightGray"/>
                                 <Setter Property="BorderBrush" Value="Gray"/>
                                 <Setter Property="Foreground" Value="DarkGray"/>
+                                <Setter Property="Opacity" Value="0.5"/>
                             </Trigger>
                         </ControlTemplate.Triggers>
                     </ControlTemplate>
@@ -97,6 +98,7 @@
                                 <Setter Property="Background" Value="LightGray"/>
                                 <Setter Property="BorderBrush" Value="Gray"/>
                                 <Setter Property="Foreground" Value="DarkGray"/>
+                                <Setter Property="Opacity" Value="0.5"/>
                             </Trigger>
                         </ControlTemplate.Triggers>
                     </ControlTemplate>
