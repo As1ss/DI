@@ -14,6 +14,8 @@
           />
         <CommandBinding x:Name="EnviarIncidencia" Command="Core:Comandos.EnviarIncidencia" CanExecute="EnviarIncidencia_CanExecute" Executed="EnviarIncidencia_Executed"/>
         <CommandBinding x:Name="PedirLibro" Command="Core:Comandos.PedirLibro" CanExecute="PedirLibro_CanExecute" Executed="PedirLibro_Executed"/>
+        <CommandBinding x:Name="DevolverLibro" Command="Core:Comandos.DevolverLibro" CanExecute="DevolverLibro_CanExecute" Executed="DevolverLibro_Executed"/>
+        
     </Window.CommandBindings>
     <DockPanel>
         <Border Background="#2258A5" DockPanel.Dock="Top">
@@ -170,7 +172,8 @@ Foreground="White" />
                                     </DataTemplate>
                                 </ListBox.ItemTemplate>
                             </ListBox>
-                            <Button x:Name="btnDevolver" Click="btnDevolver_Click"  FontSize="20" HorizontalAlignment="Right" Margin="0 20 20 0" Width="100" Style="{StaticResource RoundedButtonStyle}">Devolver</Button>
+                            <Button x:Name="btnDevolver" Click="btnDevolver_Click" Command="Core:Comandos.DevolverLibro"
+                                    FontSize="20" HorizontalAlignment="Right" Margin="0 20 20 0" Width="100" Style="{StaticResource RoundedButtonStyle}">Devolver</Button>
                         </StackPanel>
                     </Grid>
 

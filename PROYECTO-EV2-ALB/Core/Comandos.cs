@@ -40,6 +40,10 @@ namespace PROYECTO_EV2_ALB.Core
         {
                 new KeyGesture(Key.Enter)
         });
+        public static readonly RoutedUICommand DevolverLibro = new RoutedUICommand("DevolverLibro", "DevolverLibro", typeof(Comandos), new InputGestureCollection()
+        {
+                new KeyGesture(Key.Enter)
+        });
 
 
     }

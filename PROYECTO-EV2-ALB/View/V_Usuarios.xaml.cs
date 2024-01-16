@@ -208,5 +208,25 @@ namespace PROYECTO_EV2_ALB.View
             //Si agregamos el comando a la lista de comandos de la ventana, podemos ejecutarlo desde aquí
           //  btnPedir_Click(sender, e);  
         }
+
+        private void DevolverLibro_CanExecute(object sender, CanExecuteRoutedEventArgs e)
+        {
+            if (tcUser.SelectedItem == tiPrestamos)
+            {
+                if (listPrestamos==null)
+                {
+                    e.CanExecute = false;
+                }
+                else
+                {
+                    e.CanExecute = true;
+                }
+            }
+        }
+
+        private void DevolverLibro_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+            btnDevolver_Click(sender, e);
+        }
     }
 }
