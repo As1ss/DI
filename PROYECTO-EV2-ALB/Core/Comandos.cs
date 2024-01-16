@@ -19,6 +19,19 @@ namespace PROYECTO_EV2_ALB.Core
                 new KeyGesture(Key.Enter)
         });
 
-       
+        public static readonly RoutedUICommand AgregarLibro = new RoutedUICommand("AgregarLibro", "AgregarLibro", typeof(Comandos), new InputGestureCollection()
+        {
+                new KeyGesture(Key.A,ModifierKeys.Alt)
+        });
+        public static readonly RoutedUICommand ModificarLibro = new RoutedUICommand("ModificarLibro", "ModificarLibro", typeof(Comandos), new InputGestureCollection()
+        {
+                new KeyGesture(Key.M,ModifierKeys.Alt)
+        });
+        public static readonly RoutedUICommand EliminarLibro = new RoutedUICommand("EliminarLibro", "EliminarLibro", typeof(Comandos), new InputGestureCollection()
+        {
+                new KeyGesture(Key.E,ModifierKeys.Alt)
+        });
+
+
     }
 }

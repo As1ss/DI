@@ -24,12 +24,16 @@ namespace PROYECTO_EV2_ALB
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-            if (tbUser.Text == "Usuario")
+            if (tbUser.Text == string.Empty || tbxPassword.Password == string.Empty)
+            {
+                MessageBox.Show("Introduzca un usuario y una contraseña", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            else if (tbUser.Text == "Usuario")
             {
                 Window v_usuarios = new View.V_Usuarios();
                 v_usuarios.ShowDialog();
             }
-            else if(tbUser.Text == "Admin")
+            else if (tbUser.Text == "Admin")
             {
                 Window v_Administrador = new View.V_Administrador();
                 v_Administrador.ShowDialog();
@@ -88,16 +92,9 @@ namespace PROYECTO_EV2_ALB
 
         private void PuedoAceptar(object sender, CanExecuteRoutedEventArgs e)
         {
-            if (tbUser.Text == string.Empty || tbxPassword.Password == string.Empty)
-            {
-                e.CanExecute = false;
-                MessageBox.Show("Introduzca un usuario y una contraseña", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-               
-            }
-            else
-            {
+           
                e.CanExecute = true;
-            }
+            
         }
     }
 }

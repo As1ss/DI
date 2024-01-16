@@ -8,6 +8,11 @@
         Title="V_Administrador" Height="720" Width="1280"
         Closing="Window_Closing"
         xmlns:Core="clr-namespace:PROYECTO_EV2_ALB.Core">
+    <Window.CommandBindings>
+        <CommandBinding x:Name="Agregar" Command="Core:Comandos.AgregarLibro" CanExecute="Agregar_CanExecute" Executed="Agregar_Executed"/>
+        <CommandBinding x:Name="Modificar" Command="Core:Comandos.ModificarLibro" CanExecute="Modificar_CanExecute" Executed="Modificar_Executed"/>
+        <CommandBinding x:Name="Eliminar" Command="Core:Comandos.EliminarLibro" CanExecute="Eliminar_CanExecute" Executed="Eliminar_Executed"/>
+    </Window.CommandBindings>
    
     <DockPanel>
         <Border Background="#2258A5" DockPanel.Dock="Top">
@@ -136,9 +141,12 @@
                                     <TextBox x:Name="tbxStock" Style="{StaticResource RoundedTextBoxStyle}" Width="200" Margin="13 0 0 0"/>
                                 </StackPanel>
                                 <StackPanel Orientation="Horizontal" Margin="0 40 0 0">
-                                    <Button x:Name="btnAgregar" Click="btnAgregar_Click" Width="100" Margin="0 0 10 0" Style="{StaticResource RoundedButtonStyle}">Agregar</Button>
-                                    <Button x:Name="btnModificar" Click="btnModificar_Click" Width="100" Margin="0 0 10 0" Style="{StaticResource RoundedButtonStyle}">Modificar</Button>
-                                    <Button x:Name="btnEliminar" Click="btnEliminar_Click" Style="{StaticResource RoundedButtonStyleExit}">Eliminar</Button>
+                                    <Button x:Name="btnAgregar" Click="btnAgregar_Click" Command="Core:Comandos.AgregarLibro"
+                                          Width="100" Margin="0 0 10 0" Style="{StaticResource RoundedButtonStyle}">Agregar</Button>
+                                    <Button x:Name="btnModificar" Click="btnModificar_Click"  Command="Core:Comandos.ModificarLibro"
+                                            Width="100" Margin="0 0 10 0" Style="{StaticResource RoundedButtonStyle}">Modificar</Button>
+                                    <Button x:Name="btnEliminar" Click="btnEliminar_Click"  Command="Core:Comandos.EliminarLibro"
+                                            Style="{StaticResource RoundedButtonStyleExit}">Eliminar</Button>
                                 </StackPanel>
 
 

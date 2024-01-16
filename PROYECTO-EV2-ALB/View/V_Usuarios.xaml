@@ -101,7 +101,7 @@ Foreground="White" />
                                 </ScrollViewer>
                             </Border>
                             <Button Click="btnEnviar_Click" x:Name="btnEnviar" Style="{StaticResource RoundedButtonStyle}" 
-                                 Width="200" FontSize="20" Command="Core:Comandos.Aceptar" HorizontalAlignment="Right" Margin="0 20 20 0">Enviar</Button>
+                                 Width="200" FontSize="20"  HorizontalAlignment="Right" Margin="0 20 20 0">Enviar</Button>
                         </StackPanel>
                     </Grid>
                 </TabItem>
@@ -167,7 +167,7 @@ Foreground="White" />
                                     </DataTemplate>
                                 </ListBox.ItemTemplate>
                             </ListBox>
-                            <Button x:Name="btnDevolver" Click="btnDevolver_Click" Command="Core:Comandos.Aceptar" FontSize="20" HorizontalAlignment="Right" Margin="0 20 20 0" Width="100" Style="{StaticResource RoundedButtonStyle}">Devolver</Button>
+                            <Button x:Name="btnDevolver" Click="btnDevolver_Click"  FontSize="20" HorizontalAlignment="Right" Margin="0 20 20 0" Width="100" Style="{StaticResource RoundedButtonStyle}">Devolver</Button>
                         </StackPanel>
                     </Grid>
 

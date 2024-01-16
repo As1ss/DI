@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PROYECTO-EV2-ALB")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f86754b1331f2ee12757e2382dc90576bfbc03ef")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("PROYECTO-EV2-ALB")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PROYECTO-EV2-ALB")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

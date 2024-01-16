@@ -93,38 +93,126 @@ namespace PROYECTO_EV2_ALB.View
 
         private void btnAgregar_Click(object sender, RoutedEventArgs e)
         {
-            if(verificarCamposLibro())
-            {
-                MessageBox.Show("Libro agregado correctamente", "Libro", MessageBoxButton.OK, MessageBoxImage.Information);
-            }
-            else
-            {
-                MessageBox.Show("Debes rellenar todos los campos", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-            }   
+         //Comprobar que el libro existen en la base de datos
+
+            //Si existe, mostrar mensaje de error
+                // MessageBox.Show("El libro ya existe", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+    
+                //Si no existe, agregarlo
+                MessageBoxResult result = MessageBox.Show("¿Estás seguro de que quieres agregar el libro?", "Agregar", MessageBoxButton.YesNo, MessageBoxImage.Question);
+                if (result == MessageBoxResult.Yes)
+                   {
+                    MessageBox.Show("Libro agregado correctamente", "Libro", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+
         }
 
         private void btnModificar_Click(object sender, RoutedEventArgs e)
         {
-            if(verificarCamposLibro())
+           //Comprobar que el libro existe en la base de datos
+
+            //Si existe, modificarlo
+            MessageBoxResult result = MessageBox.Show("¿Estás seguro de que quieres modificar el libro?", "Modificar", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            if (result == MessageBoxResult.Yes)
             {
                 MessageBox.Show("Libro modificado correctamente", "Libro", MessageBoxButton.OK, MessageBoxImage.Information);
             }
-            else
-            {
-                MessageBox.Show("Debes rellenar todos los campos", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-            }
+
+            //Si no existe, mostrar mensaje de error
+            // MessageBox.Show("El libro no existe", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
         }
 
         private void btnEliminar_Click(object sender, RoutedEventArgs e)
         {
-            if(verificarCamposLibro())
+            //Comprobar que el libro existe en la base de datos
+
+            //Si existe, eliminarlo
+            MessageBoxResult result = MessageBox.Show("¿Estás seguro de que quieres eliminar el libro?", "Eliminar", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            if(result == MessageBoxResult.Yes)
             {
                 MessageBox.Show("Libro eliminado correctamente", "Libro", MessageBoxButton.OK, MessageBoxImage.Information);
             }
-            else
+          
+
+            //Si no existe, mostrar mensaje de error
+           // MessageBox.Show("El libro no existe", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+        }
+
+       
+
+       
+
+        private void Agregar_CanExecute(object sender, CanExecuteRoutedEventArgs e)
+        {
+            if (tiBook.IsSelected)
             {
-                MessageBox.Show("Debes rellenar todos los campos", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                if (verificarCamposLibro())
+                {
+                    e.CanExecute = true;
+                  
+                }
+                else
+                {
+                    e.CanExecute = false;
+                  
+                   
+                }
             }
+        }
+           
+
+        private void Agregar_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+            btnAgregar_Click(sender, e);   
+        }
+
+        private void Modificar_CanExecute(object sender, CanExecuteRoutedEventArgs e)
+        {
+            if (tiBook.IsSelected)
+            {
+                if (verificarCamposLibro())
+                {
+                    e.CanExecute = true;
+             
+
+                }
+                else
+                {
+                    e.CanExecute = false;
+                  
+                   
+                }
+            }
+
+        }
+
+        private void Modificar_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+            btnModificar_Click(sender, e);
+        }
+
+        private void Eliminar_CanExecute(object sender, CanExecuteRoutedEventArgs e)
+        {
+            if (tiBook.IsSelected)
+            {
+                if (verificarCamposLibro())
+                {
+                    e.CanExecute = true;
+
+                }
+                else
+                {
+                    e.CanExecute = false;
+                   
+                   
+                }
+            }
+
+        }
+
+        private void Eliminar_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+            btnEliminar_Click(sender, e);
         }
     }
 }

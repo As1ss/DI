@@ -73,24 +73,20 @@ namespace PROYECTO_EV2_ALB.View
             if (tcUser.SelectedItem == tiIncidence)
             {
 
-                MessageBox.Show("Incidencia enviada correctamente", "Incidencia", MessageBoxButton.OK, MessageBoxImage.Information);
+                
+                btnEnviar_Click(sender, e);
             }
             else if(tcUser.SelectedItem == tiPrestamos)
             {
-                MessageBox.Show("Préstamo realizado correctamente", "Préstamo", MessageBoxButton.OK, MessageBoxImage.Information);
+                btnPedir_Click(sender, e);
             }
         }
 
         private void PuedoAceptar(object sender, CanExecuteRoutedEventArgs e)
         {
-            if(tcUser.SelectedItem == tiIncidence || tcUser.SelectedItem==tiPrestamos)
-            {
+            
                 e.CanExecute = true;
-            }
-            else
-            {
-                e.CanExecute = false;
-            }
+          
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)

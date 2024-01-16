@@ -32,7 +32,22 @@ namespace PROYECTO_EV2_ALB.View
 
         private void btnRegister_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Usuario creado correctamente", "Registro", MessageBoxButton.OK, MessageBoxImage.Information);
+
+            if (tbUser.Text == string.Empty || tbxPassword.Password == string.Empty || tbEmail.Text == string.Empty)
+            {
+              
+                MessageBox.Show("Introduzca un usuario, una contraseña y un email válidos", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+
+            }
+            else if(tbUser.Text == "Usuario" || tbUser.Text=="Admin")
+            {
+                MessageBox.Show("El usuario ya existe", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            else
+            {
+                MessageBox.Show("Usuario creado correctamente", "Registro", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+         
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
@@ -60,16 +75,8 @@ namespace PROYECTO_EV2_ALB.View
 
         private void PuedoAceptar(object sender, CanExecuteRoutedEventArgs e)
         {
-            if (tbUser.Text == string.Empty || tbxPassword.Password == string.Empty || tbEmail.Text==string.Empty)
-            {
-                e.CanExecute = false;
-                MessageBox.Show("Introduzca un usuario, una contraseña y un email válidos", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-
-            }
-            else
-            {
                 e.CanExecute = true;
-            }
+            
         }
 
         private void EjecutarSalir(object sender, ExecutedRoutedEventArgs e)
