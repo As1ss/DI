@@ -5,7 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PROYECTO_EV2_ALB.View"
         mc:Ignorable="d"
-        Title="V_Administrador" Height="720" Width="1280">
+        Title="V_Administrador" Height="720" Width="1280"
+        Closing="Window_Closing"
+        xmlns:Core="clr-namespace:PROYECTO_EV2_ALB.Core">
+   
     <DockPanel>
         <Border Background="#2258A5" DockPanel.Dock="Top">
             <Grid  DockPanel.Dock="Top">
@@ -133,9 +136,9 @@
                                     <TextBox x:Name="tbxStock" Style="{StaticResource RoundedTextBoxStyle}" Width="200" Margin="13 0 0 0"/>
                                 </StackPanel>
                                 <StackPanel Orientation="Horizontal" Margin="0 40 0 0">
-                                    <Button x:Name="btnAgregar" Width="100" Margin="0 0 10 0" Style="{StaticResource RoundedButtonStyle}">Agregar</Button>
-                                    <Button x:Name="btnModificar" Width="100" Margin="0 0 10 0" Style="{StaticResource RoundedButtonStyle}">Modificar</Button>
-                                    <Button x:Name="btnEliminar" Style="{StaticResource RoundedButtonStyleExit}">Eliminar</Button>
+                                    <Button x:Name="btnAgregar" Click="btnAgregar_Click" Width="100" Margin="0 0 10 0" Style="{StaticResource RoundedButtonStyle}">Agregar</Button>
+                                    <Button x:Name="btnModificar" Click="btnModificar_Click" Width="100" Margin="0 0 10 0" Style="{StaticResource RoundedButtonStyle}">Modificar</Button>
+                                    <Button x:Name="btnEliminar" Click="btnEliminar_Click" Style="{StaticResource RoundedButtonStyleExit}">Eliminar</Button>
                                 </StackPanel>
 
 

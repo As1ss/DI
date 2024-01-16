@@ -5,7 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PROYECTO_EV2_ALB.View"
         mc:Ignorable="d"
-        Title="V_Usuarios" Height="720" Width="1280">
+        Title="V_Usuarios" Height="720" Width="1280"
+         Closing="Window_Closing"
+         xmlns:Core="clr-namespace:PROYECTO_EV2_ALB.Core">
+    <Window.CommandBindings>
+        <CommandBinding Command="Core:Comandos.Aceptar"
+          Executed="EjecutarAceptar" CanExecute="PuedoAceptar"
+          />
+    </Window.CommandBindings>
     <DockPanel>
         <Border Background="#2258A5" DockPanel.Dock="Top">
             <Grid  DockPanel.Dock="Top">
@@ -93,8 +100,8 @@ Foreground="White" />
                                     </TextBox>
                                 </ScrollViewer>
                             </Border>
-                            <Button x:Name="btnEnviar" Style="{StaticResource RoundedButtonStyle}" 
-                                 Width="200" FontSize="20" HorizontalAlignment="Right" Margin="0 20 20 0">Enviar</Button>
+                            <Button Click="btnEnviar_Click" x:Name="btnEnviar" Style="{StaticResource RoundedButtonStyle}" 
+                                 Width="200" FontSize="20" Command="Core:Comandos.Aceptar" HorizontalAlignment="Right" Margin="0 20 20 0">Enviar</Button>
                         </StackPanel>
                     </Grid>
                 </TabItem>
@@ -108,9 +115,9 @@ Foreground="White" />
                                     <ColumnDefinition Width="3*"/>
                                     <ColumnDefinition Width="120"/>
                                 </Grid.ColumnDefinitions>
-                                <TextBox x:Name="tbBuscar" Grid.Column="1" Margin="0 0 0 0" HorizontalAlignment="Stretch"/>
+                                <TextBox x:Name="tbxBuscar" Grid.Column="1" Margin="0 0 0 0" HorizontalAlignment="Stretch"/>
                                 <TextBlock Text="Buscar por:" FontSize="30"  Grid.Column="0"   Margin="0 0 20 0"/>
-                                <Button  Grid.Column="2"  Width="100" HorizontalAlignment="Right"  Style="{StaticResource RoundedButtonStyle}" 
+                                <Button x:Name="btnBuscar" Click="btnBuscar_Click" Grid.Column="2"  Width="100" HorizontalAlignment="Right"  Style="{StaticResource RoundedButtonStyle}" 
                                          VerticalAlignment="Center" >Buscar</Button>
                             </Grid>
                             <ListBox Name="listBoxBooks" ScrollViewer.VerticalScrollBarVisibility="Auto"  ScrollViewer.HorizontalScrollBarVisibility="Auto" Height="200" HorizontalAlignment="Stretch"
@@ -133,7 +140,7 @@ Foreground="White" />
                                 </ListBox.ItemTemplate>
 
                             </ListBox>
-                            <Button x:Name="btnPedir" FontSize="20" HorizontalAlignment="Right" Margin="0 20 20 0" Width="100" Style="{StaticResource RoundedButtonStyle}">Pedir</Button>
+                            <Button x:Name="btnPedir" Click="btnPedir_Click" FontSize="20" HorizontalAlignment="Right" Margin="0 20 20 0" Width="100" Style="{StaticResource RoundedButtonStyle}">Pedir</Button>
                         </StackPanel>
                     </Grid>
 
@@ -160,7 +167,7 @@ Foreground="White" />
                                     </DataTemplate>
                                 </ListBox.ItemTemplate>
                             </ListBox>
-                            <Button x:Name="btnDevolver" FontSize="20" HorizontalAlignment="Right" Margin="0 20 20 0" Width="100" Style="{StaticResource RoundedButtonStyle}">Devolver</Button>
+                            <Button x:Name="btnDevolver" Click="btnDevolver_Click" Command="Core:Comandos.Aceptar" FontSize="20" HorizontalAlignment="Right" Margin="0 20 20 0" Width="100" Style="{StaticResource RoundedButtonStyle}">Devolver</Button>
                         </StackPanel>
                     </Grid>
 

@@ -61,5 +61,70 @@ namespace PROYECTO_EV2_ALB.View
             Window v_incidencia = new V_Incidencia();
             v_incidencia.ShowDialog();
         }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            MessageBoxResult result = MessageBox.Show("¿Deseas cerrar sesión?", "Salir", MessageBoxButton.YesNo, MessageBoxImage.Question);
+
+            if (result == MessageBoxResult.No)
+            {
+                e.Cancel = true;
+            }
+            else
+            {
+                //Cerramos la ventana sin el evento close
+                this.Closing -= Window_Closing;
+
+            }
+        }
+
+      
+        private Boolean verificarCamposLibro()
+        {
+            if (tbxTitulo.Text == "" || tbxAutor.Text == "" || tbxStock.Text == "")
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        private void btnAgregar_Click(object sender, RoutedEventArgs e)
+        {
+            if(verificarCamposLibro())
+            {
+                MessageBox.Show("Libro agregado correctamente", "Libro", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            else
+            {
+                MessageBox.Show("Debes rellenar todos los campos", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }   
+        }
+
+        private void btnModificar_Click(object sender, RoutedEventArgs e)
+        {
+            if(verificarCamposLibro())
+            {
+                MessageBox.Show("Libro modificado correctamente", "Libro", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            else
+            {
+                MessageBox.Show("Debes rellenar todos los campos", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+        private void btnEliminar_Click(object sender, RoutedEventArgs e)
+        {
+            if(verificarCamposLibro())
+            {
+                MessageBox.Show("Libro eliminado correctamente", "Libro", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            else
+            {
+                MessageBox.Show("Debes rellenar todos los campos", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
     }
 }

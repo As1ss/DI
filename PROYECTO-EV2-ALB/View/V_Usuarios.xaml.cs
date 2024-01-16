@@ -67,5 +67,96 @@ namespace PROYECTO_EV2_ALB.View
         {
             this.Close();
         }
+
+        private void EjecutarAceptar(object sender, ExecutedRoutedEventArgs e)
+        {
+            if (tcUser.SelectedItem == tiIncidence)
+            {
+
+                MessageBox.Show("Incidencia enviada correctamente", "Incidencia", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            else if(tcUser.SelectedItem == tiPrestamos)
+            {
+                MessageBox.Show("Préstamo realizado correctamente", "Préstamo", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+        }
+
+        private void PuedoAceptar(object sender, CanExecuteRoutedEventArgs e)
+        {
+            if(tcUser.SelectedItem == tiIncidence || tcUser.SelectedItem==tiPrestamos)
+            {
+                e.CanExecute = true;
+            }
+            else
+            {
+                e.CanExecute = false;
+            }
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            MessageBoxResult result = MessageBox.Show("¿Deseas cerrar sesión?", "Salir", MessageBoxButton.YesNo, MessageBoxImage.Question);
+
+            if (result == MessageBoxResult.No)
+            {
+                e.Cancel = true;
+            }
+            else
+            {
+                //Cerramos la ventana sin el evento close
+                this.Closing -= Window_Closing;
+
+            }
+        }
+
+        private void btnDevolver_Click(object sender, RoutedEventArgs e)
+        {
+            if (listPrestamos.SelectedItem == null)
+            {
+                MessageBox.Show("No has seleccionado ningún libro", "Préstamo", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            else
+            {
+                MessageBox.Show("Devolución realizada correctamente", "Préstamo", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+        }
+
+        private void btnEnviar_Click(object sender, RoutedEventArgs e)
+        {
+            if (tbxIncidencia.Text == "")
+            {
+                MessageBox.Show("No has escrito ninguna incidencia", "Incidencia", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            else
+            {
+                MessageBox.Show("Incidencia enviada correctamente", "Incidencia", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+        }
+
+        private void btnPedir_Click(object sender, RoutedEventArgs e)
+        {
+            if(listBoxBooks.SelectedItem == null)
+            {
+                MessageBox.Show("No has seleccionado ningún libro", "Préstamo", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            else
+            {
+                MessageBox.Show("Préstamo realizado correctamente", "Préstamo", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+        }
+
+      
+
+        private void btnBuscar_Click(object sender, RoutedEventArgs e)
+        {
+            if(tbxBuscar.Text == "")
+            {
+                MessageBox.Show("No has escrito nada en el buscador", "Buscar", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            else
+            {
+                MessageBox.Show("Libro encontrado", "Buscar", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+        }
     }
 }
