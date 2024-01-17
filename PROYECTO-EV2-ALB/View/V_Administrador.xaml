@@ -12,6 +12,10 @@
         <CommandBinding x:Name="Agregar" Command="Core:Comandos.AgregarLibro" CanExecute="Agregar_CanExecute" Executed="Agregar_Executed"/>
         <CommandBinding x:Name="Modificar" Command="Core:Comandos.ModificarLibro" CanExecute="Modificar_CanExecute" Executed="Modificar_Executed"/>
         <CommandBinding x:Name="Eliminar" Command="Core:Comandos.EliminarLibro" CanExecute="Eliminar_CanExecute" Executed="Eliminar_Executed"/>
+        <CommandBinding x:Name="DetallesIncidencia" Command="Core:Comandos.DetallesIncidencia" CanExecute="DetallesIncidencia_CanExecute"/>
+        <CommandBinding x:Name="ResolverIncidencia" Command="Core:Comandos.ResolverIncidencia" CanExecute="ResolverIncidencia_CanExecute"/>
+        <CommandBinding x:Name="DesbloquearUsuario" Command="Core:Comandos.DesbloquearUsuario" CanExecute="DesbloquearUsuario_CanExecute"/>
+        <CommandBinding x:Name="BloquearUsuario" Command="Core:Comandos.BloquearUsuario" CanExecute="BloquearUsuario_CanExecute"/>
     </Window.CommandBindings>
    
     <DockPanel>
@@ -88,7 +92,7 @@
                     <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
                         <StackPanel Orientation="Vertical">
                             <TextBlock Text="ADMINISTRACIÓN DE INCIDENCIAS" FontSize="40" Margin="0 0 0 80" HorizontalAlignment="Center"/>
-                            <DataGrid x:Name="dgIncidencias" AutoGenerateColumns="False" CanUserAddRows="False" Width="1000"  Height="300">
+                            <DataGrid x:Name="dgIncidencias"  AutoGenerateColumns="False" CanUserAddRows="False" Width="1000"  Height="300">
                                 <DataGrid.Effect>
                                     <DropShadowEffect/>
                                 </DataGrid.Effect>
@@ -102,8 +106,8 @@
                             </DataGrid>
                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                                 <Button x:Name="btnDetalles" Style="{StaticResource RoundedButtonStyle}"
-                    FontSize="20" Width="200" Margin="0 20 20 0" Click="btnDetalles_Click">Detalles</Button>
-                                <Button x:Name="btnResolver" Margin="0 20 20 0" FontSize="20"  Style="{StaticResource RoundedButtonStyleExit}" Width="150">Resolver</Button>
+                    FontSize="20" Width="200" Margin="0 20 20 0" Click="btnDetalles_Click" Command="Core:Comandos.DetallesIncidencia">Detalles</Button>
+                                <Button x:Name="btnResolver" Margin="0 20 20 0" FontSize="20" Command="Core:Comandos.ResolverIncidencia"  Style="{StaticResource RoundedButtonStyleExit}" Width="150">Resolver</Button>
                             </StackPanel>
                         </StackPanel>
                     </Grid>
@@ -175,9 +179,10 @@
                                 </DataGrid.Columns>
                             </DataGrid>
                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                                <Button x:Name="btnUnBlock" Style="{StaticResource RoundedButtonStyle}"
+                                <Button x:Name="btnUnBlock" Style="{StaticResource RoundedButtonStyle}" Click="btnUnBlock_Click" Command="Core:Comandos.DesbloquearUsuario"
                                        FontSize="20" Width="200" Margin="0 20 20 0">Desbloquear</Button>
-                                <Button x:Name="btnBlock" Margin="0 20 20 0" FontSize="20"  Style="{StaticResource RoundedButtonStyleExit}" Width="150">Bloquear</Button>
+                                <Button x:Name="btnBlock" Margin="0 20 20 0" FontSize="20" Click="btnBlock_Click" Command="Core:Comandos.BloquearUsuario"
+                                        Style="{StaticResource RoundedButtonStyleExit}" Width="150">Bloquear</Button>
                             </StackPanel>
                         </StackPanel>
                     </Grid>

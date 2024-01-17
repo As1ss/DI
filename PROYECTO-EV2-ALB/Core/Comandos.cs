@@ -44,6 +44,25 @@ namespace PROYECTO_EV2_ALB.Core
         {
                 new KeyGesture(Key.Enter)
         });
+        public static readonly RoutedUICommand DetallesIncidencia = new RoutedUICommand("DetallesIncidencia", "DetallesIncidencia", typeof(Comandos), new InputGestureCollection()
+        {
+                new KeyGesture(Key.D,ModifierKeys.Alt)
+        });
+        public static readonly RoutedUICommand ResolverIncidencia = new RoutedUICommand("ResolverIncidencia", "ResolverIncidencia", typeof(Comandos), new InputGestureCollection()
+        {
+                new KeyGesture(Key.D,ModifierKeys.Alt)
+        });
+        public static readonly RoutedUICommand DesbloquearUsuario = new RoutedUICommand("DesbloquearUsuario", "DesbloquearUsuario", typeof(Comandos), new InputGestureCollection()
+        {
+                new KeyGesture(Key.D,ModifierKeys.Alt)
+        });
+        public static readonly RoutedUICommand BloquearUsuario = new RoutedUICommand("BloquearUsuario", "BloquearUsuario", typeof(Comandos), new InputGestureCollection()
+        {
+                new KeyGesture(Key.D,ModifierKeys.Alt)
+        });
+
+
+
 
 
     }

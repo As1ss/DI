@@ -185,7 +185,7 @@ namespace PROYECTO_EV2_ALB.View
 
         private void EnviarIncidencia_Executed(object sender, ExecutedRoutedEventArgs e)
         {
-            btnEnviar_Click(sender, e);
+            //btnEnviar_Click(sender, e);
         }
 
         private void PedirLibro_CanExecute(object sender, CanExecuteRoutedEventArgs e)
@@ -213,7 +213,7 @@ namespace PROYECTO_EV2_ALB.View
         {
             if (tcUser.SelectedItem == tiPrestamos)
             {
-                if (listPrestamos==null)
+                if (listPrestamos.SelectedItem==null)
                 {
                     e.CanExecute = false;
                 }
@@ -226,7 +226,9 @@ namespace PROYECTO_EV2_ALB.View
 
         private void DevolverLibro_Executed(object sender, ExecutedRoutedEventArgs e)
         {
-            btnDevolver_Click(sender, e);
+           // btnDevolver_Click(sender, e);
         }
+
+       
     }
 }

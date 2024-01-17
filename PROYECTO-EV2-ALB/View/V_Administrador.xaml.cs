@@ -214,5 +214,77 @@ namespace PROYECTO_EV2_ALB.View
         {
             btnEliminar_Click(sender, e);
         }
+
+        private void DetallesIncidencia_CanExecute(object sender, CanExecuteRoutedEventArgs e)
+        {
+            if (dgIncidencias.SelectedItem != null)
+            {
+                e.CanExecute = true;
+            }
+            else
+            {
+                e.CanExecute = false;
+            }
+        }
+
+        private void ResolverIncidencia_CanExecute(object sender, CanExecuteRoutedEventArgs e)
+        {
+            if(dgIncidencias.SelectedItem != null)
+            {
+                e.CanExecute = true;
+            }
+            else
+            {
+                e.CanExecute = false;
+            }
+        }
+
+        private void btnUnBlock_Click(object sender, RoutedEventArgs e)
+        {
+            if (dgUsuarios.SelectedItem != null) // and usuario bloqueado
+            {
+                MessageBoxResult result = MessageBox.Show("¿Estás seguro de que quieres desbloquear al usuario?", "Desbloquear", MessageBoxButton.YesNo, MessageBoxImage.Question);
+                if (result == MessageBoxResult.Yes)
+                {
+                    MessageBox.Show("Usuario desbloqueado correctamente", "Usuario", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+            }
+        }
+
+        private void btnBlock_Click(object sender, RoutedEventArgs e)
+        {
+            if(dgUsuarios.SelectedItem != null) // and usuario no bloqueado
+            {
+                MessageBoxResult result = MessageBox.Show("¿Estás seguro de que quieres bloquear al usuario?", "Bloquear", MessageBoxButton.YesNo, MessageBoxImage.Question);
+                if (result == MessageBoxResult.Yes)
+                {
+                    MessageBox.Show("Usuario bloqueado correctamente", "Usuario", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+            }
+        }
+
+        private void DesbloquearUsuario_CanExecute(object sender, CanExecuteRoutedEventArgs e)
+        {
+            if (dgUsuarios.SelectedItem != null)
+            {
+                e.CanExecute = true;
+            }
+            else
+            {
+                e.CanExecute = false;
+            }
+        }
+
+        private void BloquearUsuario_CanExecute(object sender, CanExecuteRoutedEventArgs e)
+        {
+            if (dgUsuarios.SelectedItem != null)
+            {
+                e.CanExecute = true;
+            }
+            else
+            {
+                e.CanExecute = false;
+            }
+        }
     }
 }
