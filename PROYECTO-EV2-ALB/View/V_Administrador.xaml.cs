@@ -1,5 +1,7 @@
-﻿using System;
+﻿using PROYECTO_EV2_ALB.ViewModels;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,9 +21,26 @@ namespace PROYECTO_EV2_ALB.View
     /// </summary>
     public partial class V_Administrador : Window
     {
+        ObservableCollection<Models.M_Usuario> listaUsuarios;
+        VM_Usuario vm_usuario = new VM_Usuario();
         public V_Administrador()
         {
+          
             InitializeComponent();
+            listaUsuarios = vm_usuario.ListaUsuarios;
+
+
+            // Asignamos el ViewModel a la ventana
+            this.DataContext = new VM_Usuario();
+
+            if (tiUsers.IsSealed)
+            {
+                // Asignamos el ViewModel a la ventana
+                this.DataContext = new VM_Usuario();
+                // Enlazamos el DataGrid directamente con la propiedad ListaUsuarios del ViewModel
+                dgUsuarios.SetBinding(ItemsControl.ItemsSourceProperty, new Binding("ListaUsuarios"));
+            }
+          
         }
 
         

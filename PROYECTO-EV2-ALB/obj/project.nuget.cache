@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "9wK4sVEq312FgJBIRmB4oqZxavdCbuCSQxm4kqm3jiu9+o2ToIC9LC63/XhK78TVgceXqzLsKV55e0CmMAGuvg==",
+  "dgSpecHash": "CQTI4b91B4i0wTD4wWuD2Y8Pn4mHZSvVH5oYCZ7GYewjOp65X5Yvuxn23gMZIinr2ORY+yfMvxIqBIlcFFDqeQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\As1ss\\Desktop\\COSAS CLASE KEK\\DAM2T\\DI\\PROYECTO-EV2-ALB\\PROYECTO-EV2-ALB.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\As1ss\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.1\\microsoft.extensions.logging.abstractions.7.0.1.nupkg.sha512",
+    "C:\\Users\\As1ss\\.nuget\\packages\\mysqlconnector\\2.3.4\\mysqlconnector.2.3.4.nupkg.sha512"
+  ],
   "logs": []
 }

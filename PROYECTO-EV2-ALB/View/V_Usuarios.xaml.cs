@@ -21,19 +21,19 @@ namespace PROYECTO_EV2_ALB.View
     /// </summary>
     public partial class V_Usuarios : Window
     {
-        public ObservableCollection<Libro> Libros { get; set; }
+        public ObservableCollection<M_Libro> Libros { get; set; }
 
         public V_Usuarios()
         {
             InitializeComponent();
-            Libros = new ObservableCollection<Libro>();
+            Libros = new ObservableCollection<M_Libro>();
 
             // Agrega algunos libros de ejemplo
-            Libros.Add(new Libro { Titulo = "Libro 1", Autor = "RutaImagen1.jpg",Stock= 20 });
-            Libros.Add(new Libro { Titulo = "Libro 2", Autor = "RutaImagen2.jpg",Stock = 50 });
-            Libros.Add(new Libro { Titulo = "Libro 3", Autor = "RutaImagen2.jpg",Stock = 40 });
-            Libros.Add(new Libro { Titulo = "Libro 4", Autor = "RutaImagen2.jpg",Stock = 60 });
-            Libros.Add(new Libro { Titulo = "Libro 5", Autor = "RutaImagen2.jpg",Stock = 10 });
+            Libros.Add(new M_Libro { Titulo = "Libro 1", Autor = "RutaImagen1.jpg",Stock= 20 });
+            Libros.Add(new M_Libro { Titulo = "Libro 2", Autor = "RutaImagen2.jpg",Stock = 50 });
+            Libros.Add(new M_Libro { Titulo = "Libro 3", Autor = "RutaImagen2.jpg",Stock = 40 });
+            Libros.Add(new M_Libro { Titulo = "Libro 4", Autor = "RutaImagen2.jpg",Stock = 60 });
+            Libros.Add(new M_Libro { Titulo = "Libro 5", Autor = "RutaImagen2.jpg",Stock = 10 });
 
          
             // Agrega más libros según sea necesario
@@ -135,7 +135,7 @@ namespace PROYECTO_EV2_ALB.View
                //Comprobar si el stock es mayor que 0
                 if (listBoxBooks.SelectedItem != null)
             {
-                    Libro libro = (Libro)listBoxBooks.SelectedItem;
+                M_Libro libro = (M_Libro)listBoxBooks.SelectedItem;
                     if (libro.Stock > 0)
                 {
                         MessageBox.Show("Préstamo realizado correctamente", "Préstamo", MessageBoxButton.OK, MessageBoxImage.Information);

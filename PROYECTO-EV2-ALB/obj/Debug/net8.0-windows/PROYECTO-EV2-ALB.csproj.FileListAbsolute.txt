@@ -50,3 +50,13 @@ C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\PROYECTO-EV2-ALB\obj\Debug\net8.
 C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\PROYECTO-EV2-ALB\obj\Debug\net8.0-windows\View\V_Administrador.baml
 C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\PROYECTO-EV2-ALB\obj\Debug\net8.0-windows\View\V_CreacionUsuario.baml
 C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\PROYECTO-EV2-ALB\obj\Debug\net8.0-windows\View\V_InicioSesion.baml
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\PROYECTO-EV2-ALB\obj\Debug\net8.0-windows\PROYECTO-EV2-ALB.csproj.AssemblyReference.cache
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\PROYECTO-EV2-ALB\obj\Debug\net8.0-windows\View\V_Incidencia.g.cs
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\PROYECTO-EV2-ALB\obj\Debug\net8.0-windows\View\V_Usuarios.g.cs
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\PROYECTO-EV2-ALB\obj\Debug\net8.0-windows\PROYECTO-EV2-ALB_Content.g.cs
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\PROYECTO-EV2-ALB\bin\Debug\net8.0-windows\images\users.png
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\PROYECTO-EV2-ALB\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\PROYECTO-EV2-ALB\bin\Debug\net8.0-windows\MySqlConnector.dll
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\PROYECTO-EV2-ALB\obj\Debug\net8.0-windows\View\V_Incidencia.baml
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\PROYECTO-EV2-ALB\obj\Debug\net8.0-windows\View\V_Usuarios.baml
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\PROYECTO-EV2-ALB\obj\Debug\net8.0-windows\PROYECTO-EV2-ALB.csproj.CopyComplete

@@ -53,7 +53,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="ViewModels\" />
+    <PackageReference Include="MySqlConnector" Version="2.3.4" />
   </ItemGroup>
 
 </Project>

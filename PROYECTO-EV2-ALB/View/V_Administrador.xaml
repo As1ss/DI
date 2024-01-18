@@ -166,7 +166,8 @@
                     <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
                         <StackPanel Orientation="Vertical">
                             <TextBlock Text="ADMINISTRACIÓN DE USUARIOS" FontSize="40" Margin="0 0 0 80" HorizontalAlignment="Center"/>
-                            <DataGrid x:Name="dgUsuarios" AutoGenerateColumns="False" CanUserAddRows="False" Width="1000"  Height="300">
+                            <DataGrid x:Name="dgUsuarios" AutoGenerateColumns="False" CanUserAddRows="False" Width="1000"  Height="300" ItemsSource="{Binding ListaUsuarios}"
+                                      >
                                 <DataGrid.Effect>
                                     <DropShadowEffect/>
                                 </DataGrid.Effect>
@@ -176,6 +177,7 @@
                                     <DataGridTextColumn Header="Contraseña" Binding="{Binding Contrasena}" Width="*"/>
                                     <DataGridTextColumn Header="Email" Binding="{Binding Email}" Width="*"/>
                                     <DataGridTextColumn Header="TipoUsuario" Binding="{Binding Tipo_usuario}" Width="*"/>
+                                    <DataGridTextColumn Header="Bloqueado" Binding="{Binding Bloqueado}" Width="*"/>
                                 </DataGrid.Columns>
                             </DataGrid>
                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">

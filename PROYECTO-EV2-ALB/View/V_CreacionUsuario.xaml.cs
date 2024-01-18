@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PROYECTO_EV2_ALB.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,17 @@ namespace PROYECTO_EV2_ALB.View
     /// </summary>
     public partial class V_CreacionUsuario : Window
     {
+        VM_Usuario vm_usuario;
+
+        Models.M_Usuario usuarioNuevo;
+
         public V_CreacionUsuario()
         {
             InitializeComponent();
+            vm_usuario = new VM_Usuario();
+            usuarioNuevo = new Models.M_Usuario();
+
+            
         }
 
         private void btnSalir_Click(object sender, RoutedEventArgs e)
@@ -39,13 +48,23 @@ namespace PROYECTO_EV2_ALB.View
                 MessageBox.Show("Introduzca un usuario, una contraseña y un email válidos", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
 
             }
-            else if(tbUser.Text == "Usuario" || tbUser.Text=="Admin")
+            else if(vm_usuario.existeUsuario(tbUser.Text))
             {
                 MessageBox.Show("El usuario ya existe", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             else
             {
-                MessageBox.Show("Usuario creado correctamente", "Registro", MessageBoxButton.OK, MessageBoxImage.Information);
+                usuarioNuevo.Nombre = tbUser.Text;
+                usuarioNuevo.Contrasena = tbxPassword.Password;
+                usuarioNuevo.Email = tbEmail.Text;
+                usuarioNuevo.Tipo_usuario = "estandar";
+
+
+
+                vm_usuario.insertarUsuario(usuarioNuevo);
+
+
+                MessageBox.Show("Usuario creado correctamente", "Información", MessageBoxButton.OK, MessageBoxImage.Information);
             }
          
         }

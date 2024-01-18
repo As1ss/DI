@@ -62,3 +62,4 @@ D:\DAM2T\DI\PROYECTO-EV2-ALB\obj\Release\net8.0-windows\refint\PROYECTO-EV2-ALB.
 D:\DAM2T\DI\PROYECTO-EV2-ALB\obj\Release\net8.0-windows\PROYECTO-EV2-ALB.pdb
 D:\DAM2T\DI\PROYECTO-EV2-ALB\obj\Release\net8.0-windows\PROYECTO-EV2-ALB.genruntimeconfig.cache
 D:\DAM2T\DI\PROYECTO-EV2-ALB\obj\Release\net8.0-windows\ref\PROYECTO-EV2-ALB.dll
+C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\PROYECTO-EV2-ALB\obj\Release\net8.0-windows\PROYECTO-EV2-ALB.csproj.AssemblyReference.cache

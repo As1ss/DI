@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using PROYECTO_EV2_ALB.ViewModels;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -17,9 +18,13 @@ namespace PROYECTO_EV2_ALB
     /// </summary>
     public partial class V_InicioSesion : Window
     {
+        VM_Usuario vm_usuario;
         public V_InicioSesion()
         {
             InitializeComponent();
+            vm_usuario = new VM_Usuario();
+
+            
         }
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
@@ -28,16 +33,21 @@ namespace PROYECTO_EV2_ALB
             {
                 MessageBox.Show("Introduzca un usuario y una contraseña", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
-            else if (tbUser.Text == "Usuario")
+            else if (vm_usuario.comprobarUsuario(tbUser.Text, tbxPassword.Password))
             {
-                Window v_usuarios = new View.V_Usuarios();
-                v_usuarios.ShowDialog();
+                if(vm_usuario.comprobarAdmin(tbUser.Text, tbxPassword.Password))
+                {
+                    Window v_Administrador = new View.V_Administrador();
+                    v_Administrador.ShowDialog();
+                }
+                else
+                {
+                    Window v_Usuario = new View.V_Usuarios();
+                    v_Usuario.ShowDialog();
+                }
+              
             }
-            else if (tbUser.Text == "Admin")
-            {
-                Window v_Administrador = new View.V_Administrador();
-                v_Administrador.ShowDialog();
-            }
+         
             else
             {
                 MessageBox.Show("Usuario o contraseña incorrectos", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
