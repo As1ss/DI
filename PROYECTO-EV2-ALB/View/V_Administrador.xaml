@@ -120,7 +120,7 @@
 
                             <StackPanel Orientation="Horizontal" >
                             <DataGrid x:Name="dgLibros" AutoGenerateColumns="True" IsReadOnly="True" 
-                                      CanUserAddRows="False" Width="600"  Height="300" SelectionChanged="DynamicDataGrid_SelectionChanged">
+                                      CanUserAddRows="False" Width="600"  Height="300" SelectionMode="Single" SelectionChanged="DynamicDataGrid_SelectionChanged">
                                 <DataGrid.Effect>
                                     <DropShadowEffect/>
                                 </DataGrid.Effect>
