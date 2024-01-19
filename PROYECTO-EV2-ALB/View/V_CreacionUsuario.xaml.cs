@@ -62,9 +62,16 @@ namespace PROYECTO_EV2_ALB.View
 
 
                 vm_usuario.insertarUsuario(usuarioNuevo);
+               
+
 
 
                 MessageBox.Show("Usuario creado correctamente", "Información", MessageBoxButton.OK, MessageBoxImage.Information);
+
+         
+
+
+               
             }
          
         }

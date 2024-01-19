@@ -29,6 +29,8 @@ namespace PROYECTO_EV2_ALB
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
+            vm_usuario.actualizarLista();
+
             if (tbUser.Text == string.Empty || tbxPassword.Password == string.Empty)
             {
                 MessageBox.Show("Introduzca un usuario y una contraseña", "Error", MessageBoxButton.OK, MessageBoxImage.Error);

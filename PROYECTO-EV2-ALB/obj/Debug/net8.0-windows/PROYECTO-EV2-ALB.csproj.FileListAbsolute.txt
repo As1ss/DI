@@ -60,3 +60,13 @@ C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\PROYECTO-EV2-ALB\bin\Debug\net8.
 C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\PROYECTO-EV2-ALB\obj\Debug\net8.0-windows\View\V_Incidencia.baml
 C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\PROYECTO-EV2-ALB\obj\Debug\net8.0-windows\View\V_Usuarios.baml
 C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\PROYECTO-EV2-ALB\obj\Debug\net8.0-windows\PROYECTO-EV2-ALB.csproj.CopyComplete
+D:\DAM2T\DI\PROYECTO-EV2-ALB\bin\Debug\net8.0-windows\images\users.png
+D:\DAM2T\DI\PROYECTO-EV2-ALB\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+D:\DAM2T\DI\PROYECTO-EV2-ALB\bin\Debug\net8.0-windows\MySqlConnector.dll
+D:\DAM2T\DI\PROYECTO-EV2-ALB\obj\Debug\net8.0-windows\PROYECTO-EV2-ALB.csproj.AssemblyReference.cache
+D:\DAM2T\DI\PROYECTO-EV2-ALB\obj\Debug\net8.0-windows\View\V_Incidencia.g.cs
+D:\DAM2T\DI\PROYECTO-EV2-ALB\obj\Debug\net8.0-windows\View\V_Usuarios.g.cs
+D:\DAM2T\DI\PROYECTO-EV2-ALB\obj\Debug\net8.0-windows\PROYECTO-EV2-ALB_Content.g.cs
+D:\DAM2T\DI\PROYECTO-EV2-ALB\obj\Debug\net8.0-windows\View\V_Incidencia.baml
+D:\DAM2T\DI\PROYECTO-EV2-ALB\obj\Debug\net8.0-windows\View\V_Usuarios.baml
+D:\DAM2T\DI\PROYECTO-EV2-ALB\obj\Debug\net8.0-windows\PROYECTO-EV2-ALB.csproj.CopyComplete

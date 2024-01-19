@@ -25,7 +25,13 @@ namespace PROYECTO_EV2_ALB.ViewModels
         {
             operacionesUsuario = new M_OperacionesUsuario();
             // Puedes acceder directamente a la propiedad ListaUsuarios de M_OperacionesUsuario
-           listaUsuarios= operacionesUsuario.obtenerUsuarios();
+           actualizarLista();
+        }
+
+        public void actualizarLista()
+        {
+            listaUsuarios = operacionesUsuario.obtenerUsuarios();
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ListaUsuarios"));
         }
         public Boolean comprobarUsuario(string nombre, string contrasena)
         {
