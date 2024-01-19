@@ -47,6 +47,10 @@ namespace PROYECTO_EV2_ALB
                 }
               
             }
+            else if (vm_usuario.comprobarBloqueado(tbUser.Text))
+            {
+                MessageBox.Show("Usuario bloqueado", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
          
             else
             {

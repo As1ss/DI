@@ -1,7 +1,9 @@
-﻿using PROYECTO_EV2_ALB.ViewModels;
+﻿using MySqlConnector;
+using PROYECTO_EV2_ALB.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,13 +27,17 @@ namespace PROYECTO_EV2_ALB.View
         VM_Usuario vm_usuario = new VM_Usuario();
         public V_Administrador()
         {
-          
+
             InitializeComponent();
-            listaUsuarios = vm_usuario.ListaUsuarios;
+
+            cargarUsuarios();
 
 
             // Asignamos el ViewModel a la ventana
             this.DataContext = new VM_Usuario();
+
+         
+
 
             if (tiUsers.IsSealed)
             {
@@ -39,11 +45,24 @@ namespace PROYECTO_EV2_ALB.View
                 this.DataContext = new VM_Usuario();
                 // Enlazamos el DataGrid directamente con la propiedad ListaUsuarios del ViewModel
                 dgUsuarios.SetBinding(ItemsControl.ItemsSourceProperty, new Binding("ListaUsuarios"));
-            }
-          
-        }
+                // Suscribirse al evento CollectionChanged de la propiedad ListaUsuarios
 
+            }
+        }
+            
+          
         
+
+        public void cargarUsuarios()
+        {
+            vm_usuario= new VM_Usuario(); //Invocando al objeto vm_usuario regenero la colección de usuarios
+          
+            listaUsuarios = vm_usuario.ListaUsuarios; //Asigno la colección de usuarios a la listaUsuarios
+           
+            dgUsuarios.ItemsSource = listaUsuarios; //Asigno la listaUsuarios al DataGrid
+           
+           
+        }
 
         private void btnLogout_Click(object sender, RoutedEventArgs e)
         {
@@ -157,9 +176,63 @@ namespace PROYECTO_EV2_ALB.View
            // MessageBox.Show("El libro no existe", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
         }
 
-       
+        private void btnUnBlock_Click(object sender, RoutedEventArgs e)
+        {
+            // Obtener el usuario seleccionado del datagridUsuarios
+            Models.M_Usuario usuarioSeleccionado = dgUsuarios.SelectedItem as Models.M_Usuario;
 
-       
+            if (usuarioSeleccionado != null)
+            {
+                string nombreUsuario = usuarioSeleccionado.Nombre;
+
+                if(vm_usuario.comprobarBloqueado(nombreUsuario))
+                {
+                    MessageBoxResult result = MessageBox.Show("¿Estás seguro de que quieres desbloquear al usuario?", "Desbloquear", MessageBoxButton.YesNo, MessageBoxImage.Question);
+                    if (result == MessageBoxResult.Yes)
+                    {
+                        MessageBox.Show("Usuario desbloqueado correctamente", "Usuario", MessageBoxButton.OK, MessageBoxImage.Information);
+                        vm_usuario.desbloquearUsuario(nombreUsuario);
+                        cargarUsuarios ();
+                        //dgUsuarios.Items.Refresh();
+
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("El usuario no está bloqueado", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+               
+            }
+
+
+        }
+
+        private void btnBlock_Click(object sender, RoutedEventArgs e)
+        {
+            // Obtener el usuario seleccionado del datagridUsuarios
+            Models.M_Usuario usuarioSeleccionado = dgUsuarios.SelectedItem as Models.M_Usuario;
+            if(usuarioSeleccionado != null)
+            {
+                string nombreUsuario = usuarioSeleccionado.Nombre;
+                if (!vm_usuario.comprobarBloqueado(nombreUsuario))
+                {
+                    MessageBoxResult result = MessageBox.Show("¿Estás seguro de que quieres bloquear al usuario?", "Bloquear", MessageBoxButton.YesNo, MessageBoxImage.Question);
+                    if (result == MessageBoxResult.Yes)
+                    {
+                        MessageBox.Show("Usuario bloqueado correctamente", "Usuario", MessageBoxButton.OK, MessageBoxImage.Information);
+                        vm_usuario.bloquearUsuario(nombreUsuario);
+                        cargarUsuarios();
+                        //dgUsuarios.Items.Refresh();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("El usuario ya está bloqueado", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
+        }
+
+        #region Comandos
 
         private void Agregar_CanExecute(object sender, CanExecuteRoutedEventArgs e)
         {
@@ -178,8 +251,7 @@ namespace PROYECTO_EV2_ALB.View
                 }
             }
         }
-           
-
+  
         private void Agregar_Executed(object sender, ExecutedRoutedEventArgs e)
         {
             btnAgregar_Click(sender, e);   
@@ -258,30 +330,6 @@ namespace PROYECTO_EV2_ALB.View
             }
         }
 
-        private void btnUnBlock_Click(object sender, RoutedEventArgs e)
-        {
-            if (dgUsuarios.SelectedItem != null) // and usuario bloqueado
-            {
-                MessageBoxResult result = MessageBox.Show("¿Estás seguro de que quieres desbloquear al usuario?", "Desbloquear", MessageBoxButton.YesNo, MessageBoxImage.Question);
-                if (result == MessageBoxResult.Yes)
-                {
-                    MessageBox.Show("Usuario desbloqueado correctamente", "Usuario", MessageBoxButton.OK, MessageBoxImage.Information);
-                }
-            }
-        }
-
-        private void btnBlock_Click(object sender, RoutedEventArgs e)
-        {
-            if(dgUsuarios.SelectedItem != null) // and usuario no bloqueado
-            {
-                MessageBoxResult result = MessageBox.Show("¿Estás seguro de que quieres bloquear al usuario?", "Bloquear", MessageBoxButton.YesNo, MessageBoxImage.Question);
-                if (result == MessageBoxResult.Yes)
-                {
-                    MessageBox.Show("Usuario bloqueado correctamente", "Usuario", MessageBoxButton.OK, MessageBoxImage.Information);
-                }
-            }
-        }
-
         private void DesbloquearUsuario_CanExecute(object sender, CanExecuteRoutedEventArgs e)
         {
             if (dgUsuarios.SelectedItem != null)
@@ -306,4 +354,5 @@ namespace PROYECTO_EV2_ALB.View
             }
         }
     }
+    #endregion
 }

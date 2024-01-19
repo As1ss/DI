@@ -97,6 +97,7 @@ namespace PROYECTO_EV2_ALB.Models
                             usuario.Contrasena = reader.GetString(2);
                             usuario.Email =reader.GetString(3);
                             usuario.Tipo_usuario = reader.GetString(4);
+                            usuario.Bloqueado = reader.GetBoolean(5);
                             
                             listaUsuarios.Add(usuario);
 
@@ -123,6 +124,84 @@ namespace PROYECTO_EV2_ALB.Models
             return null;
         }
         
+        public void desbloquearUsuario(string nombre)
+        {
+            try
+            {
+                // Obtener una conexión abierta a la BD
+                MySqlConnection? conexionBD = Conexion.obtenerConexionAbierta();
+
+                if (conexionBD == null)
+                {
+                    Console.WriteLine("Error en Conexion a BD");
+                }
+                else
+                {
+                    try
+                    {
+                        // comando a ejecutar en la BD
+                        String consulta = "UPDATE usuario SET bloqueado = 0 WHERE nombre = @nombre";
+                        using var comando = new MySqlCommand(consulta, conexionBD);
+                        comando.Parameters.AddWithValue("@nombre", nombre);
+                        comando.ExecuteNonQuery();
+                        Console.WriteLine("Usuario desbloqueado");
+                    }
+                    catch (InvalidOperationException ex)
+                    {
+                        Console.WriteLine("Error: " + ex.Message);
+                    }
+                }
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine("Error: " + ex.Message);
+            }
+            finally
+            {
+                
+                // siempre se cierra la conexion
+                Conexion.cerrarConexion();
+            }
+        }
+
+        public void bloquearUsuario(string nombre)
+        {
+            try
+            {
+                // Obtener una conexión abierta a la BD
+                MySqlConnection? conexionBD = Conexion.obtenerConexionAbierta();
+
+                if (conexionBD == null)
+                {
+                    Console.WriteLine("Error en Conexion a BD");
+                }
+                else
+                {
+                    try
+                    {
+                        // comando a ejecutar en la BD
+                        String consulta = "UPDATE usuario SET bloqueado = 1 WHERE nombre = @nombre";
+                        using var comando = new MySqlCommand(consulta, conexionBD);
+                        comando.Parameters.AddWithValue("@nombre", nombre);
+                        comando.ExecuteNonQuery();
+                        Console.WriteLine("Usuario bloqueado");
+                    }
+                    catch (InvalidOperationException ex)
+                    {
+                        Console.WriteLine("Error: " + ex.Message);
+                    }
+                }
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine("Error: " + ex.Message);
+            }
+            finally
+            {
+                // siempre se cierra la conexion
+                Conexion.cerrarConexion();
+            }
+        }
           
         
     }

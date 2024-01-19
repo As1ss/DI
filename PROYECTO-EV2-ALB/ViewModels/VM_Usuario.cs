@@ -2,16 +2,28 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace PROYECTO_EV2_ALB.ViewModels
 {
-    public class VM_Usuario
+    public class VM_Usuario: INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler? PropertyChanged;
+
+        protected void OnPropertyChanged(string name)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
+        }
+
+
+
         private Models.M_OperacionesUsuario operacionesUsuario = new M_OperacionesUsuario();
-        ObservableCollection<Models.M_Usuario> listaUsuarios;
+       private ObservableCollection<Models.M_Usuario> listaUsuarios;
+
+      
 
         public VM_Usuario()
         {
@@ -23,7 +35,7 @@ namespace PROYECTO_EV2_ALB.ViewModels
             Boolean encontrado = false;
             foreach (M_Usuario usuario in listaUsuarios)
             {
-                if (usuario.Nombre == nombre && usuario.Contrasena == contrasena)
+                if (usuario.Nombre == nombre && usuario.Contrasena == contrasena && !usuario.Bloqueado)
                 {
                     encontrado = true;
                 }
@@ -42,6 +54,21 @@ namespace PROYECTO_EV2_ALB.ViewModels
             }
             return encontrado;
         }
+        public Boolean comprobarBloqueado(string nombre)
+        {
+            Boolean encontrado = false;
+            foreach (M_Usuario usuario in listaUsuarios)
+            {
+                if (usuario.Nombre == nombre && usuario.Bloqueado)
+                {
+                    encontrado = true;
+                   
+                }
+            }
+          
+            return encontrado;
+
+        }
         public Boolean comprobarAdmin(string nombre, string contrasena)
         {
             Boolean encontrado = false;
@@ -58,14 +85,27 @@ namespace PROYECTO_EV2_ALB.ViewModels
         {
             operacionesUsuario.insertarUsuario(usuarioNuevo);
         }
-        public ObservableCollection<Models.M_Usuario> ListaUsuarios
+
+        public void desbloquearUsuario(string nombre)
         {
-            get
+            operacionesUsuario.desbloquearUsuario(nombre);
+        }
+        public void bloquearUsuario(string nombre)
+        {
+            operacionesUsuario.bloquearUsuario(nombre);
+          
+        }
+
+        public ObservableCollection<M_Usuario> ListaUsuarios
+        {
+            get => listaUsuarios;
+            set
             {
-                return listaUsuarios;
+                listaUsuarios = value;
+                OnPropertyChanged("ListaUsuarios");
             }
         }
-       
     }
 
 }
+

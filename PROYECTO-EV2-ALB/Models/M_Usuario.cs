@@ -1,13 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace PROYECTO_EV2_ALB.Models
 {
-    public class M_Usuario
+    public class M_Usuario 
+
     {
+     
+
         private int id_usuario;
         private string nombre;
         private string contrasena;
@@ -29,6 +33,7 @@ namespace PROYECTO_EV2_ALB.Models
             this.email = email;
             this.bloqueado = bloqueado;
         }
+       
 
         public int Id_usuario { get => id_usuario; set => id_usuario = value; }
         public string Nombre { get => nombre; set => nombre = value; }
@@ -37,5 +42,6 @@ namespace PROYECTO_EV2_ALB.Models
         public string Tipo_usuario { get => tipo_usuario; set => tipo_usuario = value; }
         public bool Bloqueado { get => bloqueado; set => bloqueado = value;}
 
+      
     }
 }
