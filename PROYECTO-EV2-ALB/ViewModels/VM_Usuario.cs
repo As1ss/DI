@@ -18,15 +18,12 @@ namespace PROYECTO_EV2_ALB.ViewModels
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
         }
 
-
-
-        private Models.M_OperacionesUsuario operacionesUsuario = new M_OperacionesUsuario();
+       private Models.M_OperacionesUsuario operacionesUsuario ;
        private ObservableCollection<Models.M_Usuario> listaUsuarios;
-
-      
 
         public VM_Usuario()
         {
+            operacionesUsuario = new M_OperacionesUsuario();
             // Puedes acceder directamente a la propiedad ListaUsuarios de M_OperacionesUsuario
            listaUsuarios= operacionesUsuario.obtenerUsuarios();
         }

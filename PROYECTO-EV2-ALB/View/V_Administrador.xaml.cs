@@ -24,22 +24,19 @@ namespace PROYECTO_EV2_ALB.View
     public partial class V_Administrador : Window
     {
         ObservableCollection<Models.M_Usuario> listaUsuarios;
-        VM_Usuario vm_usuario = new VM_Usuario();
+        VM_Usuario vm_usuario;
+        VM_Libro vm_libro;
         public V_Administrador()
         {
 
             InitializeComponent();
 
             cargarUsuarios();
+            cargarLibros();
 
 
-            // Asignamos el ViewModel a la ventana
-            this.DataContext = new VM_Usuario();
 
-         
-
-
-            if (tiUsers.IsSealed)
+            if (tiUsers.IsSelected)
             {
                 // Asignamos el ViewModel a la ventana
                 this.DataContext = new VM_Usuario();
@@ -47,6 +44,13 @@ namespace PROYECTO_EV2_ALB.View
                 dgUsuarios.SetBinding(ItemsControl.ItemsSourceProperty, new Binding("ListaUsuarios"));
                 // Suscribirse al evento CollectionChanged de la propiedad ListaUsuarios
 
+            }
+            if (tiBook.IsSelected)
+            {
+                vm_libro = new VM_Libro();
+                this.DataContext = new VM_Libro();
+                dgLibros.SetBinding(ItemsControl.ItemsSourceProperty, new Binding("ListaLibros"));
+               
             }
         }
             
@@ -62,6 +66,12 @@ namespace PROYECTO_EV2_ALB.View
             dgUsuarios.ItemsSource = listaUsuarios; //Asigno la listaUsuarios al DataGrid
            
            
+        }
+        public void cargarLibros()
+        {
+            vm_libro = new VM_Libro();
+            
+            dgLibros.ItemsSource = vm_libro.ListaLibros;
         }
 
         private void btnLogout_Click(object sender, RoutedEventArgs e)
@@ -132,16 +142,28 @@ namespace PROYECTO_EV2_ALB.View
         private void btnAgregar_Click(object sender, RoutedEventArgs e)
         {
          //Comprobar que el libro existen en la base de datos
-
-            //Si existe, mostrar mensaje de error
-                // MessageBox.Show("El libro ya existe", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-    
-                //Si no existe, agregarlo
+         if(vm_libro.existeLibro(tbxTitulo.Text))
+            {
+                MessageBox.Show("El libro ya existe", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+         else
+            {
+                Models.M_Libro libroNuevo = new Models.M_Libro(); 
+                //Si existe, mostrar mensaje de error
                 MessageBoxResult result = MessageBox.Show("¿Estás seguro de que quieres agregar el libro?", "Agregar", MessageBoxButton.YesNo, MessageBoxImage.Question);
                 if (result == MessageBoxResult.Yes)
-                   {
+                {
+                    libroNuevo.Titulo = tbxTitulo.Text;
+                    libroNuevo.Autor = tbxAutor.Text;
+                    libroNuevo.Stock = Convert.ToInt32(tbxStock.Text);
+                    vm_libro.insertarLibro(libroNuevo);
+                    cargarLibros();
                     MessageBox.Show("Libro agregado correctamente", "Libro", MessageBoxButton.OK, MessageBoxImage.Information);
+                    //dgLibros.Items.Refresh();
                 }
+            }
+            //Si no existe, agregarlo
+            //MessageBox.Show("Libro agregado correctamente", "Libro", MessageBoxButton.OK, MessageBoxImage.Information
 
         }
 
@@ -238,6 +260,7 @@ namespace PROYECTO_EV2_ALB.View
         {
             if (tiBook.IsSelected)
             {
+               
                 if (verificarCamposLibro())
                 {
                     e.CanExecute = true;
@@ -252,10 +275,7 @@ namespace PROYECTO_EV2_ALB.View
             }
         }
   
-        private void Agregar_Executed(object sender, ExecutedRoutedEventArgs e)
-        {
-            btnAgregar_Click(sender, e);   
-        }
+      
 
         private void Modificar_CanExecute(object sender, CanExecuteRoutedEventArgs e)
         {

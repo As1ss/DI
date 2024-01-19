@@ -9,7 +9,7 @@
         Closing="Window_Closing"
         xmlns:Core="clr-namespace:PROYECTO_EV2_ALB.Core">
     <Window.CommandBindings>
-        <CommandBinding x:Name="Agregar" Command="Core:Comandos.AgregarLibro" CanExecute="Agregar_CanExecute" Executed="Agregar_Executed"/>
+        <CommandBinding x:Name="Agregar" Command="Core:Comandos.AgregarLibro" CanExecute="Agregar_CanExecute" />
         <CommandBinding x:Name="Modificar" Command="Core:Comandos.ModificarLibro" CanExecute="Modificar_CanExecute" Executed="Modificar_Executed"/>
         <CommandBinding x:Name="Eliminar" Command="Core:Comandos.EliminarLibro" CanExecute="Eliminar_CanExecute" Executed="Eliminar_Executed"/>
         <CommandBinding x:Name="DetallesIncidencia" Command="Core:Comandos.DetallesIncidencia" CanExecute="DetallesIncidencia_CanExecute"/>
@@ -119,16 +119,12 @@
                             <TextBlock Text="ADMINISTRACIÓN DE LIBROS" FontSize="40" Margin="0 0 0 80" HorizontalAlignment="Center"/>
 
                             <StackPanel Orientation="Horizontal" >
-                            <DataGrid x:Name="dgLibros" AutoGenerateColumns="False" CanUserAddRows="False" Width="600" Height="300">
+                            <DataGrid x:Name="dgLibros" AutoGenerateColumns="True" IsReadOnly="True" 
+                                      CanUserAddRows="False" Width="600" Height="300">
                                 <DataGrid.Effect>
                                     <DropShadowEffect/>
                                 </DataGrid.Effect>
-                                <DataGrid.Columns>
-                                    <DataGridTextColumn Header="Id" Binding="{Binding Id_book}" Width="*"/>
-                                    <DataGridTextColumn Header="Título" Binding="{Binding Title}" Width="*"/>
-                                    <DataGridTextColumn Header="Autor" Binding="{Binding Autor}" Width="*"/>
-                                    <DataGridTextColumn Header="Stock" Binding="{Binding Stock}" Width="*"/>
-                                </DataGrid.Columns>
+                                
                             </DataGrid>
                             <StackPanel Orientation="Vertical" Margin="20 0 0 0" HorizontalAlignment="Center">
                                 <TextBlock Text="LIBRO" FontSize="30" HorizontalAlignment="Center"/>
