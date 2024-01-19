@@ -40,6 +40,33 @@ namespace PROYECTO_EV2_ALB.ViewModels
         {
             operacionesLibro.insertarLibro(libroNuevo);
         }
+
+        public Boolean comprobarStock(String stock)
+        {
+
+
+            Boolean correcto = false;
+
+            //Comprobamos que la variable stock no sea string
+            if (int.TryParse(stock, out int stockInt))
+            {
+                if (stockInt > 0)
+                {
+                    correcto = true;
+                }
+                else
+                {
+                    correcto = false;
+                }
+            }
+            else
+            {
+                correcto = false;
+            }
+            
+          
+            return correcto;
+        }
         
      
 

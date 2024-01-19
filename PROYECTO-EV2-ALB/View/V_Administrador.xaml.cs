@@ -1,4 +1,5 @@
 ﻿using MySqlConnector;
+using PROYECTO_EV2_ALB.Models;
 using PROYECTO_EV2_ALB.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -53,9 +54,23 @@ namespace PROYECTO_EV2_ALB.View
                
             }
         }
-            
-          
-        
+        private void DynamicDataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            // Verifica si hay una fila seleccionada
+            if (dgLibros.SelectedItem != null)
+            {
+                // Obtén el objeto seleccionado (supongamos que tu objeto tiene propiedades Autor y Stock)
+                M_Libro selectedItem = (M_Libro)dgLibros.SelectedItem;
+
+                // Asigna los valores a los TextBox
+                tbxTitulo.Text = selectedItem.Titulo;
+                tbxAutor.Text = selectedItem.Autor;
+                tbxStock.Text = selectedItem.Stock.ToString();
+            }
+        }
+
+
+
 
         public void cargarUsuarios()
         {
@@ -144,12 +159,21 @@ namespace PROYECTO_EV2_ALB.View
          //Comprobar que el libro existen en la base de datos
          if(vm_libro.existeLibro(tbxTitulo.Text))
             {
+                //Si existe, mostrar mensaje de error
                 MessageBox.Show("El libro ya existe", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
          else
             {
+                if (!vm_libro.comprobarStock(tbxStock.Text))
+                {
+                    MessageBox.Show("Stock no válido", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+                else
+                {
+
+             
                 Models.M_Libro libroNuevo = new Models.M_Libro(); 
-                //Si existe, mostrar mensaje de error
+              
                 MessageBoxResult result = MessageBox.Show("¿Estás seguro de que quieres agregar el libro?", "Agregar", MessageBoxButton.YesNo, MessageBoxImage.Question);
                 if (result == MessageBoxResult.Yes)
                 {
@@ -161,6 +185,8 @@ namespace PROYECTO_EV2_ALB.View
                     MessageBox.Show("Libro agregado correctamente", "Libro", MessageBoxButton.OK, MessageBoxImage.Information);
                     //dgLibros.Items.Refresh();
                 }
+                }
+
             }
             //Si no existe, agregarlo
             //MessageBox.Show("Libro agregado correctamente", "Libro", MessageBoxButton.OK, MessageBoxImage.Information
