@@ -54,19 +54,31 @@ namespace PROYECTO_EV2_ALB.View
             }
             else
             {
-                usuarioNuevo.Nombre = tbUser.Text;
-                usuarioNuevo.Contrasena = tbxPassword.Password;
-                usuarioNuevo.Email = tbEmail.Text;
-                usuarioNuevo.Tipo_usuario = "estandar";
+                if (!vm_usuario.comprobarEmail(tbEmail.Text))
+                {
+                    MessageBox.Show("Email no válido", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+                else
+                {
+                    usuarioNuevo.Nombre = tbUser.Text;
+                    usuarioNuevo.Contrasena = tbxPassword.Password;
+                    usuarioNuevo.Email = tbEmail.Text;
+                    usuarioNuevo.Tipo_usuario = "estandar";
 
 
 
-                vm_usuario.insertarUsuario(usuarioNuevo);
-               
+                    vm_usuario.insertarUsuario(usuarioNuevo);
 
 
 
-                MessageBox.Show("Usuario creado correctamente", "Información", MessageBoxButton.OK, MessageBoxImage.Information);
+
+                    MessageBox.Show("Usuario creado correctamente", "Información", MessageBoxButton.OK, MessageBoxImage.Information);
+                   //Cerrar ventana sin evento close
+                    
+                    this.Closing -= Window_Closing;
+                    this.Close();
+                }
+             
 
          
 

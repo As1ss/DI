@@ -5,6 +5,7 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace PROYECTO_EV2_ALB.ViewModels
@@ -26,6 +27,14 @@ namespace PROYECTO_EV2_ALB.ViewModels
             operacionesUsuario = new M_OperacionesUsuario();
             // Puedes acceder directamente a la propiedad ListaUsuarios de M_OperacionesUsuario
            actualizarLista();
+        }
+
+
+        public Boolean comprobarEmail(string email)
+        {
+           
+          return Regex.IsMatch(email, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
+        
         }
 
         public void actualizarLista()
