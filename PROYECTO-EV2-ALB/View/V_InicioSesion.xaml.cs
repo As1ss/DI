@@ -1,4 +1,6 @@
-﻿using PROYECTO_EV2_ALB.ViewModels;
+﻿using PROYECTO_EV2_ALB.Models;
+using PROYECTO_EV2_ALB.ViewModels;
+using System.Collections.ObjectModel;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -19,10 +21,14 @@ namespace PROYECTO_EV2_ALB
     public partial class V_InicioSesion : Window
     {
         VM_Usuario vm_usuario;
+        private ObservableCollection<Models.M_Usuario> listaUsuarios;
+
+        
         public V_InicioSesion()
         {
             InitializeComponent();
             vm_usuario = new VM_Usuario();
+            listaUsuarios = vm_usuario.ListaUsuarios;
 
             
         }
@@ -31,12 +37,15 @@ namespace PROYECTO_EV2_ALB
         {
             vm_usuario.actualizarLista();
 
+
             if (tbUser.Text == string.Empty || tbxPassword.Password == string.Empty)
             {
                 MessageBox.Show("Introduzca un usuario y una contraseña", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             else if (vm_usuario.comprobarUsuario(tbUser.Text, tbxPassword.Password))
             {
+                M_Usuario usuarioSesion = vm_usuario.obtenerUsuario(tbUser.Text);
+
                 if(vm_usuario.comprobarAdmin(tbUser.Text, tbxPassword.Password))
                 {
                     Window v_Administrador = new View.V_Administrador();
@@ -44,7 +53,7 @@ namespace PROYECTO_EV2_ALB
                 }
                 else
                 {
-                    Window v_Usuario = new View.V_Usuarios();
+                    Window v_Usuario = new View.V_Usuarios(usuarioSesion);
                     v_Usuario.ShowDialog();
                 }
               

@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using PROYECTO_EV2_ALB.Models;
+using PROYECTO_EV2_ALB.ViewModels;
 
 namespace PROYECTO_EV2_ALB.View
 {
@@ -21,24 +22,32 @@ namespace PROYECTO_EV2_ALB.View
     /// </summary>
     public partial class V_Usuarios : Window
     {
-        public ObservableCollection<M_Libro> Libros { get; set; }
+      
+        private VM_Libro vm_libro;
+        private VM_Incidencia vm_incidencia;
+        private ObservableCollection<M_Libro> listaLibros;
+        private M_Usuario usuarioSesion;
 
-        public V_Usuarios()
+
+        public V_Usuarios(M_Usuario usuarioSesion)
         {
             InitializeComponent();
-            Libros = new ObservableCollection<M_Libro>();
+            vm_libro = new VM_Libro();
+            vm_incidencia = new VM_Incidencia();
+            this.usuarioSesion = usuarioSesion;
+          
+            actualizarLista();
 
-            // Agrega algunos libros de ejemplo
-            Libros.Add(new M_Libro { Titulo = "Libro 1", Autor = "RutaImagen1.jpg",Stock= 20 });
-            Libros.Add(new M_Libro { Titulo = "Libro 2", Autor = "RutaImagen2.jpg",Stock = 50 });
-            Libros.Add(new M_Libro { Titulo = "Libro 3", Autor = "RutaImagen2.jpg",Stock = 40 });
-            Libros.Add(new M_Libro { Titulo = "Libro 4", Autor = "RutaImagen2.jpg",Stock = 60 });
-            Libros.Add(new M_Libro { Titulo = "Libro 5", Autor = "RutaImagen2.jpg",Stock = 10 });
 
-         
-            // Agrega más libros según sea necesario
+           
 
-            listBoxBooks.ItemsSource = Libros;
+           
+        }
+
+       public void actualizarLista()
+        {
+            listaLibros = vm_libro.ListaLibros;
+            listBoxBooks.ItemsSource = listaLibros;
         }
 
         private void bQueryBooks_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
@@ -122,10 +131,19 @@ namespace PROYECTO_EV2_ALB.View
             if (tbxIncidencia.Text == "")
             {
                 MessageBox.Show("No has escrito ninguna incidencia", "Incidencia", MessageBoxButton.OK, MessageBoxImage.Error);
+                
             }
             else
             {
+                M_Incidencia incidencia = new M_Incidencia();
+                incidencia.Id_usuario = usuarioSesion.Id_usuario;
+                incidencia.Descripcion = tbxIncidencia.Text;
+                incidencia.Fecha_incidencia = DateTime.Now;
+                incidencia.Resuelta = false;
+
+                vm_incidencia.insertarIncidencia(incidencia);
                 MessageBox.Show("Incidencia enviada correctamente", "Incidencia", MessageBoxButton.OK, MessageBoxImage.Information);
+               
             }
         }
 
@@ -183,10 +201,7 @@ namespace PROYECTO_EV2_ALB.View
            
         }
 
-        private void EnviarIncidencia_Executed(object sender, ExecutedRoutedEventArgs e)
-        {
-            //btnEnviar_Click(sender, e);
-        }
+       
 
         private void PedirLibro_CanExecute(object sender, CanExecuteRoutedEventArgs e)
         {

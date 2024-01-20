@@ -36,6 +36,18 @@ namespace PROYECTO_EV2_ALB.ViewModels
           return Regex.IsMatch(email, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
         
         }
+        public M_Usuario obtenerUsuario(string nombre)
+        {
+            M_Usuario usuario = new M_Usuario();
+            foreach (M_Usuario usuario1 in listaUsuarios)
+            {
+                if (usuario1.Nombre == nombre)
+                {
+                    usuario = usuario1;
+                }
+            }
+            return usuario;
+        }
 
         public void actualizarLista()
         {

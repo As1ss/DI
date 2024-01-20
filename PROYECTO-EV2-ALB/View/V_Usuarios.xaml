@@ -12,7 +12,7 @@
         <CommandBinding Command="Core:Comandos.Aceptar"
           Executed="EjecutarAceptar" CanExecute="PuedoAceptar"
           />
-        <CommandBinding x:Name="EnviarIncidencia" Command="Core:Comandos.EnviarIncidencia" CanExecute="EnviarIncidencia_CanExecute" Executed="EnviarIncidencia_Executed"/>
+        <CommandBinding x:Name="EnviarIncidencia" Command="Core:Comandos.EnviarIncidencia" CanExecute="EnviarIncidencia_CanExecute"/>
         <CommandBinding x:Name="PedirLibro" Command="Core:Comandos.PedirLibro" CanExecute="PedirLibro_CanExecute" Executed="PedirLibro_Executed"/>
         <CommandBinding x:Name="DevolverLibro" Command="Core:Comandos.DevolverLibro" CanExecute="DevolverLibro_CanExecute" Executed="DevolverLibro_Executed"/>
         
@@ -124,8 +124,10 @@ Foreground="White" />
                                 <Button x:Name="btnBuscar" Click="btnBuscar_Click" Grid.Column="2"  Width="100" HorizontalAlignment="Right"  Style="{StaticResource RoundedButtonStyle}" 
                                          VerticalAlignment="Center" >Buscar</Button>
                             </Grid>
-                            <ListBox Name="listBoxBooks" ScrollViewer.VerticalScrollBarVisibility="Auto"  ScrollViewer.HorizontalScrollBarVisibility="Auto" Height="200" HorizontalAlignment="Stretch"
-                                     Width="Auto" d:ItemsSource="{d:SampleData ItemCount=5}">
+                            <ListBox Name="listBoxBooks" ScrollViewer.VerticalScrollBarVisibility="Auto"  
+                                     ScrollViewer.HorizontalScrollBarVisibility="Auto" Height="200" Width="Auto" 
+                                     HorizontalAlignment="Stretch" MaxWidth="1000"
+                                     >
                                 <ListBox.Effect>
                                     <DropShadowEffect/>
                                 </ListBox.Effect>
@@ -135,9 +137,9 @@ Foreground="White" />
                                     <DataTemplate>
                                         <StackPanel Orientation="Horizontal">
 
-                                            <TextBlock Text="{Binding Titulo, StringFormat='Titulo: {0}'}" Width="Auto" Margin="60 0 0 0" />
-                                            <TextBlock Text="{Binding Autor, StringFormat='Autor: {0}'}" Width="Auto" Margin="120 0 0 0"/>
-                                            <TextBlock Text="{Binding Stock , StringFormat='Stock: {0}'}"  Width="Auto" Margin="120 0 0 0"/>
+                                            <TextBlock Text="{Binding Titulo, StringFormat='Titulo: {0}'}" Width="200" Margin="60 0 0 0" FontSize="20" />
+                                            <TextBlock Text="{Binding Autor, StringFormat='Autor: {0}'}" Width="200" Margin="120 0 0 0" FontSize="20"/>
+                                            <TextBlock Text="{Binding Stock , StringFormat='Stock: {0}'}"  Width="200" Margin="120 0 0 0" FontSize="20"/>
                                             <!-- Agrega más TextBlocks u otros controles según tus necesidades -->
                                         </StackPanel>
                                     </DataTemplate>
