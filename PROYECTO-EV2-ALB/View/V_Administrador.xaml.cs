@@ -24,9 +24,10 @@ namespace PROYECTO_EV2_ALB.View
     /// </summary>
     public partial class V_Administrador : Window
     {
-        ObservableCollection<Models.M_Usuario> listaUsuarios;
+       
         VM_Usuario vm_usuario;
         VM_Libro vm_libro;
+        VM_Incidencia vm_incidencia;
 
         public V_Administrador()
         {
@@ -35,25 +36,12 @@ namespace PROYECTO_EV2_ALB.View
 
             cargarUsuarios();
             cargarLibros();
+            cargarIncidencias();
 
 
+          
 
-            if (tiUsers.IsSelected)
-            {
-                // Asignamos el ViewModel a la ventana
-                this.DataContext = new VM_Usuario();
-                // Enlazamos el DataGrid directamente con la propiedad ListaUsuarios del ViewModel
-                dgUsuarios.SetBinding(ItemsControl.ItemsSourceProperty, new Binding("ListaUsuarios"));
-                // Suscribirse al evento CollectionChanged de la propiedad ListaUsuarios
-
-            }
-            if (tiBook.IsSelected)
-            {
-                vm_libro = new VM_Libro();
-                this.DataContext = new VM_Libro();
-                dgLibros.SetBinding(ItemsControl.ItemsSourceProperty, new Binding("ListaLibros"));
-               
-            }
+           
         }
         private void DynamicDataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -71,15 +59,20 @@ namespace PROYECTO_EV2_ALB.View
         }
 
 
+        public void cargarIncidencias()
+        {
+            vm_incidencia = new VM_Incidencia();
+            dgIncidencias.ItemsSource = vm_incidencia.ListaIncidencias;
+        }
 
 
         public void cargarUsuarios()
         {
             vm_usuario= new VM_Usuario(); //Invocando al objeto vm_usuario regenero la colección de usuarios
           
-            listaUsuarios = vm_usuario.ListaUsuarios; //Asigno la colección de usuarios a la listaUsuarios
+         
            
-            dgUsuarios.ItemsSource = listaUsuarios; //Asigno la listaUsuarios al DataGrid
+            dgUsuarios.ItemsSource = vm_usuario.ListaUsuarios; //Asigno la listaUsuarios al DataGrid
            
            
         }
@@ -98,7 +91,9 @@ namespace PROYECTO_EV2_ALB.View
 
         private void btnDetalles_Click(object sender, RoutedEventArgs e)
         {
-            Window v_incidencia = new V_Incidencia();
+            Models.M_Incidencia incidenciaSeleccionada = dgIncidencias.SelectedItem as Models.M_Incidencia;
+         
+            Window v_incidencia = new V_Incidencia(incidenciaSeleccionada);
             v_incidencia.ShowDialog();
         }
 
@@ -333,6 +328,33 @@ namespace PROYECTO_EV2_ALB.View
                 }
             }
         }
+
+
+        private void btnResolver_Click_1(object sender, RoutedEventArgs e)
+        {
+
+          
+            M_Incidencia incidencia = dgIncidencias.SelectedItem as M_Incidencia;
+
+            if (incidencia.Resuelta == true)
+            {
+               
+                MessageBox.Show("La incidencia ya está resuelta", "Incidencia resuelta", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            else
+            {
+                MessageBoxResult result = MessageBox.Show("¿Desea resolver la incidencia?", "Resolver incidencia", MessageBoxButton.YesNo, MessageBoxImage.Question);
+                if (result == MessageBoxResult.Yes)
+                {
+                    vm_incidencia.resolverIncidencia(incidencia);
+                    cargarIncidencias();
+
+
+                }
+            }
+        }
+
+        
         #endregion
 
         #region Comandos
@@ -450,6 +472,8 @@ namespace PROYECTO_EV2_ALB.View
                 e.CanExecute = false;
             }
         }
+
+        
     }
     #endregion
 }

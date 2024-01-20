@@ -92,13 +92,27 @@
                     <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
                         <StackPanel Orientation="Vertical">
                             <TextBlock Text="ADMINISTRACIÓN DE INCIDENCIAS" FontSize="40" Margin="0 0 0 80" HorizontalAlignment="Center"/>
-                            <DataGrid x:Name="dgIncidencias"  AutoGenerateColumns="False" CanUserAddRows="False" Width="1000"  Height="300">
+                            <DataGrid x:Name="dgIncidencias"  AutoGenerateColumns="False" CanUserAddRows="False"
+                                      Width="1000" FontSize="25"
+                                      Height="300">
                                 <DataGrid.Effect>
                                     <DropShadowEffect/>
                                 </DataGrid.Effect>
                                 <DataGrid.Columns>
-                                    <DataGridTextColumn Header="Id" Binding="{Binding Id_incidencia}" Width="*"/>
-                                    <DataGridTextColumn Header="IdUsuario" Binding="{Binding Id_usuario}" Width="*"/>
+                                    <DataGridTextColumn Header="Id" Binding="{Binding Id_incidencia}" Width="*">
+                                        <DataGridTextColumn.ElementStyle>
+                                            <Style>
+                                                <Setter Property="TextBlock.TextAlignment" Value="Center" />
+                                            </Style>
+                                        </DataGridTextColumn.ElementStyle>
+                                    </DataGridTextColumn>
+                                    <DataGridTextColumn Header="IdUsuario" Binding="{Binding Id_usuario}" Width="*">
+                                        <DataGridTextColumn.ElementStyle>
+                                            <Style>
+                                                <Setter Property="TextBlock.TextAlignment" Value="Center" />
+                                            </Style>
+                                        </DataGridTextColumn.ElementStyle>
+                                    </DataGridTextColumn>
                                     <DataGridTextColumn Header="Descripción" Binding="{Binding Descripcion}" Width="*"/>
                                     <DataGridTextColumn Header="Fecha" Binding="{Binding Fecha_incidencia}" Width="*"/>
                                     <DataGridTextColumn Header="Resuelta" Binding="{Binding Resuelta}" Width="*"/>
@@ -107,7 +121,9 @@
                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                                 <Button x:Name="btnDetalles" Style="{StaticResource RoundedButtonStyle}"
                     FontSize="20" Width="200" Margin="0 20 20 0" Click="btnDetalles_Click" Command="Core:Comandos.DetallesIncidencia">Detalles</Button>
-                                <Button x:Name="btnResolver" Margin="0 20 20 0" FontSize="20" Command="Core:Comandos.ResolverIncidencia"  Style="{StaticResource RoundedButtonStyleExit}" Width="150">Resolver</Button>
+                                <Button x:Name="btnResolver" Margin="0 20 20 0" FontSize="20" Click="btnResolver_Click_1"
+                                        Command="Core:Comandos.ResolverIncidencia" 
+                                        Style="{StaticResource RoundedButtonStyleExit}" Width="150">Resolver</Button>
                             </StackPanel>
                         </StackPanel>
                     </Grid>
@@ -164,7 +180,7 @@
                         <StackPanel Orientation="Vertical">
                             <TextBlock Text="ADMINISTRACIÓN DE USUARIOS" FontSize="40" Margin="0 0 0 80" HorizontalAlignment="Center"/>
                             <DataGrid x:Name="dgUsuarios" AutoGenerateColumns="True"
-                                      IsReadOnly="True" CanUserAddRows="False" Width="1000"  Height="300" 
+                                      IsReadOnly="True" CanUserAddRows="False" Width="1000"  Height="300" FontSize="25"
                                       >
                                 <DataGrid.Effect>
                                     <DropShadowEffect/>

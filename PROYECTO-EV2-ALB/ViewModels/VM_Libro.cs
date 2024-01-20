@@ -94,7 +94,7 @@ namespace PROYECTO_EV2_ALB.ViewModels
         public void actualizarLista()
         {
             listaLibros = operacionesLibro.obtenerLibros();
-            CollectionChanged?.Invoke(this, new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Reset));
+           // CollectionChanged?.Invoke(this, new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Reset));
         }
 
         //Devolver lista de libros con InotiFyCollectionChanged

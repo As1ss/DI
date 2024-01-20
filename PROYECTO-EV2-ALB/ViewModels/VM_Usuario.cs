@@ -10,14 +10,9 @@ using System.Threading.Tasks;
 
 namespace PROYECTO_EV2_ALB.ViewModels
 {
-    public class VM_Usuario: INotifyPropertyChanged
+    public class VM_Usuario
     {
-        public event PropertyChangedEventHandler? PropertyChanged;
-
-        protected void OnPropertyChanged(string name)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
-        }
+       
 
        private Models.M_OperacionesUsuario operacionesUsuario ;
        private ObservableCollection<Models.M_Usuario> listaUsuarios;
@@ -25,7 +20,8 @@ namespace PROYECTO_EV2_ALB.ViewModels
         public VM_Usuario()
         {
             operacionesUsuario = new M_OperacionesUsuario();
-            // Puedes acceder directamente a la propiedad ListaUsuarios de M_OperacionesUsuario
+
+          
            actualizarLista();
         }
 
@@ -52,8 +48,23 @@ namespace PROYECTO_EV2_ALB.ViewModels
         public void actualizarLista()
         {
             listaUsuarios = operacionesUsuario.obtenerUsuarios();
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ListaUsuarios"));
+        
         }
+
+        public M_Usuario buscarUsuarioPorId(int id)
+        {
+           //Obtenemos el usuario por id para poder mostar el nombre en la incidencia
+            M_Usuario usuario = new M_Usuario();
+            foreach (M_Usuario usuario1 in listaUsuarios)
+            {
+                if (usuario1.Id_usuario == id)
+                {
+                    usuario = usuario1;
+                }
+            }
+            return usuario;
+        }
+
         public Boolean comprobarUsuario(string nombre, string contrasena)
         {
             Boolean encontrado = false;
@@ -126,7 +137,7 @@ namespace PROYECTO_EV2_ALB.ViewModels
             set
             {
                 listaUsuarios = value;
-                OnPropertyChanged("ListaUsuarios");
+               
             }
         }
     }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using PROYECTO_EV2_ALB.Models;
+using PROYECTO_EV2_ALB.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,10 +21,33 @@ namespace PROYECTO_EV2_ALB.View
     /// </summary>
     public partial class V_Incidencia : Window
     {
-        public V_Incidencia()
+        M_Incidencia incidencia;
+        VM_Usuario vm_usuario;
+        VM_Incidencia vm_incidencia;
+        public V_Incidencia(M_Incidencia incidencia)
         {
             InitializeComponent();
+            this.incidencia = incidencia;
+            vm_usuario = new VM_Usuario(); 
+            vm_incidencia = new VM_Incidencia();
+         
+            cargarCampos();
+
+           
         }
+
+
+        private void cargarCampos()
+        {
+          
+            M_Usuario usuario = vm_usuario.buscarUsuarioPorId(incidencia.Id_usuario);
+           
+            tbUsuario.Text = usuario.Nombre;
+            tbIncidencia.Text = Convert.ToString(incidencia.Id_incidencia);
+            tbIncidenciaUser.Text = incidencia.Descripcion;
+        }
+
+       
 
         private void btnVolver_Click(object sender, RoutedEventArgs e)
         {

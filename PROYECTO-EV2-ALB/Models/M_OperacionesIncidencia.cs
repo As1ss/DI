@@ -112,6 +112,45 @@ namespace PROYECTO_EV2_ALB.Models
                 Conexion.cerrarConexion();
             }
         }
+
+        public void resolverIncidencia(M_Incidencia incidenciaResuelta)
+        {
+            try
+            {
+                MySqlConnection? conexionBD = Conexion.obtenerConexionAbierta();
+                if (conexionBD == null)
+                {
+                    Console.WriteLine("Error en Conexion a BD");
+                }
+                else
+                {
+                    try
+                    {
+                        //Modificamos la Incidencia con el booleano a resuelta
+                        String consulta = "UPDATE incidencia SET resuelta = 1 WHERE id_incidencia = @id_incidencia";
+                        using var comando = new MySqlCommand(consulta, conexionBD);
+                        comando.Parameters.AddWithValue("@id_incidencia", incidenciaResuelta.Id_incidencia);
+                        comando.ExecuteNonQuery();
+                        Console.WriteLine("Incidencia resuelta");
+
+                    }
+                    catch (InvalidOperationException ex)
+                    {
+
+                        Console.WriteLine("Error: " + ex.Message);
+                    }
+                }
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine("Error: " + ex.Message);
+
+            }
+            finally
+            {
+                Conexion.cerrarConexion();
+            }
+        }
     }
 
 
