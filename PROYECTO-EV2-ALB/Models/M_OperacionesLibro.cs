@@ -107,5 +107,89 @@ namespace PROYECTO_EV2_ALB.Models
                 Conexion.cerrarConexion();  
             }
         }
+
+        
+        public void actualizarLibro(M_Libro libroNuevo)
+        {
+            try
+            {
+                // Obtener una conexión abierta a la BD
+                MySqlConnection? conexionBD = Conexion.obtenerConexionAbierta();
+
+                if (conexionBD == null)
+                {
+                    Console.WriteLine("Error en Conexion a BD");
+                }
+                else
+                {
+                    try
+                    {
+                        // comando a ejecutar en la BD
+                        String consulta = "UPDATE libro SET titulo=@titulo, autor=@autor, stock=@stock WHERE id_libro=@id_libro";
+                        using var comando = new MySqlCommand(consulta, conexionBD);
+                        comando.Parameters.AddWithValue("@titulo", libroNuevo.Titulo);
+                        comando.Parameters.AddWithValue("@autor", libroNuevo.Autor);
+                        comando.Parameters.AddWithValue("@stock", libroNuevo.Stock);
+                        comando.Parameters.AddWithValue("@id_libro", libroNuevo.Id_libro);
+                        comando.ExecuteNonQuery();
+                        
+                    }
+                    catch (InvalidOperationException ex)
+                    {
+                        Console.WriteLine("Error: " + ex.Message);
+                    }
+                }
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine("Error: " + ex.Message);
+            }
+            finally
+            {
+                // siempre se cierra la conexion
+                Conexion.cerrarConexion();
+            }
+        }
+
+        public void eliminarLibro(M_Libro libroEliminar)
+        {
+            try
+            {
+                // Obtener una conexión abierta a la BD
+                MySqlConnection? conexionBD = Conexion.obtenerConexionAbierta();
+
+                if (conexionBD == null)
+                {
+                    Console.WriteLine("Error en Conexion a BD");
+                }
+                else
+                {
+                    try
+                    {
+                        // comando a ejecutar en la BD
+                        String consulta = "DELETE FROM libro WHERE id_libro=@id_libro";
+                        using var comando = new MySqlCommand(consulta, conexionBD);
+                        comando.Parameters.AddWithValue("@id_libro", libroEliminar.Id_libro);
+                        comando.ExecuteNonQuery();
+                        
+                    }
+                    catch (InvalidOperationException ex)
+                    {
+                        Console.WriteLine("Error: " + ex.Message);
+                    }
+                }
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine("Error: " + ex.Message);
+            }
+            finally
+            {
+                // siempre se cierra la conexion
+                Conexion.cerrarConexion();
+            }   
+        }
     }
+
+   
 }

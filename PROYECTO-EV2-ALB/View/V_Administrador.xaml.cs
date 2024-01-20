@@ -27,6 +27,7 @@ namespace PROYECTO_EV2_ALB.View
         ObservableCollection<Models.M_Usuario> listaUsuarios;
         VM_Usuario vm_usuario;
         VM_Libro vm_libro;
+
         public V_Administrador()
         {
 
@@ -94,6 +95,50 @@ namespace PROYECTO_EV2_ALB.View
             this.Close();
         }
 
+
+        private void btnDetalles_Click(object sender, RoutedEventArgs e)
+        {
+            Window v_incidencia = new V_Incidencia();
+            v_incidencia.ShowDialog();
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            MessageBoxResult result = MessageBox.Show("¿Deseas cerrar sesión?", "Salir", MessageBoxButton.YesNo, MessageBoxImage.Question);
+
+            if (result == MessageBoxResult.No)
+            {
+                e.Cancel = true;
+            }
+            else
+            {
+                //Cerramos la ventana sin el evento close
+                this.Closing -= Window_Closing;
+
+            }
+        }
+        private void limpiarCampos()
+        {
+            tbxTitulo.Text = "";
+            tbxAutor.Text = "";
+            tbxStock.Text = "";
+        }
+
+
+
+        private Boolean verificarCamposLibro()
+        {
+            if (tbxTitulo.Text == "" || tbxAutor.Text == "" || tbxStock.Text == "")
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+        #region Navegación de pestañas
+
         private void bAdminUsers_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             // Cambia a un TabItem específico por referencia
@@ -118,41 +163,9 @@ namespace PROYECTO_EV2_ALB.View
         {
             this.Close();
         }
+        #endregion
 
-        private void btnDetalles_Click(object sender, RoutedEventArgs e)
-        {
-            Window v_incidencia = new V_Incidencia();
-            v_incidencia.ShowDialog();
-        }
-
-        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-            MessageBoxResult result = MessageBox.Show("¿Deseas cerrar sesión?", "Salir", MessageBoxButton.YesNo, MessageBoxImage.Question);
-
-            if (result == MessageBoxResult.No)
-            {
-                e.Cancel = true;
-            }
-            else
-            {
-                //Cerramos la ventana sin el evento close
-                this.Closing -= Window_Closing;
-
-            }
-        }
-
-      
-        private Boolean verificarCamposLibro()
-        {
-            if (tbxTitulo.Text == "" || tbxAutor.Text == "" || tbxStock.Text == "")
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
-        }
+        #region Botones eventos
 
         private void btnAgregar_Click(object sender, RoutedEventArgs e)
         {
@@ -183,6 +196,7 @@ namespace PROYECTO_EV2_ALB.View
                     vm_libro.insertarLibro(libroNuevo);
                     cargarLibros();
                     MessageBox.Show("Libro agregado correctamente", "Libro", MessageBoxButton.OK, MessageBoxImage.Information);
+                    limpiarCampos();
                     //dgLibros.Items.Refresh();
                 }
                 }
@@ -195,33 +209,73 @@ namespace PROYECTO_EV2_ALB.View
 
         private void btnModificar_Click(object sender, RoutedEventArgs e)
         {
-           //Comprobar que el libro existe en la base de datos
+           //Comprobar que el libro existe en la base de datos por id
 
-            //Si existe, modificarlo
-            MessageBoxResult result = MessageBox.Show("¿Estás seguro de que quieres modificar el libro?", "Modificar", MessageBoxButton.YesNo, MessageBoxImage.Question);
-            if (result == MessageBoxResult.Yes)
+            //Obtenemos el objeto seleccionado del datagrid
+             Models.M_Libro libroSeleccionado = dgLibros.SelectedItem as Models.M_Libro;
+            //Comprobar que el libro existen en la base de datos
+
+            int id = libroSeleccionado.Id_libro;
+
+           if(vm_libro.comprobarIdLibro(id))
             {
-                MessageBox.Show("Libro modificado correctamente", "Libro", MessageBoxButton.OK, MessageBoxImage.Information);
-            }
+                if (!vm_libro.comprobarStock(tbxStock.Text))
+                {
+                    MessageBox.Show("Stock no válido", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+                else
+                {
+                    Models.M_Libro libroNuevo = new Models.M_Libro();
+                    MessageBoxResult result = MessageBox.Show("¿Estás seguro de que quieres modificar el libro?", "Modificar", MessageBoxButton.YesNo, MessageBoxImage.Question);
+                    if (result == MessageBoxResult.Yes)
+                    {
 
-            //Si no existe, mostrar mensaje de error
-            // MessageBox.Show("El libro no existe", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                        libroNuevo.Id_libro = id;
+                        libroNuevo.Titulo = tbxTitulo.Text;
+                        libroNuevo.Autor = tbxAutor.Text;
+                        libroNuevo.Stock = Convert.ToInt32(tbxStock.Text);
+                        vm_libro.actualizarLibro(libroNuevo);
+                        cargarLibros();
+                        MessageBox.Show("Libro modificado correctamente", "Libro", MessageBoxButton.OK, MessageBoxImage.Information);
+                        limpiarCampos();
+                        //dgLibros.Items.Refresh();
+                    }
+                }
+            }
+           else
+            {
+                //Si no existe, mostrar mensaje de error
+                MessageBox.Show("El libro no existe", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            //Si existe, modificarlo
+            //MessageBox.Show("Libro modificado correctamente", "Libro", MessageBoxButton.OK, MessageBoxImage.Information
         }
+    
 
         private void btnEliminar_Click(object sender, RoutedEventArgs e)
         {
             //Comprobar que el libro existe en la base de datos
-
-            //Si existe, eliminarlo
-            MessageBoxResult result = MessageBox.Show("¿Estás seguro de que quieres eliminar el libro?", "Eliminar", MessageBoxButton.YesNo, MessageBoxImage.Question);
-            if(result == MessageBoxResult.Yes)
+            //Obtenemos el objeto seleccionado del datagrid
+            Models.M_Libro libroSeleccionado = dgLibros.SelectedItem as Models.M_Libro;
+            //Comprobar que el libro existen en la base de datos
+            if (vm_libro.comprobarIdLibro(libroSeleccionado.Id_libro))
             {
-                MessageBox.Show("Libro eliminado correctamente", "Libro", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBoxResult result = MessageBox.Show("¿Estás seguro de que quieres eliminar el libro?", "Eliminar", MessageBoxButton.YesNo, MessageBoxImage.Question);
+                if (result == MessageBoxResult.Yes)
+                {
+                    MessageBox.Show("Libro eliminado correctamente", "Libro", MessageBoxButton.OK, MessageBoxImage.Information);
+                    vm_libro.eliminarLibro(libroSeleccionado);
+                    cargarLibros();
+                    //dgLibros.Items.Refresh();
+                    limpiarCampos();
+                }
+               
             }
-          
+            else
+            {
+                MessageBox.Show("El libro no existe", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
 
-            //Si no existe, mostrar mensaje de error
-           // MessageBox.Show("El libro no existe", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
         }
 
         private void btnUnBlock_Click(object sender, RoutedEventArgs e)
@@ -279,6 +333,7 @@ namespace PROYECTO_EV2_ALB.View
                 }
             }
         }
+        #endregion
 
         #region Comandos
 
@@ -323,10 +378,6 @@ namespace PROYECTO_EV2_ALB.View
 
         }
 
-        private void Modificar_Executed(object sender, ExecutedRoutedEventArgs e)
-        {
-            btnModificar_Click(sender, e);
-        }
 
         private void Eliminar_CanExecute(object sender, CanExecuteRoutedEventArgs e)
         {

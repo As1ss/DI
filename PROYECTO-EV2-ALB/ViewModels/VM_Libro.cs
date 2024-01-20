@@ -36,6 +36,20 @@ namespace PROYECTO_EV2_ALB.ViewModels
             return encontrado;
         }
 
+        public Boolean comprobarIdLibro(int id)
+        {
+            Boolean encontrado = false;
+            foreach (M_Libro libro in listaLibros)
+            {
+                if (libro.Id_libro == id)
+                {
+                    encontrado = true;
+                }
+            }
+            return encontrado;
+            
+        }
+
         public void insertarLibro(M_Libro libroNuevo)
         {
             operacionesLibro.insertarLibro(libroNuevo);
@@ -68,7 +82,14 @@ namespace PROYECTO_EV2_ALB.ViewModels
             return correcto;
         }
         
-     
+        public void eliminarLibro(M_Libro libro)
+        {
+            operacionesLibro.eliminarLibro(libro);
+        }
+        public void actualizarLibro(M_Libro libro)
+        {
+            operacionesLibro.actualizarLibro(libro);
+        }
 
         public void actualizarLista()
         {
