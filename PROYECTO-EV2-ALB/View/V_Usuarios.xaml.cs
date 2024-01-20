@@ -55,7 +55,11 @@ namespace PROYECTO_EV2_ALB.View
             tcUser.SelectedItem = tiBooks;
         }
 
-        
+        private void limpiarCampos()
+        {
+           tbxIncidencia.Text = ""; 
+        }
+
 
         private void bIncidencias_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
@@ -143,6 +147,8 @@ namespace PROYECTO_EV2_ALB.View
 
                 vm_incidencia.insertarIncidencia(incidencia);
                 MessageBox.Show("Incidencia enviada correctamente", "Incidencia", MessageBoxButton.OK, MessageBoxImage.Information);
+
+                limpiarCampos();
                
             }
         }
