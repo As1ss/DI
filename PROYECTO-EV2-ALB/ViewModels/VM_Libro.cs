@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace PROYECTO_EV2_ALB.ViewModels
 {
-    public class VM_Libro:INotifyCollectionChanged
+    public class VM_Libro
     {
         private Models.M_OperacionesLibro operacionesLibro;
         private ObservableCollection<M_Libro> listaLibros;
@@ -17,11 +17,11 @@ namespace PROYECTO_EV2_ALB.ViewModels
         public VM_Libro()
         {
             operacionesLibro = new M_OperacionesLibro();
-            listaLibros = operacionesLibro.obtenerLibros();
+             actualizarLista();
 
         }
 
-        public event NotifyCollectionChangedEventHandler? CollectionChanged;
+      
 
         public Boolean existeLibro(string titulo)
         {
@@ -102,10 +102,12 @@ namespace PROYECTO_EV2_ALB.ViewModels
         public void actualizarLibro(M_Libro libro)
         {
             operacionesLibro.actualizarLibro(libro);
+         
         }
 
         public void actualizarLista()
         {
+            
             listaLibros = operacionesLibro.obtenerLibros();
           
         }

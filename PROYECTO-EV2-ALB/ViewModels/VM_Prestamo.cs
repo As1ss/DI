@@ -28,12 +28,7 @@ namespace PROYECTO_EV2_ALB.ViewModels
         {
 
             listaPrestamos = operacionesPrestamo.obtenerPrestamos();
-            for (int i = 0; i < listaPrestamos.Count; i++)
-            {
-                //Mostrar el contenido de la lista
-
-                MessageBox.Show(listaPrestamos[i].Libro.Titulo);
-            }
+           
         }  
         
         public void insertarPrestamo(Models.M_Prestamo prestamo)

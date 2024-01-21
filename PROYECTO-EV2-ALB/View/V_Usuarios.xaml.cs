@@ -26,7 +26,7 @@ namespace PROYECTO_EV2_ALB.View
         private VM_Libro vm_libro;
         private VM_Prestamo vm_prestamo;
         private VM_Incidencia vm_incidencia;
-       
+        private ObservableCollection<M_Prestamo> listaPrestamos;
         private M_Usuario usuarioSesion;
 
 
@@ -36,9 +36,12 @@ namespace PROYECTO_EV2_ALB.View
             vm_libro = new VM_Libro();
             vm_incidencia = new VM_Incidencia();
             vm_prestamo = new VM_Prestamo();
+            listaPrestamos = new ObservableCollection<M_Prestamo>();
+          
             this.usuarioSesion = usuarioSesion;
+
           
-            actualizarLista();
+            actualizarListas();
 
 
            
@@ -46,20 +49,32 @@ namespace PROYECTO_EV2_ALB.View
            
         }
 
-       public void actualizarLista()
+        public void actualizarListas()
         {
-            
+            actualizarLibros();
+
+            actualizarPrestamos();
+        }
+        public void actualizarLibros()
+        {
+           vm_libro.ListaLibros.Clear();
+           vm_libro.actualizarLista();
             listBoxBooks.ItemsSource = vm_libro.ListaLibros;
-
-            listPrestamos.ItemsSource = vm_prestamo.ListaPrestamos;
-            
-           
-
-           
-
-          
         }
 
+        public void actualizarPrestamos()
+        {
+            listaPrestamos.Clear();
+            vm_prestamo.actualizarLista();
+            foreach (var prestamo in vm_prestamo.ListaPrestamos)
+            {
+                if (prestamo.Usuario.Id_usuario == usuarioSesion.Id_usuario)
+                {
+                    listaPrestamos.Add(prestamo);
+                }
+            }
+            listPrestamos.ItemsSource = listaPrestamos;
+        }
         private void bQueryBooks_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             tcUser.SelectedItem = tiBooks;
@@ -175,12 +190,15 @@ namespace PROYECTO_EV2_ALB.View
 
                     if (libro.Stock > 0)
                 {
+                    libro.Stock--;
+                    vm_libro.actualizarLibro(libro);
+
                     prestamo.Usuario= usuarioSesion;
                     prestamo.Libro = libro;
                     prestamo.Fecha_prestamo = DateTime.Now;
                     prestamo.Fecha_devolucion = DateTime.Now.AddDays(30);
                     vm_prestamo.insertarPrestamo(prestamo);
-                    actualizarLista();
+                    actualizarListas();
                    
 
                         MessageBox.Show("Préstamo realizado correctamente", "Préstamo", MessageBoxButton.OK, MessageBoxImage.Information);
