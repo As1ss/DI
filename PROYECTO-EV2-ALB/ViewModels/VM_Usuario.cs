@@ -51,7 +51,7 @@ namespace PROYECTO_EV2_ALB.ViewModels
         
         }
 
-        public M_Usuario buscarUsuarioPorId(int id)
+        public M_Usuario obtenerUsuarioId(int id)
         {
            //Obtenemos el usuario por id para poder mostar el nombre en la incidencia
             M_Usuario usuario = new M_Usuario();

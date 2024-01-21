@@ -13,8 +13,8 @@
           Executed="EjecutarAceptar" CanExecute="PuedoAceptar"
           />
         <CommandBinding x:Name="EnviarIncidencia" Command="Core:Comandos.EnviarIncidencia" CanExecute="EnviarIncidencia_CanExecute"/>
-        <CommandBinding x:Name="PedirLibro" Command="Core:Comandos.PedirLibro" CanExecute="PedirLibro_CanExecute" Executed="PedirLibro_Executed"/>
-        <CommandBinding x:Name="DevolverLibro" Command="Core:Comandos.DevolverLibro" CanExecute="DevolverLibro_CanExecute" Executed="DevolverLibro_Executed"/>
+        <CommandBinding x:Name="PedirLibro" Command="Core:Comandos.PedirLibro" CanExecute="PedirLibro_CanExecute" />
+        <CommandBinding x:Name="DevolverLibro" Command="Core:Comandos.DevolverLibro" CanExecute="DevolverLibro_CanExecute" />
         
     </Window.CommandBindings>
     <DockPanel>
@@ -137,9 +137,9 @@ Foreground="White" />
                                     <DataTemplate>
                                         <StackPanel Orientation="Horizontal">
 
-                                            <TextBlock Text="{Binding Titulo, StringFormat='Titulo: {0}'}" Width="200" Margin="60 0 0 0" FontSize="20" />
-                                            <TextBlock Text="{Binding Autor, StringFormat='Autor: {0}'}" Width="200" Margin="120 0 0 0" FontSize="20"/>
-                                            <TextBlock Text="{Binding Stock , StringFormat='Stock: {0}'}"  Width="200" Margin="120 0 0 0" FontSize="20"/>
+                                            <TextBlock Text="{Binding Titulo, StringFormat='Titulo: {0}'}"  Margin="5" FontSize="20" />
+                                            <TextBlock Text="{Binding Autor, StringFormat='Autor: {0}'}"  Margin="5" FontSize="20"/>
+                                            <TextBlock Text="{Binding Stock , StringFormat='Stock: {0}'}"  Margin="5" FontSize="20"/>
                                             <!-- Agrega más TextBlocks u otros controles según tus necesidades -->
                                         </StackPanel>
                                     </DataTemplate>
@@ -156,24 +156,24 @@ Foreground="White" />
                     <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
                         <StackPanel Orientation="Vertical">
                             <TextBlock Text="PRÉSTAMOS" FontSize="40" Margin="0 0 0 80" HorizontalAlignment="Center"/>
-                            <ListBox Name="listPrestamos" ScrollViewer.VerticalScrollBarVisibility="Auto" Height="200" HorizontalAlignment="Stretch"
-              Width="1000" d:ItemsSource="{d:SampleData ItemCount=5}">
+                            <ListBox Name="listPrestamos" ScrollViewer.VerticalScrollBarVisibility="Auto" Height="200" 
+         HorizontalAlignment="Stretch" Width="1000" >
                                 <ListBox.Effect>
                                     <DropShadowEffect/>
                                 </ListBox.Effect>
-                                <!-- Aquí puedes definir el estilo del ListBoxItem si lo necesitas -->
                                 <ListBox.ItemTemplate>
                                     <DataTemplate>
                                         <StackPanel Orientation="Horizontal">
-
-                                            <TextBlock Text="{Binding Titulo, StringFormat='Titulo: {0}'}" Margin="60 0 0 0" />
-                                            <TextBlock Text="{Binding Autor, StringFormat='Autor: {0}'}" Margin="120 0 0 0"/>
-                                            <TextBlock Text="{Binding Stock , StringFormat='Stock: {0}'}"  Margin="120 0 0 0"/>
-                                            <!-- Agrega más TextBlocks u otros controles según tus necesidades -->
+                                            <TextBlock Text="{Binding Path=Libro.Titulo, StringFormat='Libro: {0}'}" Margin="5"/>
+                                            <TextBlock Text="{Binding Path=Fecha_prestamo, StringFormat='Fecha Préstamo: {0:yyyy-MM-dd}'}" Margin="5"/>
+                                            <TextBlock Text="{Binding Path=Fecha_devolucion, StringFormat='Fecha Devolución: {0:yyyy-MM-dd}'}" Margin="5"/>
+                                            <!-- Puedes agregar más TextBlocks u otros controles según tus necesidades -->
                                         </StackPanel>
                                     </DataTemplate>
                                 </ListBox.ItemTemplate>
                             </ListBox>
+
+
                             <Button x:Name="btnDevolver" Click="btnDevolver_Click" Command="Core:Comandos.DevolverLibro"
                                     FontSize="20" HorizontalAlignment="Right" Margin="0 20 20 0" Width="100" Style="{StaticResource RoundedButtonStyle}">Devolver</Button>
                         </StackPanel>

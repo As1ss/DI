@@ -40,7 +40,7 @@ namespace PROYECTO_EV2_ALB.View
         private void cargarCampos()
         {
           
-            M_Usuario usuario = vm_usuario.buscarUsuarioPorId(incidencia.Id_usuario);
+            M_Usuario usuario = vm_usuario.obtenerUsuarioId(incidencia.Id_usuario);
            
             tbUsuario.Text = usuario.Nombre;
             tbIncidencia.Text = Convert.ToString(incidencia.Id_incidencia);

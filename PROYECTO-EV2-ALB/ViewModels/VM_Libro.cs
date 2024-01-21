@@ -36,6 +36,19 @@ namespace PROYECTO_EV2_ALB.ViewModels
             return encontrado;
         }
 
+        public M_Libro obtenerLibroId(int id)
+        {
+            M_Libro libro = new M_Libro();
+            foreach (M_Libro libro1 in listaLibros)
+            {
+                if (libro1.Id_libro == id)
+                {
+                    libro = libro1;
+                }
+            }
+            return libro;
+        }
+
         public Boolean comprobarIdLibro(int id)
         {
             Boolean encontrado = false;
@@ -94,7 +107,7 @@ namespace PROYECTO_EV2_ALB.ViewModels
         public void actualizarLista()
         {
             listaLibros = operacionesLibro.obtenerLibros();
-           // CollectionChanged?.Invoke(this, new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Reset));
+          
         }
 
         //Devolver lista de libros con InotiFyCollectionChanged

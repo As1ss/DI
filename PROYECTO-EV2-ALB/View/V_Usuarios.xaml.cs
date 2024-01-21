@@ -24,8 +24,9 @@ namespace PROYECTO_EV2_ALB.View
     {
       
         private VM_Libro vm_libro;
+        private VM_Prestamo vm_prestamo;
         private VM_Incidencia vm_incidencia;
-        private ObservableCollection<M_Libro> listaLibros;
+       
         private M_Usuario usuarioSesion;
 
 
@@ -34,6 +35,7 @@ namespace PROYECTO_EV2_ALB.View
             InitializeComponent();
             vm_libro = new VM_Libro();
             vm_incidencia = new VM_Incidencia();
+            vm_prestamo = new VM_Prestamo();
             this.usuarioSesion = usuarioSesion;
           
             actualizarLista();
@@ -46,8 +48,16 @@ namespace PROYECTO_EV2_ALB.View
 
        public void actualizarLista()
         {
-            listaLibros = vm_libro.ListaLibros;
-            listBoxBooks.ItemsSource = listaLibros;
+            
+            listBoxBooks.ItemsSource = vm_libro.ListaLibros;
+
+            listPrestamos.ItemsSource = vm_prestamo.ListaPrestamos;
+            
+           
+
+           
+
+          
         }
 
         private void bQueryBooks_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
@@ -160,8 +170,19 @@ namespace PROYECTO_EV2_ALB.View
                 if (listBoxBooks.SelectedItem != null)
             {
                 M_Libro libro = (M_Libro)listBoxBooks.SelectedItem;
+
+                M_Prestamo prestamo = new M_Prestamo();
+
                     if (libro.Stock > 0)
                 {
+                    prestamo.Usuario= usuarioSesion;
+                    prestamo.Libro = libro;
+                    prestamo.Fecha_prestamo = DateTime.Now;
+                    prestamo.Fecha_devolucion = DateTime.Now.AddDays(30);
+                    vm_prestamo.insertarPrestamo(prestamo);
+                    actualizarLista();
+                   
+
                         MessageBox.Show("Préstamo realizado correctamente", "Préstamo", MessageBoxButton.OK, MessageBoxImage.Information);
                     }
                     else
@@ -224,11 +245,7 @@ namespace PROYECTO_EV2_ALB.View
             }
         }
 
-        private void PedirLibro_Executed(object sender, ExecutedRoutedEventArgs e)
-        {
-            //Si agregamos el comando a la lista de comandos de la ventana, podemos ejecutarlo desde aquí
-          //  btnPedir_Click(sender, e);  
-        }
+       
 
         private void DevolverLibro_CanExecute(object sender, CanExecuteRoutedEventArgs e)
         {
