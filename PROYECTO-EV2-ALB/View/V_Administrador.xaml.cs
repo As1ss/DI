@@ -43,6 +43,8 @@ namespace PROYECTO_EV2_ALB.View
 
            
         }
+
+        //Metodo para completar los campos en los textbox al seleccionar una fila del datagrid
         private void DynamicDataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             // Verifica si hay una fila seleccionada
@@ -83,19 +85,7 @@ namespace PROYECTO_EV2_ALB.View
             dgLibros.ItemsSource = vm_libro.ListaLibros;
         }
 
-        private void btnLogout_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
-        }
-
-
-        private void btnDetalles_Click(object sender, RoutedEventArgs e)
-        {
-            Models.M_Incidencia incidenciaSeleccionada = dgIncidencias.SelectedItem as Models.M_Incidencia;
-         
-            Window v_incidencia = new V_Incidencia(incidenciaSeleccionada);
-            v_incidencia.ShowDialog();
-        }
+        
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
@@ -107,7 +97,7 @@ namespace PROYECTO_EV2_ALB.View
             }
             else
             {
-                //Cerramos la ventana sin el evento close
+                //Cerramos la ventana sin el evento close para que no salga el mensaje de confirmación
                 this.Closing -= Window_Closing;
 
             }
@@ -118,9 +108,6 @@ namespace PROYECTO_EV2_ALB.View
             tbxAutor.Text = "";
             tbxStock.Text = "";
         }
-
-
-
         private Boolean verificarCamposLibro()
         {
             if (tbxTitulo.Text == "" || tbxAutor.Text == "" || tbxStock.Text == "")
@@ -132,6 +119,8 @@ namespace PROYECTO_EV2_ALB.View
                 return true;
             }
         }
+
+
         #region Navegación de pestañas
 
         private void bAdminUsers_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
@@ -140,6 +129,19 @@ namespace PROYECTO_EV2_ALB.View
             tcAdministrador.SelectedItem = tiUsers;
 
 
+        }
+        private void btnLogout_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+
+        private void btnDetalles_Click(object sender, RoutedEventArgs e)
+        {
+            Models.M_Incidencia incidenciaSeleccionada = dgIncidencias.SelectedItem as Models.M_Incidencia;
+
+            Window v_incidencia = new V_Incidencia(incidenciaSeleccionada);
+            v_incidencia.ShowDialog();
         }
 
         private void bIncidencias_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
@@ -290,7 +292,7 @@ namespace PROYECTO_EV2_ALB.View
                         MessageBox.Show("Usuario desbloqueado correctamente", "Usuario", MessageBoxButton.OK, MessageBoxImage.Information);
                         vm_usuario.desbloquearUsuario(nombreUsuario);
                         cargarUsuarios ();
-                        //dgUsuarios.Items.Refresh();
+                      
 
                     }
                 }
@@ -311,7 +313,7 @@ namespace PROYECTO_EV2_ALB.View
             if(usuarioSeleccionado != null)
             {
                 string nombreUsuario = usuarioSeleccionado.Nombre;
-                if (!vm_usuario.comprobarBloqueado(nombreUsuario))
+                if (!vm_usuario.comprobarBloqueado(nombreUsuario) && usuarioSeleccionado.Tipo_usuario!="administrador")
                 {
                     MessageBoxResult result = MessageBox.Show("¿Estás seguro de que quieres bloquear al usuario?", "Bloquear", MessageBoxButton.YesNo, MessageBoxImage.Question);
                     if (result == MessageBoxResult.Yes)
@@ -319,8 +321,12 @@ namespace PROYECTO_EV2_ALB.View
                         MessageBox.Show("Usuario bloqueado correctamente", "Usuario", MessageBoxButton.OK, MessageBoxImage.Information);
                         vm_usuario.bloquearUsuario(nombreUsuario);
                         cargarUsuarios();
-                        //dgUsuarios.Items.Refresh();
+                       
                     }
+                }
+                else if (usuarioSeleccionado.Tipo_usuario == "administrador")
+                {
+                    MessageBox.Show("No se puede bloquear a un administrador", "Error", MessageBoxButton.OK, MessageBoxImage.Error);    
                 }
                 else
                 {
