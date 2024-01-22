@@ -47,48 +47,62 @@
                             <ColumnDefinition Width="385"/>
                         </Grid.ColumnDefinitions>
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="250"/>
-                            <RowDefinition Height="250"/>
+                            <RowDefinition Height="200"/>
+                            <RowDefinition Height="200"/>
+                            <RowDefinition Height="200"/>
                         </Grid.RowDefinitions>
                             <Border x:Name="bAdminUsers" Style="{StaticResource MouseOverBorder}" Grid.Column="0" Grid.Row="0" MouseLeftButtonUp="bAdminUsers_MouseLeftButtonUp" >
-                            <StackPanel x:Name="spUser"  Margin="0 -20 0 0"  HorizontalAlignment="Center" VerticalAlignment="Center" >
-                                <Image Source="../images/users.png" Height="200" HorizontalAlignment="Stretch"/>
-                                <TextBlock FontSize="30"  Margin="0 -20 0 0" Text="ADMINISTRAR USUARIOS" HorizontalAlignment="Center" Background="Transparent"/>
+                            <StackPanel x:Name="spUser"   HorizontalAlignment="Center" VerticalAlignment="Center" >
+                                <Image Source="../images/users.png" Height="150" HorizontalAlignment="Stretch"/>
+                                <TextBlock FontSize="30"   Text="ADMINISTRAR USUARIOS" HorizontalAlignment="Center" Background="Transparent"/>
                             </StackPanel>
                             </Border>
-                            <Border x:Name="bIncidencias" Style="{StaticResource MouseOverBorder}" Grid.Column="0" Grid.Row="1" MouseLeftButtonUp="bIncidencias_MouseLeftButtonUp">
-                            <StackPanel   Margin="0 -20 0 0" HorizontalAlignment="Center" VerticalAlignment="Center">
-                                    <Image Source="../images/reports.png" Height="200" HorizontalAlignment="Stretch"/>
-                                <TextBlock FontSize="30" Margin="0 -20 0 0" Text="ADMINISTRAR INCIDENCIAS" HorizontalAlignment="Center" Background="Transparent"/>
+                            <Border  x:Name="bIncidencias" Style="{StaticResource MouseOverBorder}" Grid.Column="0" Grid.Row="1" MouseLeftButtonUp="bIncidencias_MouseLeftButtonUp">
+                            <StackPanel    HorizontalAlignment="Center" VerticalAlignment="Center">
+                                    <Image Source="../images/reports.png" Height="150" HorizontalAlignment="Stretch"/>
+                                <TextBlock FontSize="30"  Text="ADMINISTRAR INCIDENCIAS" HorizontalAlignment="Center" Background="Transparent"/>
                             </StackPanel>
+                            </Border>
+                            <Border  x:Name="bPrestamos" Style="{StaticResource MouseOverBorder}" Grid.Column="1" Grid.Row="1" MouseLeftButtonUp="bPrestamos_MouseLeftButtonUp">
+                                <StackPanel    HorizontalAlignment="Center" VerticalAlignment="Center">
+                                    <Image Source="../images/prestamo.png" Height="150" HorizontalAlignment="Stretch"/>
+                                    <TextBlock FontSize="30"  Text="ADMINISTRAR PRÉSTAMOS" HorizontalAlignment="Center" Background="Transparent"/>
+                                </StackPanel>
                             </Border>
                             <Border x:Name="bAdminBooks" Style="{StaticResource MouseOverBorder}" Grid.Column="1" Grid.Row="0" MouseLeftButtonUp="bAdminBooks_MouseLeftButtonUp">
-                            <StackPanel  Margin="0 -20 0 0" HorizontalAlignment="Center" VerticalAlignment="Center">
-                                    <Image Source="../images/books.png" Height="200" HorizontalAlignment="Stretch"/>
-                                <TextBlock FontSize="30" Margin="0 -20 0 0" Text="ADMINISTRAR LIBROS" HorizontalAlignment="Center" Background="Transparent"/>
+                            <StackPanel   HorizontalAlignment="Center" VerticalAlignment="Center">
+                                    <Image Source="../images/books.png" Height="150" HorizontalAlignment="Stretch"/>
+                                <TextBlock FontSize="30"  Text="ADMINISTRAR LIBROS" HorizontalAlignment="Center" Background="Transparent"/>
                             </StackPanel>
                             </Border>
-                            <Border x:Name="bLogOut" Style="{StaticResource MouseOverBorder}" Grid.Column="1" Grid.Row="1" MouseLeftButtonUp="bLogOut_MouseLeftButtonUp">
-                                <StackPanel   Margin="0 -20 0 0" HorizontalAlignment="Center" VerticalAlignment="Center">
-                                    <Image Source="../images/cerrar_sesion.png"  Height="200" Margin="40 0 0 0" HorizontalAlignment="Stretch" RenderTransformOrigin="0.5,0.5" Width="288">
-                                    <Image.RenderTransform>
-                                        <TransformGroup>
-                                            <ScaleTransform ScaleX="-1"/>
-                                            <SkewTransform/>
-                                            <RotateTransform/>
-                                            <TranslateTransform/>
-                                        </TransformGroup>
-                                    </Image.RenderTransform>
-                                </Image>
-                                <TextBlock Margin="0 -20 0 0" FontSize="30" Text="CERRAR SESIÓN" HorizontalAlignment="Center" Background="Transparent"/>
-                            </StackPanel>
+                           
+                            <Border  x:Name="bInformes" Style="{StaticResource MouseOverBorder}" Grid.Column="0" Grid.Row="2" MouseLeftButtonUp="bInformes_MouseLeftButtonUp">
+                                <StackPanel    HorizontalAlignment="Center" VerticalAlignment="Center">
+                                    <Image Source="../images/informes.png" Height="150" HorizontalAlignment="Stretch"/>
+                                    <TextBlock FontSize="30"  Text="INFORMES" HorizontalAlignment="Center" Background="Transparent"/>
+                                </StackPanel>
+                            </Border>
+                            <Border x:Name="bLogOut" Style="{StaticResource MouseOverBorder}" Grid.Column="1" Grid.Row="2" MouseLeftButtonUp="bLogOut_MouseLeftButtonUp">
+                                <StackPanel    HorizontalAlignment="Center" VerticalAlignment="Center">
+                                    <Image Source="../images/cerrar_sesion.png"  Height="150" Margin="40 0 0 0" HorizontalAlignment="Stretch" RenderTransformOrigin="0.5,0.5" Width="288">
+                                        <Image.RenderTransform>
+                                            <TransformGroup>
+                                                <ScaleTransform ScaleX="-1"/>
+                                                <SkewTransform/>
+                                                <RotateTransform/>
+                                                <TranslateTransform/>
+                                            </TransformGroup>
+                                        </Image.RenderTransform>
+                                    </Image>
+                                    <TextBlock  FontSize="30" Text="CERRAR SESIÓN" HorizontalAlignment="Center" Background="Transparent"/>
+                                </StackPanel>
                             </Border>
                         </Grid>
                 </TabItem.Content>
                  
                 </TabItem>
 
-                <TabItem Name="tiIncidence" Header="Incidencias" FontSize="30" Style="{StaticResource BackgroundTabItems}">
+                <TabItem Name="tiIncidence" Header="Incidencias" FontSize="30" Style="{StaticResource BackgroundTabItems}" Height="45" VerticalAlignment="Bottom">
                     <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
                         <StackPanel Orientation="Vertical">
                             <TextBlock Text="ADMINISTRACIÓN DE INCIDENCIAS" FontSize="40" Margin="0 0 0 80" HorizontalAlignment="Center"/>
@@ -185,7 +199,7 @@
                                 <DataGrid.Effect>
                                     <DropShadowEffect/>
                                 </DataGrid.Effect>
-                             
+
                             </DataGrid>
                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                                 <Button x:Name="btnUnBlock" Style="{StaticResource RoundedButtonStyle}" Click="btnUnBlock_Click" Command="Core:Comandos.DesbloquearUsuario"
@@ -195,10 +209,14 @@
                             </StackPanel>
                         </StackPanel>
                     </Grid>
-
+                </TabItem>
+                <TabItem Name="tiInformes" Header="Informes" Style="{StaticResource BackgroundTabItems}" FontSize="30">
+                    
+                </TabItem>
+                <TabItem Name="tiPrestamos" Header="Préstamos" Style="{StaticResource BackgroundTabItems}" FontSize="30">
 
                 </TabItem>
-        </TabControl>
+            </TabControl>
         </Border>
         
     </DockPanel>

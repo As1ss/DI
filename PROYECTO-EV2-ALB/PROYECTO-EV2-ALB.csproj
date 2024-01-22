@@ -14,6 +14,7 @@
     <None Remove="images\books.png" />
     <None Remove="images\cerrar_sesion.png" />
     <None Remove="images\exitIcon.png" />
+    <None Remove="images\informes.png" />
     <None Remove="images\prestamo.png" />
     <None Remove="images\reports.png" />
     <None Remove="images\search_books.png" />
@@ -37,6 +38,9 @@
     </Resource>
     <Resource Include="images\exitIcon.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\informes.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="images\prestamo.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

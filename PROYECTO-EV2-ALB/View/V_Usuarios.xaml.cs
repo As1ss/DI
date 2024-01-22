@@ -251,13 +251,7 @@ namespace PROYECTO_EV2_ALB.View
 
         private void btnBuscar_Click(object sender, RoutedEventArgs e)
         {
-            if (tbxBuscar.Text == "")
-            {
-                //MessageBox.Show("No has escrito nada en el buscador", "Buscar", MessageBoxButton.OK, MessageBoxImage.Error);
-                actualizarLibros();
-            }
-            else
-            {
+           
                //Creamos una coleccion auxiliar para guardar los libros que coincidan con la busqueda
                ObservableCollection<M_Libro> aux = new ObservableCollection<M_Libro>();
                 foreach (var libro in vm_libro.ListaLibros)
@@ -274,7 +268,7 @@ namespace PROYECTO_EV2_ALB.View
                     MessageBox.Show("No se ha encontrado ningún libro", "Buscar", MessageBoxButton.OK, MessageBoxImage.Error);
                     actualizarLibros();
                 }
-            }
+            
         }
 
         private void EnviarIncidencia_CanExecute(object sender, CanExecuteRoutedEventArgs e)
@@ -326,8 +320,18 @@ namespace PROYECTO_EV2_ALB.View
 
         }
 
+        private void tbxBuscar_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
 
-
-
+            // Verifica si el texto está vacío
+            if (string.IsNullOrEmpty(textBox.Text))
+            {
+               actualizarLibros();
+            }
+           
+        }
     }
+    
 }
+

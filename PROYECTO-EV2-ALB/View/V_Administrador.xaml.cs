@@ -134,6 +134,15 @@ namespace PROYECTO_EV2_ALB.View
         {
             this.Close();
         }
+        private void bInformes_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            tcAdministrador.SelectedItem = tiInformes;
+        }
+
+        private void bPrestamos_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            tcAdministrador.SelectedItem = tiPrestamos;
+        }
 
 
         private void btnDetalles_Click(object sender, RoutedEventArgs e)
@@ -479,7 +488,7 @@ namespace PROYECTO_EV2_ALB.View
             }
         }
 
-        
+       
     }
     #endregion
 }
