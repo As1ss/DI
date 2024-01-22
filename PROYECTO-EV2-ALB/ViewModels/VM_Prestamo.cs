@@ -36,6 +36,10 @@ namespace PROYECTO_EV2_ALB.ViewModels
             operacionesPrestamo.actualizarPrestamo(prestamo);
             
         }
+        public void aplazarPrestamo(M_Prestamo prestamo)
+        {
+            operacionesPrestamo.aplazarPrestamo(prestamo);
+        }
         
         public void insertarPrestamo(Models.M_Prestamo prestamo)
         {

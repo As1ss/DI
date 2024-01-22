@@ -379,6 +379,22 @@ namespace PROYECTO_EV2_ALB.View
 
         private void btnAplazar_Click(object sender, RoutedEventArgs e)
         {
+            M_Prestamo prestamo = dgPrestamos.SelectedItem as M_Prestamo;
+            if (prestamo != null)
+            {
+               
+                MessageBoxResult result = MessageBox.Show("¿Desea aplazar el préstamo?", "Aplazar préstamo", MessageBoxButton.YesNo, MessageBoxImage.Question);
+                if (result == MessageBoxResult.Yes)
+                    {
+                   
+                    prestamo.Fecha_devolucion = prestamo.Fecha_devolucion.AddDays(30);
+                    vm_prestamo.aplazarPrestamo(prestamo);
+                    cargarPrestamos();
+
+                    MessageBox.Show("Préstamo aplazado correctamente", "Préstamo", MessageBoxButton.OK, MessageBoxImage.Information);
+                    }
+                
+            }
 
         }
 

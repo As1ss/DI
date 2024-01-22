@@ -153,6 +153,46 @@ namespace PROYECTO_EV2_ALB.Models
                 Core.Conexion.cerrarConexion();
             }
         }
+
+        public void aplazarPrestamo(M_Prestamo prestamo)
+        {
+            try
+            {
+                // Obtener una conexión abierta a la BD
+                MySqlConnection? conexionBD = Core.Conexion.obtenerConexionAbierta();
+
+                if (conexionBD == null)
+                {
+                    Console.WriteLine("Error en Conexion a BD");
+                }
+                else
+                {
+                    try
+                    {
+                        // comando a ejecutar en la BD
+                        String consulta = "UPDATE prestamo SET fecha_devolucion = @fecha_devolucion WHERE id_prestamo = @id_prestamo";
+                        using var comando = new MySqlCommand(consulta, conexionBD);
+                        comando.Parameters.AddWithValue("@id_prestamo", prestamo.Id_prestamo);
+                        comando.Parameters.AddWithValue("@fecha_devolucion", prestamo.Fecha_devolucion);
+                        comando.ExecuteNonQuery();
+
+                    }
+                    catch (InvalidOperationException ex)
+                    {
+                        Console.WriteLine("Error: " + ex.Message);
+                        MessageBox.Show("Error: " + ex.Message);
+                    }
+                }
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine("Error: " + ex.Message);
+            }
+            finally
+            {
+                Core.Conexion.cerrarConexion();
+            }
+        }
       
 
     }
