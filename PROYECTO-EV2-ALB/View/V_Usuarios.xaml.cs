@@ -253,11 +253,27 @@ namespace PROYECTO_EV2_ALB.View
         {
             if (tbxBuscar.Text == "")
             {
-                MessageBox.Show("No has escrito nada en el buscador", "Buscar", MessageBoxButton.OK, MessageBoxImage.Error);
+                //MessageBox.Show("No has escrito nada en el buscador", "Buscar", MessageBoxButton.OK, MessageBoxImage.Error);
+                actualizarLibros();
             }
             else
             {
-                MessageBox.Show("Libro encontrado", "Buscar", MessageBoxButton.OK, MessageBoxImage.Information);
+               //Creamos una coleccion auxiliar para guardar los libros que coincidan con la busqueda
+               ObservableCollection<M_Libro> aux = new ObservableCollection<M_Libro>();
+                foreach (var libro in vm_libro.ListaLibros)
+                {
+                    if (libro.Titulo.ToLower().Contains(tbxBuscar.Text.ToLower()))
+                    {
+                        aux.Add(libro);
+                    }
+                }
+                listBoxBooks.ItemsSource = aux;
+               
+               if(listBoxBooks.Items.Count == 0)
+                {
+                    MessageBox.Show("No se ha encontrado ningún libro", "Buscar", MessageBoxButton.OK, MessageBoxImage.Error);
+                    actualizarLibros();
+                }
             }
         }
 
