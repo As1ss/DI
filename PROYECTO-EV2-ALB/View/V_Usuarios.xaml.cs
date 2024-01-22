@@ -22,8 +22,9 @@ namespace PROYECTO_EV2_ALB.View
     /// </summary>
     public partial class V_Usuarios : Window
     {
-      
+
         private VM_Libro vm_libro;
+        private VM_Usuario vm_usuario;
         private VM_Prestamo vm_prestamo;
         private VM_Incidencia vm_incidencia;
         private ObservableCollection<M_Prestamo> listaPrestamos;
@@ -36,17 +37,18 @@ namespace PROYECTO_EV2_ALB.View
             vm_libro = new VM_Libro();
             vm_incidencia = new VM_Incidencia();
             vm_prestamo = new VM_Prestamo();
+            vm_usuario = new VM_Usuario();
             listaPrestamos = new ObservableCollection<M_Prestamo>();
-          
+
             this.usuarioSesion = usuarioSesion;
 
-          
+
             actualizarListas();
 
 
-           
 
-           
+
+
         }
 
         public void actualizarListas()
@@ -57,8 +59,8 @@ namespace PROYECTO_EV2_ALB.View
         }
         public void actualizarLibros()
         {
-           vm_libro.ListaLibros.Clear();
-           vm_libro.actualizarLista();
+            vm_libro.ListaLibros.Clear();
+            vm_libro.actualizarLista();
             listBoxBooks.ItemsSource = vm_libro.ListaLibros;
         }
 
@@ -66,12 +68,20 @@ namespace PROYECTO_EV2_ALB.View
         {
             listaPrestamos.Clear();
             vm_prestamo.actualizarLista();
+
+
             foreach (var prestamo in vm_prestamo.ListaPrestamos)
             {
-                if (prestamo.Usuario.Id_usuario == usuarioSesion.Id_usuario)
+                if (prestamo.Fecha_devolucion > DateTime.Now)
                 {
-                    listaPrestamos.Add(prestamo);
+
+
+                    if (prestamo.Usuario.Id_usuario == usuarioSesion.Id_usuario)
+                    {
+                        listaPrestamos.Add(prestamo);
+                    }
                 }
+
             }
             listPrestamos.ItemsSource = listaPrestamos;
         }
@@ -82,7 +92,7 @@ namespace PROYECTO_EV2_ALB.View
 
         private void limpiarCampos()
         {
-           tbxIncidencia.Text = ""; 
+            tbxIncidencia.Text = "";
         }
 
 
@@ -111,10 +121,10 @@ namespace PROYECTO_EV2_ALB.View
             if (tcUser.SelectedItem == tiIncidence)
             {
 
-                
+
                 btnEnviar_Click(sender, e);
             }
-            else if(tcUser.SelectedItem == tiPrestamos)
+            else if (tcUser.SelectedItem == tiPrestamos)
             {
                 btnPedir_Click(sender, e);
             }
@@ -122,9 +132,9 @@ namespace PROYECTO_EV2_ALB.View
 
         private void PuedoAceptar(object sender, CanExecuteRoutedEventArgs e)
         {
-            
-                e.CanExecute = true;
-          
+
+            e.CanExecute = true;
+
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
@@ -145,14 +155,22 @@ namespace PROYECTO_EV2_ALB.View
 
         private void btnDevolver_Click(object sender, RoutedEventArgs e)
         {
-            if (listPrestamos.SelectedItem == null)
+            MessageBoxResult result = MessageBox.Show("¿Deseas devolver el libro?", "Devolución", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            if (result == MessageBoxResult.Yes)
             {
-                MessageBox.Show("No has seleccionado ningún libro", "Préstamo", MessageBoxButton.OK, MessageBoxImage.Error);
+                //Igualamos la fecha de devolución a la fecha de devolucion del prestamo
+                M_Prestamo prestamo = (M_Prestamo)listPrestamos.SelectedItem;
+                M_Libro libro = prestamo.Libro;
+                libro.Stock++;
+                usuarioSesion.Prestamo_activo = false;
+                vm_usuario.actualizarUsuario(usuarioSesion);
+                vm_libro.actualizarLibro(libro);
+                vm_prestamo.actualizarPrestamo(prestamo);
+                actualizarListas();
+                MessageBox.Show("Libro devuelto correctamente", "Devolución", MessageBoxButton.OK, MessageBoxImage.Information);
             }
-            else
-            {
-                MessageBox.Show("Devolución realizada correctamente", "Préstamo", MessageBoxButton.OK, MessageBoxImage.Information);
-            }
+
+
         }
 
         private void btnEnviar_Click(object sender, RoutedEventArgs e)
@@ -160,7 +178,7 @@ namespace PROYECTO_EV2_ALB.View
             if (tbxIncidencia.Text == "")
             {
                 MessageBox.Show("No has escrito ninguna incidencia", "Incidencia", MessageBoxButton.OK, MessageBoxImage.Error);
-                
+
             }
             else
             {
@@ -174,53 +192,66 @@ namespace PROYECTO_EV2_ALB.View
                 MessageBox.Show("Incidencia enviada correctamente", "Incidencia", MessageBoxButton.OK, MessageBoxImage.Information);
 
                 limpiarCampos();
-               
+
             }
         }
 
         private void btnPedir_Click(object sender, RoutedEventArgs e)
         {
-            
-               //Comprobar si el stock es mayor que 0
-                if (listBoxBooks.SelectedItem != null)
-            {
-                M_Libro libro = (M_Libro)listBoxBooks.SelectedItem;
 
-                M_Prestamo prestamo = new M_Prestamo();
+            //Comprobar si el stock es mayor que 0
+            if (listBoxBooks.SelectedItem != null)
+            {
+                if (!usuarioSesion.Prestamo_activo)
+                {
+
+
+                    M_Libro libro = (M_Libro)listBoxBooks.SelectedItem;
+
+                    M_Prestamo prestamo = new M_Prestamo();
 
                     if (libro.Stock > 0)
-                {
-                    libro.Stock--;
-                    vm_libro.actualizarLibro(libro);
+                    {
+                        MessageBoxResult result = MessageBox.Show("¿Deseas pedir el libro?", "Préstamo", MessageBoxButton.YesNo, MessageBoxImage.Question);
+                        if (result == MessageBoxResult.Yes)
+                        {
+                            libro.Stock--;
+                            vm_libro.actualizarLibro(libro);
+                            usuarioSesion.Prestamo_activo = true;
+                            vm_usuario.actualizarUsuario(usuarioSesion);
+                            prestamo.Usuario = usuarioSesion;
+                            prestamo.Libro = libro;
+                            prestamo.Fecha_prestamo = DateTime.Now;
+                            prestamo.Fecha_devolucion = DateTime.Now.AddDays(30);
+                            vm_prestamo.insertarPrestamo(prestamo);
+                            actualizarListas();
 
-                    prestamo.Usuario= usuarioSesion;
-                    prestamo.Libro = libro;
-                    prestamo.Fecha_prestamo = DateTime.Now;
-                    prestamo.Fecha_devolucion = DateTime.Now.AddDays(30);
-                    vm_prestamo.insertarPrestamo(prestamo);
-                    actualizarListas();
-                   
 
-                        MessageBox.Show("Préstamo realizado correctamente", "Préstamo", MessageBoxButton.OK, MessageBoxImage.Information);
+                            MessageBox.Show("Préstamo realizado correctamente", "Préstamo", MessageBoxButton.OK, MessageBoxImage.Information);
+                        }
+
                     }
                     else
-                {
+                    {
                         MessageBox.Show("No hay stock disponible", "Préstamo", MessageBoxButton.OK, MessageBoxImage.Error);
                     }
                 }
                 else
-            {
-                    MessageBox.Show("No has seleccionado ningún libro", "Préstamo", MessageBoxButton.OK, MessageBoxImage.Error);
+                {
+                    MessageBox.Show("Ya tienes un préstamo activo", "Préstamo", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
-              
-            
-        }
+            }
+            else
+            {
+                MessageBox.Show("No has seleccionado ningún libro", "Préstamo", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
 
-      
+
+        }
 
         private void btnBuscar_Click(object sender, RoutedEventArgs e)
         {
-            if(tbxBuscar.Text == "")
+            if (tbxBuscar.Text == "")
             {
                 MessageBox.Show("No has escrito nada en el buscador", "Buscar", MessageBoxButton.OK, MessageBoxImage.Error);
             }
@@ -232,7 +263,7 @@ namespace PROYECTO_EV2_ALB.View
 
         private void EnviarIncidencia_CanExecute(object sender, CanExecuteRoutedEventArgs e)
         {
-            if(tcUser.SelectedItem == tiIncidence)
+            if (tcUser.SelectedItem == tiIncidence)
             {
                 if (tbxIncidencia.Text == "")
                 {
@@ -243,14 +274,12 @@ namespace PROYECTO_EV2_ALB.View
                     e.CanExecute = true;
                 }
             }
-           
-        }
 
-       
+        }
 
         private void PedirLibro_CanExecute(object sender, CanExecuteRoutedEventArgs e)
         {
-            if(tcUser.SelectedItem == tiBooks)
+            if (tcUser.SelectedItem == tiBooks)
             {
                 if (listBoxBooks.SelectedItem == null)
                 {
@@ -263,13 +292,13 @@ namespace PROYECTO_EV2_ALB.View
             }
         }
 
-       
-
         private void DevolverLibro_CanExecute(object sender, CanExecuteRoutedEventArgs e)
         {
+
+
             if (tcUser.SelectedItem == tiPrestamos)
             {
-                if (listPrestamos.SelectedItem==null)
+                if (listPrestamos.SelectedItem == null)
                 {
                     e.CanExecute = false;
                 }
@@ -278,13 +307,11 @@ namespace PROYECTO_EV2_ALB.View
                     e.CanExecute = true;
                 }
             }
+
         }
 
-        private void DevolverLibro_Executed(object sender, ExecutedRoutedEventArgs e)
-        {
-           // btnDevolver_Click(sender, e);
-        }
 
-       
+
+
     }
 }

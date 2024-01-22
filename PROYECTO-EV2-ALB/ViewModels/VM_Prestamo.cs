@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PROYECTO_EV2_ALB.Models;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -29,7 +30,12 @@ namespace PROYECTO_EV2_ALB.ViewModels
 
             listaPrestamos = operacionesPrestamo.obtenerPrestamos();
            
-        }  
+        } 
+        public void actualizarPrestamo(M_Prestamo prestamo)
+        {
+            operacionesPrestamo.actualizarPrestamo(prestamo);
+            
+        }
         
         public void insertarPrestamo(Models.M_Prestamo prestamo)
         {

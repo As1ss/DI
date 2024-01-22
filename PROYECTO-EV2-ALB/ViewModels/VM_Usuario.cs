@@ -65,6 +65,11 @@ namespace PROYECTO_EV2_ALB.ViewModels
             return usuario;
         }
 
+        public void actualizarUsuario(M_Usuario usuario)
+        {
+            operacionesUsuario.actualizarUsuario(usuario);
+        }
+
         public Boolean comprobarUsuario(string nombre, string contrasena)
         {
             Boolean encontrado = false;

@@ -54,9 +54,9 @@ namespace PROYECTO_EV2_ALB.Models
                             prestamo.Usuario.Email = reader.GetString(7);
                             prestamo.Usuario.Tipo_usuario = reader.GetString(8);
                             prestamo.Usuario.Bloqueado = reader.GetBoolean(9);
-                            prestamo.Id_prestamo = reader.GetInt32(10);
-                            prestamo.Fecha_prestamo = reader.GetDateTime(13);
-                            prestamo.Fecha_devolucion = reader.GetDateTime(14);
+                            prestamo.Id_prestamo = reader.GetInt32(11);
+                            prestamo.Fecha_prestamo = reader.GetDateTime(14);
+                            prestamo.Fecha_devolucion = reader.GetDateTime(15);
                             listaPrestamos.Add(prestamo);
                         }
 
@@ -110,8 +110,49 @@ namespace PROYECTO_EV2_ALB.Models
             {
                 Console.WriteLine("Error: " + ex.Message);
             }
+            finally
+            {
+                Core.Conexion.cerrarConexion();
+            }
         }
+        public void actualizarPrestamo(M_Prestamo prestamo)
+        {
+            try
+            {
+                // Obtener una conexión abierta a la BD
+                MySqlConnection? conexionBD = Core.Conexion.obtenerConexionAbierta();
 
+                if (conexionBD == null)
+                {
+                    Console.WriteLine("Error en Conexion a BD");
+                }
+                else
+                {
+                    try
+                    {
+                        // comando a ejecutar en la BD
+                        String consulta = "UPDATE prestamo SET fecha_devolucion = NOW() WHERE id_prestamo = @id_prestamo";
+                        using var comando = new MySqlCommand(consulta, conexionBD);
+                        comando.Parameters.AddWithValue("@id_prestamo", prestamo.Id_prestamo);
+                        comando.ExecuteNonQuery();
+                      
+                    }
+                    catch (InvalidOperationException ex)
+                    {
+                        Console.WriteLine("Error: " + ex.Message);
+                        MessageBox.Show("Error: " + ex.Message);
+                    }
+                }
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine("Error: " + ex.Message);
+            }
+            finally
+            {
+                Core.Conexion.cerrarConexion();
+            }
+        }
       
 
     }

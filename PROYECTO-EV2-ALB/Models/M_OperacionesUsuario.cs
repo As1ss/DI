@@ -98,6 +98,7 @@ namespace PROYECTO_EV2_ALB.Models
                             usuario.Email =reader.GetString(3);
                             usuario.Tipo_usuario = reader.GetString(4);
                             usuario.Bloqueado = reader.GetBoolean(5);
+                            usuario.Prestamo_activo = reader.GetBoolean(6);
                             
                             listaUsuarios.Add(usuario);
 
@@ -185,6 +186,51 @@ namespace PROYECTO_EV2_ALB.Models
                         comando.Parameters.AddWithValue("@nombre", nombre);
                         comando.ExecuteNonQuery();
                         Console.WriteLine("Usuario bloqueado");
+                    }
+                    catch (InvalidOperationException ex)
+                    {
+                        Console.WriteLine("Error: " + ex.Message);
+                    }
+                }
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine("Error: " + ex.Message);
+            }
+            finally
+            {
+                // siempre se cierra la conexion
+                Conexion.cerrarConexion();
+            }
+        }
+
+        public void actualizarUsuario(M_Usuario usuario)
+        {
+            try
+            {
+                // Obtener una conexión abierta a la BD
+                MySqlConnection? conexionBD = Conexion.obtenerConexionAbierta();
+
+                if (conexionBD == null)
+                {
+                    Console.WriteLine("Error en Conexion a BD");
+                }
+                else
+                {
+                    try
+                    {
+                        // comando a ejecutar en la BD
+                        String consulta = "UPDATE usuario SET prestamo_activo = @prestamo_activo WHERE id_usuario = @id_usuario";
+                        using var comando = new MySqlCommand(consulta, conexionBD);
+                        comando.Parameters.AddWithValue("@id_usuario", usuario.Id_usuario);
+                        comando.Parameters.AddWithValue("@nombre", usuario.Nombre);
+                        comando.Parameters.AddWithValue("@contrasena", usuario.Contrasena);
+                        comando.Parameters.AddWithValue("@email",usuario.Email);
+                        comando.Parameters.AddWithValue("@tipo_usuario", usuario.Tipo_usuario);
+                        comando.Parameters.AddWithValue("@bloqueado", usuario.Bloqueado);
+                        comando.Parameters.AddWithValue("@prestamo_activo", usuario.Prestamo_activo);
+                        comando.ExecuteNonQuery();
+                        Console.WriteLine("Usuario actualizado");
                     }
                     catch (InvalidOperationException ex)
                     {

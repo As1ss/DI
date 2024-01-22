@@ -64,6 +64,8 @@ namespace PROYECTO_EV2_ALB.View
                     usuarioNuevo.Contrasena = tbxPassword.Password;
                     usuarioNuevo.Email = tbEmail.Text;
                     usuarioNuevo.Tipo_usuario = "estandar";
+                    usuarioNuevo.Bloqueado = false;
+                    usuarioNuevo.Prestamo_activo = false;
 
 
 

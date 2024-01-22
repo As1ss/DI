@@ -18,13 +18,14 @@ namespace PROYECTO_EV2_ALB.Models
         private string email;
         private string tipo_usuario;
         private Boolean bloqueado;
+        private Boolean prestamo_activo;
 
         public M_Usuario()
         {
 
         }
 
-        public M_Usuario(int id_usuario, string nombre, string contrasena, string tipo_usuario, string email, bool bloqueado)
+        public M_Usuario(int id_usuario, string nombre, string contrasena, string tipo_usuario, string email, bool bloqueado,bool prestamo_activo)
         {
             this.id_usuario = id_usuario;
             this.nombre = nombre;
@@ -32,6 +33,7 @@ namespace PROYECTO_EV2_ALB.Models
             this.tipo_usuario = tipo_usuario;
             this.email = email;
             this.bloqueado = bloqueado;
+            this.prestamo_activo = prestamo_activo;
         }
        
 
@@ -41,6 +43,7 @@ namespace PROYECTO_EV2_ALB.Models
         public string Email { get => email; set => email = value; }
         public string Tipo_usuario { get => tipo_usuario; set => tipo_usuario = value; }
         public bool Bloqueado { get => bloqueado; set => bloqueado = value;}
+        public bool Prestamo_activo { get => prestamo_activo; set => prestamo_activo = value; }
 
       
     }
