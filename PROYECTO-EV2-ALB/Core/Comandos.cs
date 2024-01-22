@@ -60,6 +60,10 @@ namespace PROYECTO_EV2_ALB.Core
         {
                 new KeyGesture(Key.D,ModifierKeys.Alt)
         });
+        public static readonly RoutedUICommand AplazarPrestamo = new RoutedUICommand("AplazarPrestamo", "AplazarPrestamo", typeof(Comandos), new InputGestureCollection()
+        {
+                new KeyGesture(Key.D,ModifierKeys.Alt)
+        });
 
 
 

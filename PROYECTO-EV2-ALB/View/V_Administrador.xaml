@@ -16,6 +16,7 @@
         <CommandBinding x:Name="ResolverIncidencia" Command="Core:Comandos.ResolverIncidencia" CanExecute="ResolverIncidencia_CanExecute"/>
         <CommandBinding x:Name="DesbloquearUsuario" Command="Core:Comandos.DesbloquearUsuario" CanExecute="DesbloquearUsuario_CanExecute"/>
         <CommandBinding x:Name="BloquearUsuario" Command="Core:Comandos.BloquearUsuario" CanExecute="BloquearUsuario_CanExecute"/>
+        <CommandBinding x:Name="AplazarPrestamo" Command="Core:Comandos.AplazarPrestamo" CanExecute="AplazarPrestamo_CanExecute"/>
     </Window.CommandBindings>
    
     <DockPanel>
@@ -214,6 +215,38 @@
                     
                 </TabItem>
                 <TabItem Name="tiPrestamos" Header="Préstamos" Style="{StaticResource BackgroundTabItems}" FontSize="30">
+                    <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock Text="ADMINISTRACIÓN DE PRÉSTAMOS" FontSize="40" Margin="0 0 0 80" HorizontalAlignment="Center"/>
+                            <DataGrid x:Name="dgPrestamos" AutoGenerateColumns="False"
+                            IsReadOnly="True" CanUserAddRows="False" Width="1000" Height="300" FontSize="25">
+                                <DataGrid.Columns>
+                                    <!-- Define las columnas que deseas mostrar -->
+                                    <DataGridTextColumn Header="ID Prestamo" Binding="{Binding Id_prestamo}" >
+                                        <DataGridTextColumn.ElementStyle>
+                                            <Style>
+                                                <Setter Property="TextBlock.TextAlignment" Value="Center" />
+                                            </Style>
+                                        </DataGridTextColumn.ElementStyle>
+                                    </DataGridTextColumn>
+                                    <DataGridTextColumn Header="Libro" Binding="{Binding Libro.Titulo}" />
+                                    <DataGridTextColumn Header="Usuario" Binding="{Binding Usuario.Nombre}"/>
+                                    <DataGridTextColumn Header="Fecha de Prestamo" Binding="{Binding Fecha_prestamo}" Width="*"/>
+                                    <DataGridTextColumn Header="Fecha de Devolucion" Binding="{Binding Fecha_devolucion}" Width="*"/>
+                                    <!-- Puedes agregar más columnas según tus necesidades -->
+                                </DataGrid.Columns>
+                          
+                                <DataGrid.Effect>
+                                    <DropShadowEffect/>
+                                </DataGrid.Effect>
+                            </DataGrid>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                                <Button x:Name="btnAplazar" Style="{StaticResource RoundedButtonStyle}" Click="btnAplazar_Click" Command="Core:Comandos.AplazarPrestamo"
+                   FontSize="20" Width="200" Margin="0 20 20 0">Aplazar Devolución</Button>
+                             
+                            </StackPanel>
+                        </StackPanel>
+                    </Grid>
 
                 </TabItem>
             </TabControl>

@@ -28,6 +28,7 @@ namespace PROYECTO_EV2_ALB.View
         VM_Usuario vm_usuario;
         VM_Libro vm_libro;
         VM_Incidencia vm_incidencia;
+        VM_Prestamo vm_prestamo;
 
         public V_Administrador()
         {
@@ -37,11 +38,18 @@ namespace PROYECTO_EV2_ALB.View
             cargarUsuarios();
             cargarLibros();
             cargarIncidencias();
+            cargarPrestamos();
 
 
           
 
            
+        }
+
+        private void cargarPrestamos()
+        {
+            vm_prestamo = new VM_Prestamo();
+            dgPrestamos.ItemsSource = vm_prestamo.ListaPrestamos;
         }
 
         //Metodo para completar los campos en los textbox al seleccionar una fila del datagrid
@@ -369,7 +377,12 @@ namespace PROYECTO_EV2_ALB.View
             }
         }
 
-        
+        private void btnAplazar_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+
         #endregion
 
         #region Comandos
@@ -488,7 +501,19 @@ namespace PROYECTO_EV2_ALB.View
             }
         }
 
-       
+      
+
+        private void AplazarPrestamo_CanExecute(object sender, CanExecuteRoutedEventArgs e)
+        {
+            if(dgPrestamos.SelectedItem != null)
+            {
+                e.CanExecute = true;
+            }
+            else
+            {
+                e.CanExecute = false;
+            }
+        }
     }
     #endregion
 }
