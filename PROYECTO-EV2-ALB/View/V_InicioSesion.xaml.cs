@@ -21,21 +21,21 @@ namespace PROYECTO_EV2_ALB
     public partial class V_InicioSesion : Window
     {
         VM_Usuario vm_usuario;
-        private ObservableCollection<Models.M_Usuario> listaUsuarios;
+     
 
         
         public V_InicioSesion()
         {
             InitializeComponent();
             vm_usuario = new VM_Usuario();
-            listaUsuarios = vm_usuario.ListaUsuarios;
+         
 
             
         }
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-            vm_usuario.actualizarLista();
+            vm_usuario= new VM_Usuario();
 
 
 
