@@ -136,12 +136,17 @@ Foreground="White" />
                                 <ListBox.ItemTemplate>
                                     <DataTemplate>
                                         <StackPanel Orientation="Horizontal">
+                                            <Image Source="{Binding Imagen}" />
 
-                                            <TextBlock Text="{Binding Titulo, StringFormat='Titulo: {0}'}"  Margin="5" FontSize="20" />
-                                            <TextBlock Text="{Binding Autor, StringFormat='Autor: {0}'}"  Margin="5" FontSize="20"/>
-                                            <TextBlock Text="{Binding Stock , StringFormat='Stock: {0}'}"  Margin="5" FontSize="20"/>
-                                            <!-- Agrega más TextBlocks u otros controles según tus necesidades -->
+                                            <StackPanel Orientation="Vertical">
+
+                                                <TextBlock Text="{Binding Titulo, StringFormat='Titulo: {0}'}"  Margin="5" FontSize="20" />
+                                                <TextBlock Text="{Binding Autor, StringFormat='Autor: {0}'}"  Margin="5" FontSize="20"/>
+                                                <TextBlock Text="{Binding Stock , StringFormat='Stock: {0}'}"  Margin="5" FontSize="20"/>
+                                                <!-- Agrega más TextBlocks u otros controles según tus necesidades -->
+                                            </StackPanel>
                                         </StackPanel>
+                                      
                                     </DataTemplate>
                                 </ListBox.ItemTemplate>
 

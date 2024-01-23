@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using MySqlConnector;
+using WPF_MVVM_CRUD.Core;
 namespace PROYECTO_EV2_ALB.Models
 {
     public class M_OperacionesPrestamo
@@ -48,15 +49,16 @@ namespace PROYECTO_EV2_ALB.Models
                             prestamo.Libro.Titulo = reader.GetString(1);
                             prestamo.Libro.Autor = reader.GetString(2);
                             prestamo.Libro.Stock = reader.GetInt32(3);
-                            prestamo.Usuario.Id_usuario = reader.GetInt32(4);
-                            prestamo.Usuario.Nombre = reader.GetString(5);
-                            prestamo.Usuario.Contrasena = reader.GetString(6);
-                            prestamo.Usuario.Email = reader.GetString(7);
-                            prestamo.Usuario.Tipo_usuario = reader.GetString(8);
-                            prestamo.Usuario.Bloqueado = reader.GetBoolean(9);
-                            prestamo.Id_prestamo = reader.GetInt32(11);
-                            prestamo.Fecha_prestamo = reader.GetDateTime(14);
-                            prestamo.Fecha_devolucion = reader.GetDateTime(15);
+                            prestamo.Libro.Imagen = Utils.ConvertByteArrayToBitmapImage(reader.GetFieldValue<byte[]>(4));
+                            prestamo.Usuario.Id_usuario = reader.GetInt32(5);
+                            prestamo.Usuario.Nombre = reader.GetString(6);
+                            prestamo.Usuario.Contrasena = reader.GetString(7);
+                            prestamo.Usuario.Email = reader.GetString(8);
+                            prestamo.Usuario.Tipo_usuario = reader.GetString(9);
+                            prestamo.Usuario.Bloqueado = reader.GetBoolean(10);
+                            prestamo.Id_prestamo = reader.GetInt32(12);
+                            prestamo.Fecha_prestamo = reader.GetDateTime(15);
+                            prestamo.Fecha_devolucion = reader.GetDateTime(16);
                             listaPrestamos.Add(prestamo);
                         }
 
