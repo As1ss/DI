@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MySqlConnector;
 using PROYECTO_EV2_ALB.Core;
+using WPF_MVVM_CRUD.Core;
 
 namespace PROYECTO_EV2_ALB.Models
 {
@@ -45,6 +46,14 @@ namespace PROYECTO_EV2_ALB.Models
                             libro.Titulo = reader.GetString(1);
                             libro.Autor = reader.GetString(2);
                             libro.Stock = reader.GetInt32(3);
+                            if (!reader.IsDBNull(4))
+                            {
+                                libro.Imagen = Utils.ConvertByteArrayToBitmapImage(reader.GetFieldValue<byte[]>(4));
+                            }
+
+
+                           
+                           
                             listaLibros.Add(libro);
                         }
                     }
@@ -83,11 +92,12 @@ namespace PROYECTO_EV2_ALB.Models
                     try
                     {
                         // comando a ejecutar en la BD
-                        String consulta = "INSERT INTO libro (titulo, autor, stock) VALUES (@titulo, @autor, @stock)";
+                        String consulta = "INSERT INTO libro (titulo, autor, stock,imagen) VALUES (@titulo, @autor, @stock,@imagen)";
                         using var comando = new MySqlCommand(consulta, conexionBD);
                         comando.Parameters.AddWithValue("@titulo", libroNuevo.Titulo);
                         comando.Parameters.AddWithValue("@autor", libroNuevo.Autor);
                         comando.Parameters.AddWithValue("@stock", libroNuevo.Stock);
+                        comando.Parameters.AddWithValue("@imagen", Utils.ConvertBitmapImageToByteArray(libroNuevo.Imagen));
                         comando.ExecuteNonQuery();
                        
                     }
@@ -125,12 +135,13 @@ namespace PROYECTO_EV2_ALB.Models
                     try
                     {
                         // comando a ejecutar en la BD
-                        String consulta = "UPDATE libro SET titulo=@titulo, autor=@autor, stock=@stock WHERE id_libro=@id_libro";
+                        String consulta = "UPDATE libro SET titulo=@titulo, autor=@autor, stock=@stock, imagen=@imagen WHERE id_libro=@id_libro";
                         using var comando = new MySqlCommand(consulta, conexionBD);
                         comando.Parameters.AddWithValue("@titulo", libroNuevo.Titulo);
                         comando.Parameters.AddWithValue("@autor", libroNuevo.Autor);
                         comando.Parameters.AddWithValue("@stock", libroNuevo.Stock);
                         comando.Parameters.AddWithValue("@id_libro", libroNuevo.Id_libro);
+                        comando.Parameters.AddWithValue("@imagen", Utils.ConvertBitmapImageToByteArray(libroNuevo.Imagen));
                         comando.ExecuteNonQuery();
                         
                     }

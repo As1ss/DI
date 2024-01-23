@@ -50,7 +50,7 @@ namespace PROYECTO_EV2_ALB.Core
         });
         public static readonly RoutedUICommand ResolverIncidencia = new RoutedUICommand("ResolverIncidencia", "ResolverIncidencia", typeof(Comandos), new InputGestureCollection()
         {
-                new KeyGesture(Key.D,ModifierKeys.Alt)
+                new KeyGesture(Key.R,ModifierKeys.Alt)
         });
         public static readonly RoutedUICommand DesbloquearUsuario = new RoutedUICommand("DesbloquearUsuario", "DesbloquearUsuario", typeof(Comandos), new InputGestureCollection()
         {
@@ -58,11 +58,15 @@ namespace PROYECTO_EV2_ALB.Core
         });
         public static readonly RoutedUICommand BloquearUsuario = new RoutedUICommand("BloquearUsuario", "BloquearUsuario", typeof(Comandos), new InputGestureCollection()
         {
-                new KeyGesture(Key.D,ModifierKeys.Alt)
+                new KeyGesture(Key.B,ModifierKeys.Alt)
         });
         public static readonly RoutedUICommand AplazarPrestamo = new RoutedUICommand("AplazarPrestamo", "AplazarPrestamo", typeof(Comandos), new InputGestureCollection()
         {
-                new KeyGesture(Key.D,ModifierKeys.Alt)
+                new KeyGesture(Key.A,ModifierKeys.Alt)
+        });
+        public static readonly RoutedUICommand AgregarImagen = new RoutedUICommand("AgregarImagen", "AgregarImagen", typeof(Comandos), new InputGestureCollection()
+        {
+                new KeyGesture(Key.I,ModifierKeys.Alt)
         });
 
 

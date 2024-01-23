@@ -65,6 +65,7 @@ namespace PROYECTO_EV2_ALB.View
                 tbxTitulo.Text = selectedItem.Titulo;
                 tbxAutor.Text = selectedItem.Autor;
                 tbxStock.Text = selectedItem.Stock.ToString();
+                imgLibro.Source = selectedItem.Imagen;
             }
         }
 
@@ -91,6 +92,7 @@ namespace PROYECTO_EV2_ALB.View
             vm_libro = new VM_Libro();
             
             dgLibros.ItemsSource = vm_libro.ListaLibros;
+            imgLibro.Source = null;
         }
 
         
@@ -207,6 +209,7 @@ namespace PROYECTO_EV2_ALB.View
                     libroNuevo.Titulo = tbxTitulo.Text;
                     libroNuevo.Autor = tbxAutor.Text;
                     libroNuevo.Stock = Convert.ToInt32(tbxStock.Text);
+                    libroNuevo.Imagen = imgLibro.Source as BitmapImage;
                     vm_libro.insertarLibro(libroNuevo);
                     cargarLibros();
                     MessageBox.Show("Libro agregado correctamente", "Libro", MessageBoxButton.OK, MessageBoxImage.Information);
@@ -248,6 +251,7 @@ namespace PROYECTO_EV2_ALB.View
                         libroNuevo.Titulo = tbxTitulo.Text;
                         libroNuevo.Autor = tbxAutor.Text;
                         libroNuevo.Stock = Convert.ToInt32(tbxStock.Text);
+                        libroNuevo.Imagen = imgLibro.Source as BitmapImage;
                         vm_libro.actualizarLibro(libroNuevo);
                         cargarLibros();
                         MessageBox.Show("Libro modificado correctamente", "Libro", MessageBoxButton.OK, MessageBoxImage.Information);
@@ -398,6 +402,35 @@ namespace PROYECTO_EV2_ALB.View
 
         }
 
+        private void btnImagen_Click(object sender, RoutedEventArgs e)
+        {
+
+            //Abrir dialogo para escoger imagen para el libro
+            Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog();
+            dlg.Filter = "Archivos de imagen (*.jpg, *.jpeg, *.png) | *.jpg; *.jpeg; *.png";
+            Nullable<bool> result = dlg.ShowDialog();
+            if (result != null)
+            {
+                if (result == true)
+                {
+                    M_Libro libro = new M_Libro();
+                    libro.Imagen = new BitmapImage(new Uri(dlg.FileName));
+                    imgLibro.Source = libro.Imagen;
+                    //Obtener la ruta de la imagen
+                    string filename = dlg.FileName;
+                    //Asignar la imagen al Image
+
+                    imgLibro.Source = new BitmapImage(new Uri(filename));
+
+
+                }
+                else
+                {
+                    MessageBox.Show("No se ha seleccionado ninguna imagen", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
+        }
+
 
         #endregion
 
@@ -464,10 +497,7 @@ namespace PROYECTO_EV2_ALB.View
 
         }
 
-        private void Eliminar_Executed(object sender, ExecutedRoutedEventArgs e)
-        {
-            btnEliminar_Click(sender, e);
-        }
+      
 
         private void DetallesIncidencia_CanExecute(object sender, CanExecuteRoutedEventArgs e)
         {
@@ -528,6 +558,24 @@ namespace PROYECTO_EV2_ALB.View
             else
             {
                 e.CanExecute = false;
+            }
+        }
+
+        private void AgregarImagen_CanExecute(object sender, CanExecuteRoutedEventArgs e)
+        {
+            if (tiBook.IsSelected)
+            {
+                if (verificarCamposLibro())
+                {
+                    e.CanExecute = true;
+
+                }
+                else
+                {
+                    e.CanExecute = false;
+
+
+                }
             }
         }
     }

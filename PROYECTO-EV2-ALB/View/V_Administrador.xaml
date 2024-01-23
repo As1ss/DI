@@ -11,12 +11,13 @@
     <Window.CommandBindings>
         <CommandBinding x:Name="Agregar" Command="Core:Comandos.AgregarLibro" CanExecute="Agregar_CanExecute" />
         <CommandBinding x:Name="Modificar" Command="Core:Comandos.ModificarLibro" CanExecute="Modificar_CanExecute" />
-        <CommandBinding x:Name="Eliminar" Command="Core:Comandos.EliminarLibro" CanExecute="Eliminar_CanExecute" Executed="Eliminar_Executed"/>
+        <CommandBinding x:Name="Eliminar" Command="Core:Comandos.EliminarLibro" CanExecute="Eliminar_CanExecute" />
         <CommandBinding x:Name="DetallesIncidencia" Command="Core:Comandos.DetallesIncidencia" CanExecute="DetallesIncidencia_CanExecute"/>
         <CommandBinding x:Name="ResolverIncidencia" Command="Core:Comandos.ResolverIncidencia" CanExecute="ResolverIncidencia_CanExecute"/>
         <CommandBinding x:Name="DesbloquearUsuario" Command="Core:Comandos.DesbloquearUsuario" CanExecute="DesbloquearUsuario_CanExecute"/>
         <CommandBinding x:Name="BloquearUsuario" Command="Core:Comandos.BloquearUsuario" CanExecute="BloquearUsuario_CanExecute"/>
         <CommandBinding x:Name="AplazarPrestamo" Command="Core:Comandos.AplazarPrestamo" CanExecute="AplazarPrestamo_CanExecute"/>
+        <CommandBinding x:Name="AgregarImagen" Command="Core:Comandos.AgregarImagen" CanExecute="AgregarImagen_CanExecute"/>
     </Window.CommandBindings>
    
     <DockPanel>
@@ -150,16 +151,23 @@
                             <TextBlock Text="ADMINISTRACIÓN DE LIBROS" FontSize="40" Margin="0 0 0 80" HorizontalAlignment="Center"/>
 
                             <StackPanel Orientation="Horizontal" >
-                            <DataGrid x:Name="dgLibros" AutoGenerateColumns="True" IsReadOnly="True" 
+                            <DataGrid x:Name="dgLibros" AutoGenerateColumns="False" IsReadOnly="True" 
                                       CanUserAddRows="False" Width="600"  Height="300" SelectionMode="Single" FontSize="20"
                                       SelectionChanged="DynamicDataGrid_SelectionChanged">
                                 <DataGrid.Effect>
                                     <DropShadowEffect/>
                                 </DataGrid.Effect>
+                                    <DataGrid.Columns>
+                                        <DataGridTextColumn Header="Id" Binding="{Binding Id_libro}" Width="*" />
+                                        <DataGridTextColumn Header="Titulo" Binding="{Binding Titulo}" Width="*" />
+                                        <DataGridTextColumn Header="Autor" Binding="{Binding Autor}" Width="*"/>
+                                        <DataGridTextColumn Header="Stock" Binding="{Binding Stock}" Width="*"/>
+                                    </DataGrid.Columns>
                                 
                             </DataGrid>
                             <StackPanel Orientation="Vertical" Margin="20 0 0 0" HorizontalAlignment="Center">
-                                <TextBlock Text="LIBRO" FontSize="30" HorizontalAlignment="Center"/>
+                                    <Image x:Name="imgLibro" Width="100" Height="100"/>
+                                    <TextBlock Text="LIBRO" FontSize="30" HorizontalAlignment="Center"/>
                                 <StackPanel Orientation="Horizontal" Margin="0 10 0 0" HorizontalAlignment="Center">
                                     <TextBlock Text="Titulo" FontSize="20"/>
                                     <TextBox x:Name="tbxTitulo" Style="{StaticResource RoundedTextBoxStyle}"  Width="200" Margin="10 0 0 0"/>
@@ -177,9 +185,11 @@
                                           Width="100" Margin="0 0 10 0" Style="{StaticResource RoundedButtonStyle}">Agregar</Button>
                                     <Button x:Name="btnModificar" Click="btnModificar_Click"  Command="Core:Comandos.ModificarLibro"
                                             Width="100" Margin="0 0 10 0" Style="{StaticResource RoundedButtonStyle}">Modificar</Button>
-                                    <Button x:Name="btnEliminar" Click="btnEliminar_Click"  Command="Core:Comandos.EliminarLibro"
+                                        <Button x:Name="btnEliminar"  Width="100" Margin="0 0 10 0" Click="btnEliminar_Click"  Command="Core:Comandos.EliminarLibro"
                                             Style="{StaticResource RoundedButtonStyleExit}">Eliminar</Button>
-                                </StackPanel>
+                                        <Button x:Name="btnImagen" Click="btnImagen_Click"  Command="Core:Comandos.AgregarImagen"
+                                    Style="{StaticResource RoundedButtonStyleExit}">Imagen</Button>
+                                    </StackPanel>
 
 
 

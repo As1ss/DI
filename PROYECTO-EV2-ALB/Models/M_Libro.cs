@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
 
 namespace PROYECTO_EV2_ALB.Models
 {
@@ -12,6 +14,7 @@ namespace PROYECTO_EV2_ALB.Models
         private string titulo;
         private string autor;
         private int stock;
+        private BitmapImage imagen;
 
         public M_Libro()
         {
@@ -29,5 +32,6 @@ namespace PROYECTO_EV2_ALB.Models
         public string Autor { get => autor; set => autor = value; }
         public int Stock { get => stock; set => stock = value; }
         public int Id_libro { get => id_libro; set => id_libro = value; }
+        public BitmapImage Imagen { get => imagen; set => imagen = value; }
     }
 }
