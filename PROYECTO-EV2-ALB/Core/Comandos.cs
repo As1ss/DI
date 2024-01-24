@@ -68,6 +68,10 @@ namespace PROYECTO_EV2_ALB.Core
         {
                 new KeyGesture(Key.I,ModifierKeys.Alt)
         });
+        public static readonly RoutedUICommand LimpiarCampos = new RoutedUICommand("LimpiarCampos", "LimpiarCampos", typeof(Comandos), new InputGestureCollection()
+        {
+                new KeyGesture(Key.L,ModifierKeys.Alt)
+        });
 
 
 

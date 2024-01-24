@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Data;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -117,6 +118,7 @@ namespace PROYECTO_EV2_ALB.View
             tbxTitulo.Text = "";
             tbxAutor.Text = "";
             tbxStock.Text = "";
+            imgLibro.Source = null;
         }
         private Boolean verificarCamposLibro()
         {
@@ -294,6 +296,10 @@ namespace PROYECTO_EV2_ALB.View
                 MessageBox.Show("El libro no existe", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
 
+        }
+        private void btnLimpiar_Click(object sender, RoutedEventArgs e)
+        {
+            limpiarCampos();
         }
 
         private void btnUnBlock_Click(object sender, RoutedEventArgs e)
@@ -501,56 +507,78 @@ namespace PROYECTO_EV2_ALB.View
 
         private void DetallesIncidencia_CanExecute(object sender, CanExecuteRoutedEventArgs e)
         {
-            if (dgIncidencias.SelectedItem != null)
+            if(tiIncidence.IsSelected)
             {
-                e.CanExecute = true;
+                if (dgIncidencias.SelectedItem != null)
+                {
+                    e.CanExecute = true;
+                }
+                else
+                {
+                    e.CanExecute = false;
+                }
             }
-            else
-            {
-                e.CanExecute = false;
-            }
+           
         }
 
         private void ResolverIncidencia_CanExecute(object sender, CanExecuteRoutedEventArgs e)
         {
-            if(dgIncidencias.SelectedItem != null)
+           
+           
+            if(tiIncidence.IsSelected)
             {
-                e.CanExecute = true;
+                if (dgIncidencias.SelectedItem != null)
+                {
+                    e.CanExecute = true;
+                }
+                else
+                {
+                    e.CanExecute = false;
+                }
             }
-            else
-            {
-                e.CanExecute = false;
-            }
+           
         }
 
         private void DesbloquearUsuario_CanExecute(object sender, CanExecuteRoutedEventArgs e)
         {
-            if (dgUsuarios.SelectedItem != null)
+            if (tiUsers.IsSelected)
             {
-                e.CanExecute = true;
+                if (dgUsuarios.SelectedItem != null)
+                {
+                    e.CanExecute = true;
+                }
+                else
+                {
+                    e.CanExecute = false;
+                }
             }
-            else
-            {
-                e.CanExecute = false;
-            }
+           
         }
 
         private void BloquearUsuario_CanExecute(object sender, CanExecuteRoutedEventArgs e)
         {
-            if (dgUsuarios.SelectedItem != null)
+            if (tiUsers.IsSelected)
             {
-                e.CanExecute = true;
+                if (dgUsuarios.SelectedItem != null)
+                {
+                    e.CanExecute = true;
+                }
+                else
+                {
+                    e.CanExecute = false;
+                }
             }
-            else
-            {
-                e.CanExecute = false;
-            }
+           
         }
 
       
 
         private void AplazarPrestamo_CanExecute(object sender, CanExecuteRoutedEventArgs e)
         {
+            if (tiPrestamos.IsSelected)
+            {
+
+         
             if(dgPrestamos.SelectedItem != null)
             {
                 e.CanExecute = true;
@@ -558,6 +586,7 @@ namespace PROYECTO_EV2_ALB.View
             else
             {
                 e.CanExecute = false;
+            }
             }
         }
 
@@ -578,6 +607,24 @@ namespace PROYECTO_EV2_ALB.View
                 }
             }
         }
+
+        private void LimpiarCampos_CanExecute(object sender, CanExecuteRoutedEventArgs e)
+        {
+            if (tiBook.IsSelected)
+            {
+                if (verificarCamposLibro())
+                {
+                    e.CanExecute = true;
+
+                }
+                else
+                {
+                    e.CanExecute = false;
+                }
+            }
+        }
+
+       
     }
     #endregion
 }
