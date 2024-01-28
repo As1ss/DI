@@ -35,129 +35,46 @@ namespace PROYECTO_EV2_ALB.View
         public V_Usuarios(M_Usuario usuarioSesion)
         {
             InitializeComponent();
+            //Instanciamos los viewmodels y la lista de prestamos
             vm_libro = new VM_Libro();
             vm_incidencia = new VM_Incidencia();
             vm_prestamo = new VM_Prestamo();
             vm_usuario = new VM_Usuario();
             listaPrestamos = new ObservableCollection<M_Prestamo>();
-
             this.usuarioSesion = usuarioSesion;
 
+            //Asignamos el nombre de usuario a la ventana de usuario
             tbUsuario.Text = usuarioSesion.Nombre;
 
-
-
-
             actualizarListas();
-
-
-
-
-
         }
 
 
-        public void actualizarListas()
-        {
-            actualizarLibros();
+       
 
-            actualizarPrestamos();
-        }
-        public void actualizarLibros()
-        {
-            vm_libro.ListaLibros.Clear();
-            vm_libro.actualizarLista();
-            listBoxBooks.ItemsSource = vm_libro.ListaLibros;
-        }
-
-        public class IndexToColorConverter : IValueConverter
-        {
-            public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
-            {
-                int index = (int)value;
-                return index % 2 == 0 ? Brushes.LightBlue : Brushes.LightGray;
-            }
-
-            public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
-            {
-                throw new NotImplementedException();
-            }
-        }
+    
 
 
-        public void actualizarPrestamos()
-        {
-            listaPrestamos.Clear();
-            vm_prestamo.actualizarLista();
-
-
-            foreach (var prestamo in vm_prestamo.ListaPrestamos)
-            {
-                if (prestamo.Fecha_devolucion > DateTime.Now)
-                {
-
-
-                    if (prestamo.Usuario.Id_usuario == usuarioSesion.Id_usuario)
-                    {
-                        listaPrestamos.Add(prestamo);
-                    }
-                }
-
-            }
-            listPrestamos.ItemsSource = listaPrestamos;
-        }
-        private void bQueryBooks_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            tcUser.SelectedItem = tiBooks;
-        }
-
+        //Evento para limpiar los campos de la incidencia
         private void limpiarCampos()
         {
             tbxIncidencia.Text = "";
         }
 
-
-        private void bIncidencias_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        //Evento para filtrar los libros, si el texto está vacío se muestran todos los libros
+        private void tbxBuscar_TextChanged(object sender, TextChangedEventArgs e)
         {
-            tcUser.SelectedItem = tiIncidence;
-        }
+            TextBox textBox = (TextBox)sender;
 
-        private void bPrestamos_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            tcUser.SelectedItem = tiPrestamos;
-        }
-
-        private void bCerrarSesion_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            this.Close();
-        }
-
-        private void btnLogout_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
-        }
-
-        private void EjecutarAceptar(object sender, ExecutedRoutedEventArgs e)
-        {
-            if (tcUser.SelectedItem == tiIncidence)
+            // Verifica si el texto está vacío
+            if (string.IsNullOrEmpty(textBox.Text))
             {
-
-
-                btnEnviar_Click(sender, e);
+                actualizarLibros();
             }
-            else if (tcUser.SelectedItem == tiPrestamos)
-            {
-                btnPedir_Click(sender, e);
-            }
-        }
-
-        private void PuedoAceptar(object sender, CanExecuteRoutedEventArgs e)
-        {
-
-            e.CanExecute = true;
 
         }
 
+        //Evento para cerrar la ventana creando un mensaje de confirmación
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             MessageBoxResult result = MessageBox.Show("¿Deseas cerrar sesión?", "Salir", MessageBoxButton.YesNo, MessageBoxImage.Question);
@@ -174,6 +91,51 @@ namespace PROYECTO_EV2_ALB.View
             }
         }
 
+
+        #region Eventos para actualizar los ListBox
+        public void actualizarListas()
+        {
+            actualizarLibros();
+
+            actualizarPrestamos();
+        }
+
+        public void actualizarLibros()
+        {
+            vm_libro.ListaLibros.Clear();
+            vm_libro.actualizarLista();
+            listBoxBooks.ItemsSource = vm_libro.ListaLibros;
+        }
+
+        public void actualizarPrestamos()
+        {
+            listaPrestamos.Clear();
+            vm_prestamo.actualizarLista();
+
+
+            foreach (var prestamo in vm_prestamo.ListaPrestamos)
+            {
+                if (usuarioSesion.Prestamo_activo)
+                {
+
+
+                    if (prestamo.Usuario.Id_usuario == usuarioSesion.Id_usuario)
+                    {
+                        listaPrestamos.Add(prestamo);
+                    }
+                }
+
+            }
+            listPrestamos.ItemsSource = listaPrestamos;
+        }
+        #endregion Eventos para actualizar los ListBox
+
+        #region Eventos botones
+        private void btnLogout_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
         private void btnDevolver_Click(object sender, RoutedEventArgs e)
         {
             MessageBoxResult result = MessageBox.Show("¿Deseas devolver el libro?", "Devolución", MessageBoxButton.YesNo, MessageBoxImage.Question);
@@ -186,7 +148,7 @@ namespace PROYECTO_EV2_ALB.View
                 usuarioSesion.Prestamo_activo = false;
                 vm_usuario.actualizarUsuario(usuarioSesion);
                 vm_libro.actualizarLibro(libro);
-                vm_prestamo.actualizarPrestamo(prestamo);
+                vm_prestamo.eliminarPrestamo(prestamo);
                 actualizarListas();
                 MessageBox.Show("Libro devuelto correctamente", "Devolución", MessageBoxButton.OK, MessageBoxImage.Information);
             }
@@ -291,7 +253,31 @@ namespace PROYECTO_EV2_ALB.View
                 }
             
         }
+        #endregion Eventos botones
 
+        #region Navegacion entre pestañas
+        private void bQueryBooks_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            tcUser.SelectedItem = tiBooks;
+        }
+
+        private void bIncidencias_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            tcUser.SelectedItem = tiIncidence;
+        }
+
+        private void bPrestamos_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            tcUser.SelectedItem = tiPrestamos;
+        }
+
+        private void bCerrarSesion_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            this.Close();
+        }
+        #endregion Navegacion entre pestañas
+
+        #region Comandos
         private void EnviarIncidencia_CanExecute(object sender, CanExecuteRoutedEventArgs e)
         {
             if (tcUser.SelectedItem == tiIncidence)
@@ -305,6 +291,13 @@ namespace PROYECTO_EV2_ALB.View
                     e.CanExecute = true;
                 }
             }
+
+        }
+
+        private void PuedoAceptar(object sender, CanExecuteRoutedEventArgs e)
+        {
+
+            e.CanExecute = true;
 
         }
 
@@ -340,19 +333,9 @@ namespace PROYECTO_EV2_ALB.View
             }
 
         }
+        #endregion Comandos
 
-        private void tbxBuscar_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            TextBox textBox = (TextBox)sender;
-
-            // Verifica si el texto está vacío
-            if (string.IsNullOrEmpty(textBox.Text))
-            {
-               actualizarLibros();
-            }
-           
-        }
     }
-    
+
 }
 

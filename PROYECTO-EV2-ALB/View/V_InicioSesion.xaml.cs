@@ -33,6 +33,25 @@ namespace PROYECTO_EV2_ALB
             
         }
 
+        //Evento que se ejecuta al cerrar la ventana de confirmación de salida
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            MessageBoxResult result = MessageBox.Show("¿Desea salir de la aplicación?", "Salir", MessageBoxButton.YesNo, MessageBoxImage.Question);
+
+            if (result == MessageBoxResult.No)
+            {
+                e.Cancel = true;
+            }
+            else
+            {
+                //Cerramos la aplicación
+                Application.Current.Shutdown();
+            }
+
+        }
+
+
+        #region Eventos de los botones
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
             vm_usuario= new VM_Usuario();
@@ -91,21 +110,9 @@ namespace PROYECTO_EV2_ALB
 
         }
 
-        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-            MessageBoxResult result = MessageBox.Show("¿Desea salir de la aplicación?", "Salir", MessageBoxButton.YesNo, MessageBoxImage.Question);
+        #endregion
 
-            if (result == MessageBoxResult.No)
-            {
-                e.Cancel = true;
-            }
-            else {
-                //Cerramos la aplicación
-                Application.Current.Shutdown();
-            }
-
-        }
-
+        #region Comandos
         private void EjecutarSalir(object sender, ExecutedRoutedEventArgs e)
         {
             Close();
@@ -122,5 +129,6 @@ namespace PROYECTO_EV2_ALB
                e.CanExecute = true;
             
         }
+        #endregion
     }
 }

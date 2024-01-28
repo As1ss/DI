@@ -126,7 +126,6 @@ namespace PROYECTO_EV2_ALB.Models
                 Conexion.cerrarConexion();  
             }
         }
-
         
         public void actualizarLibro(M_Libro libroNuevo)
         {

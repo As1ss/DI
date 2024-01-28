@@ -22,21 +22,21 @@ namespace PROYECTO_EV2_ALB.ViewModels
 
         }
 
-      
 
-        public Boolean existeLibro(string titulo)
+        //Método para actualizar la lista de libros
+        public void actualizarLista()
         {
-            Boolean encontrado = false;
-            foreach (M_Libro libro in listaLibros)
-            {
-                if (libro.Titulo == titulo)
-                {
-                    encontrado = true;
-                }
-            }
-            return encontrado;
+            listaLibros = operacionesLibro.obtenerLibros();
         }
 
+        //Métodos get y set
+        public ObservableCollection<M_Libro> ListaLibros { get => listaLibros; set => listaLibros = value; }
+
+
+
+
+        //Métodos para obtener un libro, eliminarlo, actualizarlo e insertarlo
+        #region Metodos CRUD
         public M_Libro obtenerLibroId(int id)
         {
             M_Libro libro = new M_Libro();
@@ -49,9 +49,26 @@ namespace PROYECTO_EV2_ALB.ViewModels
             }
             return libro;
         }
+        public void eliminarLibro(M_Libro libro)
+        {
+            operacionesLibro.eliminarLibro(libro);
+        }
+        public void actualizarLibro(M_Libro libro)
+        {
+            operacionesLibro.actualizarLibro(libro);
+
+        }
+        public void insertarLibro(M_Libro libroNuevo)
+        {
+            operacionesLibro.insertarLibro(libroNuevo);
+        }
+        #endregion
 
 
 
+
+        //Métodos para comprobar los datos introducidos
+        #region Comprobaciones
         public Boolean comprobarIdLibro(int id)
         {
             Boolean encontrado = false;
@@ -65,12 +82,6 @@ namespace PROYECTO_EV2_ALB.ViewModels
             return encontrado;
             
         }
-
-        public void insertarLibro(M_Libro libroNuevo)
-        {
-            operacionesLibro.insertarLibro(libroNuevo);
-        }
-
         public Boolean comprobarStock(String stock)
         {
 
@@ -97,31 +108,23 @@ namespace PROYECTO_EV2_ALB.ViewModels
           
             return correcto;
         }
-        
-        public void eliminarLibro(M_Libro libro)
+        public Boolean existeLibro(string titulo)
         {
-            operacionesLibro.eliminarLibro(libro);
+            Boolean encontrado = false;
+            foreach (M_Libro libro in listaLibros)
+            {
+                if (libro.Titulo == titulo)
+                {
+                    encontrado = true;
+                }
+            }
+            return encontrado;
         }
-        public void actualizarLibro(M_Libro libro)
-        {
-            operacionesLibro.actualizarLibro(libro);
-         
-        }
+        #endregion
 
-        public void actualizarLista()
-        {
-            
-            listaLibros = operacionesLibro.obtenerLibros();
 
-           
 
-           
-          
-        }
-
-        //Devolver lista de libros con InotiFyCollectionChanged
-        
-        public ObservableCollection<M_Libro> ListaLibros { get => listaLibros; set => listaLibros = value; }
+       
        
     }
 }

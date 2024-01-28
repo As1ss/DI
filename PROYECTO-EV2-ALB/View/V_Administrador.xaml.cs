@@ -47,10 +47,83 @@ namespace PROYECTO_EV2_ALB.View
            
         }
 
+
+
+
+     
+
+
+        //Evento para cerrar la ventana
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            MessageBoxResult result = MessageBox.Show("¿Deseas cerrar sesión?", "Salir", MessageBoxButton.YesNo, MessageBoxImage.Question);
+
+            if (result == MessageBoxResult.No)
+            {
+                e.Cancel = true;
+            }
+            else
+            {
+                //Cerramos la ventana sin el evento close para que no salga el mensaje de confirmación
+                this.Closing -= Window_Closing;
+
+            }
+        }
+
+        //Metodo para limpiar los campos de los textbox del Libro
+        private void limpiarCampos()
+        {
+            tbxTitulo.Text = "";
+            tbxAutor.Text = "";
+            tbxStock.Text = "";
+            imgLibro.Source = null;
+        }
+
+        //Metodo para verificar que los campos del libro no estén vacíos
+        private Boolean verificarCamposLibro()
+        {
+            if (tbxTitulo.Text == "" || tbxAutor.Text == "" || tbxStock.Text == "")
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+
+        #region Actualizar datagrids
+
         private void cargarPrestamos()
         {
             vm_prestamo = new VM_Prestamo();
             dgPrestamos.ItemsSource = vm_prestamo.ListaPrestamos;
+        }
+
+        public void cargarIncidencias()
+        {
+            vm_incidencia = new VM_Incidencia();
+            dgIncidencias.ItemsSource = vm_incidencia.ListaIncidencias;
+        }
+
+        public void cargarUsuarios()
+        {
+            vm_usuario = new VM_Usuario(); //Invocando al objeto vm_usuario regenero la colección de usuarios
+
+
+
+            dgUsuarios.ItemsSource = vm_usuario.ListaUsuarios; //Asigno la listaUsuarios al DataGrid
+
+
+        }
+
+        public void cargarLibros()
+        {
+            vm_libro = new VM_Libro();
+
+            dgLibros.ItemsSource = vm_libro.ListaLibros;
+            imgLibro.Source = null;
         }
 
         //Metodo para completar los campos en los textbox al seleccionar una fila del datagrid
@@ -69,69 +142,7 @@ namespace PROYECTO_EV2_ALB.View
                 imgLibro.Source = selectedItem.Imagen;
             }
         }
-
-
-        public void cargarIncidencias()
-        {
-            vm_incidencia = new VM_Incidencia();
-            dgIncidencias.ItemsSource = vm_incidencia.ListaIncidencias;
-        }
-
-
-        public void cargarUsuarios()
-        {
-            vm_usuario= new VM_Usuario(); //Invocando al objeto vm_usuario regenero la colección de usuarios
-          
-         
-           
-            dgUsuarios.ItemsSource = vm_usuario.ListaUsuarios; //Asigno la listaUsuarios al DataGrid
-           
-           
-        }
-        public void cargarLibros()
-        {
-            vm_libro = new VM_Libro();
-            
-            dgLibros.ItemsSource = vm_libro.ListaLibros;
-            imgLibro.Source = null;
-        }
-
-        
-
-        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-            MessageBoxResult result = MessageBox.Show("¿Deseas cerrar sesión?", "Salir", MessageBoxButton.YesNo, MessageBoxImage.Question);
-
-            if (result == MessageBoxResult.No)
-            {
-                e.Cancel = true;
-            }
-            else
-            {
-                //Cerramos la ventana sin el evento close para que no salga el mensaje de confirmación
-                this.Closing -= Window_Closing;
-
-            }
-        }
-        private void limpiarCampos()
-        {
-            tbxTitulo.Text = "";
-            tbxAutor.Text = "";
-            tbxStock.Text = "";
-            imgLibro.Source = null;
-        }
-        private Boolean verificarCamposLibro()
-        {
-            if (tbxTitulo.Text == "" || tbxAutor.Text == "" || tbxStock.Text == "")
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
-        }
-
+        #endregion
 
         #region Navegación de pestañas
 

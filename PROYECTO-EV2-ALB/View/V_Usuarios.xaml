@@ -10,7 +10,7 @@
          xmlns:Core="clr-namespace:PROYECTO_EV2_ALB.Core">
     <Window.CommandBindings>
         <CommandBinding Command="Core:Comandos.Aceptar"
-          Executed="EjecutarAceptar" CanExecute="PuedoAceptar"
+           CanExecute="PuedoAceptar"
           />
         <CommandBinding x:Name="EnviarIncidencia" Command="Core:Comandos.EnviarIncidencia" CanExecute="EnviarIncidencia_CanExecute"/>
         <CommandBinding x:Name="PedirLibro" Command="Core:Comandos.PedirLibro" CanExecute="PedirLibro_CanExecute" />
@@ -128,7 +128,7 @@ Foreground="White" />
                             <ListBox Name="listBoxBooks" ScrollViewer.VerticalScrollBarVisibility="Auto"  
                              ScrollViewer.HorizontalScrollBarVisibility="Auto" Height="350" Width="1000" ScrollViewer.PanningDeceleration="0.0001"
                                     HorizontalAlignment="Stretch" MaxWidth="1000" 
-                             ItemContainerStyle="{StaticResource AlternatingListBoxItemStyle}" AlternationCount="2">
+                             ItemContainerStyle="{StaticResource AlternatingListBoxItemStyle}" AlternationCount="2" d:ItemsSource="{d:SampleData ItemCount=5}">
                                 <ListBox.ItemTemplate>
                                     
                                     <DataTemplate>
@@ -174,7 +174,7 @@ Foreground="White" />
                             <ListBox Name="listPrestamos" ScrollViewer.VerticalScrollBarVisibility="Auto"  
          ScrollViewer.HorizontalScrollBarVisibility="Auto" Height="350" Width="1000" ScrollViewer.PanningDeceleration="0.0001"
          HorizontalAlignment="Stretch" MaxWidth="1000" 
-         ItemContainerStyle="{StaticResource AlternatingListBoxItemStyle}" AlternationCount="2">
+         ItemContainerStyle="{StaticResource AlternatingListBoxItemStyle}" AlternationCount="2" d:ItemsSource="{d:SampleData ItemCount=5}">
                                 <ListBox.ItemTemplate>
                                     <DataTemplate>
                                         <Grid>
@@ -192,8 +192,8 @@ Foreground="White" />
                                                     <RowDefinition Height="*"/>
                                                 </Grid.RowDefinitions>
                                                 <TextBlock Text="{Binding Path=Libro.Titulo, StringFormat='Titulo: {0}'}"  FontSize="25" Grid.Row="0"  />
-                                                <TextBlock Text="{Binding Path=Fecha_prestamo, StringFormat='Fecha Préstamo: {0:yyyy-MM-dd}'}"  FontSize="25" Grid.Row="1"/>
-                                                <TextBlock Text="{Binding Path=Fecha_devolucion, StringFormat='Fecha Devolución: {0:yyyy-MM-dd}'}"  FontSize="25" Grid.Row="2"/>
+                                                <TextBlock Text="{Binding Path=Fecha_prestamo, StringFormat='Fecha Préstamo: {0:dd-MM-yyyy}'}"  FontSize="25" Grid.Row="1"/>
+                                                <TextBlock Text="{Binding Path=Fecha_devolucion, StringFormat='Fecha Devolución: {0:dd-MM-yyyy}'}"  FontSize="25" Grid.Row="2"/>
                                             </Grid>
                                         </Grid>
                                     </DataTemplate>

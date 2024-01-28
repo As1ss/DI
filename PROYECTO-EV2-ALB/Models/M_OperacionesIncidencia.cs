@@ -66,6 +66,7 @@ namespace PROYECTO_EV2_ALB.Models
             }
             return listaIncidencias;
         }
+
         public void insertarIncidencia(M_Incidencia incidenciaNueva)
         {
          

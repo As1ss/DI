@@ -25,27 +25,18 @@ namespace PROYECTO_EV2_ALB.ViewModels
             
         }
 
+
+        //Metodo para ctualizar la lista de prestamos
         public void actualizarLista()
         {
 
             listaPrestamos = operacionesPrestamo.obtenerPrestamos();
            
         } 
-        public void actualizarPrestamo(M_Prestamo prestamo)
-        {
-            operacionesPrestamo.actualizarPrestamo(prestamo);
-            
-        }
-        public void aplazarPrestamo(M_Prestamo prestamo)
-        {
-            operacionesPrestamo.aplazarPrestamo(prestamo);
-        }
-        
-        public void insertarPrestamo(Models.M_Prestamo prestamo)
-        {
-            operacionesPrestamo.insertarPrestamo(prestamo);
-        }
 
+       
+
+        //Metodo get y set de la lista de prestamos
         public ObservableCollection<Models.M_Prestamo> ListaPrestamos
         {
             set
@@ -59,5 +50,28 @@ namespace PROYECTO_EV2_ALB.ViewModels
         }
 
 
+        #region Metodos CRUD
+        public void actualizarPrestamo(M_Prestamo prestamo)
+        {
+            operacionesPrestamo.actualizarPrestamo(prestamo);
+
+        }
+
+        public void aplazarPrestamo(M_Prestamo prestamo)
+        {
+            operacionesPrestamo.aplazarPrestamo(prestamo);
+        }
+
+        public void insertarPrestamo(Models.M_Prestamo prestamo)
+        {
+            operacionesPrestamo.insertarPrestamo(prestamo);
+        }
+
+        public void eliminarPrestamo(Models.M_Prestamo prestamo)
+        {
+            operacionesPrestamo.eliminarPrestamo(prestamo);
+        }
+
+        #endregion
     }
 }

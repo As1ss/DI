@@ -25,13 +25,28 @@ namespace PROYECTO_EV2_ALB.ViewModels
            actualizarLista();
         }
 
-
-        public Boolean comprobarEmail(string email)
+        //Actualizamos la lista de usuarios
+        public void actualizarLista()
         {
-           
-          return Regex.IsMatch(email, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
-        
+            listaUsuarios = operacionesUsuario.obtenerUsuarios();
+
         }
+
+
+        //Metodos Get y Set
+        public ObservableCollection<M_Usuario> ListaUsuarios
+        {
+            get => listaUsuarios;
+            set
+            {
+                listaUsuarios = value;
+
+            }
+        }
+
+        #region Metodos CRUD
+
+        //Este método es unicamente para el inicio de sesión
         public M_Usuario obtenerUsuario(string nombre)
         {
             M_Usuario usuario = new M_Usuario();
@@ -44,13 +59,7 @@ namespace PROYECTO_EV2_ALB.ViewModels
             }
             return usuario;
         }
-
-        public void actualizarLista()
-        {
-            listaUsuarios = operacionesUsuario.obtenerUsuarios();
-        
-        }
-
+      
         public M_Usuario obtenerUsuarioId(int id)
         {
            //Obtenemos el usuario por id para poder mostar el nombre en la incidencia
@@ -70,6 +79,26 @@ namespace PROYECTO_EV2_ALB.ViewModels
             operacionesUsuario.actualizarUsuario(usuario);
         }
 
+        public void insertarUsuario(M_Usuario usuarioNuevo)
+        {
+            operacionesUsuario.insertarUsuario(usuarioNuevo);
+        }
+
+        public void desbloquearUsuario(string nombre)
+        {
+            operacionesUsuario.desbloquearUsuario(nombre);
+        }
+
+        public void bloquearUsuario(string nombre)
+        {
+            operacionesUsuario.bloquearUsuario(nombre);
+          
+        }
+
+        #endregion
+
+
+        #region Validaciones
         public Boolean comprobarUsuario(string nombre, string contrasena)
         {
             Boolean encontrado = false;
@@ -82,6 +111,7 @@ namespace PROYECTO_EV2_ALB.ViewModels
             }
             return encontrado;
         }
+
         public Boolean existeUsuario(string nombre)
         {
             Boolean encontrado = false;
@@ -94,6 +124,7 @@ namespace PROYECTO_EV2_ALB.ViewModels
             }
             return encontrado;
         }
+
         public Boolean comprobarBloqueado(string nombre)
         {
             Boolean encontrado = false;
@@ -102,13 +133,14 @@ namespace PROYECTO_EV2_ALB.ViewModels
                 if (usuario.Nombre == nombre && usuario.Bloqueado)
                 {
                     encontrado = true;
-                   
+
                 }
             }
-          
+
             return encontrado;
 
         }
+
         public Boolean comprobarAdmin(string nombre, string contrasena)
         {
             Boolean encontrado = false;
@@ -121,30 +153,14 @@ namespace PROYECTO_EV2_ALB.ViewModels
             }
             return encontrado;
         }
-        public void insertarUsuario(M_Usuario usuarioNuevo)
-        {
-            operacionesUsuario.insertarUsuario(usuarioNuevo);
-        }
 
-        public void desbloquearUsuario(string nombre)
+        public Boolean comprobarEmail(string email)
         {
-            operacionesUsuario.desbloquearUsuario(nombre);
-        }
-        public void bloquearUsuario(string nombre)
-        {
-            operacionesUsuario.bloquearUsuario(nombre);
-          
-        }
 
-        public ObservableCollection<M_Usuario> ListaUsuarios
-        {
-            get => listaUsuarios;
-            set
-            {
-                listaUsuarios = value;
-               
-            }
+            return Regex.IsMatch(email, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
+
         }
+        #endregion
     }
 
 }

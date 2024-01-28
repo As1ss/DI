@@ -37,6 +37,7 @@ namespace PROYECTO_EV2_ALB.View
         }
 
 
+        //Carga los campos de la incidencia
         private void cargarCampos()
         {
           
@@ -49,6 +50,7 @@ namespace PROYECTO_EV2_ALB.View
 
        
 
+        //Boton para cerrar la incidencia
         private void btnVolver_Click(object sender, RoutedEventArgs e)
         {
             this.Close();

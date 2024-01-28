@@ -19,6 +19,29 @@ namespace PROYECTO_EV2_ALB.ViewModels
            actualizarLista();
         }
 
+        //Metodo para actualizar la lista de incidencias
+        public void actualizarLista()
+        {
+            listaIncidencias = operacionesIncidencia.obtenerIncidencias();
+
+        }
+
+        //Metodos get y set
+        public ObservableCollection<Models.M_Incidencia> ListaIncidencias
+        {
+            set
+            {
+                listaIncidencias = value;
+            }
+            get
+            {
+                return listaIncidencias;
+            }
+        }
+
+
+        //Metodos para insertar y resolver incidencias
+        #region Métodos CRUD
         public void insertarIncidencia(Models.M_Incidencia incidencia)
         {
             operacionesIncidencia.insertarIncidencia(incidencia);
@@ -33,24 +56,11 @@ namespace PROYECTO_EV2_ALB.ViewModels
              
              
            
-        }  
+        }
+        #endregion
 
-        public void actualizarLista()
-        {
-            listaIncidencias = operacionesIncidencia.obtenerIncidencias();
-            
-        }
-        public ObservableCollection<Models.M_Incidencia> ListaIncidencias
-        {
-            set
-            {
-                listaIncidencias = value;
-            }
-            get
-            {
-                return listaIncidencias;
-            }
-        }
+
+      
 
     }
 }
