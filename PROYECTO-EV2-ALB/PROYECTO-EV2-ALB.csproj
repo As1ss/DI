@@ -13,6 +13,7 @@
     <None Remove="images\BIBLIONET.png" />
     <None Remove="images\books.png" />
     <None Remove="images\cerrar_sesion.png" />
+    <None Remove="images\default.png" />
     <None Remove="images\exitIcon.png" />
     <None Remove="images\informes.png" />
     <None Remove="images\prestamo.png" />
@@ -35,6 +36,9 @@
     <Resource Include="images\books.png" />
     <Resource Include="images\cerrar_sesion.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\default.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="images\exitIcon.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

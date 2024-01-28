@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -42,6 +43,10 @@ namespace PROYECTO_EV2_ALB.View
 
             this.usuarioSesion = usuarioSesion;
 
+            tbUsuario.Text = usuarioSesion.Nombre;
+
+
+
 
             actualizarListas();
 
@@ -50,6 +55,7 @@ namespace PROYECTO_EV2_ALB.View
 
 
         }
+
 
         public void actualizarListas()
         {
@@ -63,6 +69,21 @@ namespace PROYECTO_EV2_ALB.View
             vm_libro.actualizarLista();
             listBoxBooks.ItemsSource = vm_libro.ListaLibros;
         }
+
+        public class IndexToColorConverter : IValueConverter
+        {
+            public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+            {
+                int index = (int)value;
+                return index % 2 == 0 ? Brushes.LightBlue : Brushes.LightGray;
+            }
+
+            public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+            {
+                throw new NotImplementedException();
+            }
+        }
+
 
         public void actualizarPrestamos()
         {

@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Media.Imaging;
 using MySqlConnector;
 using PROYECTO_EV2_ALB.Core;
 using WPF_MVVM_CRUD.Core;
@@ -50,10 +51,18 @@ namespace PROYECTO_EV2_ALB.Models
                             {
                                 libro.Imagen = Utils.ConvertByteArrayToBitmapImage(reader.GetFieldValue<byte[]>(4));
                             }
+                            else
+                            {
+                                 
+                                  // Asignar imagen por defecto
+                                 libro.Imagen = new BitmapImage(new Uri("../images/default.png", UriKind.Relative));
 
 
-                           
-                           
+                            }
+
+
+
+
                             listaLibros.Add(libro);
                         }
                     }

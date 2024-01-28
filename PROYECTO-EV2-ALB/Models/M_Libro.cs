@@ -18,7 +18,7 @@ namespace PROYECTO_EV2_ALB.Models
 
         public M_Libro()
         {
-
+           
         }
 
         public M_Libro(string titulo, string autor, int stock)

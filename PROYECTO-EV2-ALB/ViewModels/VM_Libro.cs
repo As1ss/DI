@@ -6,6 +6,7 @@ using System.Collections.Specialized;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace PROYECTO_EV2_ALB.ViewModels
 {
@@ -16,7 +17,7 @@ namespace PROYECTO_EV2_ALB.ViewModels
 
         public VM_Libro()
         {
-            operacionesLibro = new M_OperacionesLibro();
+                operacionesLibro = new M_OperacionesLibro();
              actualizarLista();
 
         }
@@ -48,6 +49,8 @@ namespace PROYECTO_EV2_ALB.ViewModels
             }
             return libro;
         }
+
+
 
         public Boolean comprobarIdLibro(int id)
         {
@@ -109,6 +112,10 @@ namespace PROYECTO_EV2_ALB.ViewModels
         {
             
             listaLibros = operacionesLibro.obtenerLibros();
+
+           
+
+           
           
         }
 

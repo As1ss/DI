@@ -49,7 +49,11 @@ namespace PROYECTO_EV2_ALB.Models
                             prestamo.Libro.Titulo = reader.GetString(1);
                             prestamo.Libro.Autor = reader.GetString(2);
                             prestamo.Libro.Stock = reader.GetInt32(3);
-                            prestamo.Libro.Imagen = Utils.ConvertByteArrayToBitmapImage(reader.GetFieldValue<byte[]>(4));
+                            if (!reader.IsDBNull(4))
+                            {
+                                prestamo.Libro.Imagen = Utils.ConvertByteArrayToBitmapImage(reader.GetFieldValue<byte[]>(4));
+                            }
+
                             prestamo.Usuario.Id_usuario = reader.GetInt32(5);
                             prestamo.Usuario.Nombre = reader.GetString(6);
                             prestamo.Usuario.Contrasena = reader.GetString(7);

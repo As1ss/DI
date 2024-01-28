@@ -20,7 +20,8 @@
     <DockPanel>
         <Border Background="#2258A5" DockPanel.Dock="Top">
             <Grid  DockPanel.Dock="Top">
-                <TextBlock Text="UsuarioNombre" FontSize="30" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <TextBlock Text="UsuarioNombre" Name="tbUsuario" Margin="20 0 0 0"
+                           FontSize="30" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center"/>
                 <Button x:Name="btnLogout" Click="btnLogout_Click" >
 
                     <Button.HorizontalAlignment>Right</Button.HorizontalAlignment>
@@ -125,32 +126,41 @@ Foreground="White" />
                                          VerticalAlignment="Center" >Buscar</Button>
                             </Grid>
                             <ListBox Name="listBoxBooks" ScrollViewer.VerticalScrollBarVisibility="Auto"  
-                                     ScrollViewer.HorizontalScrollBarVisibility="Auto" Height="200" Width="Auto" 
-                                     HorizontalAlignment="Stretch" MaxWidth="1000"
-                                     >
-                                <ListBox.Effect>
-                                    <DropShadowEffect/>
-                                </ListBox.Effect>
-                                <!-- Aquí puedes definir el estilo del ListBoxItem si lo necesitas -->
-                                
+                             ScrollViewer.HorizontalScrollBarVisibility="Auto" Height="350" Width="1000" ScrollViewer.PanningDeceleration="0.0001"
+                                    HorizontalAlignment="Stretch" MaxWidth="1000" 
+                             ItemContainerStyle="{StaticResource AlternatingListBoxItemStyle}" AlternationCount="2">
                                 <ListBox.ItemTemplate>
+                                    
                                     <DataTemplate>
-                                        <StackPanel Orientation="Horizontal">
-                                            <Image Source="{Binding Imagen}" />
-
-                                            <StackPanel Orientation="Vertical">
-
-                                                <TextBlock Text="{Binding Titulo, StringFormat='Titulo: {0}'}"  Margin="5" FontSize="20" />
-                                                <TextBlock Text="{Binding Autor, StringFormat='Autor: {0}'}"  Margin="5" FontSize="20"/>
-                                                <TextBlock Text="{Binding Stock , StringFormat='Stock: {0}'}"  Margin="5" FontSize="20"/>
-                                                <!-- Agrega más TextBlocks u otros controles según tus necesidades -->
-                                            </StackPanel>
-                                        </StackPanel>
-                                      
+                                        
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="*"/>
+                                                
+                                            </Grid.ColumnDefinitions>
+                                            <Border BorderBrush="AliceBlue" BorderThickness="5" Margin="20 0 0 0">
+                                                <Image Source="{Binding Imagen}" Height="140" Width="140" Grid.Column="0" />
+                                            </Border>
+                                          
+                                            <Grid Grid.Column="1" Margin="150 0 0 0">
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="*"/>
+                                                    <RowDefinition Height="*"/>
+                                                    <RowDefinition Height="*"/>
+                                                </Grid.RowDefinitions>
+                                                <TextBlock Text="{Binding Titulo, StringFormat='Titulo: {0}'}"  FontSize="25" Grid.Row="0"  />
+                                                <TextBlock Text="{Binding Autor, StringFormat='Autor: {0}'}"  FontSize="25" Grid.Row="1"/>
+                                                <TextBlock Text="{Binding Stock , StringFormat='Stock: {0}'}"  FontSize="25" Grid.Row="2"/>
+                                            </Grid>
+                                         
+                                        </Grid>
                                     </DataTemplate>
+                                    
                                 </ListBox.ItemTemplate>
-
                             </ListBox>
+
+
                             <Button x:Name="btnPedir" Click="btnPedir_Click" Command="Core:Comandos.PedirLibro"
                                     FontSize="20" HorizontalAlignment="Right" Margin="0 20 20 0" Width="100" Style="{StaticResource RoundedButtonStyle}">Pedir</Button>
                         </StackPanel>
@@ -161,22 +171,35 @@ Foreground="White" />
                     <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
                         <StackPanel Orientation="Vertical">
                             <TextBlock Text="PRÉSTAMOS" FontSize="40" Margin="0 0 0 80" HorizontalAlignment="Center"/>
-                            <ListBox Name="listPrestamos" ScrollViewer.VerticalScrollBarVisibility="Auto" Height="200" 
-         HorizontalAlignment="Stretch" Width="1000" >
-                                <ListBox.Effect>
-                                    <DropShadowEffect/>
-                                </ListBox.Effect>
+                            <ListBox Name="listPrestamos" ScrollViewer.VerticalScrollBarVisibility="Auto"  
+         ScrollViewer.HorizontalScrollBarVisibility="Auto" Height="350" Width="1000" ScrollViewer.PanningDeceleration="0.0001"
+         HorizontalAlignment="Stretch" MaxWidth="1000" 
+         ItemContainerStyle="{StaticResource AlternatingListBoxItemStyle}" AlternationCount="2">
                                 <ListBox.ItemTemplate>
                                     <DataTemplate>
-                                        <StackPanel Orientation="Horizontal">
-                                            <TextBlock Text="{Binding Path=Libro.Titulo, StringFormat='Libro: {0}'}" Margin="5"/>
-                                            <TextBlock Text="{Binding Path=Fecha_prestamo, StringFormat='Fecha Préstamo: {0:yyyy-MM-dd}'}" Margin="5"/>
-                                            <TextBlock Text="{Binding Path=Fecha_devolucion, StringFormat='Fecha Devolución: {0:yyyy-MM-dd}'}" Margin="5"/>
-                                            <!-- Puedes agregar más TextBlocks u otros controles según tus necesidades -->
-                                        </StackPanel>
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <Border BorderBrush="AliceBlue" BorderThickness="5" Margin="20 0 0 0">
+                                                <Image Source="{Binding Path=Libro.Imagen}" Height="140" Width="140" Grid.Column="0" />
+                                            </Border>
+                                            <Grid Grid.Column="1" Margin="150 0 0 0">
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="*"/>
+                                                    <RowDefinition Height="*"/>
+                                                    <RowDefinition Height="*"/>
+                                                </Grid.RowDefinitions>
+                                                <TextBlock Text="{Binding Path=Libro.Titulo, StringFormat='Titulo: {0}'}"  FontSize="25" Grid.Row="0"  />
+                                                <TextBlock Text="{Binding Path=Fecha_prestamo, StringFormat='Fecha Préstamo: {0:yyyy-MM-dd}'}"  FontSize="25" Grid.Row="1"/>
+                                                <TextBlock Text="{Binding Path=Fecha_devolucion, StringFormat='Fecha Devolución: {0:yyyy-MM-dd}'}"  FontSize="25" Grid.Row="2"/>
+                                            </Grid>
+                                        </Grid>
                                     </DataTemplate>
                                 </ListBox.ItemTemplate>
                             </ListBox>
+
 
 
                             <Button x:Name="btnDevolver" Click="btnDevolver_Click" Command="Core:Comandos.DevolverLibro"
