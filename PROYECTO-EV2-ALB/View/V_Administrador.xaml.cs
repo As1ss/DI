@@ -447,6 +447,25 @@ namespace PROYECTO_EV2_ALB.View
                 }
             }
         }
+        private void btnInformeLibros_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnInformePrestamos_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnInformeUsuarios_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnInformeIncidencias_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
 
 
         #endregion

@@ -108,7 +108,8 @@
                 <TabItem Name="tiIncidence" Header="Incidencias" FontSize="30" Style="{StaticResource BackgroundTabItems}" Height="45" VerticalAlignment="Bottom">
                     <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
                         <StackPanel Orientation="Vertical">
-                            <TextBlock Text="ADMINISTRACIÓN DE INCIDENCIAS" FontSize="40" Margin="0 0 0 80" HorizontalAlignment="Center"/>
+                            <Image Source="../images/reports.png" Height="150" HorizontalAlignment="Stretch"/>
+                            <TextBlock Text="ADMINISTRACIÓN DE INCIDENCIAS" FontSize="40" Margin="0 0 0 40" HorizontalAlignment="Center"/>
                             <DataGrid x:Name="dgIncidencias"  AutoGenerateColumns="False" CanUserAddRows="False"
                                       Width="1000" FontSize="25"
                                       Height="300">
@@ -149,11 +150,12 @@
                 <TabItem Name="tiBook" Header="Libro" FontSize="30" Style="{StaticResource BackgroundTabItems}" >
                     <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
                         <StackPanel Orientation="Vertical">
-                            <TextBlock Text="ADMINISTRACIÓN DE LIBROS" FontSize="40" Margin="0 0 0 80" HorizontalAlignment="Center"/>
+                            <Image Source="../images/books.png" Height="150" HorizontalAlignment="Stretch"/>
+                            <TextBlock Text="ADMINISTRACIÓN DE LIBROS" FontSize="40"  HorizontalAlignment="Center"/>
 
                             <StackPanel Orientation="Horizontal" >
                             <DataGrid x:Name="dgLibros" AutoGenerateColumns="False" IsReadOnly="True" 
-                                      CanUserAddRows="False" Width="600"  Height="425" SelectionMode="Single" FontSize="20"
+                                      CanUserAddRows="False" Width="600"  Height="325" SelectionMode="Single" FontSize="20"
                                       SelectionChanged="DynamicDataGrid_SelectionChanged">
                                 <DataGrid.Effect>
                                     <DropShadowEffect/>
@@ -167,7 +169,7 @@
                                 
                             </DataGrid>
                             <StackPanel Orientation="Vertical" Margin="20 0 0 0" HorizontalAlignment="Center">
-                                    <Image x:Name="imgLibro" Width="200" Height="200"/>
+                                    <Image x:Name="imgLibro" Width="200" Height="150"/>
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                                     <TextBlock Text="LIBRO" FontSize="30" HorizontalAlignment="Center"/>
                                     <Button x:Name="btnImagen" Width="100" Margin="80 0 0 0" Click="btnImagen_Click"  Command="Core:Comandos.AgregarImagen"
@@ -209,7 +211,8 @@
                 <TabItem Name="tiUsers" Header="Usuarios" FontSize="30" Style="{StaticResource BackgroundTabItems}">
                     <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
                         <StackPanel Orientation="Vertical">
-                            <TextBlock Text="ADMINISTRACIÓN DE USUARIOS" FontSize="40" Margin="0 0 0 80" HorizontalAlignment="Center"/>
+                            <Image Source="../images/users.png" Height="150" HorizontalAlignment="Stretch"/>
+                            <TextBlock Text="ADMINISTRACIÓN DE USUARIOS" FontSize="40" Margin="0 0 0 40" HorizontalAlignment="Center"/>
                             <DataGrid x:Name="dgUsuarios" AutoGenerateColumns="True"
                                       IsReadOnly="True" CanUserAddRows="False" Width="1000"  Height="300" FontSize="25"
                                       >
@@ -228,12 +231,28 @@
                     </Grid>
                 </TabItem>
                 <TabItem Name="tiInformes" Header="Informes" Style="{StaticResource BackgroundTabItems}" FontSize="30">
+                    <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+                    
+                        <StackPanel Orientation="Vertical">
+                            <Image Source="../images/informes.png" Height="150" HorizontalAlignment="Stretch"/>
+                            <TextBlock Text="ADMINISTRACIÓN DE INFORMES" FontSize="40" Margin="0 0 0 120" HorizontalAlignment="Center"/>
+                            <Button x:Name="btnInformeLibros" FontSize="20" Click="btnInformeLibros_Click"
+                                    Style="{StaticResource RoundedButtonStyle}">Generar Informe Libros</Button>
+                            <Button x:Name="btnInformePrestamos" FontSize="20" Margin="0 20 0 0" Click="btnInformePrestamos_Click"
+                                Style="{StaticResource RoundedButtonStyle}">Generar Informe Prestamos</Button>
+                            <Button x:Name="btnInformeUsuarios" FontSize="20" Margin="0 20 0 0" Click="btnInformeUsuarios_Click"
+                            Style="{StaticResource RoundedButtonStyle}">Generar Informe Usuarios</Button>
+                            <Button x:Name="btnInformeIncidencias" FontSize="20" Margin="0 20 0 0" Click="btnInformeIncidencias_Click"
+                         Style="{StaticResource RoundedButtonStyle}">Generar Informe Incidencias</Button>
+                        </StackPanel>
+                    </Grid>
                     
                 </TabItem>
                 <TabItem Name="tiPrestamos" Header="Préstamos" Style="{StaticResource BackgroundTabItems}" FontSize="30">
                     <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
                         <StackPanel Orientation="Vertical">
-                            <TextBlock Text="ADMINISTRACIÓN DE PRÉSTAMOS" FontSize="40" Margin="0 0 0 80" HorizontalAlignment="Center"/>
+                            <Image Source="../images/prestamo.png" Height="150" HorizontalAlignment="Stretch"/>
+                            <TextBlock Text="ADMINISTRACIÓN DE PRÉSTAMOS" FontSize="40" Margin="0 0 0 40" HorizontalAlignment="Center"/>
                             <DataGrid x:Name="dgPrestamos" AutoGenerateColumns="False"
                             IsReadOnly="True" CanUserAddRows="False" Width="1000" Height="300" FontSize="25">
                                 <DataGrid.Columns>

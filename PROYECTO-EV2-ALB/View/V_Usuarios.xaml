@@ -92,9 +92,10 @@ Foreground="White" />
                     <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
 
                         <StackPanel Orientation="Vertical" Width="900">
-                            <TextBlock Text="INCIDENCIAS" FontSize="40" Margin="0 0 0 40" HorizontalAlignment="Center"/>
+                            <Image Source="../images/reports.png" Height="150" HorizontalAlignment="Stretch"/>
+                            <TextBlock Text="INCIDENCIAS" FontSize="40" Margin="0 0 0 10" HorizontalAlignment="Center"/>
                             <TextBlock TextWrapping="Wrap" TextAlignment="Center" Text="Por favor, utilice este espacio para redactar cualquier incidencia o comentario relacionado con los libros o usuarios."/>
-                            <Border Background="LightGray" BorderBrush="DarkGray" BorderThickness="5" CornerRadius="5" Margin="0 30 0 0" Height="300" Width="889">
+                            <Border Background="LightGray" BorderBrush="DarkGray" BorderThickness="5" CornerRadius="5" Margin="0 30 0 0" Height="200" Width="889">
                                 <Border.Effect>
                                     <DropShadowEffect/>
                                 </Border.Effect>
@@ -113,7 +114,8 @@ Foreground="White" />
                 <TabItem Name="tiBooks" Header="Libros" FontSize="30" Style="{StaticResource BackgroundTabItems}" >
                     <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
                         <StackPanel Orientation="Vertical">
-                            <TextBlock Text="CONSULTAR LIBROS" FontSize="40" Margin="0 0 0 80" HorizontalAlignment="Center"/>
+                            <Image Source="../images/search_books.png" Height="150" HorizontalAlignment="Stretch"/>
+                            <TextBlock Text="CONSULTAR LIBROS" FontSize="40" Margin="0 0 0 20" HorizontalAlignment="Center"/>
                             <Grid Margin="0 0 0 20">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="*"/>
@@ -126,7 +128,7 @@ Foreground="White" />
                                          VerticalAlignment="Center" >Buscar</Button>
                             </Grid>
                             <ListBox Name="listBoxBooks" ScrollViewer.VerticalScrollBarVisibility="Auto"  
-                             ScrollViewer.HorizontalScrollBarVisibility="Auto" Height="350" Width="1000" ScrollViewer.PanningDeceleration="0.0001"
+                             ScrollViewer.HorizontalScrollBarVisibility="Auto" Height="250" Width="1000" ScrollViewer.PanningDeceleration="0.0001"
                                     HorizontalAlignment="Stretch" MaxWidth="1000" 
                              ItemContainerStyle="{StaticResource AlternatingListBoxItemStyle}" AlternationCount="2" d:ItemsSource="{d:SampleData ItemCount=5}">
                                 <ListBox.ItemTemplate>
@@ -140,7 +142,7 @@ Foreground="White" />
                                                 
                                             </Grid.ColumnDefinitions>
                                             <Border BorderBrush="AliceBlue" BorderThickness="5" Margin="20 0 0 0">
-                                                <Image Source="{Binding Imagen}" Height="140" Width="140" Grid.Column="0" />
+                                                <Image Source="{Binding Imagen}" Height="120" Width="120" Grid.Column="0" />
                                             </Border>
                                           
                                             <Grid Grid.Column="1" Margin="150 0 0 0">
@@ -170,9 +172,10 @@ Foreground="White" />
                 <TabItem Name="tiPrestamos" Header="Préstamos" FontSize="30" Style="{StaticResource BackgroundTabItems}">
                     <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
                         <StackPanel Orientation="Vertical">
-                            <TextBlock Text="PRÉSTAMOS" FontSize="40" Margin="0 0 0 80" HorizontalAlignment="Center"/>
+                            <Image Source="../images/prestamo.png" Height="150" HorizontalAlignment="Stretch"/>
+                            <TextBlock Text="PRÉSTAMOS" FontSize="40" Margin="0 0 0 40" HorizontalAlignment="Center"/>
                             <ListBox Name="listPrestamos" ScrollViewer.VerticalScrollBarVisibility="Auto"  
-         ScrollViewer.HorizontalScrollBarVisibility="Auto" Height="350" Width="1000" ScrollViewer.PanningDeceleration="0.0001"
+         ScrollViewer.HorizontalScrollBarVisibility="Auto" Height="250" Width="1000" ScrollViewer.PanningDeceleration="0.0001"
          HorizontalAlignment="Stretch" MaxWidth="1000" 
          ItemContainerStyle="{StaticResource AlternatingListBoxItemStyle}" AlternationCount="2" d:ItemsSource="{d:SampleData ItemCount=5}">
                                 <ListBox.ItemTemplate>
@@ -183,7 +186,7 @@ Foreground="White" />
                                                 <ColumnDefinition Width="*"/>
                                             </Grid.ColumnDefinitions>
                                             <Border BorderBrush="AliceBlue" BorderThickness="5" Margin="20 0 0 0">
-                                                <Image Source="{Binding Path=Libro.Imagen}" Height="140" Width="140" Grid.Column="0" />
+                                                <Image Source="{Binding Path=Libro.Imagen}" Height="120" Width="120" Grid.Column="0" />
                                             </Border>
                                             <Grid Grid.Column="1" Margin="150 0 0 0">
                                                 <Grid.RowDefinitions>
