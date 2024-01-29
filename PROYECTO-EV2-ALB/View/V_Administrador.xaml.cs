@@ -449,7 +449,8 @@ namespace PROYECTO_EV2_ALB.View
         }
         private void btnInformeLibros_Click(object sender, RoutedEventArgs e)
         {
-
+            V_Informes v_Informes = new V_Informes();
+            v_Informes.ShowDialog();
         }
 
         private void btnInformePrestamos_Click(object sender, RoutedEventArgs e)

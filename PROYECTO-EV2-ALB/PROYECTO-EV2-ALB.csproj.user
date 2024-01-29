@@ -16,6 +16,9 @@
     <Compile Update="View\V_Incidencia.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\V_Informes.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\V_Usuarios.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -28,6 +31,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\V_Incidencia.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\V_Informes.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\V_InicioSesion.xaml">
