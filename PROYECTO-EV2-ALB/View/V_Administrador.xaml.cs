@@ -449,23 +449,26 @@ namespace PROYECTO_EV2_ALB.View
         }
         private void btnInformeLibros_Click(object sender, RoutedEventArgs e)
         {
-            V_Informes v_Informes = new V_Informes();
+            V_Informes v_Informes = new V_Informes(sender);
             v_Informes.ShowDialog();
         }
 
         private void btnInformePrestamos_Click(object sender, RoutedEventArgs e)
         {
-
+            V_Informes v_Informes = new V_Informes(sender);
+            v_Informes.ShowDialog();
         }
 
         private void btnInformeUsuarios_Click(object sender, RoutedEventArgs e)
         {
-
+            V_Informes v_Informes = new V_Informes(sender);
+            v_Informes.ShowDialog();
         }
 
         private void btnInformeIncidencias_Click(object sender, RoutedEventArgs e)
         {
-
+            V_Informes v_Informes = new V_Informes(sender);
+            v_Informes.ShowDialog();
         }
 
 

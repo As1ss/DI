@@ -134,7 +134,6 @@ D:\DAM2T\DI\PROYECTO-EV2-ALB\bin\Debug\net8.0-windows\runtimes\unix\lib\netcorea
 D:\DAM2T\DI\PROYECTO-EV2-ALB\bin\Debug\net8.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 D:\DAM2T\DI\PROYECTO-EV2-ALB\obj\Debug\net8.0-windows\View\V_Informes.g.cs
 D:\DAM2T\DI\PROYECTO-EV2-ALB\obj\Debug\net8.0-windows\View\V_Informes.baml
-D:\DAM2T\DI\PROYECTO-EV2-ALB\bin\Debug\net8.0-windows\Reportes\Report1.rdl
 C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\PROYECTO-EV2-ALB\bin\Debug\net8.0-windows\Reportes\Report1.rdl
 C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\PROYECTO-EV2-ALB\bin\Debug\net8.0-windows\Bold.Licensing.dll
 C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\PROYECTO-EV2-ALB\bin\Debug\net8.0-windows\BoldReports.WPF.dll
@@ -201,3 +200,7 @@ C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\PROYECTO-EV2-ALB\bin\Debug\net8.
 C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\PROYECTO-EV2-ALB\obj\Debug\net8.0-windows\View\V_Informes.g.cs
 C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\PROYECTO-EV2-ALB\obj\Debug\net8.0-windows\View\V_Informes.baml
 C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\PROYECTO-EV2-ALB\bin\Debug\net8.0-windows\Reportes\Report2.rdl
+D:\DAM2T\DI\PROYECTO-EV2-ALB\bin\Debug\net8.0-windows\Reportes\Incidencias.rdl
+D:\DAM2T\DI\PROYECTO-EV2-ALB\bin\Debug\net8.0-windows\Reportes\Libros.rdl
+D:\DAM2T\DI\PROYECTO-EV2-ALB\bin\Debug\net8.0-windows\Reportes\Prestamos.rdl
+D:\DAM2T\DI\PROYECTO-EV2-ALB\bin\Debug\net8.0-windows\Reportes\Usuarios.rdl

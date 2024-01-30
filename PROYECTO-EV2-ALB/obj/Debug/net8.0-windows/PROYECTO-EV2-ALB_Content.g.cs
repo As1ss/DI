@@ -9,7 +9,9 @@
 //------------------------------------------------------------------------------
 
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/users.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("reportes/report1.rdl")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("reportes/report2.rdl")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("reportes/incidencias.rdl")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("reportes/libros.rdl")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("reportes/prestamos.rdl")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("reportes/usuarios.rdl")]
 
 

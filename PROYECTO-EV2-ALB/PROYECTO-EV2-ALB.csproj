@@ -21,18 +21,29 @@
     <None Remove="images\search_books.png" />
     <None Remove="images\users.jpg" />
     <None Remove="images\users.png" />
-    <None Remove="Reportes\Report1.rdl" />
-    <None Remove="Reportes\Report2.rdl" />
+    <None Remove="Reportes\Incidencias.rdl" />
+    <None Remove="Reportes\Libros.rdl" />
+    <None Remove="Reportes\Prestamos.rdl" />
+    <None Remove="Reportes\Report3.rdl" />
+    <None Remove="Reportes\Report4.rdl" />
+    <None Remove="Reportes\Report5.rdl" />
+    <None Remove="Reportes\Usuarios.rdl" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Include="images\users.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Reportes\Report1.rdl">
+    <Content Include="Reportes\Incidencias.rdl">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Reportes\Report2.rdl">
+    <Content Include="Reportes\Libros.rdl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reportes\Prestamos.rdl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reportes\Usuarios.rdl">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

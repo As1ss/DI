@@ -20,11 +20,38 @@ namespace PROYECTO_EV2_ALB.View
     /// </summary>
     public partial class V_Informes : Window
     {
-        public V_Informes()
+        public V_Informes(Object sender)
         {
             InitializeComponent();
-            reportViewer.ReportPath = System.IO.Path.Combine(Environment.CurrentDirectory, "Reportes","Report2.rdl");
-            reportViewer.RefreshReport();
+
+
+            if (sender is Button boton)
+            {
+
+           
+
+            if (boton.Name.ToString().Equals("btnInformeLibros"))
+            {
+                reportViewer.ReportPath = System.IO.Path.Combine(Environment.CurrentDirectory, "Reportes", "Libros.rdl");
+                reportViewer.RefreshReport();
+            }
+            if (boton.Name.ToString().Equals("btnInformePrestamos"))
+            {
+                reportViewer.ReportPath = System.IO.Path.Combine(Environment.CurrentDirectory, "Reportes", "Prestamos.rdl");
+                reportViewer.RefreshReport();
+            }
+            if (boton.Name.ToString().Equals("btnInformeUsuarios"))
+            {
+                reportViewer.ReportPath = System.IO.Path.Combine(Environment.CurrentDirectory, "Reportes", "Usuarios.rdl");
+                reportViewer.RefreshReport();
+            }
+            if (boton.Name.ToString().Equals("btnInformeIncidencias"))
+            {
+                reportViewer.ReportPath = System.IO.Path.Combine(Environment.CurrentDirectory, "Reportes", "Incidencias.rdl");
+                reportViewer.RefreshReport();
+            }
+            }
+
         }
     }
 }

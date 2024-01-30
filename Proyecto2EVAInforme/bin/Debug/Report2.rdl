@@ -62,7 +62,7 @@ FROM            libro</CommandText>
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>7.97917in</Width>
+                  <Width>8.54167in</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -571,19 +571,18 @@ FROM            libro</CommandText>
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>DataSet1</DataSetName>
-            <Top>0.10583cm</Top>
-            <Left>2.5664cm</Left>
+            <Left>0.76729cm</Left>
             <Height>1.54112in</Height>
-            <Width>7.97917in</Width>
+            <Width>8.54167in</Width>
             <Style>
               <FontSize>14pt</FontSize>
             </Style>
           </Tablix>
         </ReportItems>
-        <Height>4.18786cm</Height>
+        <Height>4.41722cm</Height>
         <Style />
       </Body>
-      <Width>24.60621cm</Width>
+      <Width>22.46312cm</Width>
       <Page>
         <PageHeader>
           <Height>2.06127cm</Height>
@@ -597,9 +596,16 @@ FROM            libro</CommandText>
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>INFORME LIBROS</Value>
+                      <Value>I</Value>
                       <Style>
-                        <FontSize>22pt</FontSize>
+                        <FontSize>26pt</FontSize>
+                        <Color>White</Color>
+                      </Style>
+                    </TextRun>
+                    <TextRun>
+                      <Value>NFORME LIBROS</Value>
+                      <Style>
+                        <FontSize>26pt</FontSize>
                         <FontWeight>Bold</FontWeight>
                         <Color>White</Color>
                       </Style>
@@ -659,7 +665,7 @@ FROM            libro</CommandText>
               <rd:DefaultName>Textbox20</rd:DefaultName>
               <Top>0.35842cm</Top>
               <Left>16.37453cm</Left>
-              <Height>1.03505cm</Height>
+              <Height>0.68228cm</Height>
               <Width>4.44817cm</Width>
               <ZIndex>2</ZIndex>
               <Style>
@@ -681,7 +687,7 @@ FROM            libro</CommandText>
           </Style>
         </PageHeader>
         <PageFooter>
-          <Height>1.24382cm</Height>
+          <Height>1.82562cm</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -694,28 +700,28 @@ FROM            libro</CommandText>
                     <TextRun>
                       <Value>Página </Value>
                       <Style>
-                        <FontSize>14pt</FontSize>
+                        <FontSize>16pt</FontSize>
                         <Color>White</Color>
                       </Style>
                     </TextRun>
                     <TextRun>
                       <Value>=Globals!PageNumber</Value>
                       <Style>
-                        <FontSize>14pt</FontSize>
+                        <FontSize>16pt</FontSize>
                         <Color>White</Color>
                       </Style>
                     </TextRun>
                     <TextRun>
                       <Value> / </Value>
                       <Style>
-                        <FontSize>14pt</FontSize>
+                        <FontSize>16pt</FontSize>
                         <Color>White</Color>
                       </Style>
                     </TextRun>
                     <TextRun>
                       <Value>=Globals!TotalPages</Value>
                       <Style>
-                        <FontSize>14pt</FontSize>
+                        <FontSize>16pt</FontSize>
                         <Color>White</Color>
                       </Style>
                     </TextRun>
@@ -724,9 +730,9 @@ FROM            libro</CommandText>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox22</rd:DefaultName>
-              <Top>0.14111cm</Top>
+              <Top>0.17639cm</Top>
               <Left>9.10229cm</Left>
-              <Height>0.9616cm</Height>
+              <Height>0.74993cm</Height>
               <Width>10.58271cm</Width>
               <Style>
                 <Border>
