@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "Proyecto2EVAInforme", "Proyecto2EVAInforme.rptproj", "{AA6FDC94-E0BB-4A9A-8F91-AB2B9BB7F994}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		DebugLocal|Default = DebugLocal|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AA6FDC94-E0BB-4A9A-8F91-AB2B9BB7F994}.Debug|Default.ActiveCfg = Debug
+		{AA6FDC94-E0BB-4A9A-8F91-AB2B9BB7F994}.Debug|Default.Build.0 = Debug
+		{AA6FDC94-E0BB-4A9A-8F91-AB2B9BB7F994}.Debug|Default.Deploy.0 = Debug
+		{AA6FDC94-E0BB-4A9A-8F91-AB2B9BB7F994}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{AA6FDC94-E0BB-4A9A-8F91-AB2B9BB7F994}.DebugLocal|Default.Build.0 = DebugLocal
+		{AA6FDC94-E0BB-4A9A-8F91-AB2B9BB7F994}.Release|Default.ActiveCfg = Release
+		{AA6FDC94-E0BB-4A9A-8F91-AB2B9BB7F994}.Release|Default.Build.0 = Release
+		{AA6FDC94-E0BB-4A9A-8F91-AB2B9BB7F994}.Release|Default.Deploy.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DEBAB96C-40E9-4324-9CA2-8FD51A75AC4D}
+	EndGlobalSection
+EndGlobal

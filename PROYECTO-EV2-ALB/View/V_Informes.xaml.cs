@@ -23,7 +23,7 @@ namespace PROYECTO_EV2_ALB.View
         public V_Informes()
         {
             InitializeComponent();
-            reportViewer.ReportPath = System.IO.Path.Combine(Environment.CurrentDirectory, "Reportes","Report1.rdl");
+            reportViewer.ReportPath = System.IO.Path.Combine(Environment.CurrentDirectory, "Reportes","Report2.rdl");
             reportViewer.RefreshReport();
         }
     }
