@@ -9,7 +9,7 @@
       <am:Name>SSDTRS</am:Name>
       <am:Version>17.8.34330.188</am:Version>
     </am:UpdatedBy>
-    <am:LastModifiedTimestamp>2024-01-30T00:08:05.6938276Z</am:LastModifiedTimestamp>
+    <am:LastModifiedTimestamp>2024-01-30T14:28:46.9827626Z</am:LastModifiedTimestamp>
   </am:AuthoringMetadata>
   <df:DefaultFontFamily>Segoe UI</df:DefaultFontFamily>
   <AutoRefresh>0</AutoRefresh>
@@ -62,7 +62,7 @@ FROM            libro</CommandText>
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>8.6875in</Width>
+                  <Width>7.97917in</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -506,7 +506,7 @@ FROM            libro</CommandText>
                               <Top>0.5in</Top>
                               <Left>1.24354cm</Left>
                               <Height>1.04112in</Height>
-                              <Width>6.61458in</Width>
+                              <Width>6.6146in</Width>
                               <ZIndex>1</ZIndex>
                               <Style>
                                 <FontFamily />
@@ -571,18 +571,19 @@ FROM            libro</CommandText>
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>DataSet1</DataSetName>
-            <Left>0.76729cm</Left>
+            <Top>0.10583cm</Top>
+            <Left>2.5664cm</Left>
             <Height>1.54112in</Height>
-            <Width>8.6875in</Width>
+            <Width>7.97917in</Width>
             <Style>
               <FontSize>14pt</FontSize>
             </Style>
           </Tablix>
         </ReportItems>
-        <Height>11.13764cm</Height>
+        <Height>4.18786cm</Height>
         <Style />
       </Body>
-      <Width>22.83354cm</Width>
+      <Width>24.60621cm</Width>
       <Page>
         <PageHeader>
           <Height>2.06127cm</Height>
@@ -596,16 +597,9 @@ FROM            libro</CommandText>
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>I</Value>
+                      <Value>INFORME LIBROS</Value>
                       <Style>
-                        <FontSize>26pt</FontSize>
-                        <Color>White</Color>
-                      </Style>
-                    </TextRun>
-                    <TextRun>
-                      <Value>NFORME LIBROS</Value>
-                      <Style>
-                        <FontSize>26pt</FontSize>
+                        <FontSize>22pt</FontSize>
                         <FontWeight>Bold</FontWeight>
                         <Color>White</Color>
                       </Style>
@@ -665,7 +659,7 @@ FROM            libro</CommandText>
               <rd:DefaultName>Textbox20</rd:DefaultName>
               <Top>0.35842cm</Top>
               <Left>16.37453cm</Left>
-              <Height>0.68228cm</Height>
+              <Height>1.03505cm</Height>
               <Width>4.44817cm</Width>
               <ZIndex>2</ZIndex>
               <Style>
@@ -687,7 +681,7 @@ FROM            libro</CommandText>
           </Style>
         </PageHeader>
         <PageFooter>
-          <Height>2.54cm</Height>
+          <Height>1.24382cm</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -704,22 +698,33 @@ FROM            libro</CommandText>
                         <Color>White</Color>
                       </Style>
                     </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>Textbox22</rd:DefaultName>
+              <Top>0.14111cm</Top>
+              <Left>9.10229cm</Left>
+              <Height>0.9616cm</Height>
+              <Width>3.10819cm</Width>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="Textbox11">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
                     <TextRun>
                       <Value>=Globals!PageNumber</Value>
-                      <Style>
-                        <FontSize>16pt</FontSize>
-                        <Color>White</Color>
-                      </Style>
-                    </TextRun>
-                    <TextRun>
-                      <Value> / </Value>
-                      <Style>
-                        <FontSize>16pt</FontSize>
-                        <Color>White</Color>
-                      </Style>
-                    </TextRun>
-                    <TextRun>
-                      <Value>=Globals!TotalPages</Value>
                       <Style>
                         <FontSize>16pt</FontSize>
                         <Color>White</Color>
@@ -729,11 +734,12 @@ FROM            libro</CommandText>
                   <Style />
                 </Paragraph>
               </Paragraphs>
-              <rd:DefaultName>Textbox22</rd:DefaultName>
+              <rd:DefaultName>Textbox11</rd:DefaultName>
               <Top>0.17639cm</Top>
-              <Left>9.10229cm</Left>
-              <Height>0.74993cm</Height>
-              <Width>10.58271cm</Width>
+              <Left>10.8712cm</Left>
+              <Height>0.9616cm</Height>
+              <Width>2.5cm</Width>
+              <ZIndex>1</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
