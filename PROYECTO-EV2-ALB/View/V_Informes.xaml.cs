@@ -27,29 +27,30 @@ namespace PROYECTO_EV2_ALB.View
 
             if (sender is Button boton)
             {
+                String botonName = boton.Name.ToString();
 
+                switch (botonName)
+                {
+                    case "btnInformeLibros":
+                        reportViewer.ReportPath = System.IO.Path.Combine(Environment.CurrentDirectory, "Reportes", "Libros.rdl");
+                        reportViewer.RefreshReport();
+                        break;
+                    case "btnInformePrestamos":
+                        reportViewer.ReportPath = System.IO.Path.Combine(Environment.CurrentDirectory, "Reportes", "Prestamos.rdl");
+                        reportViewer.RefreshReport();
+                        break;
+                    case "btnInformeUsuarios":
+                        reportViewer.ReportPath = System.IO.Path.Combine(Environment.CurrentDirectory, "Reportes", "Usuarios.rdl");
+                        reportViewer.RefreshReport();
+                        break;
+                    case "btnInformeIncidencias":
+                        reportViewer.ReportPath = System.IO.Path.Combine(Environment.CurrentDirectory, "Reportes", "Incidencias.rdl");
+                        reportViewer.RefreshReport();
+                        break;
+                    default:
+                        break;
+                }
            
-
-            if (boton.Name.ToString().Equals("btnInformeLibros"))
-            {
-                reportViewer.ReportPath = System.IO.Path.Combine(Environment.CurrentDirectory, "Reportes", "Libros.rdl");
-                reportViewer.RefreshReport();
-            }
-            if (boton.Name.ToString().Equals("btnInformePrestamos"))
-            {
-                reportViewer.ReportPath = System.IO.Path.Combine(Environment.CurrentDirectory, "Reportes", "Prestamos.rdl");
-                reportViewer.RefreshReport();
-            }
-            if (boton.Name.ToString().Equals("btnInformeUsuarios"))
-            {
-                reportViewer.ReportPath = System.IO.Path.Combine(Environment.CurrentDirectory, "Reportes", "Usuarios.rdl");
-                reportViewer.RefreshReport();
-            }
-            if (boton.Name.ToString().Equals("btnInformeIncidencias"))
-            {
-                reportViewer.ReportPath = System.IO.Path.Combine(Environment.CurrentDirectory, "Reportes", "Incidencias.rdl");
-                reportViewer.RefreshReport();
-            }
             }
 
         }

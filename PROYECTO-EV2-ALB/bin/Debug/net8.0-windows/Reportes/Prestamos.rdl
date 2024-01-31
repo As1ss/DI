@@ -9,7 +9,7 @@
       <am:Name>SSDTRS</am:Name>
       <am:Version>17.8.34330.188</am:Version>
     </am:UpdatedBy>
-    <am:LastModifiedTimestamp>2024-01-30T20:22:56.1866553Z</am:LastModifiedTimestamp>
+    <am:LastModifiedTimestamp>2024-01-31T19:44:34.6550620Z</am:LastModifiedTimestamp>
   </am:AuthoringMetadata>
   <df:DefaultFontFamily>Segoe UI</df:DefaultFontFamily>
   <AutoRefresh>0</AutoRefresh>
@@ -134,13 +134,14 @@ WHERE        prestamo.usuario = usuario.id_usuario AND prestamo.libro = libro.id
                                       <Style>
                                         <FontStyle>Italic</FontStyle>
                                         <FontFamily />
-                                        <FontSize>14pt</FontSize>
+                                        <FontSize>16pt</FontSize>
                                         <FontWeight>Bold</FontWeight>
+                                        <Color>White</Color>
                                       </Style>
                                     </TextRun>
                                   </TextRuns>
                                   <Style>
-                                    <TextAlign>Left</TextAlign>
+                                    <TextAlign>Center</TextAlign>
                                   </Style>
                                 </Paragraph>
                               </Paragraphs>
@@ -148,11 +149,12 @@ WHERE        prestamo.usuario = usuario.id_usuario AND prestamo.libro = libro.id
                               <Top>0.03528cm</Top>
                               <Left>1.24354cm</Left>
                               <Height>0.27in</Height>
-                              <Width>5in</Width>
+                              <Width>0.41667in</Width>
                               <Style>
                                 <Border>
                                   <Style>None</Style>
                                 </Border>
+                                <BackgroundColor>CornflowerBlue</BackgroundColor>
                                 <FontFamily />
                                 <PaddingLeft>2pt</PaddingLeft>
                                 <PaddingRight>2pt</PaddingRight>
@@ -206,10 +208,12 @@ WHERE        prestamo.usuario = usuario.id_usuario AND prestamo.libro = libro.id
                                             <rd:DefaultName>textbox2</rd:DefaultName>
                                             <Style>
                                               <Border>
-                                                <Color>LightGrey</Color>
+                                                <Style>None</Style>
                                               </Border>
                                               <BottomBorder>
+                                                <Color>Black</Color>
                                                 <Style>Solid</Style>
+                                                <Width>1pt</Width>
                                               </BottomBorder>
                                               <BackgroundColor>CornflowerBlue</BackgroundColor>
                                               <FontFamily />
@@ -248,10 +252,12 @@ WHERE        prestamo.usuario = usuario.id_usuario AND prestamo.libro = libro.id
                                             <rd:DefaultName>textbox4</rd:DefaultName>
                                             <Style>
                                               <Border>
-                                                <Color>LightGrey</Color>
+                                                <Style>None</Style>
                                               </Border>
                                               <BottomBorder>
+                                                <Color>Black</Color>
                                                 <Style>Solid</Style>
+                                                <Width>1pt</Width>
                                               </BottomBorder>
                                               <BackgroundColor>CornflowerBlue</BackgroundColor>
                                               <FontFamily />
@@ -290,10 +296,12 @@ WHERE        prestamo.usuario = usuario.id_usuario AND prestamo.libro = libro.id
                                             <rd:DefaultName>textbox5</rd:DefaultName>
                                             <Style>
                                               <Border>
-                                                <Color>LightGrey</Color>
+                                                <Style>None</Style>
                                               </Border>
                                               <BottomBorder>
+                                                <Color>Black</Color>
                                                 <Style>Solid</Style>
+                                                <Width>1pt</Width>
                                               </BottomBorder>
                                               <BackgroundColor>CornflowerBlue</BackgroundColor>
                                               <FontFamily />
@@ -331,10 +339,12 @@ WHERE        prestamo.usuario = usuario.id_usuario AND prestamo.libro = libro.id
                                             <rd:DefaultName>textbox6</rd:DefaultName>
                                             <Style>
                                               <Border>
-                                                <Color>LightGrey</Color>
+                                                <Style>None</Style>
                                               </Border>
                                               <BottomBorder>
+                                                <Color>Black</Color>
                                                 <Style>Solid</Style>
+                                                <Width>1pt</Width>
                                               </BottomBorder>
                                               <BackgroundColor>CornflowerBlue</BackgroundColor>
                                               <FontFamily />
@@ -363,7 +373,7 @@ WHERE        prestamo.usuario = usuario.id_usuario AND prestamo.libro = libro.id
                                                     <Value>=Fields!titulo.Value</Value>
                                                     <Style>
                                                       <FontFamily />
-                                                      <FontSize>14pt</FontSize>
+                                                      <FontSize>18pt</FontSize>
                                                       <Color>Brown</Color>
                                                     </Style>
                                                   </TextRun>
@@ -377,10 +387,12 @@ WHERE        prestamo.usuario = usuario.id_usuario AND prestamo.libro = libro.id
                                             <rd:DefaultName>titulo</rd:DefaultName>
                                             <Style>
                                               <Border>
-                                                <Color>LightGrey</Color>
+                                                <Style>None</Style>
                                               </Border>
                                               <BottomBorder>
+                                                <Color>Black</Color>
                                                 <Style>Solid</Style>
+                                                <Width>1pt</Width>
                                               </BottomBorder>
                                               <FontFamily />
                                               <PaddingLeft>2pt</PaddingLeft>
@@ -403,7 +415,7 @@ WHERE        prestamo.usuario = usuario.id_usuario AND prestamo.libro = libro.id
                                                     <Value>=Fields!nombre.Value</Value>
                                                     <Style>
                                                       <FontFamily />
-                                                      <FontSize>14pt</FontSize>
+                                                      <FontSize>18pt</FontSize>
                                                       <Color>#333333</Color>
                                                     </Style>
                                                   </TextRun>
@@ -417,10 +429,12 @@ WHERE        prestamo.usuario = usuario.id_usuario AND prestamo.libro = libro.id
                                             <rd:DefaultName>nombre</rd:DefaultName>
                                             <Style>
                                               <Border>
-                                                <Color>LightGrey</Color>
+                                                <Style>None</Style>
                                               </Border>
                                               <BottomBorder>
+                                                <Color>Black</Color>
                                                 <Style>Solid</Style>
+                                                <Width>1pt</Width>
                                               </BottomBorder>
                                               <FontFamily />
                                               <PaddingLeft>2pt</PaddingLeft>
@@ -443,7 +457,7 @@ WHERE        prestamo.usuario = usuario.id_usuario AND prestamo.libro = libro.id
                                                     <Value>=Fields!fecha_prestamo.Value</Value>
                                                     <Style>
                                                       <FontFamily />
-                                                      <FontSize>14pt</FontSize>
+                                                      <FontSize>18pt</FontSize>
                                                       <Color>#333333</Color>
                                                     </Style>
                                                   </TextRun>
@@ -457,10 +471,12 @@ WHERE        prestamo.usuario = usuario.id_usuario AND prestamo.libro = libro.id
                                             <rd:DefaultName>fecha_prestamo</rd:DefaultName>
                                             <Style>
                                               <Border>
-                                                <Color>LightGrey</Color>
+                                                <Style>None</Style>
                                               </Border>
                                               <BottomBorder>
+                                                <Color>Black</Color>
                                                 <Style>Solid</Style>
+                                                <Width>1pt</Width>
                                               </BottomBorder>
                                               <FontFamily />
                                               <PaddingLeft>2pt</PaddingLeft>
@@ -482,7 +498,7 @@ WHERE        prestamo.usuario = usuario.id_usuario AND prestamo.libro = libro.id
                                                   <TextRun>
                                                     <Value>=Fields!fecha_devolucion.Value</Value>
                                                     <Style>
-                                                      <FontSize>14pt</FontSize>
+                                                      <FontSize>18pt</FontSize>
                                                     </Style>
                                                   </TextRun>
                                                 </TextRuns>
@@ -496,6 +512,11 @@ WHERE        prestamo.usuario = usuario.id_usuario AND prestamo.libro = libro.id
                                               <Border>
                                                 <Style>None</Style>
                                               </Border>
+                                              <BottomBorder>
+                                                <Color>Black</Color>
+                                                <Style>Solid</Style>
+                                                <Width>1pt</Width>
+                                              </BottomBorder>
                                               <PaddingLeft>2pt</PaddingLeft>
                                               <PaddingRight>2pt</PaddingRight>
                                               <PaddingTop>2pt</PaddingTop>
@@ -566,6 +587,7 @@ WHERE        prestamo.usuario = usuario.id_usuario AND prestamo.libro = libro.id
                             </Border>
                           </Style>
                         </Rectangle>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                   </TablixCells>
@@ -731,8 +753,8 @@ WHERE        prestamo.usuario = usuario.id_usuario AND prestamo.libro = libro.id
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox22</rd:DefaultName>
-              <Top>0.33072cm</Top>
-              <Left>7.24707cm</Left>
+              <Top>0.33071cm</Top>
+              <Left>8.20303cm</Left>
               <Height>0.90868cm</Height>
               <Width>1.93083cm</Width>
               <Style>
@@ -765,8 +787,8 @@ WHERE        prestamo.usuario = usuario.id_usuario AND prestamo.libro = libro.id
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>PageNumber</rd:DefaultName>
-              <Top>0.33072cm</Top>
-              <Left>9.17791cm</Left>
+              <Top>0.33071cm</Top>
+              <Left>10.13387cm</Left>
               <Height>0.90867cm</Height>
               <Width>0.67438cm</Width>
               <ZIndex>1</ZIndex>
@@ -801,8 +823,8 @@ WHERE        prestamo.usuario = usuario.id_usuario AND prestamo.libro = libro.id
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox7</rd:DefaultName>
-              <Top>0.33072cm</Top>
-              <Left>9.88756cm</Left>
+              <Top>0.33071cm</Top>
+              <Left>10.84352cm</Left>
               <Height>0.90867cm</Height>
               <Width>0.61264cm</Width>
               <ZIndex>2</ZIndex>
@@ -837,8 +859,8 @@ WHERE        prestamo.usuario = usuario.id_usuario AND prestamo.libro = libro.id
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>TotalPages</rd:DefaultName>
-              <Top>0.33072cm</Top>
-              <Left>10.5002cm</Left>
+              <Top>0.33071cm</Top>
+              <Left>11.45616cm</Left>
               <Height>0.90867cm</Height>
               <Width>2.5cm</Width>
               <ZIndex>3</ZIndex>

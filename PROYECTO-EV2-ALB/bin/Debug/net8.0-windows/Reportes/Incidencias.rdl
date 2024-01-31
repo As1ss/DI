@@ -9,7 +9,7 @@
       <am:Name>SSDTRS</am:Name>
       <am:Version>17.8.34330.188</am:Version>
     </am:UpdatedBy>
-    <am:LastModifiedTimestamp>2024-01-30T19:30:34.1413129Z</am:LastModifiedTimestamp>
+    <am:LastModifiedTimestamp>2024-01-31T20:03:23.6041267Z</am:LastModifiedTimestamp>
   </am:AuthoringMetadata>
   <df:DefaultFontFamily>Segoe UI</df:DefaultFontFamily>
   <AutoRefresh>0</AutoRefresh>
@@ -92,7 +92,7 @@ WHERE        incidencia.usuario = usuario.id_usuario</CommandText>
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>9.22919in</Width>
+                  <Width>7.80209in</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -110,17 +110,18 @@ WHERE        incidencia.usuario = usuario.id_usuario</CommandText>
                                 <Paragraph>
                                   <TextRuns>
                                     <TextRun>
-                                      <Value>=Fields!id_incidencia.Value</Value>
+                                      <Value>=Sum(Fields!id_incidencia.Value)</Value>
                                       <Style>
                                         <FontStyle>Italic</FontStyle>
                                         <FontFamily />
-                                        <FontSize>14pt</FontSize>
+                                        <FontSize>16pt</FontSize>
                                         <FontWeight>Bold</FontWeight>
+                                        <Color>White</Color>
                                       </Style>
                                     </TextRun>
                                   </TextRuns>
                                   <Style>
-                                    <TextAlign>Left</TextAlign>
+                                    <TextAlign>Center</TextAlign>
                                   </Style>
                                 </Paragraph>
                               </Paragraphs>
@@ -128,11 +129,12 @@ WHERE        incidencia.usuario = usuario.id_usuario</CommandText>
                               <Top>0.03528cm</Top>
                               <Left>1.24354cm</Left>
                               <Height>0.27in</Height>
-                              <Width>5in</Width>
+                              <Width>0.375in</Width>
                               <Style>
                                 <Border>
                                   <Style>None</Style>
                                 </Border>
+                                <BackgroundColor>CornflowerBlue</BackgroundColor>
                                 <FontFamily />
                                 <PaddingLeft>2pt</PaddingLeft>
                                 <PaddingRight>2pt</PaddingRight>
@@ -144,16 +146,16 @@ WHERE        incidencia.usuario = usuario.id_usuario</CommandText>
                               <TablixBody>
                                 <TablixColumns>
                                   <TablixColumn>
-                                    <Width>2.1849in</Width>
+                                    <Width>1.8099in</Width>
                                   </TablixColumn>
                                   <TablixColumn>
-                                    <Width>2.1849in</Width>
+                                    <Width>1.8099in</Width>
                                   </TablixColumn>
                                   <TablixColumn>
-                                    <Width>1.75782in</Width>
+                                    <Width>1.38282in</Width>
                                   </TablixColumn>
                                   <TablixColumn>
-                                    <Width>2.61198in</Width>
+                                    <Width>2.23698in</Width>
                                   </TablixColumn>
                                 </TablixColumns>
                                 <TablixRows>
@@ -187,9 +189,12 @@ WHERE        incidencia.usuario = usuario.id_usuario</CommandText>
                                             <Style>
                                               <Border>
                                                 <Color>LightGrey</Color>
+                                                <Style>None</Style>
                                               </Border>
                                               <BottomBorder>
+                                                <Color>Black</Color>
                                                 <Style>Solid</Style>
+                                                <Width>1pt</Width>
                                               </BottomBorder>
                                               <BackgroundColor>CornflowerBlue</BackgroundColor>
                                               <FontFamily />
@@ -229,9 +234,12 @@ WHERE        incidencia.usuario = usuario.id_usuario</CommandText>
                                             <Style>
                                               <Border>
                                                 <Color>LightGrey</Color>
+                                                <Style>None</Style>
                                               </Border>
                                               <BottomBorder>
+                                                <Color>Black</Color>
                                                 <Style>Solid</Style>
+                                                <Width>1pt</Width>
                                               </BottomBorder>
                                               <BackgroundColor>CornflowerBlue</BackgroundColor>
                                               <FontFamily />
@@ -252,7 +260,7 @@ WHERE        incidencia.usuario = usuario.id_usuario</CommandText>
                                               <Paragraph>
                                                 <TextRuns>
                                                   <TextRun>
-                                                    <Value>tipo usuario</Value>
+                                                    <Value>fecha</Value>
                                                     <Style>
                                                       <FontFamily />
                                                       <FontSize>20pt</FontSize>
@@ -271,9 +279,12 @@ WHERE        incidencia.usuario = usuario.id_usuario</CommandText>
                                             <Style>
                                               <Border>
                                                 <Color>LightGrey</Color>
+                                                <Style>None</Style>
                                               </Border>
                                               <BottomBorder>
+                                                <Color>Black</Color>
                                                 <Style>Solid</Style>
+                                                <Width>1pt</Width>
                                               </BottomBorder>
                                               <BackgroundColor>CornflowerBlue</BackgroundColor>
                                               <FontFamily />
@@ -312,9 +323,12 @@ WHERE        incidencia.usuario = usuario.id_usuario</CommandText>
                                             <Style>
                                               <Border>
                                                 <Color>LightGrey</Color>
+                                                <Style>None</Style>
                                               </Border>
                                               <BottomBorder>
+                                                <Color>Black</Color>
                                                 <Style>Solid</Style>
+                                                <Width>1pt</Width>
                                               </BottomBorder>
                                               <BackgroundColor>CornflowerBlue</BackgroundColor>
                                               <FontFamily />
@@ -333,7 +347,7 @@ WHERE        incidencia.usuario = usuario.id_usuario</CommandText>
                                     <TablixCells>
                                       <TablixCell>
                                         <CellContents>
-                                          <Textbox Name="nombre1">
+                                          <Textbox Name="nombre">
                                             <CanGrow>true</CanGrow>
                                             <KeepTogether>true</KeepTogether>
                                             <Paragraphs>
@@ -343,7 +357,7 @@ WHERE        incidencia.usuario = usuario.id_usuario</CommandText>
                                                     <Value>=Fields!nombre.Value</Value>
                                                     <Style>
                                                       <FontFamily />
-                                                      <FontSize>14pt</FontSize>
+                                                      <FontSize>18pt</FontSize>
                                                       <Color>Brown</Color>
                                                     </Style>
                                                   </TextRun>
@@ -354,13 +368,16 @@ WHERE        incidencia.usuario = usuario.id_usuario</CommandText>
                                                 </Style>
                                               </Paragraph>
                                             </Paragraphs>
-                                            <rd:DefaultName>nombre1</rd:DefaultName>
+                                            <rd:DefaultName>nombre</rd:DefaultName>
                                             <Style>
                                               <Border>
                                                 <Color>LightGrey</Color>
+                                                <Style>None</Style>
                                               </Border>
                                               <BottomBorder>
+                                                <Color>Black</Color>
                                                 <Style>Solid</Style>
+                                                <Width>1pt</Width>
                                               </BottomBorder>
                                               <FontFamily />
                                               <PaddingLeft>2pt</PaddingLeft>
@@ -373,7 +390,7 @@ WHERE        incidencia.usuario = usuario.id_usuario</CommandText>
                                       </TablixCell>
                                       <TablixCell>
                                         <CellContents>
-                                          <Textbox Name="email">
+                                          <Textbox Name="email1">
                                             <CanGrow>true</CanGrow>
                                             <KeepTogether>true</KeepTogether>
                                             <Paragraphs>
@@ -383,7 +400,7 @@ WHERE        incidencia.usuario = usuario.id_usuario</CommandText>
                                                     <Value>=Fields!email.Value</Value>
                                                     <Style>
                                                       <FontFamily />
-                                                      <FontSize>14pt</FontSize>
+                                                      <FontSize>18pt</FontSize>
                                                       <Color>#333333</Color>
                                                     </Style>
                                                   </TextRun>
@@ -394,13 +411,16 @@ WHERE        incidencia.usuario = usuario.id_usuario</CommandText>
                                                 </Style>
                                               </Paragraph>
                                             </Paragraphs>
-                                            <rd:DefaultName>email</rd:DefaultName>
+                                            <rd:DefaultName>email1</rd:DefaultName>
                                             <Style>
                                               <Border>
                                                 <Color>LightGrey</Color>
+                                                <Style>None</Style>
                                               </Border>
                                               <BottomBorder>
+                                                <Color>Black</Color>
                                                 <Style>Solid</Style>
+                                                <Width>1pt</Width>
                                               </BottomBorder>
                                               <FontFamily />
                                               <PaddingLeft>2pt</PaddingLeft>
@@ -413,17 +433,17 @@ WHERE        incidencia.usuario = usuario.id_usuario</CommandText>
                                       </TablixCell>
                                       <TablixCell>
                                         <CellContents>
-                                          <Textbox Name="tipo_usuario">
+                                          <Textbox Name="fecha_incidencia">
                                             <CanGrow>true</CanGrow>
                                             <KeepTogether>true</KeepTogether>
                                             <Paragraphs>
                                               <Paragraph>
                                                 <TextRuns>
                                                   <TextRun>
-                                                    <Value>=Fields!tipo_usuario.Value</Value>
+                                                    <Value>=Fields!fecha_incidencia.Value</Value>
                                                     <Style>
                                                       <FontFamily />
-                                                      <FontSize>14pt</FontSize>
+                                                      <FontSize>18pt</FontSize>
                                                       <Color>#333333</Color>
                                                     </Style>
                                                   </TextRun>
@@ -434,13 +454,16 @@ WHERE        incidencia.usuario = usuario.id_usuario</CommandText>
                                                 </Style>
                                               </Paragraph>
                                             </Paragraphs>
-                                            <rd:DefaultName>tipo_usuario</rd:DefaultName>
+                                            <rd:DefaultName>fecha_incidencia</rd:DefaultName>
                                             <Style>
                                               <Border>
                                                 <Color>LightGrey</Color>
+                                                <Style>None</Style>
                                               </Border>
                                               <BottomBorder>
+                                                <Color>Black</Color>
                                                 <Style>Solid</Style>
+                                                <Width>1pt</Width>
                                               </BottomBorder>
                                               <FontFamily />
                                               <PaddingLeft>2pt</PaddingLeft>
@@ -460,9 +483,9 @@ WHERE        incidencia.usuario = usuario.id_usuario</CommandText>
                                               <Paragraph>
                                                 <TextRuns>
                                                   <TextRun>
-                                                    <Value>=Fields!resuelta.Value</Value>
+                                                    <Value>=Sum(Fields!resuelta.Value)</Value>
                                                     <Style>
-                                                      <FontSize>14pt</FontSize>
+                                                      <FontSize>18pt</FontSize>
                                                     </Style>
                                                   </TextRun>
                                                 </TextRuns>
@@ -476,6 +499,11 @@ WHERE        incidencia.usuario = usuario.id_usuario</CommandText>
                                               <Border>
                                                 <Style>None</Style>
                                               </Border>
+                                              <BottomBorder>
+                                                <Color>Black</Color>
+                                                <Style>Solid</Style>
+                                                <Width>1pt</Width>
+                                              </BottomBorder>
                                               <PaddingLeft>2pt</PaddingLeft>
                                               <PaddingRight>2pt</PaddingRight>
                                               <PaddingTop>2pt</PaddingTop>
@@ -504,7 +532,7 @@ WHERE        incidencia.usuario = usuario.id_usuario</CommandText>
                                     <KeepTogether>true</KeepTogether>
                                   </TablixMember>
                                   <TablixMember>
-                                    <Group Name="table1_titulo">
+                                    <Group Name="table1_incidencia">
                                       <GroupExpressions>
                                         <GroupExpression>=Fields!id_incidencia.Value</GroupExpression>
                                       </GroupExpressions>
@@ -525,13 +553,13 @@ WHERE        incidencia.usuario = usuario.id_usuario</CommandText>
                               <DataSetName>DataSet1</DataSetName>
                               <SortExpressions>
                                 <SortExpression>
-                                  <Value>=Fields!email.Value</Value>
+                                  <Value>=Fields!id_usuario.Value</Value>
                                 </SortExpression>
                               </SortExpressions>
                               <Top>0.5in</Top>
                               <Left>1.24354cm</Left>
                               <Height>1.04112in</Height>
-                              <Width>8.73961in</Width>
+                              <Width>7.2396in</Width>
                               <ZIndex>1</ZIndex>
                               <Style>
                                 <FontFamily />
@@ -560,7 +588,7 @@ WHERE        incidencia.usuario = usuario.id_usuario</CommandText>
             <TablixRowHierarchy>
               <TablixMembers>
                 <TablixMember>
-                  <Group Name="list1_id_prestamo">
+                  <Group Name="list1_id_usuario">
                     <GroupExpressions>
                       <GroupExpression>=Fields!id_incidencia.Value</GroupExpression>
                     </GroupExpressions>
@@ -576,18 +604,19 @@ WHERE        incidencia.usuario = usuario.id_usuario</CommandText>
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>DataSet1</DataSetName>
-            <Left>0.76729cm</Left>
+            <Top>0.17639cm</Top>
+            <Left>0.37042cm</Left>
             <Height>1.54112in</Height>
-            <Width>9.22919in</Width>
+            <Width>7.80209in</Width>
             <Style>
               <FontSize>14pt</FontSize>
             </Style>
           </Tablix>
         </ReportItems>
-        <Height>4.41722cm</Height>
+        <Height>4.09083cm</Height>
         <Style />
       </Body>
-      <Width>24.20944cm</Width>
+      <Width>20.95501cm</Width>
       <Page>
         <PageHeader>
           <Height>2.06127cm</Height>
@@ -601,14 +630,7 @@ WHERE        incidencia.usuario = usuario.id_usuario</CommandText>
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>I</Value>
-                      <Style>
-                        <FontSize>26pt</FontSize>
-                        <Color>White</Color>
-                      </Style>
-                    </TextRun>
-                    <TextRun>
-                      <Value>NFORME INCIDENCIAS</Value>
+                      <Value>INFORME INCIDENCIAS</Value>
                       <Style>
                         <FontSize>26pt</FontSize>
                         <FontWeight>Bold</FontWeight>
@@ -622,10 +644,9 @@ WHERE        incidencia.usuario = usuario.id_usuario</CommandText>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox1</rd:DefaultName>
-              <Top>0.35842cm</Top>
-              <Left>4.91808cm</Left>
-              <Height>1.03505cm</Height>
-              <Width>10.72854cm</Width>
+              <Left>5.12565cm</Left>
+              <Height>1.52646cm</Height>
+              <Width>11.12542cm</Width>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -664,14 +685,16 @@ WHERE        incidencia.usuario = usuario.id_usuario</CommandText>
                       </Style>
                     </TextRun>
                   </TextRuns>
-                  <Style />
+                  <Style>
+                    <TextAlign>Right</TextAlign>
+                  </Style>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox20</rd:DefaultName>
               <Top>0.35842cm</Top>
-              <Left>16.37453cm</Left>
-              <Height>0.68228cm</Height>
-              <Width>4.44817cm</Width>
+              <Left>16.13642cm</Left>
+              <Height>1.52646cm</Height>
+              <Width>4.81859cm</Width>
               <ZIndex>2</ZIndex>
               <Style>
                 <Border>
@@ -686,7 +709,7 @@ WHERE        incidencia.usuario = usuario.id_usuario</CommandText>
           </ReportItems>
           <Style>
             <Border>
-              <Style>Solid</Style>
+              <Style>None</Style>
             </Border>
             <BackgroundColor>CornflowerBlue</BackgroundColor>
           </Style>
@@ -709,6 +732,33 @@ WHERE        incidencia.usuario = usuario.id_usuario</CommandText>
                         <Color>White</Color>
                       </Style>
                     </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Center</TextAlign>
+                  </Style>
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>Textbox22</rd:DefaultName>
+              <Top>0.33071cm</Top>
+              <Left>8.20303cm</Left>
+              <Height>0.90868cm</Height>
+              <Width>1.93083cm</Width>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="PageNumber">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
                     <TextRun>
                       <Value>=Globals!PageNumber</Value>
                       <Style>
@@ -716,13 +766,71 @@ WHERE        incidencia.usuario = usuario.id_usuario</CommandText>
                         <Color>White</Color>
                       </Style>
                     </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Right</TextAlign>
+                  </Style>
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>PageNumber</rd:DefaultName>
+              <Top>0.33071cm</Top>
+              <Left>10.13387cm</Left>
+              <Height>0.90867cm</Height>
+              <Width>0.67438cm</Width>
+              <ZIndex>1</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <VerticalAlign>Bottom</VerticalAlign>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="Textbox7">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
                     <TextRun>
-                      <Value> / </Value>
+                      <Value>/</Value>
                       <Style>
                         <FontSize>16pt</FontSize>
                         <Color>White</Color>
                       </Style>
                     </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Center</TextAlign>
+                  </Style>
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>Textbox7</rd:DefaultName>
+              <Top>0.33071cm</Top>
+              <Left>10.84352cm</Left>
+              <Height>0.90867cm</Height>
+              <Width>0.61264cm</Width>
+              <ZIndex>2</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <VerticalAlign>Middle</VerticalAlign>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="TotalPages">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
                     <TextRun>
                       <Value>=Globals!TotalPages</Value>
                       <Style>
@@ -731,18 +839,22 @@ WHERE        incidencia.usuario = usuario.id_usuario</CommandText>
                       </Style>
                     </TextRun>
                   </TextRuns>
-                  <Style />
+                  <Style>
+                    <TextAlign>Left</TextAlign>
+                  </Style>
                 </Paragraph>
               </Paragraphs>
-              <rd:DefaultName>Textbox22</rd:DefaultName>
-              <Top>0.17639cm</Top>
-              <Left>9.10229cm</Left>
-              <Height>0.74993cm</Height>
-              <Width>10.58271cm</Width>
+              <rd:DefaultName>TotalPages</rd:DefaultName>
+              <Top>0.33071cm</Top>
+              <Left>11.45616cm</Left>
+              <Height>0.90867cm</Height>
+              <Width>2.5cm</Width>
+              <ZIndex>3</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
                 </Border>
+                <VerticalAlign>Bottom</VerticalAlign>
                 <PaddingLeft>2pt</PaddingLeft>
                 <PaddingRight>2pt</PaddingRight>
                 <PaddingTop>2pt</PaddingTop>
@@ -757,8 +869,8 @@ WHERE        incidencia.usuario = usuario.id_usuario</CommandText>
             <BackgroundColor>CornflowerBlue</BackgroundColor>
           </Style>
         </PageFooter>
-        <PageHeight>39cm</PageHeight>
-        <PageWidth>28cm</PageWidth>
+        <PageHeight>29.7cm</PageHeight>
+        <PageWidth>21cm</PageWidth>
         <LeftMargin>0cm</LeftMargin>
         <RightMargin>0cm</RightMargin>
         <TopMargin>0cm</TopMargin>

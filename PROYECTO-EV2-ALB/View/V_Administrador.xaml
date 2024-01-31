@@ -169,7 +169,7 @@
                                 
                             </DataGrid>
                             <StackPanel Orientation="Vertical" Margin="20 0 0 0" HorizontalAlignment="Center">
-                                    <Image x:Name="imgLibro" Width="200" Height="150"/>
+                                    <Image x:Name="imgLibro" Width="200" Height="150" Margin="0 0 0 20"/>
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                                     <TextBlock Text="LIBRO" FontSize="30" HorizontalAlignment="Center"/>
                                     <Button x:Name="btnImagen" Width="100" Margin="80 0 0 0" Click="btnImagen_Click"  Command="Core:Comandos.AgregarImagen"

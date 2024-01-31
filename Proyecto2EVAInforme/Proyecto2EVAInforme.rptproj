@@ -51,6 +51,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Report Include="Incidencias.rdl" />
+    <Report Include="Libros.rdl" />
     <Report Include="Prestamos.rdl" />
     <Report Include="Report2.rdl" />
     <Report Include="Usuarios.rdl" />
