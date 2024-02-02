@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:PROYECTO_EV2_ALB.View"
         xmlns:syncfusion="clr-namespace:BoldReports.UI.Xaml;assembly=BoldReports.Wpf"
         mc:Ignorable="d"
-        Title="V_Informes" Height="450" Width="800">
+         Icon="../images/BIBLIONET.png"
+        Title="Informes" Height="450" Width="800">
     <Grid>
         <syncfusion:ReportViewer x:Name="reportViewer"  />
 

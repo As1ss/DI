@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PROYECTO_EV2_ALB.View"
         mc:Ignorable="d"
-        Title="V_Administrador" Height="720" Width="1280"
+         Icon="../images/BIBLIONET.png"
+        Title="Administrador" Height="720" Width="1280"
         Closing="Window_Closing"
         xmlns:Core="clr-namespace:PROYECTO_EV2_ALB.Core">
     <Window.CommandBindings>

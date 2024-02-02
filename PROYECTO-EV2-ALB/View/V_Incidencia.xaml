@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PROYECTO_EV2_ALB.View"
         mc:Ignorable="d"
-        Title="V_Incidencia" Height="600" Width="800">
+         Icon="../images/BIBLIONET.png"
+        Title="Incidencia" Height="600" Width="800">
 
     <DockPanel>
         <TextBlock DockPanel.Dock="Top" Text="Incidencia" FontSize="40" Foreground="White"  Background="#2258A5"/>

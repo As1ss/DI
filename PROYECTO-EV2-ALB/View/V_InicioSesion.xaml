@@ -8,6 +8,7 @@
         Title="Inicio de Sesión" Height="720" Width="1280"
         ResizeMode="CanResizeWithGrip"
         Closing="Window_Closing"
+         Icon="../images/BIBLIONET.png"
          xmlns:Core="clr-namespace:PROYECTO_EV2_ALB.Core"
        >
     <Window.CommandBindings>

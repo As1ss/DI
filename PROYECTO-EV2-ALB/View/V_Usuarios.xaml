@@ -5,8 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PROYECTO_EV2_ALB.View"
         mc:Ignorable="d"
-        Title="V_Usuarios" Height="720" Width="1280"
+        Title="Usuarios" Height="720" Width="1280"
          Closing="Window_Closing"
+        Icon="../images/BIBLIONET.png"
          xmlns:Core="clr-namespace:PROYECTO_EV2_ALB.Core">
     <Window.CommandBindings>
         <CommandBinding Command="Core:Comandos.Aceptar"
