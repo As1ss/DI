@@ -90,11 +90,17 @@ Foreground="White" />
                 </TabItem>
 
                 <TabItem Name="tiIncidence" Header="Incidencias" FontSize="30" Style="{StaticResource BackgroundTabItems}">
-                    <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Grid>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top">
+                        <Image Source="../images/reports.png" Height="100"  />
+                            <TextBlock Text="INCIDENCIAS" FontSize="30" VerticalAlignment="Bottom" />
+                        </StackPanel>
+                        <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+                 
 
                         <StackPanel Orientation="Vertical" Width="900">
-                            <Image Source="../images/reports.png" Height="150" HorizontalAlignment="Stretch"/>
-                            <TextBlock Text="INCIDENCIAS" FontSize="40" Margin="0 0 0 10" HorizontalAlignment="Center"/>
+                           
+                            
                             <TextBlock TextWrapping="Wrap" TextAlignment="Center" Text="Por favor, utilice este espacio para redactar cualquier incidencia o comentario relacionado con los libros o usuarios."/>
                             <Border Background="LightGray" BorderBrush="DarkGray" BorderThickness="5" CornerRadius="5" Margin="0 30 0 0" Height="200" Width="889">
                                 <Border.Effect>
@@ -111,12 +117,18 @@ Foreground="White" />
                                  Width="200" FontSize="20"  HorizontalAlignment="Right" Margin="0 20 20 0">Enviar</Button>
                         </StackPanel>
                     </Grid>
+                    </Grid>
                 </TabItem>
                 <TabItem Name="tiBooks" Header="Libros" FontSize="30" Style="{StaticResource BackgroundTabItems}" >
+                    <Grid>
+                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top">
+                            <Image Source="../images/search_books.png" Height="100" HorizontalAlignment="Stretch"/>
+                            <TextBlock Text="CONSULTAR LIBROS" FontSize="30"  VerticalAlignment="Bottom"/>
+                        </StackPanel>
+                    
                     <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
-                        <StackPanel Orientation="Vertical">
-                            <Image Source="../images/search_books.png" Height="150" HorizontalAlignment="Stretch"/>
-                            <TextBlock Text="CONSULTAR LIBROS" FontSize="40" Margin="0 0 0 20" HorizontalAlignment="Center"/>
+                        <StackPanel Orientation="Vertical" Margin="0 120 0 0">
+                           
                             <Grid Margin="0 0 0 20">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="*"/>
@@ -168,15 +180,20 @@ Foreground="White" />
                                     FontSize="20" HorizontalAlignment="Right" Margin="0 20 20 0" Width="100" Style="{StaticResource RoundedButtonStyle}">Pedir</Button>
                         </StackPanel>
                     </Grid>
+                    </Grid>
 
                 </TabItem>
                 <TabItem Name="tiPrestamos" Header="Préstamos" FontSize="30" Style="{StaticResource BackgroundTabItems}">
+                    <Grid>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top">
+                            <Image Source="../images/prestamo.png" Height="100" />
+                            <TextBlock Text="PRÉSTAMOS" FontSize="30"  VerticalAlignment="Bottom"/>
+                        </StackPanel>
                     <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
                         <StackPanel Orientation="Vertical">
-                            <Image Source="../images/prestamo.png" Height="150" HorizontalAlignment="Stretch"/>
-                            <TextBlock Text="PRÉSTAMOS" FontSize="40" Margin="0 0 0 40" HorizontalAlignment="Center"/>
+                            
                             <ListBox Name="listPrestamos" ScrollViewer.VerticalScrollBarVisibility="Auto"  
-         ScrollViewer.HorizontalScrollBarVisibility="Auto" Height="250" Width="1000" ScrollViewer.PanningDeceleration="0.0001"
+         ScrollViewer.HorizontalScrollBarVisibility="Auto" Height="250" Margin="0 120 0 0" Width="1000" ScrollViewer.PanningDeceleration="0.0001"
          HorizontalAlignment="Stretch" MaxWidth="1000" 
          ItemContainerStyle="{StaticResource AlternatingListBoxItemStyle}" AlternationCount="2" d:ItemsSource="{d:SampleData ItemCount=5}">
                                 <ListBox.ItemTemplate>
@@ -210,7 +227,7 @@ Foreground="White" />
                                     FontSize="20" HorizontalAlignment="Right" Margin="0 20 20 0" Width="100" Style="{StaticResource RoundedButtonStyle}">Devolver</Button>
                         </StackPanel>
                     </Grid>
-
+                    </Grid>
 
                 </TabItem>
             </TabControl>
