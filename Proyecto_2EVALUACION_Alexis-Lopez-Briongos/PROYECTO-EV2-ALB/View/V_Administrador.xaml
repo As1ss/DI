@@ -1,0 +1,318 @@
+﻿<Window x:Class="PROYECTO_EV2_ALB.View.V_Administrador"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PROYECTO_EV2_ALB.View"
+        mc:Ignorable="d"
+         Icon="../images/BIBLIONET.png"
+        Title="Administrador" Height="720" Width="1280"
+        Closing="Window_Closing"
+        xmlns:Core="clr-namespace:PROYECTO_EV2_ALB.Core">
+    <Window.CommandBindings>
+        <CommandBinding x:Name="Agregar" Command="Core:Comandos.AgregarLibro" CanExecute="Agregar_CanExecute" />
+        <CommandBinding x:Name="Modificar" Command="Core:Comandos.ModificarLibro" CanExecute="Modificar_CanExecute" />
+        <CommandBinding x:Name="Eliminar" Command="Core:Comandos.EliminarLibro" CanExecute="Eliminar_CanExecute" />
+        <CommandBinding x:Name="DetallesIncidencia" Command="Core:Comandos.DetallesIncidencia" CanExecute="DetallesIncidencia_CanExecute"/>
+        <CommandBinding x:Name="ResolverIncidencia" Command="Core:Comandos.ResolverIncidencia" CanExecute="ResolverIncidencia_CanExecute"/>
+        <CommandBinding x:Name="DesbloquearUsuario" Command="Core:Comandos.DesbloquearUsuario" CanExecute="DesbloquearUsuario_CanExecute"/>
+        <CommandBinding x:Name="BloquearUsuario" Command="Core:Comandos.BloquearUsuario" CanExecute="BloquearUsuario_CanExecute"/>
+        <CommandBinding x:Name="AplazarPrestamo" Command="Core:Comandos.AplazarPrestamo" CanExecute="AplazarPrestamo_CanExecute"/>
+        <CommandBinding x:Name="AgregarImagen" Command="Core:Comandos.AgregarImagen" CanExecute="AgregarImagen_CanExecute"/>
+        <CommandBinding x:Name="LimpiarCampos" Command="Core:Comandos.LimpiarCampos" CanExecute="LimpiarCampos_CanExecute"/>
+    </Window.CommandBindings>
+   
+    <DockPanel>
+        <Border Background="#2258A5" DockPanel.Dock="Top">
+            <Grid  DockPanel.Dock="Top">
+                <TextBlock Text="Administrador" FontSize="30" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <Button x:Name="btnLogout" Click="btnLogout_Click" >
+
+                    <Button.HorizontalAlignment>Right</Button.HorizontalAlignment>
+                    <Button.VerticalAlignment>Top</Button.VerticalAlignment>
+                    <Button.Margin>10,0,10,0</Button.Margin>
+                    <Button.Background>Transparent</Button.Background>
+                    <Button.BorderBrush>Transparent</Button.BorderBrush>
+                    <StackPanel Orientation="Horizontal" >
+                        <Image  Source="../images/exitIcon.png" Height="30" Width="34"/>
+                        <TextBlock FontSize="25" Text="Cerrar sesión" Background="Transparent" 
+   Foreground="White" />
+                    </StackPanel>
+                </Button>
+            </Grid>
+        </Border>
+        <Border DockPanel.Dock="Left" Background="#2258A5">
+        <TabControl TabStripPlacement="Left" Margin="0, 0, 0, 10" Name="tcAdministrador">
+                <TabItem Name="tiHome" Header="Home" FontSize="30" Style="{StaticResource BackgroundTabItems}" >
+                    <TabItem.Content>
+                    <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="385"/>
+                            <ColumnDefinition Width="385"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="200"/>
+                            <RowDefinition Height="200"/>
+                            <RowDefinition Height="200"/>
+                        </Grid.RowDefinitions>
+                            <Border x:Name="bAdminUsers" Style="{StaticResource MouseOverBorder}" Grid.Column="0" Grid.Row="0" MouseLeftButtonUp="bAdminUsers_MouseLeftButtonUp" >
+                            <StackPanel x:Name="spUser"   HorizontalAlignment="Center" VerticalAlignment="Center" >
+                                <Image Source="../images/users.png" Height="150" HorizontalAlignment="Stretch"/>
+                                <TextBlock FontSize="30"   Text="ADMINISTRAR USUARIOS" HorizontalAlignment="Center" Background="Transparent"/>
+                            </StackPanel>
+                            </Border>
+                            <Border  x:Name="bIncidencias" Style="{StaticResource MouseOverBorder}" Grid.Column="0" Grid.Row="1" MouseLeftButtonUp="bIncidencias_MouseLeftButtonUp">
+                            <StackPanel    HorizontalAlignment="Center" VerticalAlignment="Center">
+                                    <Image Source="../images/reports.png" Height="150" HorizontalAlignment="Stretch"/>
+                                <TextBlock FontSize="30"  Text="ADMINISTRAR INCIDENCIAS" HorizontalAlignment="Center" Background="Transparent"/>
+                            </StackPanel>
+                            </Border>
+                            <Border  x:Name="bPrestamos" Style="{StaticResource MouseOverBorder}" Grid.Column="1" Grid.Row="1" MouseLeftButtonUp="bPrestamos_MouseLeftButtonUp">
+                                <StackPanel    HorizontalAlignment="Center" VerticalAlignment="Center">
+                                    <Image Source="../images/prestamo.png" Height="150" HorizontalAlignment="Stretch"/>
+                                    <TextBlock FontSize="30"  Text="ADMINISTRAR PRÉSTAMOS" HorizontalAlignment="Center" Background="Transparent"/>
+                                </StackPanel>
+                            </Border>
+                            <Border x:Name="bAdminBooks" Style="{StaticResource MouseOverBorder}" Grid.Column="1" Grid.Row="0" MouseLeftButtonUp="bAdminBooks_MouseLeftButtonUp">
+                            <StackPanel   HorizontalAlignment="Center" VerticalAlignment="Center">
+                                    <Image Source="../images/books.png" Height="150" HorizontalAlignment="Stretch"/>
+                                <TextBlock FontSize="30"  Text="ADMINISTRAR LIBROS" HorizontalAlignment="Center" Background="Transparent"/>
+                            </StackPanel>
+                            </Border>
+                           
+                            <Border  x:Name="bInformes" Style="{StaticResource MouseOverBorder}" Grid.Column="0" Grid.Row="2" MouseLeftButtonUp="bInformes_MouseLeftButtonUp">
+                                <StackPanel    HorizontalAlignment="Center" VerticalAlignment="Center">
+                                    <Image Source="../images/informes.png" Height="150" HorizontalAlignment="Stretch"/>
+                                    <TextBlock FontSize="30"  Text="INFORMES" HorizontalAlignment="Center" Background="Transparent"/>
+                                </StackPanel>
+                            </Border>
+                            <Border x:Name="bLogOut" Style="{StaticResource MouseOverBorder}" Grid.Column="1" Grid.Row="2" MouseLeftButtonUp="bLogOut_MouseLeftButtonUp">
+                                <StackPanel    HorizontalAlignment="Center" VerticalAlignment="Center">
+                                    <Image Source="../images/cerrar_sesion.png"  Height="150" Margin="40 0 0 0" HorizontalAlignment="Stretch" RenderTransformOrigin="0.5,0.5" Width="288">
+                                        <Image.RenderTransform>
+                                            <TransformGroup>
+                                                <ScaleTransform ScaleX="-1"/>
+                                                <SkewTransform/>
+                                                <RotateTransform/>
+                                                <TranslateTransform/>
+                                            </TransformGroup>
+                                        </Image.RenderTransform>
+                                    </Image>
+                                    <TextBlock  FontSize="30" Text="CERRAR SESIÓN" HorizontalAlignment="Center" Background="Transparent"/>
+                                </StackPanel>
+                            </Border>
+                        </Grid>
+                </TabItem.Content>
+                 
+                </TabItem>
+
+                <TabItem Name="tiIncidence" Header="Incidencias" FontSize="30" Style="{StaticResource BackgroundTabItems}" Height="45" VerticalAlignment="Bottom">
+                    <Grid>
+                        <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Orientation="Horizontal">
+                            <Image Source="../images/reports.png" Height="100" HorizontalAlignment="Stretch"/>
+                            <TextBlock Text="ADMINISTRACIÓN DE INCIDENCIAS" FontSize="30" VerticalAlignment="Bottom"/>
+
+                        </StackPanel>
+                    <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 120 0 0">
+                        <StackPanel Orientation="Vertical">
+                           
+                            <DataGrid x:Name="dgIncidencias"  AutoGenerateColumns="False" CanUserAddRows="False"
+                                      Width="1000" FontSize="25"
+                                      Height="300">
+                                <DataGrid.Effect>
+                                    <DropShadowEffect/>
+                                </DataGrid.Effect>
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="Id" Binding="{Binding Id_incidencia}" Width="*">
+                                        <DataGridTextColumn.ElementStyle>
+                                            <Style>
+                                                <Setter Property="TextBlock.TextAlignment" Value="Center" />
+                                            </Style>
+                                        </DataGridTextColumn.ElementStyle>
+                                    </DataGridTextColumn>
+                                    <DataGridTextColumn Header="IdUsuario" Binding="{Binding Id_usuario}" Width="*">
+                                        <DataGridTextColumn.ElementStyle>
+                                            <Style>
+                                                <Setter Property="TextBlock.TextAlignment" Value="Center" />
+                                            </Style>
+                                        </DataGridTextColumn.ElementStyle>
+                                    </DataGridTextColumn>
+                                    <DataGridTextColumn Header="Descripción" Binding="{Binding Descripcion}" Width="*"/>
+                                    <DataGridTextColumn Header="Fecha" Binding="{Binding Fecha_incidencia}" Width="*"/>
+                                    <DataGridTextColumn Header="Resuelta" Binding="{Binding Resuelta}" Width="*"/>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                                <Button x:Name="btnDetalles" Style="{StaticResource RoundedButtonStyle}"
+                    FontSize="20" Width="200" Margin="0 20 20 0" Click="btnDetalles_Click" Command="Core:Comandos.DetallesIncidencia">Detalles</Button>
+                                <Button x:Name="btnResolver" Margin="0 20 20 0" FontSize="20" Click="btnResolver_Click_1"
+                                        Command="Core:Comandos.ResolverIncidencia" 
+                                        Style="{StaticResource RoundedButtonStyleExit}" Width="150">Resolver</Button>
+                            </StackPanel>
+                        </StackPanel>
+                    </Grid>
+                    </Grid>
+                </TabItem>
+                <TabItem Name="tiBook" Header="Libro" FontSize="30" Style="{StaticResource BackgroundTabItems}" >
+                    <Grid>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top">
+                            <Image Source="../images/books.png" Height="100" HorizontalAlignment="Stretch"/>
+                            <TextBlock Text="ADMINISTRACIÓN DE LIBROS" FontSize="30"  VerticalAlignment="Bottom"/>
+
+                        </StackPanel>
+                    <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <StackPanel Orientation="Vertical">
+                           
+                            <StackPanel Orientation="Horizontal" Margin="0 120 0 0">
+                            <DataGrid x:Name="dgLibros" AutoGenerateColumns="False" IsReadOnly="True" 
+                                      CanUserAddRows="False" Width="600"  Height="325" SelectionMode="Single" FontSize="20"
+                                      SelectionChanged="DynamicDataGrid_SelectionChanged" VerticalAlignment="Bottom">
+                                <DataGrid.Effect>
+                                    <DropShadowEffect/>
+                                </DataGrid.Effect>
+                                    <DataGrid.Columns>
+                                        <DataGridTextColumn Header="Id" Binding="{Binding Id_libro}" Width="*" />
+                                        <DataGridTextColumn Header="Titulo" Binding="{Binding Titulo}" Width="*" />
+                                        <DataGridTextColumn Header="Autor" Binding="{Binding Autor}" Width="*"/>
+                                        <DataGridTextColumn Header="Stock" Binding="{Binding Stock}" Width="*"/>
+                                    </DataGrid.Columns>
+                                
+                            </DataGrid>
+                            <StackPanel Orientation="Vertical" Margin="20 0 0 0" HorizontalAlignment="Center">
+                                    <Image x:Name="imgLibro" Width="200" Height="150" Margin="0 0 0 20"/>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                    <TextBlock Text="LIBRO" FontSize="30" HorizontalAlignment="Center"/>
+                                    <Button x:Name="btnImagen" Width="100" Margin="80 0 0 0" Click="btnImagen_Click"  Command="Core:Comandos.AgregarImagen"
+                                        Style="{StaticResource RoundedButtonStyle}">Imagen</Button>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal" Margin="0 10 0 0" HorizontalAlignment="Center">
+                                    <TextBlock Text="Titulo" FontSize="20"/>
+                                    <TextBox x:Name="tbxTitulo" Style="{StaticResource RoundedTextBoxStyle}"  Width="200" Margin="10 0 0 0"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Margin="0 10 0 0" HorizontalAlignment="Center">
+                                    <TextBlock Text="Autor" FontSize="20"/>
+                                    <TextBox x:Name="tbxAutor" Style="{StaticResource RoundedTextBoxStyle}"  Width="200" Margin="11 0 0 0"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Margin="0 10 0 0" HorizontalAlignment="Center">
+                                    <TextBlock Text="Stock" FontSize="20"/>
+                                    <TextBox x:Name="tbxStock" Style="{StaticResource RoundedTextBoxStyle}" Width="200" Margin="13 0 0 0"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Margin="0 40 0 0">
+                                    <Button x:Name="btnAgregar" Click="btnAgregar_Click" Command="Core:Comandos.AgregarLibro"
+                                          Width="100" Margin="0 0 10 0" Style="{StaticResource RoundedButtonStyle}">Agregar</Button>
+                                    <Button x:Name="btnModificar" Click="btnModificar_Click"  Command="Core:Comandos.ModificarLibro"
+                                            Width="100" Margin="0 0 10 0" Style="{StaticResource RoundedButtonStyle}">Modificar</Button>
+                                        <Button x:Name="btnEliminar"  Width="100" Margin="0 0 10 0" Click="btnEliminar_Click"  Command="Core:Comandos.EliminarLibro"
+                                            Style="{StaticResource RoundedButtonStyleExit}">Eliminar</Button>
+                                        <Button x:Name="btnLimpiar"  Width="100" Margin="0 0 10 0" Click="btnLimpiar_Click"  Command="Core:Comandos.LimpiarCampos"
+         Style="{StaticResource RoundedButtonStyle}">Limpiar</Button>
+
+                                    </StackPanel>
+
+
+
+                            </StackPanel>
+
+                        </StackPanel>
+                        </StackPanel>
+                    </Grid>
+                    </Grid>
+                </TabItem>
+                <TabItem Name="tiUsers" Header="Usuarios" FontSize="30" Style="{StaticResource BackgroundTabItems}">
+                    <Grid>
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Left">
+                            <Image Source="../images/users.png" Height="100" />
+                            <TextBlock Text="ADMINISTRACIÓN DE USUARIOS" FontSize="30" VerticalAlignment="Bottom"/>
+                        </StackPanel>
+
+                        <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <StackPanel Orientation="Vertical">
+                                
+                                <DataGrid x:Name="dgUsuarios" AutoGenerateColumns="True"
+                                      IsReadOnly="True" CanUserAddRows="False" Width="1000"  Height="300" FontSize="25"
+                                      >
+                                    <DataGrid.Effect>
+                                        <DropShadowEffect/>
+                                    </DataGrid.Effect>
+
+                                </DataGrid>
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                                    <Button x:Name="btnUnBlock" Style="{StaticResource RoundedButtonStyle}" Click="btnUnBlock_Click" Command="Core:Comandos.DesbloquearUsuario"
+                                       FontSize="20" Width="200" Margin="0 20 20 0">Desbloquear</Button>
+                                    <Button x:Name="btnBlock" Margin="0 20 20 0" FontSize="20" Click="btnBlock_Click" Command="Core:Comandos.BloquearUsuario"
+                                        Style="{StaticResource RoundedButtonStyleExit}" Width="150">Bloquear</Button>
+                                </StackPanel>
+                            </StackPanel>
+                        </Grid>
+                    </Grid>
+                </TabItem>
+                <TabItem Name="tiInformes" Header="Informes" Style="{StaticResource BackgroundTabItems}" FontSize="30">
+                    <Grid>
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Left">
+                            <Image Source="../images/informes.png" Height="100" />
+                            <TextBlock Text="ADMINISTRACIÓN DE INFORMES" FontSize="30" VerticalAlignment="Bottom"/>
+                        </StackPanel>
+                    <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+                        
+                    
+                        <StackPanel Orientation="Vertical">
+                            
+                            <Button x:Name="btnInformeLibros" FontSize="20" Click="btnInformeLibros_Click"
+                                    Style="{StaticResource RoundedButtonStyle}">Generar Informe Libros</Button>
+                            <Button x:Name="btnInformePrestamos" FontSize="20" Margin="0 20 0 0" Click="btnInformePrestamos_Click"
+                                Style="{StaticResource RoundedButtonStyle}">Generar Informe Prestamos</Button>
+                            <Button x:Name="btnInformeUsuarios" FontSize="20" Margin="0 20 0 0" Click="btnInformeUsuarios_Click"
+                            Style="{StaticResource RoundedButtonStyle}">Generar Informe Usuarios</Button>
+                            <Button x:Name="btnInformeIncidencias" FontSize="20" Margin="0 20 0 0" Click="btnInformeIncidencias_Click"
+                         Style="{StaticResource RoundedButtonStyle}">Generar Informe Incidencias</Button>
+                        </StackPanel>
+                    </Grid>
+                    </Grid>
+                    
+                </TabItem>
+                <TabItem Name="tiPrestamos" Header="Préstamos" Style="{StaticResource BackgroundTabItems}" FontSize="30">
+                    <Grid>
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Left">
+                            <Image Source="../images/prestamo.png" Height="100" />
+                            <TextBlock Text="ADMINISTRACIÓN DE PRÉSTAMOS" FontSize="30" VerticalAlignment="Bottom"/>
+
+                        </StackPanel>
+                        <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <StackPanel Orientation="Vertical">
+                                
+                                <DataGrid x:Name="dgPrestamos" AutoGenerateColumns="False" Margin="0 120 0 0"
+                            IsReadOnly="True" CanUserAddRows="False" Width="1000" Height="300" FontSize="25">
+                                    <DataGrid.Columns>
+                                        <!-- Define las columnas que deseas mostrar -->
+                                        <DataGridTextColumn Header="ID Prestamo" Binding="{Binding Id_prestamo}" >
+                                            <DataGridTextColumn.ElementStyle>
+                                                <Style>
+                                                    <Setter Property="TextBlock.TextAlignment" Value="Center" />
+                                                </Style>
+                                            </DataGridTextColumn.ElementStyle>
+                                        </DataGridTextColumn>
+                                        <DataGridTextColumn Header="Libro" Binding="{Binding Libro.Titulo}" />
+                                        <DataGridTextColumn Header="Usuario" Binding="{Binding Usuario.Nombre}"/>
+                                        <DataGridTextColumn Header="Fecha de Prestamo" Binding="{Binding Fecha_prestamo}" Width="*"/>
+                                        <DataGridTextColumn Header="Fecha de Devolucion" Binding="{Binding Fecha_devolucion}" Width="*"/>
+                                        <!-- Puedes agregar más columnas según tus necesidades -->
+                                    </DataGrid.Columns>
+
+                                    <DataGrid.Effect>
+                                        <DropShadowEffect/>
+                                    </DataGrid.Effect>
+                                </DataGrid>
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                                    <Button x:Name="btnAplazar" Style="{StaticResource RoundedButtonStyle}" Click="btnAplazar_Click" Command="Core:Comandos.AplazarPrestamo"
+                   FontSize="20" Width="200" Margin="0 20 20 0">Aplazar Devolución</Button>
+
+                                </StackPanel>
+                            </StackPanel>
+                        </Grid>
+                    </Grid>
+                </TabItem>
+            </TabControl>
+        </Border>
+        
+    </DockPanel>
+</Window>

@@ -1,0 +1,237 @@
+﻿<Window x:Class="PROYECTO_EV2_ALB.View.V_Usuarios"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PROYECTO_EV2_ALB.View"
+        mc:Ignorable="d"
+        Title="Usuarios" Height="720" Width="1280"
+         Closing="Window_Closing"
+        Icon="../images/BIBLIONET.png"
+         xmlns:Core="clr-namespace:PROYECTO_EV2_ALB.Core">
+    <Window.CommandBindings>
+        <CommandBinding Command="Core:Comandos.Aceptar"
+           CanExecute="PuedoAceptar"
+          />
+        <CommandBinding x:Name="EnviarIncidencia" Command="Core:Comandos.EnviarIncidencia" CanExecute="EnviarIncidencia_CanExecute"/>
+        <CommandBinding x:Name="PedirLibro" Command="Core:Comandos.PedirLibro" CanExecute="PedirLibro_CanExecute" />
+        <CommandBinding x:Name="DevolverLibro" Command="Core:Comandos.DevolverLibro" CanExecute="DevolverLibro_CanExecute" />
+        
+    </Window.CommandBindings>
+    <DockPanel>
+        <Border Background="#2258A5" DockPanel.Dock="Top">
+            <Grid  DockPanel.Dock="Top">
+                <TextBlock Text="UsuarioNombre" Name="tbUsuario" Margin="20 0 0 0"
+                           FontSize="30" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <Button x:Name="btnLogout" Click="btnLogout_Click" >
+
+                    <Button.HorizontalAlignment>Right</Button.HorizontalAlignment>
+                    <Button.VerticalAlignment>Top</Button.VerticalAlignment>
+                    <Button.Margin>10,0,10,0</Button.Margin>
+                    <Button.Background>Transparent</Button.Background>
+                    <Button.BorderBrush>Transparent</Button.BorderBrush>
+                    <StackPanel Orientation="Horizontal" >
+                        <Image  Source="../images/exitIcon.png" Height="30" Width="34"/>
+                        <TextBlock FontSize="25" Text="Cerrar sesión" Background="Transparent" 
+Foreground="White" />
+                    </StackPanel>
+                </Button>
+            </Grid>
+        </Border>
+        <Border DockPanel.Dock="Left" Background="#2258A5">
+            <TabControl TabStripPlacement="Left" Margin="0, 0, 0, 10" Name="tcUser">
+                <TabItem Name="tiHome" Header="Home" FontSize="30" Style="{StaticResource BackgroundTabItems}" >
+                    <TabItem.Content>
+                        <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="385"/>
+                                <ColumnDefinition Width="385"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="250"/>
+                                <RowDefinition Height="250"/>
+                            </Grid.RowDefinitions>
+                            <Border x:Name="bQueryBooks" Style="{StaticResource MouseOverBorder}" Grid.Column="0" Grid.Row="0" PreviewMouseLeftButtonUp="bQueryBooks_PreviewMouseLeftButtonUp" >
+                                <StackPanel x:Name="spUser"  Margin="0 -20 0 0"  HorizontalAlignment="Center" VerticalAlignment="Center" >
+                                    <Image Source="../images/search_books.png" Height="200" HorizontalAlignment="Stretch"/>
+                                    <TextBlock FontSize="30"  Margin="0 -20 0 0" Text="CONSULTAR LIBROS" HorizontalAlignment="Center" Background="Transparent"/>
+                                </StackPanel>
+                            </Border>
+                            <Border x:Name="bIncidencias" Style="{StaticResource MouseOverBorder}" Grid.Column="0" Grid.Row="1" MouseLeftButtonUp="bIncidencias_MouseLeftButtonUp">
+                                <StackPanel   Margin="0 -20 0 0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                    <Image Source="../images/reports.png" Height="200" HorizontalAlignment="Stretch"/>
+                                    <TextBlock FontSize="30" Margin="0 -20 0 0" Text="INCIDENCIAS" HorizontalAlignment="Center" Background="Transparent"/>
+                                </StackPanel>
+                            </Border>
+                            <Border x:Name="bPrestamos" Style="{StaticResource MouseOverBorder}" Grid.Column="1" Grid.Row="0" MouseLeftButtonUp="bPrestamos_MouseLeftButtonUp">
+                                <StackPanel  Margin="0 -20 0 0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                    <Image Source="../images/prestamo.png" Height="200" HorizontalAlignment="Stretch"/>
+                                    <TextBlock FontSize="30" Margin="0 -20 0 0" Text="PRÉSTAMOS" HorizontalAlignment="Center" Background="Transparent"/>
+                                </StackPanel>
+                            </Border>
+                            <Border x:Name="bCerrarSesion" Style="{StaticResource MouseOverBorder}" Grid.Column="1" Grid.Row="1" MouseLeftButtonUp="bCerrarSesion_MouseLeftButtonUp">
+                                <StackPanel   Margin="0 -20 0 0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                    <Image Source="../images/cerrar_sesion.png"  Height="200" Margin="40 0 0 0" HorizontalAlignment="Stretch" RenderTransformOrigin="0.5,0.5" Width="288">
+                                        <Image.RenderTransform>
+                                            <TransformGroup>
+                                                <ScaleTransform ScaleX="-1"/>
+                                                <SkewTransform/>
+                                                <RotateTransform/>
+                                                <TranslateTransform/>
+                                            </TransformGroup>
+                                        </Image.RenderTransform>
+                                    </Image>
+                                    <TextBlock Margin="0 -20 0 0" FontSize="30" Text="CERRAR SESIÓN" HorizontalAlignment="Center" Background="Transparent"/>
+                                </StackPanel>
+                            </Border>
+                        </Grid>
+                    </TabItem.Content>
+
+                </TabItem>
+
+                <TabItem Name="tiIncidence" Header="Incidencias" FontSize="30" Style="{StaticResource BackgroundTabItems}">
+                    <Grid>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top">
+                        <Image Source="../images/reports.png" Height="100"  />
+                            <TextBlock Text="INCIDENCIAS" FontSize="30" VerticalAlignment="Bottom" />
+                        </StackPanel>
+                        <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+                 
+
+                        <StackPanel Orientation="Vertical" Width="900">
+                           
+                            
+                            <TextBlock TextWrapping="Wrap" TextAlignment="Center" Text="Por favor, utilice este espacio para redactar cualquier incidencia o comentario relacionado con los libros o usuarios."/>
+                            <Border Background="LightGray" BorderBrush="DarkGray" BorderThickness="5" CornerRadius="5" Margin="0 30 0 0" Height="200" Width="889">
+                                <Border.Effect>
+                                    <DropShadowEffect/>
+                                </Border.Effect>
+                                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                                    <TextBox TextWrapping="Wrap" x:Name="tbxIncidencia">
+                
+
+                                    </TextBox>
+                                </ScrollViewer>
+                            </Border>
+                            <Button Click="btnEnviar_Click" x:Name="btnEnviar" Command="Core:Comandos.EnviarIncidencia" Style="{StaticResource RoundedButtonStyle}" 
+                                 Width="200" FontSize="20"  HorizontalAlignment="Right" Margin="0 20 20 0">Enviar</Button>
+                        </StackPanel>
+                    </Grid>
+                    </Grid>
+                </TabItem>
+                <TabItem Name="tiBooks" Header="Libros" FontSize="30" Style="{StaticResource BackgroundTabItems}" >
+                    <Grid>
+                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top">
+                            <Image Source="../images/search_books.png" Height="100" HorizontalAlignment="Stretch"/>
+                            <TextBlock Text="CONSULTAR LIBROS" FontSize="30"  VerticalAlignment="Bottom"/>
+                        </StackPanel>
+                    
+                    <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <StackPanel Orientation="Vertical" Margin="0 120 0 0">
+                           
+                            <Grid Margin="0 0 0 20">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="3*"/>
+                                    <ColumnDefinition Width="120"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBox x:Name="tbxBuscar" Grid.Column="1" Margin="0 0 0 0" HorizontalAlignment="Stretch"  TextChanged="tbxBuscar_TextChanged"/>
+                                <TextBlock Text="Buscar por:" FontSize="30"  Grid.Column="0"   Margin="0 0 20 0"/>
+                                <Button x:Name="btnBuscar" Click="btnBuscar_Click" Grid.Column="2"  Width="100" HorizontalAlignment="Right"  Style="{StaticResource RoundedButtonStyle}" 
+                                         VerticalAlignment="Center" >Buscar</Button>
+                            </Grid>
+                            <ListBox Name="listBoxBooks" ScrollViewer.VerticalScrollBarVisibility="Auto"  
+                             ScrollViewer.HorizontalScrollBarVisibility="Auto" Height="250" Width="1000" ScrollViewer.PanningDeceleration="0.0001"
+                                    HorizontalAlignment="Stretch" MaxWidth="1000" 
+                             ItemContainerStyle="{StaticResource AlternatingListBoxItemStyle}" AlternationCount="2" d:ItemsSource="{d:SampleData ItemCount=5}">
+                                <ListBox.ItemTemplate>
+                                    
+                                    <DataTemplate>
+                                        
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="*"/>
+                                                
+                                            </Grid.ColumnDefinitions>
+                                            <Border BorderBrush="AliceBlue" BorderThickness="5" Margin="20 0 0 0">
+                                                <Image Source="{Binding Imagen}" Height="120" Width="120" Grid.Column="0" />
+                                            </Border>
+                                          
+                                            <Grid Grid.Column="1" Margin="150 0 0 0">
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="*"/>
+                                                    <RowDefinition Height="*"/>
+                                                    <RowDefinition Height="*"/>
+                                                </Grid.RowDefinitions>
+                                                <TextBlock Text="{Binding Titulo, StringFormat='Titulo: {0}'}"  FontSize="25" Grid.Row="0"  />
+                                                <TextBlock Text="{Binding Autor, StringFormat='Autor: {0}'}"  FontSize="25" Grid.Row="1"/>
+                                                <TextBlock Text="{Binding Stock , StringFormat='Stock: {0}'}"  FontSize="25" Grid.Row="2"/>
+                                            </Grid>
+                                         
+                                        </Grid>
+                                    </DataTemplate>
+                                    
+                                </ListBox.ItemTemplate>
+                            </ListBox>
+
+
+                            <Button x:Name="btnPedir" Click="btnPedir_Click" Command="Core:Comandos.PedirLibro"
+                                    FontSize="20" HorizontalAlignment="Right" Margin="0 20 20 0" Width="100" Style="{StaticResource RoundedButtonStyle}">Pedir</Button>
+                        </StackPanel>
+                    </Grid>
+                    </Grid>
+
+                </TabItem>
+                <TabItem Name="tiPrestamos" Header="Préstamos" FontSize="30" Style="{StaticResource BackgroundTabItems}">
+                    <Grid>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top">
+                            <Image Source="../images/prestamo.png" Height="100" />
+                            <TextBlock Text="PRÉSTAMOS" FontSize="30"  VerticalAlignment="Bottom"/>
+                        </StackPanel>
+                    <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <StackPanel Orientation="Vertical">
+                            
+                            <ListBox Name="listPrestamos" ScrollViewer.VerticalScrollBarVisibility="Auto"  
+         ScrollViewer.HorizontalScrollBarVisibility="Auto" Height="250" Margin="0 120 0 0" Width="1000" ScrollViewer.PanningDeceleration="0.0001"
+         HorizontalAlignment="Stretch" MaxWidth="1000" 
+         ItemContainerStyle="{StaticResource AlternatingListBoxItemStyle}" AlternationCount="2" d:ItemsSource="{d:SampleData ItemCount=5}">
+                                <ListBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <Border BorderBrush="AliceBlue" BorderThickness="5" Margin="20 0 0 0">
+                                                <Image Source="{Binding Path=Libro.Imagen}" Height="120" Width="120" Grid.Column="0" />
+                                            </Border>
+                                            <Grid Grid.Column="1" Margin="150 0 0 0">
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="*"/>
+                                                    <RowDefinition Height="*"/>
+                                                    <RowDefinition Height="*"/>
+                                                </Grid.RowDefinitions>
+                                                <TextBlock Text="{Binding Path=Libro.Titulo, StringFormat='Titulo: {0}'}"  FontSize="25" Grid.Row="0"  />
+                                                <TextBlock Text="{Binding Path=Fecha_prestamo, StringFormat='Fecha Préstamo: {0:dd-MM-yyyy}'}"  FontSize="25" Grid.Row="1"/>
+                                                <TextBlock Text="{Binding Path=Fecha_devolucion, StringFormat='Fecha Devolución: {0:dd-MM-yyyy}'}"  FontSize="25" Grid.Row="2"/>
+                                            </Grid>
+                                        </Grid>
+                                    </DataTemplate>
+                                </ListBox.ItemTemplate>
+                            </ListBox>
+
+
+
+                            <Button x:Name="btnDevolver" Click="btnDevolver_Click" Command="Core:Comandos.DevolverLibro"
+                                    FontSize="20" HorizontalAlignment="Right" Margin="0 20 20 0" Width="100" Style="{StaticResource RoundedButtonStyle}">Devolver</Button>
+                        </StackPanel>
+                    </Grid>
+                    </Grid>
+
+                </TabItem>
+            </TabControl>
+        </Border>
+
+    </DockPanel>
+</Window>
