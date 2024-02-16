@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "t7RnFPLQ2E4i9J7bHJec35CbNEvSb20MbHP/TlSevXxdJ3fZ3ujydOjJp4KXGGNo3uuvBl8kdmanL2rrMwYXEQ==",
+  "dgSpecHash": "XcYZiPf46CQ6ClS+jOW5QmQGyUK7gUmniHWMWxlyux0Oc69dsR6Kz+X2cnH3ZGiCu2oCrCz8CyAv26U9/S7/Tg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\As1ss\\Desktop\\COSAS CLASE KEK\\DAM2T\\DI\\RepasoCrudExamen\\RepasoCrudExamen.csproj",
+  "projectFilePath": "D:\\DAM2T\\DI\\RepasoCrudExamen\\RepasoCrudExamen.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\As1ss\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.1\\microsoft.extensions.logging.abstractions.7.0.1.nupkg.sha512",
-    "C:\\Users\\As1ss\\.nuget\\packages\\mysqlconnector\\2.3.5\\mysqlconnector.2.3.5.nupkg.sha512"
+    "C:\\Users\\dam2t05\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.1\\microsoft.extensions.logging.abstractions.7.0.1.nupkg.sha512",
+    "C:\\Users\\dam2t05\\.nuget\\packages\\mysqlconnector\\2.3.5\\mysqlconnector.2.3.5.nupkg.sha512"
   ],
   "logs": []
 }

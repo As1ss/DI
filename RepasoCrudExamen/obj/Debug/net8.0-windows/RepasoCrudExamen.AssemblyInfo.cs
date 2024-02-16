@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RepasoCrudExamen")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+96f8d1ecd1524a3fb0534ccea15e191a6a0772f3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4ab87968102f487f20c18d5a9c211ad59f708284")]
 [assembly: System.Reflection.AssemblyProductAttribute("RepasoCrudExamen")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RepasoCrudExamen")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

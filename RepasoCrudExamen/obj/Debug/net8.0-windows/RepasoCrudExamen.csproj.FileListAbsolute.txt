@@ -23,3 +23,28 @@ C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\RepasoCrudExamen\bin\Debug\net8.
 C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\RepasoCrudExamen\bin\Debug\net8.0-windows\MySqlConnector.dll
 C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\RepasoCrudExamen\obj\Debug\net8.0-windows\RepasoCrudExamen.csproj.AssemblyReference.cache
 C:\Users\As1ss\Desktop\COSAS CLASE KEK\DAM2T\DI\RepasoCrudExamen\obj\Debug\net8.0-windows\RepasoCrudExamen.csproj.CopyComplete
+D:\DAM2T\DI\RepasoCrudExamen\bin\Debug\net8.0-windows\RepasoCrudExamen.exe
+D:\DAM2T\DI\RepasoCrudExamen\bin\Debug\net8.0-windows\RepasoCrudExamen.deps.json
+D:\DAM2T\DI\RepasoCrudExamen\bin\Debug\net8.0-windows\RepasoCrudExamen.runtimeconfig.json
+D:\DAM2T\DI\RepasoCrudExamen\bin\Debug\net8.0-windows\RepasoCrudExamen.dll
+D:\DAM2T\DI\RepasoCrudExamen\bin\Debug\net8.0-windows\RepasoCrudExamen.pdb
+D:\DAM2T\DI\RepasoCrudExamen\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+D:\DAM2T\DI\RepasoCrudExamen\bin\Debug\net8.0-windows\MySqlConnector.dll
+D:\DAM2T\DI\RepasoCrudExamen\obj\Debug\net8.0-windows\RepasoCrudExamen.csproj.AssemblyReference.cache
+D:\DAM2T\DI\RepasoCrudExamen\obj\Debug\net8.0-windows\Views\MainWindow.g.cs
+D:\DAM2T\DI\RepasoCrudExamen\obj\Debug\net8.0-windows\App.g.cs
+D:\DAM2T\DI\RepasoCrudExamen\obj\Debug\net8.0-windows\RepasoCrudExamen_MarkupCompile.cache
+D:\DAM2T\DI\RepasoCrudExamen\obj\Debug\net8.0-windows\RepasoCrudExamen_MarkupCompile.lref
+D:\DAM2T\DI\RepasoCrudExamen\obj\Debug\net8.0-windows\Views\MainWindow.baml
+D:\DAM2T\DI\RepasoCrudExamen\obj\Debug\net8.0-windows\RepasoCrudExamen.g.resources
+D:\DAM2T\DI\RepasoCrudExamen\obj\Debug\net8.0-windows\RepasoCrudExamen.GeneratedMSBuildEditorConfig.editorconfig
+D:\DAM2T\DI\RepasoCrudExamen\obj\Debug\net8.0-windows\RepasoCrudExamen.AssemblyInfoInputs.cache
+D:\DAM2T\DI\RepasoCrudExamen\obj\Debug\net8.0-windows\RepasoCrudExamen.AssemblyInfo.cs
+D:\DAM2T\DI\RepasoCrudExamen\obj\Debug\net8.0-windows\RepasoCrudExamen.csproj.CoreCompileInputs.cache
+D:\DAM2T\DI\RepasoCrudExamen\obj\Debug\net8.0-windows\RepasoCrudExamen.sourcelink.json
+D:\DAM2T\DI\RepasoCrudExamen\obj\Debug\net8.0-windows\RepasoCrudExamen.csproj.CopyComplete
+D:\DAM2T\DI\RepasoCrudExamen\obj\Debug\net8.0-windows\RepasoCrudExamen.dll
+D:\DAM2T\DI\RepasoCrudExamen\obj\Debug\net8.0-windows\refint\RepasoCrudExamen.dll
+D:\DAM2T\DI\RepasoCrudExamen\obj\Debug\net8.0-windows\RepasoCrudExamen.pdb
+D:\DAM2T\DI\RepasoCrudExamen\obj\Debug\net8.0-windows\RepasoCrudExamen.genruntimeconfig.cache
+D:\DAM2T\DI\RepasoCrudExamen\obj\Debug\net8.0-windows\ref\RepasoCrudExamen.dll
